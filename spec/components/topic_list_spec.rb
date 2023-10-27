@@ -39,23 +39,19 @@ RSpec.describe "topic_list component", type: :view do
 
   it "sets GA4 data attributes correctly" do
     ga4_data = {
-      index: {
-        index_section: 1,
-        index_section_count: 1,
-      },
+      index_section: 1,
+      index_section_count: 1,
       section: "Simple item",
     }
 
     expected = {
       "event_name": "navigation",
       "type": "document list",
-      "index": {
-        "index_link": 1,
-        "index_section": 1,
-        "index_section_count": 1,
-      },
+      "index_link": 1,
       "index_total": 1,
       "section": "Simple item",
+      "index_section": 1,
+      "index_section_count": 1,
     }.to_json
 
     render_component(items: [simple_item], ga4_data:)
@@ -73,9 +69,7 @@ RSpec.describe "topic_list component", type: :view do
     expected = {
       "event_name": "navigation",
       "type": "document list",
-      "index": {
-        "index_link": 1,
-      },
+      "index_link": 1,
       "index_total": 1,
       "section": "Simple item",
     }.to_json
@@ -99,9 +93,7 @@ RSpec.describe "topic_list component", type: :view do
         expected = {
           "event_name": "navigation",
           "type": "document list",
-          "index": {
-            "index_link": index + 1,
-          },
+          "index_link": index + 1,
           "index_total": 2,
           "section": "Simple item",
         }.to_json

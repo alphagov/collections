@@ -39,11 +39,9 @@ class TaxonPresenter
       ga4_link: {
         event_name: "navigation",
         type: "subtopic list",
-        index: {
-          index_link: (index + 1).to_s,
-          index_section: page_section_total.to_s,
-          index_section_count: page_section_total.to_s,
-        },
+        index_link: (index + 1).to_s,
+        index_section: page_section_total.to_s,
+        index_section_count: page_section_total.to_s,
         index_total: child_taxons.count,
         section: I18n.t("taxons.explore_sub_topics", locale: :en),
       },

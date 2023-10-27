@@ -82,9 +82,9 @@ RSpec.feature "Services and information browsing" do
 
       expect(ga4_data["event_name"]).to eq "navigation"
       expect(ga4_data["type"]).to eq "document list"
-      expect(ga4_data["index"]["index_link"]).to eq 1
-      expect(ga4_data["index"]["index_section"]).to eq 1
-      expect(ga4_data["index"]["index_section_count"]).to eq 2
+      expect(ga4_data["index_link"]).to eq 1
+      expect(ga4_data["index_section"]).to eq 1
+      expect(ga4_data["index_section_count"]).to eq 2
       expect(ga4_data["index_total"]).to eq 5
       expect(ga4_data["section"]).to eq "Environmental permits"
     end
@@ -95,9 +95,9 @@ RSpec.feature "Services and information browsing" do
 
       expect(ga4_data["event_name"]).to eq "navigation"
       expect(ga4_data["type"]).to eq "document list"
-      expect(ga4_data["index"]["index_link"]).to eq 1
-      expect(ga4_data["index"]["index_section"]).to eq 2
-      expect(ga4_data["index"]["index_section_count"]).to eq 2
+      expect(ga4_data["index_link"]).to eq 1
+      expect(ga4_data["index_section"]).to eq 2
+      expect(ga4_data["index_section_count"]).to eq 2
       expect(ga4_data["index_total"]).to eq 5
       expect(ga4_data["section"]).to eq "Waste"
     end

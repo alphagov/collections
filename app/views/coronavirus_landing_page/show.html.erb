@@ -58,16 +58,14 @@
     </div>
   </section>
 
-  <%= content_tag :section, 
-    class: "covid__topic-wrapper", 
-    data: { 
-      module: "ga4-link-tracker", 
+  <%= content_tag :section,
+    class: "covid__topic-wrapper",
+    data: {
+      module: "ga4-link-tracker",
       ga4_link: {
         event_name: "navigation",
         type: "subscribe",
-        index: {
-          index_link: 1
-        },
+        index_link: 1,
         index_total: 1,
         section: "Footer"
       },

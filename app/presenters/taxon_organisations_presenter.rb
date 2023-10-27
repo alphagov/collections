@@ -79,11 +79,9 @@ private
       ga4_link: {
         event_name: "navigation",
         type: "organisation logo",
-        index: {
-          index_link: index,
-          index_section: @index_section,
-          index_section_count: @index_section_count,
-        },
+        index_link: index,
+        index_section: @index_section,
+        index_section_count: @index_section_count,
         index_total: organisations.count,
         section: "Organisations",
       },

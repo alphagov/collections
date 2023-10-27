@@ -8,11 +8,9 @@
           ga4_link: {
             event_name: "navigation",
             type: "organisation logo",
-            index: {
-              index_link: index_link + index,
-              index_section: index_section,
-              index_section_count: index_section_count
-            },
+            index_link: index_link + index,
+            index_section: index_section,
+            index_section_count: index_section_count,
             index_total: organisations_with_logos.count,
             section: "Organisations"
           }
@@ -29,7 +27,7 @@
 <% if organisations_without_logos.any? %>
   <div
     data-module="ga4-link-tracker <%= "gem-track-click" if track_click?(organisations_without_logos) %>"
-    data-ga4-link="{'index':{'index_section':<%= index_section %>,'index_section_count':<%= index_section_count %>}}"
+    data-ga4-link="{'index_section':<%= index_section %>,'index_section_count':<%= index_section_count %>}"
   >
     <%= render 'govuk_publishing_components/components/document_list',
       items: organisations_without_logos

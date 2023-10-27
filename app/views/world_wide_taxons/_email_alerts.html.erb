@@ -1,7 +1,7 @@
 <% if taxon_is_live?(presented_taxon) %>
-  <div 
-    data-module="ga4-link-tracker" 
-    data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Top" }'
+  <div
+    data-module="ga4-link-tracker"
+    data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index_link": 1, "index_total": 1, "section": "Top" }'
     data-ga4-track-links-only
   >
     <% if presented_taxon.renders_as_accordion? %>
