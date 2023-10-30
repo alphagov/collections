@@ -30,6 +30,23 @@ RSpec.feature "Topical Event pages" do
     expect(page).to have_css("img[src='https://www.gov.uk/some-image.png'][alt='Text describing the image']")
   end
 
+  it "includes image srcset for various image sizes" do
+    visit base_path
+    expect(page).to have_css("img[srcset='https://www.gov.uk/some-medium-image.png 2x, https://www.gov.uk/some-high-image.png 3x']")
+  end
+
+  context "when the image has no variants" do
+    before do
+      content_item["details"]["image"].delete("medium_resolution_url")
+      content_item["details"]["image"].delete("high_resolution_url")
+      stub_content_store_has_item(base_path, content_item)
+    end
+    it "omits srcset if there are no higher res image sizes" do
+      visit base_path
+      expect(page).not_to have_css("img[srcset]")
+    end
+  end
+
   it "sets the body text" do
     visit base_path
     expect(page).to have_text(content_item.dig("details", "body"))
