@@ -23,23 +23,23 @@ class TopicalEvent
     @content_item.content_item_data.dig("details", "image", "url")
   end
 
-  def image_alt_text
-    @content_item.content_item_data.dig("details", "image", "alt_text")
+  def image_medium_resolution_url
+    @content_item.content_item_data.dig("details", "image", "medium_resolution_url")
+  end
+
+  def image_high_resolution_url
+    @content_item.content_item_data.dig("details", "image", "high_resolution_url")
   end
 
   def image_srcset
-    [
-      { url: sized_image_url(960), size: "960w" },
-      { url: sized_image_url(712), size: "712w" },
-      { url: sized_image_url(630), size: "630w" },
-      { url: sized_image_url(465), size: "465w" },
-      { url: sized_image_url(300), size: "300w" },
-      { url: sized_image_url(216), size: "216w" },
-    ]
+    set = {}
+    set[image_medium_resolution_url] = "2x" if image_medium_resolution_url
+    set[image_high_resolution_url] = "3x" if image_high_resolution_url
+    set
   end
 
-  def sized_image_url(width)
-    image_url.gsub("/s300_", "/s#{width}_")
+  def image_alt_text
+    @content_item.content_item_data.dig("details", "image", "alt_text")
   end
 
   def body
