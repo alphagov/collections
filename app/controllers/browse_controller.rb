@@ -1,5 +1,5 @@
 class BrowseController < ApplicationController
-  slimmer_template "gem_layout_full_width"
+  slimmer_template "gem_layout_full_width_browse_header"
 
   def index
     page = MainstreamBrowsePage.find("/browse")
