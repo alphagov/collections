@@ -9,7 +9,7 @@ cy:
     contact:
       contact_details: Manylion cyswllt
       contact_form: 'Ffurflen Gysylltu: %{title}'
-      contact_organisation: Cyswllt %{organisation}
+      contact_organisation: Cysylltu â ni
       email: E-bost
       telephone: Ffôn
     corporate_information: Gwybodaeth gorfforaethol
@@ -64,7 +64,7 @@ cy:
     high_profile_groups: Grwpiau proffil uchel o fewn %{title}
     index_title: "%{title}"
     jobs_contracts: Swyddi a chontractau
-    latest_from: Y diweddaraf gan %{title}
+    latest_from: Y diweddaraf gennym
     notices:
       changed_name_html: Mae %{title} bellach yn cael ei alw'n <a href='%{link_href}'>%{link_text}</a>
       devolved_html: Mae %{title} yn gorff o <a href='%{link_href}'>%{link_text}</a>
@@ -108,7 +108,7 @@ cy:
       special_health_authority:
       sub_organisation:
       tribunal: Tribiwnlys
-    what_we_do: Beth rydym yn ei wneud
+    what_we_do: Ein gwaith
     works_with_statement:
       few:
       many:
