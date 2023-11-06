@@ -25,7 +25,7 @@ def url_encode(str)
 end
 
 def pact_broker_base_url
-  "https://pact-broker.cloudapps.digital"
+  "https://govuk-pact-broker-6991351eca05.herokuapp.com"
 end
 
 Pact.service_provider "Collections Organisation API" do
