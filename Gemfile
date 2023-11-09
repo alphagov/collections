@@ -20,7 +20,7 @@ gem "rails_translation_manager"
 gem "rinku", require: "rails_rinku"
 gem "slimmer"
 gem "sprockets-rails"
-gem "uglifier"
+gem "terser"
 
 group :test do
   gem "cucumber-rails", require: false
