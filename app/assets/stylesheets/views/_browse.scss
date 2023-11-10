@@ -78,3 +78,12 @@ $browse-header-background-colour: #263135;
     margin-bottom: govuk-spacing(1);
   }
 }
+
+.browse__action-links {
+  border-bottom: 4px solid govuk-colour("blue");
+  margin-bottom: govuk-spacing(4);
+
+  @include govuk-media-query($from: "tablet") {
+    margin-bottom: govuk-spacing(6);
+  }
+}

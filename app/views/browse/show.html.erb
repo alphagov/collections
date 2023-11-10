@@ -20,7 +20,7 @@
   } %>
 <% end %>
 
-<%= render "shared/browse_header", { margin_bottom: page.slug == "benefits" || page.recruitment_survey_url ? 7 : 9 } do %>
+<%= render "shared/browse_header", { margin_bottom: display_action_links_for_slug?(page.slug) || page.recruitment_survey_url ? 6 : 9 } do %>
   <h1 class="browse__heading govuk-heading-xl">
     <%= page.title %>
   </h1>
@@ -42,25 +42,39 @@
   </div>
 <% end %>
 
-<% if page.slug == "benefits" %>
+<% if display_action_links_for_slug?(page.slug) %>
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <%= render "govuk_publishing_components/components/action_link", {
-          text: t("browse.check_benefits_and_financial_support"),
-          href: "/check-benefits-financial-support",
-          dark_large_icon: true,
-          margin_bottom: 7,
-          data_attributes: {
-            module: "ga4-link-tracker",
-            ga4_track_links_only: "",
-            ga4_link: {
-              event_name: "navigation",
-              type: "action",
-              index_link: "1",
-              index_total: "1",
-            }
-          }
+        <div class="browse__action-links">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: t("browse.popular_tasks"),
+            margin_bottom: 6,
+            font_size: "m"
+          } %>
+          <ul class="govuk-list govuk-!-margin-bottom-7">
+            <% if page.slug == "benefits" %>
+              <li>
+                <%= render "shared/browse_action_link", locals: { text: t("browse.check_benefits_and_financial_support"), href: "/check-benefits-financial-support" } %>
+              </li>
+            <% elsif page.slug == "business" %>
+              <li>
+                <%= render "shared/browse_action_link", locals: { text: t("browse.file_your_self_assessment"), href: "/log-in-file-self-assessment-tax-return" } %>
+              </li>
+              <li>
+                <%= render "shared/browse_action_link", locals: { text: t("browse.pay_your_self_assessment_tax_bill"), href: "/pay-self-assessment-tax-bill" } %>
+              </li>
+              <li>
+                <%= render "shared/browse_action_link", locals: { text: t("browse.employing_people"), href: "/browse/employing-people" } %>
+              </li>
+            <% end%>
+          </ul>
+        </div>
+
+        <%= render "govuk_publishing_components/components/heading", {
+          text: t("browse.topics"),
+          margin_bottom: 6,
+          font_size: "m"
         } %>
       </div>
     </div>
@@ -96,6 +110,6 @@
         description: second_level_browse_page.description,
       }
     end,
-    sub_heading_level: 2,
+    sub_heading_level: 3,
   } %>
 <% end %>
