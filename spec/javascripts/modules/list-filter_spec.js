@@ -76,7 +76,8 @@ describe('list-filter.js', function () {
     wrapper.append(items)
     $(document.body).append(wrapper)
 
-    new GOVUK.Modules.ListFilter(wrapper[0]).init()
+    /* eslint-disable no-new */
+    new GOVUK.Modules.ListFilter(wrapper[0])
   })
 
   afterAll(function () {

@@ -10,8 +10,8 @@ describe('A toggle attribute module', function () {
       '<div id="nested-click" data-toggle-attribute="data-state" data-when-closed-text="closed" data-when-open-text="open" data-state="closed">' +
         '<button type="button"><span>Toggler</span></button>' +
       '</div>'
-    var toggle = new GOVUK.Modules.ToggleAttribute(element)
-    toggle.init()
+    /* eslint-disable no-new */
+    new GOVUK.Modules.ToggleAttribute(element)
   })
 
   it('sets the state to open when clicked and back again', function () {

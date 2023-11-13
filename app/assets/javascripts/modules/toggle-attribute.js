@@ -4,6 +4,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 (function (Modules) {
   function ToggleAttribute ($module) {
     this.$module = $module
+    this.init()
   }
 
   ToggleAttribute.prototype.init = function () {

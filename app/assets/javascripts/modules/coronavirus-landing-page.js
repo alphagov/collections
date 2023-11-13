@@ -6,6 +6,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 (function (Modules) {
   function CoronavirusLandingPage ($module) {
     this.module = $module
+    this.init()
   }
 
   CoronavirusLandingPage.prototype.init = function () {

@@ -10,6 +10,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.filterTimeout = null
     this.form = this.$module.querySelector('[data-filter="form"]')
     this.searchResults = this.$module.querySelector('#search_results')
+    this.init()
   }
 
   ListFilter.prototype.init = function () {
