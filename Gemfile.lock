@@ -149,8 +149,7 @@ GEM
     diff-lcs (1.5.0)
     dig_rb (1.0.1)
     docile (1.4.0)
-    domain_name (0.5.20190701)
-      unf (>= 0.0.5, < 1.0.0)
+    domain_name (0.6.20231109)
     drb (2.2.0)
       ruby2_keywords
     erb_lint (0.5.0)
@@ -697,7 +696,7 @@ GEM
     simplecov-rcov (0.3.3)
       simplecov (>= 0.4.1)
     simplecov_json_formatter (0.1.4)
-    slimmer (18.1.0)
+    slimmer (18.2.0)
       json
       nokogiri (~> 1.7)
       null_logger
@@ -732,9 +731,6 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.8.2)
     unicode-display_width (2.4.2)
     unparser (0.6.10)
       diff-lcs (~> 1.3)
