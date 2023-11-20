@@ -55,10 +55,8 @@
   </div>
 
   <div class="govuk-grid-column-one-third">
-    <p class="govuk-body">
-      <%=  render "govuk_publishing_components/components/related_navigation", {
-      content_item: @past_prime_minister.related_prime_ministers_nav,
-      ga4_tracking: true
+    <%=  render "govuk_publishing_components/components/related_navigation", {
+      content_item: @past_prime_minister.related_prime_ministers_nav
     } %>
     <p class="govuk-body">
       <a class="govuk-link" href="/government/history/past-prime-ministers"><%= I18n.t("past_prime_ministers.view_all")  %></a>
