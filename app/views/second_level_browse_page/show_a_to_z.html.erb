@@ -37,18 +37,6 @@
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
-
-    <% if page.recruitment_survey_url %>
-      <div class="govuk-!-static-margin-top-4">
-        <%= render "govuk_publishing_components/components/intervention", {
-          suggestion_text: "Help improve GOV.UK",
-          suggestion_link_text: "Take part in user research",
-          suggestion_link_url: page.recruitment_survey_url,
-          new_tab: true,
-        } %>
-      </div>
-    <% end %>
-    
     <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-2" data-module="ga4-link-tracker">
       <%
         index_section_count = page.lists.count
