@@ -10,7 +10,9 @@
       {
         "href": "https://www.gov.uk/somewhere",
         "image": {
-          "url": "https://www.gov.uk/someimage.png",
+          "url": "https://assets.publishing.service.gov.uk/media/original_asset_manager_id/someimage.png",
+          "medium_resolution_url": "https://assets.publishing.service.gov.uk/media/s465_asset_manager_id/s465_someimage.png",
+          "high_resolution_url": "https://assets.publishing.service.gov.uk/media/s712_asset_manager_id/s712_someimage.png",
           "alt_text": "Alt text for the image"
         },
         "title": "A document related to this location",
@@ -21,7 +23,9 @@
       {
         "href": "https://www.gov.uk/somewhere-without-an-update-date",
         "image": {
-          "url": "https://www.gov.uk/someimage2.png",
+          "url": "https://assets.publishing.service.gov.uk/media/original_asset_manager_id/someimage2.png",
+          "medium_resolution_url": "https://assets.publishing.service.gov.uk/media/s465_asset_manager_id/s465_someimage2.png",
+          "high_resolution_url": "https://assets.publishing.service.gov.uk/media/s712_asset_manager_id/s712_someimage2.png",
           "alt_text": "Alt text for the second image"
         },
         "title": "A document related to this location with no updated date",

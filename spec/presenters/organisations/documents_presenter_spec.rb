@@ -6,6 +6,7 @@ RSpec.describe Organisations::DocumentsPresenter do
     let(:documents) { organisation_with_featured_documents["details"]["ordered_featured_documents"] }
     let(:documents_of_no_10) { organisation_with_featured_documents_and_is_no_10["details"]["ordered_featured_documents"] }
     let(:documents_presenter) { presenter_from_organisation_hash(organisation_with_featured_documents) }
+    let(:documents_presenter_with_missing_urls) { presenter_from_organisation_hash(organisation_with_featured_documents_and_missing_urls) }
     let(:documents_presenter_no_10) { presenter_from_organisation_hash(organisation_with_featured_documents_and_is_no_10) }
     let(:no_documents_presenter) { presenter_from_organisation_hash(organisation_with_no_documents) }
 
@@ -24,7 +25,7 @@ RSpec.describe Organisations::DocumentsPresenter do
         expected = [
           {
             href: "/government/news/new-head-of-the-serious-fraud-office-announced",
-            image_src: "https://assets.publishing.service.gov.uk/s465_jeremy.jpg",
+            image_src: "https://assets.publishing.service.gov.uk/media/s465_asset_manager_id/s465_jeremy.jpg",
             image_alt: "Attorney General Jeremy Wright QC MP",
             context: {
               date: Date.parse(time_stamps[0]),
@@ -39,7 +40,7 @@ RSpec.describe Organisations::DocumentsPresenter do
           },
           {
             href: "/government/news/new-head-of-a-different-office-announced",
-            image_src: "https://assets.publishing.service.gov.uk/s465_john.jpg",
+            image_src: "https://assets.publishing.service.gov.uk/media/s465_asset_manager_id/s465_john.jpg",
             image_alt: "John Someone MP",
             context: {
               date: Date.parse(time_stamps[1]),
@@ -61,7 +62,7 @@ RSpec.describe Organisations::DocumentsPresenter do
       time_stamp = documents.first["public_updated_at"]
       expected = {
         href: "/government/news/new-head-of-the-serious-fraud-office-announced",
-        image_src: "https://assets.publishing.service.gov.uk/s712_jeremy.jpg",
+        image_src: "https://assets.publishing.service.gov.uk/media/s712_asset_manager_id/s712_jeremy.jpg",
         image_alt: "Attorney General Jeremy Wright QC MP",
         context: {
           date: Date.parse(time_stamp),
@@ -76,11 +77,17 @@ RSpec.describe Organisations::DocumentsPresenter do
       expect(documents_presenter.first_featured_news).to eq(expected)
     end
 
+    it "formats the main large news story with url field when high_resolution_url is not provided" do
+      expected = "https://assets.publishing.service.gov.uk/media/original_asset_manager_id/jeremy.jpg"
+
+      expect(documents_presenter_with_missing_urls.first_featured_news[:image_src]).to eq(expected)
+    end
+
     it "formats the remaining news stories correctly" do
       time_stamp = documents.last["public_updated_at"]
       expected = [{
         href: "/government/news/new-head-of-a-different-office-announced",
-        image_src: "https://assets.publishing.service.gov.uk/s465_john.jpg",
+        image_src: "https://assets.publishing.service.gov.uk/media/s465_asset_manager_id/s465_john.jpg",
         image_alt: "John Someone MP",
         context: {
           date: Date.parse(time_stamp),
@@ -92,6 +99,12 @@ RSpec.describe Organisations::DocumentsPresenter do
         heading_level: 3,
       }]
       expect(documents_presenter.remaining_featured_news).to eq(expected)
+    end
+
+    it "formats the remaining news stories with url field when medium_resolution_url is not provided" do
+      expected = "https://assets.publishing.service.gov.uk/media/original_asset_manager_id/john.jpg"
+
+      expect(documents_presenter_with_missing_urls.remaining_featured_news.first[:image_src]).to eq(expected)
     end
 
     it "returns true if there are latest documents" do
