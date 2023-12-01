@@ -16,7 +16,7 @@ RSpec.describe WorldLocationNews do
     expect(world_location_news.ordered_featured_documents.first).to eq(
       {
         href: "https://www.gov.uk/somewhere",
-        image_src: "https://www.gov.uk/someimage.png",
+        image_src: "https://assets.publishing.service.gov.uk/media/original_asset_manager_id/someimage.png",
         image_alt: "Alt text for the image",
         heading_text: "A document related to this location",
         description: "Very interesting document content. However this goes over the 160 character limit so when displayed this should be truncated in order to display the content...",
@@ -32,7 +32,7 @@ RSpec.describe WorldLocationNews do
     expect(world_location_news.ordered_featured_documents.second).to eq(
       {
         href: "https://www.gov.uk/somewhere-without-an-update-date",
-        image_src: "https://www.gov.uk/someimage2.png",
+        image_src: "https://assets.publishing.service.gov.uk/media/original_asset_manager_id/someimage2.png",
         image_alt: "Alt text for the second image",
         heading_text: "A document related to this location with no updated date",
         description: "Very interesting document content.",

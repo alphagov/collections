@@ -8,14 +8,6 @@ module OrganisationHelper
     I18n.t("organisations.type.#{organisation_type}", default: I18n.t("organisations.type.other"))
   end
 
-  def image_url_by_size(image_url, size)
-    image_url_array = image_url.split("/")
-    image_by_size_name = "s#{size}_" + image_url_array[-1]
-    image_url_array[-1] = image_by_size_name
-
-    image_url_array.join("/")
-  end
-
   def search_results_to_documents(search_results, organisation, include_metadata: true)
     {
       brand: (organisation.brand if organisation.is_live?),
