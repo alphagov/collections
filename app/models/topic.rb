@@ -1,4 +1,6 @@
 class Topic
+  include RecruitmentBannerHelper
+
   attr_reader :content_item
 
   delegate(
