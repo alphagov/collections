@@ -59,13 +59,13 @@
               </li>
             <% elsif page.slug == "business" %>
               <li>
-                <%= render "shared/browse_action_link", locals: { text: t("browse.file_your_self_assessment"), href: "/log-in-file-self-assessment-tax-return" } %>
+                <%= render "shared/browse_action_link", locals: { text: t("browse.hmrc_online_services"), href: "/log-in-register-hmrc-online-services" } %>
               </li>
               <li>
-                <%= render "shared/browse_action_link", locals: { text: t("browse.pay_your_self_assessment_tax_bill"), href: "/pay-self-assessment-tax-bill" } %>
+                <%= render "shared/browse_action_link", locals: { text: t("browse.self_assessment_tax_returns"), href: "/self-assessment-tax-returns" } %>
               </li>
               <li>
-                <%= render "shared/browse_action_link", locals: { text: t("browse.employing_people"), href: "/browse/employing-people" } %>
+                <%= render "shared/browse_action_link", locals: { text: t("browse.pay_employers_paye"), href: "/pay-paye-tax" } %>
               </li>
             <% end%>
           </ul>
