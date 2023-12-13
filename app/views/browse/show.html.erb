@@ -53,21 +53,11 @@
             font_size: "m"
           } %>
           <ul class="govuk-list govuk-!-margin-bottom-7">
-            <% if page.slug == "benefits" %>
+            <% action_link_data(page.slug).each do |link| %>
               <li>
-                <%= render "shared/browse_action_link", locals: { text: t("browse.check_benefits_and_financial_support"), href: "/check-benefits-financial-support" } %>
+                <%= render "shared/browse_action_link", locals: link %>
               </li>
-            <% elsif page.slug == "business" %>
-              <li>
-                <%= render "shared/browse_action_link", locals: { text: t("browse.hmrc_online_services"), href: "/log-in-register-hmrc-online-services" } %>
-              </li>
-              <li>
-                <%= render "shared/browse_action_link", locals: { text: t("browse.self_assessment_tax_returns"), href: "/self-assessment-tax-returns" } %>
-              </li>
-              <li>
-                <%= render "shared/browse_action_link", locals: { text: t("browse.pay_employers_paye"), href: "/pay-paye-tax" } %>
-              </li>
-            <% end%>
+            <% end %>
           </ul>
         </div>
 
