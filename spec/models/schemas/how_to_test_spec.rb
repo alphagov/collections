@@ -17,7 +17,7 @@ RSpec.describe Schemas::HowTo do
         "step": [
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-1-f0c4380d0551bb7f36f3bbc335f966197e8e8d087f3c259301e71751788fe254.png",
+            "image": "/assets/collections/step-1-419678d1eb10946da134d767de6a742194128995bc3fd078f02d698694b13cc8.png",
             "name": "Check you're allowed to drive",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#check-you-re-allowed-to-drive",
             "position": 1,
@@ -49,7 +49,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-2-8e5828409d4c6ba90d46423ddd110a69d594c9a95050a853b92a6ee65b4e6438.png",
+            "image": "/assets/collections/step-2-500da45e351d3c043efaa66abf85469f139aff761826940558f2d92ecaf2f923.png",
             "name": "Get a provisional driving licence",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#get-a-provisional-driving-licence",
             "position": 2,
@@ -64,7 +64,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-3-464e7f5d4df65200b5595a01337c5d619f486fe307bbc58bacf279ab31f0c0ca.png",
+            "image": "/assets/collections/step-3-cb41bc7399d970783e1da3927371f71f202749fa693e4855628e0ee84d2d951a.png",
             "name": "Driving lessons and practice",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#driving-lessons-and-practice",
             "position": 3,
@@ -102,7 +102,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-and-da0ea81ae330dafaf6f8beb2fe2f3875d68f718c4094627518ad6d3105205e28.png",
+            "image": "/assets/collections/step-and-4a5258a44e04865aa5381999fdbf0a3271c72cb09b8a6ef058bbcb3cb9fbebbe.png",
             "name": "Prepare for your theory test",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#prepare-for-your-theory-test",
             "position": 4,
@@ -129,7 +129,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-4-d605649a9cda7e3b6bce802cdf7b564dd1e893da065bede6dd52285cae80a4ea.png",
+            "image": "/assets/collections/step-4-02dc5864756f35d67b065a2d295e507c018fff107ef8dc2e3d872390493e01d8.png",
             "name": "Book and manage your theory test",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#book-and-manage-your-theory-test",
             "position": 5,
@@ -173,7 +173,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-5-e3c06303d977066500539e8b1ed0f04b3357e60b411e399ff22a3a85e9b7dfde.png",
+            "image": "/assets/collections/step-5-dc698051bb3aaae1e559d78619f78227e361200cbb4104730dc7cdb5c13b8532.png",
             "name": "Book and manage your driving test",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#book-and-manage-your-driving-test",
             "position": 6,
@@ -216,7 +216,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-6-0cb0f4e287fa0e07e440cda3d0dd8528064b259e12352158c9ba5fecde5b0001.png",
+            "image": "/assets/collections/step-6-88c7fad7cc164c399ce2eaa463b056e112ec0ffcefe1c0ce0d17f0e825934c77.png",
             "name": "When you pass",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#when-you-pass",
             "position": 7,
