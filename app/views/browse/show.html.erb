@@ -20,7 +20,7 @@
   } %>
 <% end %>
 
-<%= render "shared/browse_header", { margin_bottom: display_action_links_for_slug?(page.slug) || page.recruitment_survey_url ? 6 : 9 } do %>
+<%= render "shared/browse_header", { margin_bottom: page.slug == "benefits" ? 7 : 9 } do %>
   <h1 class="browse__heading govuk-heading-xl">
     <%= page.title %>
   </h1>
@@ -29,17 +29,6 @@
     margin_bottom: 2,
     inverse: true
   } %>
-<% end %>
-
-<% if page.recruitment_survey_url %>
-  <div class="govuk-width-container">
-    <%= render "govuk_publishing_components/components/intervention", {
-      suggestion_text: "Help improve GOV.UK",
-      suggestion_link_text: "Take part in user research",
-      suggestion_link_url: page.recruitment_survey_url,
-      new_tab: true,
-    } %>
-  </div>
 <% end %>
 
 <% if display_action_links_for_slug?(page.slug) %>
