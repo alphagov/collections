@@ -22,3 +22,7 @@
 /spec/reports
 .yarn/cache
 .yarn/install-state.gz
+
+# vim swap files and tags
+*.sw[a-z]
+/tags
