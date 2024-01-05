@@ -182,7 +182,7 @@ GEM
     google-protobuf (3.25.1)
     googleapis-common-protos-types (1.11.0)
       google-protobuf (~> 3.18)
-    govspeak (8.3.1)
+    govspeak (8.3.2)
       actionview (>= 6)
       addressable (>= 2.3.8, < 3)
       govuk_publishing_components (>= 35.1)
@@ -249,7 +249,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
     io-console (0.7.1)
-    irb (1.10.1)
+    irb (1.11.0)
       rdoc
       reline (>= 0.3.8)
     json (2.6.3)
@@ -285,7 +285,7 @@ GEM
     multi_test (1.1.0)
     multi_xml (0.6.0)
     mutex_m (0.2.0)
-    net-imap (0.4.8)
+    net-imap (0.4.9)
       date
       net-protocol
     net-pop (0.1.2)
@@ -296,7 +296,7 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.0)
-    nokogiri (1.15.5)
+    nokogiri (1.16.0)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     null_logger (0.0.1)
@@ -540,7 +540,7 @@ GEM
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
-    puma (6.4.0)
+    puma (6.4.1)
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (3.0.8)
