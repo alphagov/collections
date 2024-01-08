@@ -90,6 +90,7 @@ pa:
     services_and_information: ਸਾਰੀਆਂ %{acronym} ਸੇਵਾਵਾਂ ਅਤੇ ਜਾਣਕਾਰੀ
     subscription:
       email: ਈਮੇਲਾਂ ਪ੍ਰਾਪਤ ਕਰੋ
+      email_english_only:
       feed: ਫੀਡ ਦੇ ਗਾਹਕ ਬਣੋ
     type:
       adhoc_advisory_group: ਐਡਹਾਕ ਸਲਾਹਕਾਰ ਸਮੂਹ

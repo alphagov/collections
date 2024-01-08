@@ -90,6 +90,7 @@ fi:
     services_and_information: Kaikki %{acronym} palvelut ja tiedot
     subscription:
       email: Hanki sähköpostit
+      email_english_only:
       feed: Tilaa syöte
     type:
       adhoc_advisory_group: Ad-hoc-neuvoa-antava ryhmä

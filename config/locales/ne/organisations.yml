@@ -88,6 +88,7 @@ ne:
     services_and_information:
     subscription:
       email:
+      email_english_only:
       feed:
     type:
       adhoc_advisory_group:

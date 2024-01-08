@@ -90,6 +90,7 @@ bg:
     services_and_information: Всички услуги и пълната информация на %{acronym}
     subscription:
       email: Получаване на имейли
+      email_english_only:
       feed: Абонирайте се за канал
     type:
       adhoc_advisory_group: Специална консултативна група

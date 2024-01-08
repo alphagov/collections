@@ -90,6 +90,7 @@ sv:
     services_and_information: Alla %{acronym} tjänster och information
     subscription:
       email: Få e-post
+      email_english_only:
       feed: Prenumerera på flöde
     type:
       adhoc_advisory_group: Rådgivande ad hoc-grupp

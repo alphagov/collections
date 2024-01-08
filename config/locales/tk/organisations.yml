@@ -90,6 +90,7 @@ tk:
     services_and_information: Ähli %{acronym} hyzmatlar we maglumatlar
     subscription:
       email: E-poçtalary alyň
+      email_english_only:
       feed: Goldamak üçin agza boluň
     type:
       adhoc_advisory_group: Aýratyn maslahat beriji topar

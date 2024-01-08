@@ -90,6 +90,7 @@ et:
     services_and_information: Kõik %{acronym} teenused ja teave
     subscription:
       email: Hangi e-kirju
+      email_english_only:
       feed: Telli voog
     type:
       adhoc_advisory_group: Ajutine nõuanderühm

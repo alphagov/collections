@@ -90,6 +90,7 @@ so:
     services_and_information: Dhamaan %{acronym} adeegyada iyo macluumaadka
     subscription:
       email: Hel iimaylada
+      email_english_only:
       feed: Ku xidhnow warka
     type:
       adhoc_advisory_group: Kooxda latalinta kadiska ah

@@ -90,6 +90,7 @@ ps:
     services_and_information: ټول %{acronym} خدمتونه او معلومات
     subscription:
       email: بریښنالیکونه ترلاسه کړئ
+      email_english_only:
       feed: فیډ کې ګډون وکړئ
     type:
       adhoc_advisory_group: د عادلانه مشورتي ګروپ

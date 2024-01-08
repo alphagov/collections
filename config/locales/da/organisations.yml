@@ -90,6 +90,7 @@ da:
     services_and_information: All %{acronym} tjenester og information
     subscription:
       email: Få e-mails
+      email_english_only:
       feed: Abonner på feed
     type:
       adhoc_advisory_group: Ad hoc-rådgivende gruppe

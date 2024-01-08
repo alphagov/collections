@@ -2,6 +2,17 @@ RSpec.describe Organisations::ShowPresenter do
   include SearchApiHelpers
   include OrganisationHelpers
 
+  def build_show_presenter_for_org(title, type, base_path: "/base/path", brand: "brand")
+    content_item = ContentItem.new({
+      title:,
+      base_path:,
+      details: { organisation_type: type, brand: },
+    }.with_indifferent_access)
+
+    organisation = Organisation.new(content_item)
+    Organisations::ShowPresenter.new(organisation)
+  end
+
   it "adds a prefix to a title when it should" do
     presenter = build_show_presenter_for_org("Attorney General's Office", "ministerial_department")
     expect(presenter.prefixed_title).to eq("the Attorney General's Office")
@@ -21,12 +32,44 @@ RSpec.describe Organisations::ShowPresenter do
     expect(presenter.prefixed_title).to eq("civil service hr")
   end
 
-  def build_show_presenter_for_org(title, type)
-    content_item = ContentItem.new({ title:,
-                                     details: { organisation_type: type } }.with_indifferent_access)
+  context "#subscription_links" do
+    context "when government organisation's page in Welsh" do
+      it "returns subscription links indicating it's English only" do
+        base_path = "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+        presenter = build_show_presenter_for_org(
+          "Office of the Secretary of State for Wales",
+          "ministerial_department",
+          base_path:,
+        )
+        I18n.with_locale(:cy) do
+          expect(presenter.subscription_links).to eq({
+            email_signup_link: "/email-signup?link=#{base_path}",
+            email_signup_link_text: "I gael e-byst (Saesneg yn unig)",
+            email_signup_link_text_locale: false,
+            brand: "brand",
+          })
+        end
+      end
+    end
 
-    organisation = Organisation.new(content_item)
-    Organisations::ShowPresenter.new(organisation)
+    context "when government organisation's page in another language" do
+      it "returns subscription links without indication" do
+        base_path = "/government/organisations/office-of-the-secretary-of-state-for-wales"
+        presenter = build_show_presenter_for_org(
+          "Office of the Secretary of State for Wales",
+          "ministerial_department",
+          base_path:,
+        )
+        I18n.with_locale(:en) do
+          expect(presenter.subscription_links).to eq({
+            email_signup_link: "/email-signup?link=#{base_path}",
+            email_signup_link_text: "Get emails",
+            email_signup_link_text_locale: false,
+            brand: "brand",
+          })
+        end
+      end
+    end
   end
 
   it "returns a link to a parent organisation" do

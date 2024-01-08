@@ -90,6 +90,7 @@ hu:
     services_and_information: Minden %{acronym} szolgálatás és információ
     subscription:
       email: E-mailek fogadása
+      email_english_only:
       feed: Feliratkozás a hírcsatornára
     type:
       adhoc_advisory_group: Ad-hoc tanácsadói csoport

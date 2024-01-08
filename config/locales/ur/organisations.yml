@@ -90,6 +90,7 @@ ur:
     services_and_information: "%{acronym} کی تمام سروسز اور معلومات"
     subscription:
       email: ای میلز حاصل کریں
+      email_english_only:
       feed: فیڈ پر سبسکرائب کریں
     type:
       adhoc_advisory_group: ایڈہاک مشاورتی گروپ

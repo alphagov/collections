@@ -90,6 +90,7 @@ en:
     services_and_information: All %{acronym} services and information
     subscription:
       email: Get emails
+      email_english_only: Get emails (English only)
       feed: Subscribe to feed
     type:
       adhoc_advisory_group: Ad-hoc advisory group

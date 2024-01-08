@@ -90,6 +90,7 @@ gd:
     services_and_information: Gach faisnéis agus seirbhís ó %{acronym}
     subscription:
       email: Faigh r-phost
+      email_english_only:
       feed: Liostáil le fotha
     type:
       adhoc_advisory_group: Grúpa oibre ad hoc

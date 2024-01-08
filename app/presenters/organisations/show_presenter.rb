@@ -14,10 +14,17 @@ module Organisations
     end
 
     def subscription_links
+      if special_subscription_link_text?
+        email_signup_link_text = I18n.t("organisations.subscription.email_english_only")
+        email_signup_link_text_locale = t_fallback("organisations.subscription.email_english_only")
+      else
+        email_signup_link_text = I18n.t("organisations.subscription.email")
+        email_signup_link_text_locale = t_fallback("organisations.subscription.email")
+      end
       {
         email_signup_link: "/email-signup?link=#{@org.base_path}",
-        email_signup_link_text: I18n.t("organisations.subscription.email"),
-        email_signup_link_text_locale: t_fallback("organisations.subscription.email"),
+        email_signup_link_text:,
+        email_signup_link_text_locale:,
         brand: @org.brand,
       }
     end
@@ -125,6 +132,10 @@ module Organisations
 
     def has_definite_article?(phrase)
       phrase.downcase.strip[0..2] == "the"
+    end
+
+    def special_subscription_link_text?
+      I18n.locale.to_sym == :cy
     end
 
     def separate_job_links(corporate_information_links)

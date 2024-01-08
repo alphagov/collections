@@ -88,6 +88,7 @@ hr:
     services_and_information: Sve %{acronym} usluge i informacije
     subscription:
       email: Dobijte e -poštu
+      email_english_only:
       feed: Pretplatite se na feed
     type:
       adhoc_advisory_group: Ad-hoc savjetodavna skupina

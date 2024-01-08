@@ -90,6 +90,7 @@ zh-tw:
     services_and_information: 所有 %{acronym} 服務和資訊
     subscription:
       email: 取得電子郵件
+      email_english_only:
       feed: 訂閱提要
     type:
       adhoc_advisory_group: 特設諮詢小組

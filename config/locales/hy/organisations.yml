@@ -90,6 +90,7 @@ hy:
     services_and_information: Բոլոր %{acronym} ծառայություններն ու տեղեկությունները
     subscription:
       email: Ստանալ էլ․ հաղորդագրություններ
+      email_english_only:
       feed: Բաժանորդագրվել նորություւններին
     type:
       adhoc_advisory_group: Հատուկ խորհրդատվական խումբ

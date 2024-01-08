@@ -90,6 +90,7 @@ sw:
     services_and_information: Huduma na habari zote za %{acronym}
     subscription:
       email: Pata barua pepe
+      email_english_only:
       feed: Jisajili ili upokee mipasho
     type:
       adhoc_advisory_group: Kikundi cha ushauri kisicho rasmi

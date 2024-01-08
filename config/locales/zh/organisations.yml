@@ -88,6 +88,7 @@ zh:
     services_and_information: 全部 %{acronym} 服务和信息
     subscription:
       email: 获取电子邮件
+      email_english_only:
       feed: 订阅推送
     type:
       adhoc_advisory_group: 特别咨询小组

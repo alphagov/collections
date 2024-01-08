@@ -90,6 +90,7 @@ he:
     services_and_information: כל השירותים והמידע של %{acronym}
     subscription:
       email: קבל הודעות דואר אלקטרוני
+      email_english_only:
       feed: הירשם להזנה
     type:
       adhoc_advisory_group: קבוצת ייעוץ אד-הוק

@@ -90,6 +90,7 @@ ko:
     services_and_information: 모든 %{acronym} 서비스 및 정보
     subscription:
       email: 이메일 받기
+      email_english_only:
       feed: 피드로 구독하기
     type:
       adhoc_advisory_group: 임시 자문단
