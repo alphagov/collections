@@ -54,6 +54,10 @@
               <div class="govuk-!-margin-bottom-3">
                 <%= render "govuk_publishing_components/components/details", {
                   title: @presented_organisations.works_with_statement(organisation),
+                  ga4_attributes: {
+                    index_section_count: number_of_details_components,
+                    section: organisation["title"],
+                  },
                   summary_aria_attributes: {
                     label: "#{organisation["title"]} #{@presented_organisations.works_with_statement(organisation)}"
                   }
