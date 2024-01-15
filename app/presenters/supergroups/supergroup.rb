@@ -98,7 +98,7 @@ module Supergroups
         end
 
         if with_image_url
-          data[:image] = { url: (document.image_url || default_news_image_url) }
+          data[:image] = { url: document.image_url || default_news_image_url }
         end
 
         data

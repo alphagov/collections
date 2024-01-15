@@ -113,7 +113,7 @@ module Organisations
       orgs_with_services_and_information_link = %w[
         hm-revenue-customs
       ]
-      return true if orgs_with_services_and_information_link.include?(org.slug)
+      true if orgs_with_services_and_information_link.include?(org.slug)
     end
   end
 end
