@@ -112,7 +112,7 @@ module Organisations
     end
 
     def contact_description(description)
-      return tag.p(description.gsub("\r\n", "<br/>").html_safe) if description.present?
+      tag.p(description.gsub("\r\n", "<br/>").html_safe) if description.present?
     end
   end
 end

@@ -58,7 +58,7 @@ module Organisations
 
     def organisations_with_works_with_statement
       count = 0
-      all_organisations.each do |_organisation_type, organisations|
+      all_organisations.each_value do |organisations|
         organisations.each do |organisation|
           count += 1 if works_with_statement(organisation)
         end
