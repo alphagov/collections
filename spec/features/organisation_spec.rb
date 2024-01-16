@@ -58,7 +58,7 @@ RSpec.describe "Organisation pages" do
     expect(page).to have_css(".content")
   end
 
-  it "includes description and autodiscovery meta tags" do
+  it "includes description, autodiscovery, and google no image preview meta tags" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     padded_string =
       "10 Downing Street is the official residence and the office of the British Prime Minister.\
@@ -66,6 +66,7 @@ RSpec.describe "Organisation pages" do
       and to communicate the government’s policies to Parliament, the public and international audiences."
     string = padded_string.gsub("      ", " ")
     expect(page).to have_selector("meta[name='description'][content='#{string}']", visible: :hidden)
+    expect(page).to have_selector("meta[name='robots'][content='max-image-preview:none']", visible: :hidden)
     expect(page).to have_css("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: :hidden)
     expect(page).to have_css("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: :hidden)
   end
