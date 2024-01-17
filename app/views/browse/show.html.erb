@@ -89,6 +89,6 @@
         description: second_level_browse_page.description,
       }
     end,
-    sub_heading_level: 3,
+    sub_heading_level: display_action_links_for_slug?(page.slug) ? 3 : 2,
   } %>
 <% end %>
