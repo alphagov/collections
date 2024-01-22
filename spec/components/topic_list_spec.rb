@@ -125,11 +125,13 @@ RSpec.describe "topic_list component", type: :view do
     expect(rendered).to have_selector(".app-c-topic-list.app-c-topic-list--small")
   end
 
-  it "renders with margin-bottom" do
+  it "renders without margin-bottom by default" do
     render_component(items: [simple_item])
     # Margin bottom should not be applied by default
     expect(rendered).not_to have_selector(".govuk-\\!-margin-bottom-6")
+  end
 
+  it "renders with margin-bottom" do
     render_component(items: [simple_item], margin_bottom: true)
     expect(rendered).to have_selector(".govuk-\\!-margin-bottom-6")
   end
