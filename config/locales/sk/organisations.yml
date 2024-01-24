@@ -90,6 +90,7 @@ sk:
     services_and_information: Všetky %{acronym} služby a informácie
     subscription:
       email: Dostávať e-maily
+      email_english_only:
       feed: Prihlásiť sa k odberu
     type:
       adhoc_advisory_group: Ad hoc poradná skupina

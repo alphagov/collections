@@ -90,6 +90,7 @@ pl:
     services_and_information: Wszystkie usługi i informacje %{acronym}
     subscription:
       email: Otrzymuj wiadomości e-mail
+      email_english_only:
       feed: Subskrybuj kanał
     type:
       adhoc_advisory_group: Doraźna grupa doradcza

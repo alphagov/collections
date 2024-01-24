@@ -90,6 +90,7 @@ ja:
     services_and_information: すべての%{acronym}サービスと情報
     subscription:
       email: メールを受け取る
+      email_english_only:
       feed: フィードを購読する
     type:
       adhoc_advisory_group: 特別顧問団

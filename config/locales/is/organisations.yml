@@ -90,6 +90,7 @@ is:
     services_and_information: Öll %{acronym} þjónusta og upplýsingar
     subscription:
       email: Fá tölvupósta
+      email_english_only:
       feed: Gerast áskrifandi að straumi
     type:
       adhoc_advisory_group: Sérstakir ráðgjafahópar

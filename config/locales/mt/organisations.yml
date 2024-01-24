@@ -88,6 +88,7 @@ mt:
     services_and_information: Is-servizzi u l-informazzjoni %{acronym} kollha
     subscription:
       email: Irċievi l-imejls
+      email_english_only:
       feed: Abbona għall-feed
     type:
       adhoc_advisory_group: Grupp konsultattiv ad-hoc

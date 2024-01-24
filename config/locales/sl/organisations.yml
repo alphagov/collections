@@ -90,6 +90,7 @@ sl:
     services_and_information: Vse %{acronym} storitve in informacije
     subscription:
       email: Prejemajte e-sporočila
+      email_english_only:
       feed: Naročite se na novice
     type:
       adhoc_advisory_group: Ad-hoc svetovalna skupina

@@ -90,6 +90,7 @@ cs:
     services_and_information: Všechny služby a informace %{akronym}
     subscription:
       email: Získat e-maily
+      email_english_only:
       feed: Přihlásit se k odběru
     type:
       adhoc_advisory_group: Ad-hoc poradní skupina

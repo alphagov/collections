@@ -88,6 +88,7 @@ hi:
     services_and_information: सभी %{acronym} सेवाएं और जानकारी
     subscription:
       email: ईमेल प्राप्त करें
+      email_english_only:
       feed: फीड के लिए सब्स्क्राइब करें
     type:
       adhoc_advisory_group: विशेष सलाहकार समूह

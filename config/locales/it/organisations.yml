@@ -90,6 +90,7 @@ it:
     services_and_information: Tutti %{acronym} i servizi e le informazioni
     subscription:
       email: Ricevi e-mail
+      email_english_only:
       feed: Iscriviti al feed
     type:
       adhoc_advisory_group: Gruppo di consulenza ad-hoc

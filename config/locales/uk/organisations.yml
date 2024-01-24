@@ -90,6 +90,7 @@ uk:
     services_and_information: Усі послуги та інформація %{acronym}
     subscription:
       email: Отримувати електронні листи
+      email_english_only:
       feed: Підпишіться на канал
     type:
       adhoc_advisory_group: Спеціальна консультативна група

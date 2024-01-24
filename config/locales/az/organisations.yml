@@ -90,6 +90,7 @@ az:
     services_and_information: Bütün %{acronym} xidmətləri və məlumatları
     subscription:
       email: E-məktublar alın
+      email_english_only:
       feed: Veb-kanala abunə olun
     type:
       adhoc_advisory_group: Xüsusi məsləhətçilər qrupu

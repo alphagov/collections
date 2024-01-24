@@ -90,6 +90,7 @@ es-419:
     services_and_information: Todos %{acronym} los servicios e información
     subscription:
       email: Recibir emails
+      email_english_only:
       feed: Suscríbase a la fuente
     type:
       adhoc_advisory_group: Grupo consultivo ad hoc

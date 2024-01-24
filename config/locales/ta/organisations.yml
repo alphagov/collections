@@ -90,6 +90,7 @@ ta:
     services_and_information: அனைத்து %{acronym} சேவைகள் மற்றும் தகவல்கள்
     subscription:
       email: மின்னஞ்சல்களைப் பெறுக
+      email_english_only:
       feed: செய்தியூட்டத்தில் இணைக
     type:
       adhoc_advisory_group: தற்காலிக ஆலோசனைக் குழு

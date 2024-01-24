@@ -90,6 +90,7 @@ si:
     services_and_information: සියලු %{acronym} සේවා සහ තොරතුරු
     subscription:
       email: විද්‍යුත් තැපෑල් ලබා ගන්න
+      email_english_only:
       feed: පෝෂණය කිරීමට දායක වන්න
     type:
       adhoc_advisory_group: තත්කාර්ය උපදේශක කණ්ඩායම

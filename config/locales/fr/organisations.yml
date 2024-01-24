@@ -88,6 +88,7 @@ fr:
     services_and_information: Tous les %{acronym} services et informations
     subscription:
       email: Obtenir des courriels
+      email_english_only:
       feed: S'abonner au flux
     type:
       adhoc_advisory_group: Groupe de consultation ad hoc

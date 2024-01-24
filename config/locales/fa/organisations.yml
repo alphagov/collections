@@ -90,6 +90,7 @@ fa:
     services_and_information: تمام خدمات و اطلاعات %{acronym}
     subscription:
       email: دریافت ایمیل‌ها
+      email_english_only:
       feed: اشتراک در فید
     type:
       adhoc_advisory_group: گروه مشاوره اختصاصی

@@ -92,6 +92,7 @@ pa-pk:
     services_and_information: ساریاں {acronym}% خدمات تے معلومات
     subscription:
       email: ای میل حاصل کرو
+      email_english_only:
       feed: جواب لین لئی سبسکرائب کرو
     type:
       adhoc_advisory_group: ایڈہاک ایڈوائزری گروپ

@@ -90,6 +90,7 @@ id:
     services_and_information: Semua %{acronym} layanan dan informasi
     subscription:
       email: Dapatkan email
+      email_english_only:
       feed: Berlangganan feed
     type:
       adhoc_advisory_group: Grup penasihat ad-hoc

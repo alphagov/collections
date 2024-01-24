@@ -90,6 +90,7 @@ tr:
     services_and_information: Tüm %{acronym} hizmetleri ve bilgisi
     subscription:
       email: E-postalar al
+      email_english_only:
       feed: Yayına abone ol
     type:
       adhoc_advisory_group: Geçici danışma grubu

@@ -90,6 +90,7 @@ bn:
     services_and_information: সকল %{acronym} পরিষেবা ও তথ্য
     subscription:
       email: ইমেইল পান
+      email_english_only:
       feed: ফিডে সাবস্ক্রাইব করুন
     type:
       adhoc_advisory_group: অ্যাড-হক পরামর্শক গোষ্ঠী

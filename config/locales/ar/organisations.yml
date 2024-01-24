@@ -90,6 +90,7 @@ ar:
     services_and_information: جميع معلومات وخدمات %{acronym}
     subscription:
       email: احصل على رسائل البريد الإلكتروني
+      email_english_only:
       feed: اشترك في التغذية
     type:
       adhoc_advisory_group: مجموعة استشارية مخصصة

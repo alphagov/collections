@@ -90,6 +90,7 @@ lt:
     services_and_information: Visos %{acronym} paslaugos ir informacija
     subscription:
       email: Gauti el. laiškus
+      email_english_only:
       feed: Prenumeruoti srautą
     type:
       adhoc_advisory_group: Ad-hoc konsultacinė grupė

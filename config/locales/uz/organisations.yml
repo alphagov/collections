@@ -90,6 +90,7 @@ uz:
     services_and_information: Барча %{acronym} хизматлар ва маълумотлар
     subscription:
       email: Электрон манзилларни олиш
+      email_english_only:
       feed: Лентага обуна бўлиш
     type:
       adhoc_advisory_group: Махсус маслаҳат гуруҳи

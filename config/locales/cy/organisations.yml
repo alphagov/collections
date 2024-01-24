@@ -90,6 +90,7 @@ cy:
     services_and_information: Pob %{acronym} gwasanaeth a gwybodaeth
     subscription:
       email: I gael e-byst
+      email_english_only: I gael e-byst (Saesneg yn unig)
       feed: Tanysgrifio i'r ffrwd
     type:
       adhoc_advisory_group: Grŵp cynghori ad-hoc

@@ -90,6 +90,7 @@ ro:
     services_and_information: Toate serviciile și informațiile de la %{acronym}
     subscription:
       email: Primiți e-mailuri
+      email_english_only:
       feed: Abonați-vă la flux
     type:
       adhoc_advisory_group: Grup consultativ ad-hoc

@@ -90,6 +90,7 @@ lv:
     services_and_information: Visi %{acronym} pakalpojumi un informācija
     subscription:
       email: Saņemt e-pasta ziņojumus
+      email_english_only:
       feed: Abonēt plūsmu
     type:
       adhoc_advisory_group: Ad hoc padomdevēju grupa

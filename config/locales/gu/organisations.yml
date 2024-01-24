@@ -88,6 +88,7 @@ gu:
     services_and_information: તમામ %{acronym} સેવાઓ અને માહિતી
     subscription:
       email: ઈમેલ્સ મેળવો
+      email_english_only:
       feed: ફીડ માટે સબ્સ્ક્રાઈબ કરો
     type:
       adhoc_advisory_group: એડ-હોક સલાહકાર જૂથ

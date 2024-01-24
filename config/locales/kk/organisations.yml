@@ -90,6 +90,7 @@ kk:
     services_and_information: Барлық %{acronym} қызметтер мен ақпарат
     subscription:
       email: Электрондық хаттарды алу
+      email_english_only:
       feed: Арнаға жазылу
     type:
       adhoc_advisory_group: Арнайы кеңес тобы

@@ -90,6 +90,7 @@ el:
     services_and_information: Όλες οι υπηρεσίες και οι πληροφορίες %{acronym}
     subscription:
       email: Λάβετε email
+      email_english_only:
       feed: Εγγραφείτε στη ροή
     type:
       adhoc_advisory_group: Ad-hoc συμβουλευτική ομάδα

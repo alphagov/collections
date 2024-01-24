@@ -90,6 +90,7 @@ vi:
     services_and_information: Tất cả các dịch vụ %{acronym} và thông tin
     subscription:
       email: Nhận email
+      email_english_only:
       feed: Đăng ký nguồn cấp dữ liệu
     type:
       adhoc_advisory_group: Nhóm cố vấn đặc biệt

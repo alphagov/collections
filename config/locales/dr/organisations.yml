@@ -93,6 +93,7 @@ dr:
     services_and_information: تمام{acronym}%خدمات و اطلاعات
     subscription:
       email: ایمل ها دریافت نمایید
+      email_english_only:
       feed: برای حمایت سبسکرایب نمایید
     type:
       adhoc_advisory_group: گروه مشاورهء موقت

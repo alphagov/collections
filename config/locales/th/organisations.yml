@@ -90,6 +90,7 @@ th:
     services_and_information: บริการและข้อมูลของ %{acronym} ทั้งหมด
     subscription:
       email: รับอีเมล
+      email_english_only:
       feed: สมัครรับข้อมูลฟีดข่าว
     type:
       adhoc_advisory_group: กลุ่มที่ปรึกษาเฉพาะกิจ

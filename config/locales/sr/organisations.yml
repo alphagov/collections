@@ -90,6 +90,7 @@ sr:
     services_and_information: Sve %{acronym} usluge i informacije
     subscription:
       email: Želim da dobijam e-poruke
+      email_english_only:
       feed: Pretplatite se na fid
     type:
       adhoc_advisory_group: Namenske grupe za savetovanje

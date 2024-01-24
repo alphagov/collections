@@ -90,6 +90,7 @@ de:
     services_and_information: Alle %{acronym} Dienstleistungen und Informationen
     subscription:
       email: Emails erhalten
+      email_english_only:
       feed: Feed abonnieren
     type:
       adhoc_advisory_group: Ad-hoc-Beratungsgruppe
