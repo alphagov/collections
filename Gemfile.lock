@@ -175,7 +175,7 @@ GEM
       net-http
     ffi (1.16.3)
     find_a_port (1.0.1)
-    gds-api-adapters (92.1.0)
+    gds-api-adapters (93.0.0)
       addressable
       link_header
       null_logger
