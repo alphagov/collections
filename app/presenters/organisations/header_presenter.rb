@@ -36,13 +36,6 @@ module Organisations
       if org.ordered_featured_links
         links = []
 
-        if has_services_and_information_link?
-          see_more_link = {
-            text: I18n.t("organisations.services_and_information", acronym: org.acronym),
-            path: "/government/organisations/#{org.slug}/services-information",
-          }
-        end
-
         org.ordered_featured_links.each do |link|
           links << {
             text: link["title"],
@@ -54,7 +47,6 @@ module Organisations
           small: org.is_news_organisation?,
           brand: org.brand,
           items: links,
-          see_more_link:,
         }
       end
     end
@@ -107,13 +99,6 @@ module Organisations
           url: "/government/organisations",
         }
       end
-    end
-
-    def has_services_and_information_link?
-      orgs_with_services_and_information_link = %w[
-        hm-revenue-customs
-      ]
-      true if orgs_with_services_and_information_link.include?(org.slug)
     end
   end
 end
