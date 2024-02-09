@@ -20,7 +20,7 @@
     <% if @organisation.is_live? %>
       <div class="<%= @header.link_wrapper_class %> organisation__margin-bottom">
         <%= render "govuk_publishing_components/components/translation_nav", @header.translation_links %>
-        <%= render "components/topic_list", @header.ordered_featured_links %>
+        <%= render "components/topic_list", @header.ordered_featured_links.merge({ ga4_data: { section: @header.org.title } }) %>
       </div>
     <% end %>
   </div>

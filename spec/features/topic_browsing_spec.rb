@@ -102,7 +102,7 @@ RSpec.feature "Topic browsing" do
 
     visit "/topic"
 
-    expect(page).to have_selector('.topics-page[data-module="gem-track-click ga4-link-tracker"]')
+    expect(page).to have_selector('.topics-page[data-module="gem-track-click"]')
 
     topic_link = page.find("a", text: "Oil and Gas")
 
@@ -135,7 +135,7 @@ RSpec.feature "Topic browsing" do
 
     visit "/topic/oil-and-gas"
 
-    expect(page).to have_selector('.topics-page[data-module="gem-track-click ga4-link-tracker"]')
+    expect(page).to have_selector('.topics-page[data-module="gem-track-click"]')
 
     within ".app-c-topic-list" do
       within "li:nth-child(1)" do

@@ -1,7 +1,14 @@
 <% if @documents.has_promotional_features? %>
 <section class="organisation__margin-bottom organisation__section-wrap">
   <% @documents.promotional_features.each do |feature| %>
-    <div class="organisation__promotion">
+    <%
+      ga4_image_card_json = {
+        "event_name": "navigation",
+        "type": "image card",
+        "section": feature[:title]
+      }.to_json
+    %>
+    <div class="organisation__promotion" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
       <%= render "govuk_publishing_components/components/heading", {
         text: feature[:title],
         heading_level: 2,

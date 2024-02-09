@@ -892,4 +892,52 @@ module OrganisationHelpers
     stub_content_store_has_item(content_item["base_path"], content_item)
     stub_search_api_latest_content_requests(slug)
   end
+
+  def test_ga4_image_cards(selector, section_heading = nil)
+    ga4_selector = "#{selector}[data-module='ga4-link-tracker'][data-ga4-track-links-only]"
+    expect(page).to have_css(ga4_selector)
+
+    ga4_link_data = JSON.parse(page.first(ga4_selector)["data-ga4-link"])
+    expect(ga4_link_data["event_name"]).to eq "navigation"
+    expect(ga4_link_data["type"]).to eq "image card"
+    section_heading ||= page.first("#{selector} h2").text
+    expect(ga4_link_data["section"]).to eq section_heading
+  end
+
+  def test_ga4_see_all_link(section_heading = nil, link_text = "See all latest documents")
+    see_all_link = page.find("#latest-documents a", text: link_text)
+    expect(see_all_link["data-module"]).to eq "ga4-link-tracker"
+    ga4_link_data = JSON.parse(see_all_link["data-ga4-link"])
+    expect(ga4_link_data["event_name"]).to eq "navigation"
+    expect(ga4_link_data["type"]).to eq "see all"
+    section_heading ||= page.first("#latest-documents h2").text
+    expect(ga4_link_data["section"]).to eq section_heading
+  end
+
+  def test_ga4_get_emails_link(section_heading = nil)
+    email_div = page.find("#latest-documents ul.gem-c-document-list ~ div")
+    expect(email_div["data-module"]).to eq "ga4-link-tracker"
+    expect(email_div["data-ga4-track-links-only"]).to eq ""
+    ga4_link_data = JSON.parse(email_div["data-ga4-link"])
+    expect(ga4_link_data["event_name"]).to eq "navigation"
+    expect(ga4_link_data["type"]).to eq "subscribe"
+    expect(ga4_link_data["index_link"]).to eq 1
+    expect(ga4_link_data["index_total"]).to eq 1
+    section_heading ||= page.first("#latest-documents h2").text
+    expect(ga4_link_data["section"]).to eq section_heading
+  end
+
+  def test_ga4_email_links(selector, section_heading = nil)
+    section_heading ||= page.first("#{selector} h2").text
+    links = page.all("#{selector} p[data-ga4-link]")
+    links.each do |link|
+      expect(link["data-module"]).to eq "ga4-link-tracker"
+      expect(link["data-ga4-do-not-redact"]).to eq ""
+      expect(link["data-ga4-track-links-only"]).to eq ""
+      ga4_link_data = JSON.parse(link["data-ga4-link"])
+      expect(ga4_link_data["event_name"]).to eq "navigation"
+      expect(ga4_link_data["type"]).to eq "email"
+      expect(ga4_link_data["section"]).to eq section_heading
+    end
+  end
 end

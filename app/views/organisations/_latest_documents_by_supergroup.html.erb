@@ -18,7 +18,7 @@
             heading_level: 3,
             lang: supergroup[:lang]
           } %>
-          <%= render "govuk_publishing_components/components/document_list", supergroup[:documents] %>
+          <%= render "govuk_publishing_components/components/document_list", supergroup[:documents].merge({ ga4_extra_data: { section: t('organisations.document_types.documents', locale: :en)}}) %>
           <a href="<%= supergroup[:finder_link][:path] %>" class="govuk-link brand__color" <%= supergroup[:finder_link][:lang] %>>
             <%= supergroup[:finder_link][:text] %>
           </a>

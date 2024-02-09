@@ -6,6 +6,8 @@
   margin_bottom ||= false
   ga4_data ||= {}
 
+  ul_data_attributes = { "module": "ga4-link-tracker", "ga4-track-links-only": "" } if !ga4_data.empty?
+
   brand ||= false
   brand_helper = GovukPublishingComponents::AppHelpers::BrandHelper.new(brand)
 
@@ -15,7 +17,7 @@
   ul_classes << brand_helper.brand_class if brand
 %>
 <% if items.any? %>
-  <%= tag.ul(class: ul_classes, lang: "en") do %>
+  <%= tag.ul(class: ul_classes, lang: "en", data: ul_data_attributes) do %>
     <% items.each_with_index do |item, index| %>
       <li class="app-c-topic-list__item">
         <%

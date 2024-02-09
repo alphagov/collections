@@ -1,4 +1,9 @@
 <% if contacts.present? %>
+<% 
+  ga4_section ||= nil
+  ga4_email_link_data = { event_name: "navigation", type: "email" }
+  ga4_email_link_data[:section] = ga4_section if ga4_section
+ %>
 <% contacts.each do |contact| %>
   <div class="organisation__contact-section <%= "organisation__contact-section--border-top" if local_assigns[:border] %>" <%= "lang=#{contact[:locale]}" if contact[:locale] %>>
     <%= render "govuk_publishing_components/components/heading", {
@@ -28,7 +33,13 @@
               <% end %>
 
               <% contact[:email_addresses].each do |email| %>
-                <p><%= email.html_safe %></p>
+                <p
+                  data-module="ga4-link-tracker"
+                  data-ga4-track-links-only
+                  data-ga4-do-not-redact
+                  data-ga4-link="<%= ga4_email_link_data.to_json %>">
+                    <%= email.html_safe %>
+                </p>
               <% end %>
             </div>
           <% end %>
