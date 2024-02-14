@@ -56,9 +56,6 @@ Rails.application.routes.draw do
   get "/government/organisations/:organisation_name(.:locale)",
       to: "organisations#show",
       as: :organisation
-  get "/government/organisations/:organisation_id/services-information",
-      to: "services_and_information#index",
-      as: :services_and_information
 
   get "/government/organisations/:organisation_id/chiefs-of-staff" => redirect("/government/organisations/%{organisation_id}")
   get "/government/organisations/:organisation_id/consultations" => redirect("/government/organisations/%{organisation_id}")

@@ -9,7 +9,6 @@ At time of writing, it also serves the priority campaign pages. See the [Campaig
 - Browse page: [gov.uk/browse](https://www.gov.uk/browse)
 - Topic page: [gov.uk/oil-and-gas](https://www.gov.uk/oil-and-gas)
 - Subtopic page: [gov.uk/oil-and-gas/fields-and-wells](https://www.gov.uk/oil-and-gas/fields-and-wells)
-- Services and information page: [gov.uk/government/organisations/hm-revenue-customs/services-information](https://www.gov.uk/government/organisations/hm-revenue-customs/services-information)
 - Taxonomy page: [gov.uk/education](https://www.gov.uk/education)
 - Worldwide taxonomy page: [gov.uk/world/japan](https://www.gov.uk/world/japan)
 - Organisation index page: [gov.uk/government/organisations](https://www.gov.uk/government/organisations)
