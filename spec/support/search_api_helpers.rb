@@ -161,28 +161,6 @@ module SearchApiHelpers
     stub_search(params:, body: response)
   end
 
-  def stub_services_and_information_links(organisation_id)
-    params = {
-      count: "0",
-      filter_organisations: organisation_id,
-      facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
-    }
-    response = stub_search_has_services_and_info_data_for_organisation
-
-    stub_search(params:, body: response)
-  end
-
-  def stub_services_and_information_links_with_missing_keys(organisation_id)
-    params = {
-      count: "0",
-      filter_organisations: organisation_id,
-      facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
-    }
-    response = stub_search_has_services_and_info_data_with_missing_keys_for_organisation
-
-    stub_search(params:, body: response)
-  end
-
   def search_api_document_for_slug(slug, updated_at = 1.hour.ago, format = "guide")
     {
       "format" => format.to_s,
