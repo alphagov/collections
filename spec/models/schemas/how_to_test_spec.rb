@@ -12,7 +12,7 @@ RSpec.describe Schemas::HowTo do
         "@context": "http://schema.org",
         "@type": "HowTo",
         "description": "Learn to drive a car in the UK - get a provisional licence, take driving lessons, prepare for your theory test, book your practical test.",
-        "image": "/assets/collections/govuk_publishing_components/govuk-schema-placeholder-1x1-bf9e64d759af6dfd93bede8168f3087a329f405b382aff36747db0db4b7b23e9.png",
+        "image": "/assets/collections/govuk_publishing_components/govuk-schema-placeholder-1x1-c3d38c0d4fc00005df38a71e1db7097276681d6917bca58f0dc8336a252e1bb3.png",
         "name": "Learn to drive a car: step by step",
         "step": [
           {
