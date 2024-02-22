@@ -37,7 +37,7 @@
           lang: t_fallback('organisations.follow_us')
         } %>
         <div lang="en">
-          <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links %>
+          <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links.merge({ ga4_extra_data: { section: t('organisations.what_we_do', locale: :en) }}) %>
         </div>
       </div>
     <% end %>

@@ -1,5 +1,12 @@
 <% if people.any? %>
-  <section class="brand--<%= brand %> brand__border-color organisation__brand-border-top organisation__margin-bottom">
+  <%
+    ga4_image_card_json = {
+      "event_name": "navigation",
+      "type": "image card",
+      "section": ga4_english_title
+    }.to_json
+  %>
+  <section class="brand--<%= brand %> brand__border-color organisation__brand-border-top organisation__margin-bottom" data-people-id="<%= title.downcase.split(' ').join('-')%>">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/heading", {
@@ -12,7 +19,7 @@
     </div>
 
     <% people.in_groups_of(4, false) do |people| %>
-      <div class="govuk-grid-row">
+      <div class="govuk-grid-row" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
         <% people.each do |person| %>
           <div class="govuk-grid-column-one-quarter">
             <%= render "govuk_publishing_components/components/image_card", person %>

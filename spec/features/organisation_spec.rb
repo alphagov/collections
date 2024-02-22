@@ -430,4 +430,53 @@ RSpec.describe "Organisation pages" do
     org_schema = schemas.detect { |schema| schema["@type"] == "GovernmentOrganization" }
     expect("Student Loans Company").to eq(org_schema["name"])
   end
+
+  it "has GA4 tracking on image cards" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    test_ga4_image_cards("#featured-documents div")
+    test_ga4_image_cards("div.organisation__promotion")
+
+    visit "/government/organisations/attorney-generals-office"
+    test_ga4_image_cards("#featured-documents div")
+    test_ga4_image_cards("[data-people-id=our-ministers] div")
+    test_ga4_image_cards("[data-people-id=our-management] div")
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    test_ga4_image_cards("#featured-documents div", "Featured")
+    test_ga4_image_cards("[data-people-id=ein-gweinidogion] div", "Our ministers")
+    test_ga4_image_cards("[data-people-id=ein-rheolwyr] div", "Our management")
+  end
+
+  it "has GA4 tracking on the see all latest documents link" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    test_ga4_see_all_link
+
+    visit "/government/organisations/attorney-generals-office"
+    test_ga4_see_all_link
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    test_ga4_see_all_link("Latest from the Office of the Secretary of State for Wales", "Gweld yr holl ddogfennau diweddaraf")
+  end
+
+  it "has GA4 tracking on the get emails link" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    test_ga4_get_emails_link
+
+    visit "/government/organisations/attorney-generals-office"
+    test_ga4_get_emails_link
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    test_ga4_get_emails_link("Latest from the Office of the Secretary of State for Wales")
+  end
+
+  it "has GA4 tracking on email links" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    test_ga4_email_links("#org-contacts")
+
+    visit "/government/organisations/attorney-generals-office"
+    test_ga4_email_links("#org-contacts")
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    test_ga4_email_links("#freedom-of-information", "Make an FOI request")
+  end
 end

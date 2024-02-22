@@ -8,6 +8,6 @@
       lang: t_fallback("organisations.contact.contact_organisation", { organisation: @show.acronym })
   } %>
 
-  <%= render partial: 'contacts', locals: { contacts: contacts.contacts, border: true } %>
+  <%= render partial: 'contacts', locals: { contacts: contacts.contacts, border: true, ga4_section: t('organisations.contact.contact_organisation', organisation: @show.acronym, locale: :en) } %>
 </section>
 <% end %>

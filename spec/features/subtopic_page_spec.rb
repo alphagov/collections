@@ -250,7 +250,7 @@ RSpec.feature "Subtopic pages" do
 
     visit "/topic/oil-and-gas/offshore"
 
-    expect(page).to have_selector('.browse-container[data-module="gem-track-click ga4-link-tracker"]')
+    expect(page).to have_selector('.browse-container[data-module="gem-track-click"]')
 
     oil_rig_safety_requirements = page.find(
       "a",

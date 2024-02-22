@@ -55,7 +55,8 @@ RSpec.describe "topic_list component", type: :view do
     }.to_json
 
     render_component(items: [simple_item], ga4_data:)
-
+    assert_select "ul[data-module=ga4-link-tracker]"
+    assert_select "ul[data-ga4-track-links-only]"
     assert_select ".govuk-link" do |link|
       expect(link.attr("data-ga4-link").to_s).to eq expected
     end

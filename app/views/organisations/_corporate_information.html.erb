@@ -10,7 +10,7 @@
     <% end %>
   <% if @show.corporate_information[:corporate_information_links][:items].any? && !@organisation.is_no_10? %>
     <div class="<%= "organisation__section-border-top" if @organisation.is_promotional_org? %>">
-      <%= render "components/topic_list", @show.corporate_information[:corporate_information_links] %>
+      <%= render "components/topic_list", @show.corporate_information[:corporate_information_links].merge({ ga4_data: { section: t('organisations.corporate_information', locale: :en) } })  %>
     </div>
   <% end %>
 
@@ -22,7 +22,7 @@
       font_size: 24,
       lang: t_fallback('organisations.jobs_contracts')
     } %>
-    <%= render "components/topic_list", @show.corporate_information[:job_links] %>
+    <%= render "components/topic_list", @show.corporate_information[:job_links].merge({ ga4_data: { section: t('organisations.jobs_contracts', locale: :en) } }) %>
   <% end %>
 
   <% if @organisation.secondary_corporate_information && !@organisation.is_no_10? %>
@@ -39,11 +39,11 @@
         font_size: 19,
         padding: true,
         border_top: 5,
-        brand: @organisation.brand,        
+        brand: @organisation.brand,
         lang: t_fallback('organisations.follow_us')
       } %>
       <div lang="en">
-        <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links %>
+        <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links.merge({ ga4_extra_data: { section: t('organisations.follow_us', locale: :en) }}) %>
       </div>
   <% end %>
 </div>

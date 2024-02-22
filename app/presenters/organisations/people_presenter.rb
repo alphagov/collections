@@ -18,6 +18,7 @@ module Organisations
         {
           type: person_type,
           title: I18n.t("organisations.people.#{person_type}"),
+          ga4_english_title: I18n.t("organisations.people.#{person_type}", locale: :en),
           lang: t_fallback("organisations.people.#{person_type}"),
           people: people.map { |person| formatted_person_data(person, person_type) },
         }

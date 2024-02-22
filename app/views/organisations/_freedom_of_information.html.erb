@@ -30,7 +30,7 @@
     <% end %>
 
     <% if @contacts.has_foi_contacts? %>
-      <%= render partial: 'contacts', locals: { contacts: @contacts.foi_contacts } %>
+      <%= render partial: 'contacts', locals: { contacts: @contacts.foi_contacts, ga4_section: t('organisations.foi.make_an_foi_request', locale: :en) } %>
     <% end %>
   <% end %>
 </section>

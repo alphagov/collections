@@ -1,4 +1,11 @@
 <% if @documents.has_featured_news? %>
+<%
+  ga4_image_card_json = {
+    "event_name": "navigation",
+    "type": "image card",
+    "section": t('shared.featured', locale: :en)
+  }.to_json
+%>
 <section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="featured-documents">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -12,11 +19,13 @@
   </div>
 
   <% if @organisation.is_news_organisation? && !@organisation.is_no_10? %>
-    <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>
+    <div data-module="ga4-link-tracker" data-ga4-link="<%= ga4_image_card_json %>">
+      <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>
+    </div>
   <% end %>
 
   <% @documents.remaining_featured_news.in_groups_of(3, false) do |news| %>
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
       <% news.each do |news_item| %>
         <% classes = %w[] %>
         <% classes << "govuk-grid-column-one-third" unless news_item[:large] %>

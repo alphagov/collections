@@ -13,17 +13,21 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <%= render "govuk_publishing_components/components/document_list", @documents.latest_documents %>
-
+      <% ga4_section = t('organisations.latest_from', title: @show.prefixed_title, locale: :en) %>
+      <%= render "govuk_publishing_components/components/document_list", @documents.latest_documents.merge({ ga4_extra_data: { section: ga4_section }}) %>
       <p class="organisation__margin-bottom brand--<%= @organisation.brand %>">
-        <a href="<%= "/search/all?organisations[]=#{@organisation.slug}&order=updated-newest&parent=#{@organisation.slug}" %>" class="govuk-link brand__color" <%= t_lang('organisations.see_all_latest_documents') %>>
+        <a
+          href="<%= "/search/all?organisations[]=#{@organisation.slug}&order=updated-newest&parent=#{@organisation.slug}" %>"
+          class="govuk-link brand__color" <%= t_lang('organisations.see_all_latest_documents') %>
+          data-module="ga4-link-tracker"
+          data-ga4-link="<%= { event_name: "navigation", type: "see all", section: ga4_section }.to_json %>">
           <%= t('organisations.see_all_latest_documents') %>
         </a>
       </p>
 
       <div
         data-module="ga4-link-tracker"
-        data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index_link": 1, "index_total": 1, "section": "Content" }'
+        data-ga4-link="<%= { "event_name": "navigation", "type": "subscribe", "index_link": 1, "index_total": 1, "section": ga4_section }.to_json %>"
         data-ga4-track-links-only
       >
         <%= render "govuk_publishing_components/components/subscription_links", @show.subscription_links %>
