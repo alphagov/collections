@@ -8,6 +8,7 @@
         lang: t_fallback('organisations.corporate_information')
       } %>
     <% end %>
+
   <% if @show.corporate_information[:corporate_information_links][:items].any? && !@organisation.is_no_10? %>
     <div class="<%= "organisation__section-border-top" if @organisation.is_promotional_org? %>">
       <%= render "components/topic_list", @show.corporate_information[:corporate_information_links].merge({ ga4_data: { section: t('organisations.corporate_information', locale: :en) } })  %>
