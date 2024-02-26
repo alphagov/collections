@@ -17,7 +17,6 @@ class DevelopmentController < ApplicationController
       person
       step_by_step_nav
       taxon
-      topic
       topical_event
       world_embassies
       world_location_news
