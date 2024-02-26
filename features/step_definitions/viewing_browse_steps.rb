@@ -89,10 +89,6 @@ When(/^I visit that browse page$/) do
   visit "/browse/crime-and-justice/judges"
 end
 
-Then(/^I should see the topics linked under Detailed guidance$/) do
-  expect(page).to have_text("A linked topic")
-end
-
 def top_level_browse_pages
   [
     {
