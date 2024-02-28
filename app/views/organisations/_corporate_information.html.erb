@@ -13,7 +13,6 @@
       <%= render "components/topic_list", @show.corporate_information[:corporate_information_links].merge({ ga4_data: { section: t('organisations.corporate_information', locale: :en) } })  %>
     </div>
   <% end %>
-
   <% if @show.corporate_information[:job_links][:items].any? && !@organisation.is_no_10? %>
     <%= render "govuk_publishing_components/components/heading", {
       text: t('organisations.jobs_contracts'),

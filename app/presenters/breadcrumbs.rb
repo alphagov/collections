@@ -1,4 +1,4 @@
-# Breadcrumbs for Mainstream browse and old topic pages
+# Breadcrumbs for Mainstream browse
 class Breadcrumbs
   def initialize(content_item)
     @content_item = content_item

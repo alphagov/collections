@@ -151,16 +151,6 @@ module SearchApiHelpers
     end
   end
 
-  def stub_topic_organisations(slug, content_id)
-    params =
-      { count: "0",
-        filter_topic_content_ids: [content_id],
-        facet_organisations: "1000" }
-    response = stub_search_has_specialist_sector_organisations(slug)
-
-    stub_search(params:, body: response)
-  end
-
   def search_api_document_for_slug(slug, updated_at = 1.hour.ago, format = "guide")
     {
       "format" => format.to_s,

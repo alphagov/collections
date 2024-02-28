@@ -21,8 +21,3 @@ Feature: Viewing browse
     When I click on a top level browse page
     Then I see the curated list of second level browse pages
     Then the A to Z label should not be present
-
-  Scenario: Browse to browse page that has "Detailed guidance"
-    Given there is a browse page set up with links
-    When I visit that browse page
-    Then I should see the topics linked under Detailed guidance
