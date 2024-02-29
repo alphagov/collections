@@ -333,3 +333,4 @@ az:
         other: Parlamentə yazılı müraciətlər
     topics:
       title: "%{title}: ətraflı məlumat"
+    visually_hidden_get_emails:

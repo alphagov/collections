@@ -333,3 +333,4 @@ bn:
         other: সংসদে লিখিত বিবৃতিসমূহ
     topics:
       title: "%{title}: বিস্তারিত তথ্য"
+    visually_hidden_get_emails:

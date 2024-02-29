@@ -333,3 +333,4 @@ fr:
         other: Déclarations écrites au Parlement
     topics:
       title: "%{title}: informations détaillées"
+    visually_hidden_get_emails:

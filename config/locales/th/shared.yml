@@ -227,3 +227,4 @@ th:
         other: แถลงการณ์เป็นลายลักษณ์อักษรต่อรัฐสภา
     topics:
       title: "%{title}: ข้อมูลโดยละเอียด"
+    visually_hidden_get_emails:

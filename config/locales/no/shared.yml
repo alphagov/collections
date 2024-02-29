@@ -333,3 +333,4 @@
         other: Skriftlige uttalelser til Stortinget
     topics:
       title: "%{title}: detaljert informasjon"
+    visually_hidden_get_emails:

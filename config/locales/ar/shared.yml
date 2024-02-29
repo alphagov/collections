@@ -757,3 +757,4 @@ ar:
         zero:
     topics:
       title: "%{title}: معلومات تفصيلية"
+    visually_hidden_get_emails:

@@ -333,3 +333,4 @@ ta:
         other: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்புகள்
     topics:
       title: "%{title}: விரிவான தகவல்கள்"
+    visually_hidden_get_emails:
