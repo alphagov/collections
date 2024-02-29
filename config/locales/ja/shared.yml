@@ -8,7 +8,7 @@ ja:
     featured: 特徴
     get_emails: このトピックでメールを取得する
     language_direction: ltr
-    language_name: 日本
+    language_name: 日本語
     schema_name:
       aaib_report:
         other: 航空事故調査局報告書
