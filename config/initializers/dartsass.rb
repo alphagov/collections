@@ -1,6 +1,6 @@
 APP_STYLESHEETS = {
   "components/_taxon-list.scss" => "components/_taxon-list.css",
-  "components/_topic-list.scss" => "components/_topic-list.css",
+  "components/_document-navigation-list.scss" => "components/_document-navigation-list.css",
   "views/_browse.scss" => "views/_browse.css",
   "views/_bunting.scss" => "views/_bunting.css",
   "views/_covid.scss" => "views/_covid.css",

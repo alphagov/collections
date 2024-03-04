@@ -8,6 +8,6 @@
         padding: true,
         margin_bottom: 3
     } %>
-    <%= render "components/topic_list", @show.high_profile_groups.merge({ ga4_data: { section: @show.high_profile_groups[:title] } }) %>
+    <%= render "components/document_navigation_list", @show.high_profile_groups.merge({ ga4_data: { section: @show.high_profile_groups[:title] } }) %>
     </section>
 <% end %>

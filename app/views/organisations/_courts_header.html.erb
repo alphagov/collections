@@ -12,6 +12,6 @@
 
   <div class="govuk-grid-column-one-third">
     <%= render "govuk_publishing_components/components/translation_nav", @header.translation_links %>
-    <%= render "components/topic_list", @header.ordered_featured_links.merge({ ga4_data: { section: @header.org.title } }) %>
+    <%= render "components/document_navigation_list", @header.ordered_featured_links.merge({ ga4_data: { section: @header.org.title } }) %>
   </div>
 </div>

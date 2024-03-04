@@ -1,5 +1,5 @@
-name: Topic list
-description: A list of topics
+name: Document Navigation List
+description: A list of documents used in navigation links
 shared_accessibility_criteria:
   - link
 examples:

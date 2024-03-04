@@ -43,7 +43,7 @@ module CourtPagesHelper
   end
 
   def and_featured_links
-    expect(page).to have_selector(".app-c-topic-list")
+    expect(page).to have_selector(".app-c-document-navigation-list")
   end
 
   def and_the_what_we_do_section
