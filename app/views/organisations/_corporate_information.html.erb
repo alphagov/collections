@@ -10,7 +10,7 @@
     <% end %>
   <% if @show.corporate_information[:corporate_information_links][:items].any? && !@organisation.is_no_10? %>
     <div class="<%= "organisation__section-border-top" if @organisation.is_promotional_org? %>">
-      <%= render "components/topic_list", @show.corporate_information[:corporate_information_links].merge({ ga4_data: { section: t('organisations.corporate_information', locale: :en) } })  %>
+      <%= render "components/document_navigation_list", @show.corporate_information[:corporate_information_links].merge({ ga4_data: { section: t('organisations.corporate_information', locale: :en) } })  %>
     </div>
   <% end %>
   <% if @show.corporate_information[:job_links][:items].any? && !@organisation.is_no_10? %>
@@ -21,7 +21,7 @@
       font_size: 24,
       lang: t_fallback('organisations.jobs_contracts')
     } %>
-    <%= render "components/topic_list", @show.corporate_information[:job_links].merge({ ga4_data: { section: t('organisations.jobs_contracts', locale: :en) } }) %>
+    <%= render "components/document_navigation_list", @show.corporate_information[:job_links].merge({ ga4_data: { section: t('organisations.jobs_contracts', locale: :en) } }) %>
   <% end %>
 
   <% if @organisation.secondary_corporate_information && !@organisation.is_no_10? %>

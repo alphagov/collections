@@ -1,8 +1,8 @@
-RSpec.describe "topic_list component", type: :view do
+RSpec.describe "document_navigation_list component", type: :view do
   include ComponentTestHelper
 
   def component_name
-    "topic_list"
+    "document_navigation_list"
   end
 
   let(:simple_item) do
@@ -27,14 +27,14 @@ RSpec.describe "topic_list component", type: :view do
 
   it "renders a list of links" do
     render_component(items: [simple_item])
-    expect(rendered).to have_selector(%(.app-c-topic-list__link[href="#{simple_item[:path]}"]), text: simple_item[:text])
+    expect(rendered).to have_selector(%(.app-c-document-navigation-list__link[href="#{simple_item[:path]}"]), text: simple_item[:text])
   end
 
   it "renders links with data attributes" do
     simple_item[:data_attributes] = { test: "test" }
     render_component(items: [simple_item])
 
-    expect(rendered).to have_selector(".app-c-topic-list__link[data-test='test']")
+    expect(rendered).to have_selector(".app-c-document-navigation-list__link[data-test='test']")
   end
 
   it "sets GA4 data attributes correctly" do
@@ -111,19 +111,19 @@ RSpec.describe "topic_list component", type: :view do
 
   it "renders a see more link" do
     render_component(items: [simple_item], see_more_link:)
-    expect(rendered).to have_selector(".app-c-topic-list__item a[href='/more'][data-test='test']", text: "More")
+    expect(rendered).to have_selector(".app-c-document-navigation-list__item a[href='/more'][data-test='test']", text: "More")
   end
 
   it "adds branding correctly" do
     render_component(items: [simple_item], see_more_link:, brand: "attorney-generals-office")
-    expect(rendered).to have_selector(".app-c-topic-list.brand--attorney-generals-office")
-    expect(rendered).to have_selector(".app-c-topic-list .app-c-topic-list__link.brand__color")
+    expect(rendered).to have_selector(".app-c-document-navigation-list.brand--attorney-generals-office")
+    expect(rendered).to have_selector(".app-c-document-navigation-list .app-c-document-navigation-list__link.brand__color")
     expect(rendered).to have_selector(".brand__color", text: "More")
   end
 
   it "renders small version" do
     render_component(items: [simple_item], small: true)
-    expect(rendered).to have_selector(".app-c-topic-list.app-c-topic-list--small")
+    expect(rendered).to have_selector(".app-c-document-navigation-list.app-c-document-navigation-list--small")
   end
 
   it "renders without margin-bottom by default" do
