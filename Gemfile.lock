@@ -1,3 +1,17 @@
+PATH
+  remote: ../govuk_publishing_components
+  specs:
+    govuk_publishing_components (37.7.1)
+      govuk_app_config
+      govuk_personalisation (>= 0.7.0)
+      kramdown
+      plek
+      rails (>= 6)
+      rouge
+      sprockets (>= 3)
+      sprockets-rails
+      terser
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -212,15 +226,6 @@ GEM
     govuk_personalisation (0.15.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (37.7.1)
-      govuk_app_config
-      govuk_personalisation (>= 0.7.0)
-      kramdown
-      plek
-      rails (>= 6)
-      rouge
-      sprockets (>= 3)
-      sprockets-rails
     govuk_schemas (4.7.0)
       json-schema (>= 2.8, < 4.2)
     govuk_test (4.0.2)
@@ -280,6 +285,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2024.0206)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.5)
     minitest (5.22.2)
     mocha (2.1.0)
       ruby2_keywords (>= 0.0.5)
@@ -301,6 +307,7 @@ GEM
     netrc (0.11.0)
     nio4r (2.7.0)
     nokogiri (1.16.2)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     null_logger (0.0.1)
     opentelemetry-api (1.2.5)
@@ -774,7 +781,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_document_types
-  govuk_publishing_components
+  govuk_publishing_components!
   govuk_schemas
   govuk_test
   i18n-coverage
