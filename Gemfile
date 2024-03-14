@@ -13,14 +13,14 @@ gem "govspeak"
 gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_document_types"
-gem "govuk_publishing_components"
+gem "govuk_publishing_components", path: "../govuk_publishing_components"
 gem "plek"
 gem "rails-i18n"
 gem "rails_translation_manager"
 gem "rinku", require: "rails_rinku"
 gem "slimmer"
 gem "sprockets-rails"
-gem "uglifier"
+gem "terser"
 
 group :test do
   gem "cucumber-rails", require: false
