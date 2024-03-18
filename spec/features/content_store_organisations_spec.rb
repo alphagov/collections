@@ -71,6 +71,16 @@ RSpec.feature "Content store organisations" do
     expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/hm-crown-prosecution-service-inspectorate']", text: "HM Crown Prosecution Service Inspectorate", visible: false)).to be(true)
   end
 
+  scenario "renders links with GA4 tracking" do
+    ga4_module = "ol[data-module=ga4-link-tracker]"
+    expect(page).to have_css(ga4_module)
+    expect(page).to have_css("ol[data-ga4-track-links-only]")
+
+    ga4_link_data = JSON.parse(page.first(ga4_module)["data-ga4-link"])
+    expect(ga4_link_data["event_name"]).to eq "navigation"
+    expect(ga4_link_data["type"]).to eq "filter"
+  end
+
 private
 
   def organisations_content_hash
