@@ -1,5 +1,6 @@
 class OrganisationsController < ApplicationController
   skip_before_action :set_expiry
+  include RecruitmentBannerHelper
   before_action do
     set_expiry content_item.max_age, public_cache: content_item.public_cache
   end

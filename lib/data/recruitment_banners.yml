@@ -9,3 +9,10 @@
   #     - /foreign-travel-advice
 
 banners:
+- name: DWP user research banner
+  suggestion_text: Help improve GOV.UK
+  suggestion_link_text: Take part in user research (opens in a new tab)
+  survey_url: https://forms.office.com/e/CkfCRwdLQj
+  page_paths:
+    - /government/organisations/department-for-work-pensions
+    - /browse/benefits
