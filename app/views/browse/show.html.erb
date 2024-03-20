@@ -1,5 +1,4 @@
 <% add_view_stylesheet("browse") %>
-
 <% content_for :title, page.title %>
 
 <%= render 'shared/tag_meta', tag: page %>
@@ -19,6 +18,8 @@
     column_two_thirds: true
   } %>
 <% end %>
+
+<%= render partial: 'shared/intervention_banner' %>
 
 <%= render "shared/browse_header", { margin_bottom: page.slug == "benefits" ? 7 : 9 } do %>
   <h1 class="browse__heading govuk-heading-xl">

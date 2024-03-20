@@ -1,5 +1,6 @@
 class BrowseController < ApplicationController
   slimmer_template "gem_layout_full_width"
+  include RecruitmentBannerHelper
 
   def index
     page = MainstreamBrowsePage.find("/browse")
