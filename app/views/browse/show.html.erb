@@ -19,8 +19,6 @@
   } %>
 <% end %>
 
-<%= render partial: 'shared/intervention_banner' %>
-
 <%= render "shared/browse_header", { margin_bottom: page.slug == "benefits" ? 7 : 9 } do %>
   <h1 class="browse__heading govuk-heading-xl">
     <%= page.title %>
@@ -31,6 +29,8 @@
     inverse: true
   } %>
 <% end %>
+
+<%= render partial: 'shared/intervention_banner' %>
 
 <% if display_action_links_for_slug?(page.slug) %>
   <div class="govuk-width-container">
