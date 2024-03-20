@@ -45,7 +45,11 @@
       </div>
 
       <div class="govuk-grid-column-two-thirds">
-        <ol class="world-locations-groups">
+        <ol
+          class="world-locations-groups"
+          data-module="ga4-link-tracker"
+          data-ga4-track-links-only
+          data-ga4-link="<%= { event_name: "navigation", type: "filter" }.to_json %>">
           <% @presented_index.grouped_world_locations.each do |letter, locations| %>
             <div class="world-locations-group" data-filter="inner-block">
               <h3 class="world-locations-group__letter"><%= letter %></h3>

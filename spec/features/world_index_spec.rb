@@ -52,4 +52,14 @@ RSpec.feature "World index page" do
       expect(page).to have_link("The UK Permanent Delegation to the OECD (Organisation for Economic Co-operation and Development)", href: "/world/the-uk-permanent-delegation-to-the-oecd-organisation-for-economic-co-operation-and-development")
     end
   end
+
+  scenario "renders links with GA4 tracking" do
+    ga4_module = "ol[data-module=ga4-link-tracker]"
+    expect(page).to have_css(ga4_module)
+    expect(page).to have_css("ol[data-ga4-track-links-only]")
+
+    ga4_link_data = JSON.parse(page.first(ga4_module)["data-ga4-link"])
+    expect(ga4_link_data["event_name"]).to eq "navigation"
+    expect(ga4_link_data["type"]).to eq "filter"
+  end
 end
