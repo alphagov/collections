@@ -125,7 +125,7 @@ RSpec.feature "World Location News pages" do
 
       within("#latest") do
         latest_documents.each { |title, link| expect(page).to have_link(title, href: link) }
-        expect(page).to have_link("See all", href: "/search/all?order=updated-newest&world_locations%5B%5D=mock-country")
+        expect(page).to have_link("See all", href: "/search/all?order=updated-newest&use_v1=true&world_locations%5B%5D=mock-country")
       end
     end
 
@@ -168,17 +168,17 @@ RSpec.feature "World Location News pages" do
 
       within("#our-announcements") do
         related_announcements.each { |title, link| expect(page).to have_link(title, href: link) }
-        expect(page).to have_link("See all our announcements", href: "/search/news-and-communications?world_locations%5B%5D=mock-country")
+        expect(page).to have_link("See all our announcements", href: "/search/news-and-communications?use_v1=true&world_locations%5B%5D=mock-country")
       end
 
       within("#our-publications") do
         related_publications.each { |title, link| expect(page).to have_link(title, href: link) }
-        expect(page).to have_link("See all our publications", href: "/search/all?content_purpose_supergroup%5B%5D=guidance_and_regulation&content_purpose_supergroup%5B%5D=policy_and_engagement&content_purpose_supergroup%5B%5D=transparency&order=updated-newest&world_locations%5B%5D=mock-country")
+        expect(page).to have_link("See all our publications", href: "/search/all?content_purpose_supergroup%5B%5D=guidance_and_regulation&content_purpose_supergroup%5B%5D=policy_and_engagement&content_purpose_supergroup%5B%5D=transparency&order=updated-newest&use_v1=true&world_locations%5B%5D=mock-country")
       end
 
       within("#our-statistics") do
         related_statistics.each { |title, link| expect(page).to have_link(title, href: link) }
-        expect(page).to have_link("See all our statistics", href: "/search/research-and-statistics?world_locations%5B%5D=mock-country")
+        expect(page).to have_link("See all our statistics", href: "/search/research-and-statistics?use_v1=true&world_locations%5B%5D=mock-country")
       end
     end
 
