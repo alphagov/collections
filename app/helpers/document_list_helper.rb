@@ -44,7 +44,12 @@ private
   end
 
   def world_location_news_query_params(content_type, slug)
-    query_params = { world_locations: [slug] }
+    query_params = {
+      world_locations: [slug],
+      # TODO: remove use_v1 once search-api-v2 handles world location news queries for world_locations like
+      #       https://www.gov.uk/search/all?order=updated-newest&world_locations%5B%5D=uk-delegation-to-council-of-europe
+      use_v1: true,
+    }
     query_params.merge!(order: "updated-newest") if %i[latest publication].include?(content_type)
     query_params.merge!(content_purpose_supergroup: %w[guidance_and_regulation policy_and_engagement transparency]) if content_type == :publication
     query_params
