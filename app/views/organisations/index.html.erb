@@ -20,7 +20,16 @@
           },
           name: "search-box",
           id: "filter-organisations-list",
-          controls: "search_results"
+          controls: "search_results",
+          data: {
+            module: "ga4-focus-loss-tracker",
+            ga4_focus_loss: {
+              event_name: "filter",
+              type: "filter",
+              action: "filter",
+              section: t("organisations.index_title", title: @presented_organisations.title, lang: :en)
+            }
+          }
         } %>
       </form>
     </div>

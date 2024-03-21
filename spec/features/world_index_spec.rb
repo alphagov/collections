@@ -62,4 +62,15 @@ RSpec.feature "World index page" do
     expect(ga4_link_data["event_name"]).to eq "navigation"
     expect(ga4_link_data["type"]).to eq "filter"
   end
+
+  scenario "renders the filter input box with GA4 tracking" do
+    ga4_module = ".filter-list__form input[data-module=ga4-focus-loss-tracker]"
+    expect(page).to have_css(ga4_module)
+
+    ga4_focus_loss_data = JSON.parse(page.first(ga4_module)["data-ga4-focus-loss"])
+    expect(ga4_focus_loss_data["event_name"]).to eq "filter"
+    expect(ga4_focus_loss_data["type"]).to eq "filter"
+    expect(ga4_focus_loss_data["action"]).to eq "filter"
+    expect(ga4_focus_loss_data["section"]).to eq "Help and services around the world"
+  end
 end
