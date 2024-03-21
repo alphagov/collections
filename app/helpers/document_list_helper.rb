@@ -44,22 +44,9 @@ private
   end
 
   def world_location_news_query_params(content_type, slug)
-    case content_type
-    when :latest
-      {
-        order: "updated-newest",
-        world_locations: [slug],
-      }
-    when :publication
-      {
-        content_purpose_supergroup: %w[guidance_and_regulation policy_and_engagement transparency],
-        order: "updated-newest",
-        world_locations: [slug],
-      }
-    else
-      {
-        world_locations: [slug],
-      }
-    end
+    query_params = { world_locations: [slug] }
+    query_params.merge!(order: "updated-newest") if %i[latest publication].include?(content_type)
+    query_params.merge!(content_purpose_supergroup: %w[guidance_and_regulation policy_and_engagement transparency]) if content_type == :publication
+    query_params
   end
 end
