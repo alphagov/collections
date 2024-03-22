@@ -19,7 +19,6 @@ RSpec.describe SecondLevelBrowsePageController do
               title: "Benefits",
               base_path: "/browse/benefits",
             }],
-            related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
           },
         )
 
@@ -75,7 +74,6 @@ RSpec.describe SecondLevelBrowsePageController do
               title: "Benefits",
               base_path: "/browse/benefits",
             }],
-            related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
           },
           details:,
         )

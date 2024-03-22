@@ -1,6 +1,5 @@
 <%
   index_section_count = page.lists.count
-  index_section_count += 1 if page.related_topics.any?
 %>
 <% page.lists.each_with_index do |list, list_index| %>
 
@@ -13,5 +12,3 @@
     <%= render partial: "links", locals: { list: list.contents, list_index: list_index, index_section_count: index_section_count.to_s, section: list.title } %>
   </div>
 <% end %>
-
-<%= render partial: "shared/browse_related_topics", locals: { page: page, index_section_count: index_section_count.to_s } %>
