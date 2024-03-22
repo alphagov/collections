@@ -940,4 +940,16 @@ module OrganisationHelpers
       expect(ga4_link_data["section"]).to eq section_heading
     end
   end
+
+  def test_ga4_organisation_supergroup_links(section_headings)
+    supergroups = page.all("[data-ga4-section-documents]")
+    supergroups.each_with_index do |supergroup, index|
+      see_all_link = supergroup.find("a[data-ga4-link]")
+      expect(see_all_link["data-module"]).to eq "ga4-link-tracker"
+      ga4_link_data = JSON.parse(see_all_link["data-ga4-link"])
+      expect(ga4_link_data["event_name"]).to eq "navigation"
+      expect(ga4_link_data["type"]).to eq "see all"
+      expect(ga4_link_data["section"]).to eq section_headings[index]
+    end
+  end
 end

@@ -10,7 +10,7 @@
   <% @supergroups.latest_documents_by_supergroup.in_groups_of(2, false) do |supergroup_pair| %>
     <div class="govuk-grid-row">
       <% supergroup_pair.each do |supergroup| %>
-        <div class="govuk-grid-column-one-half organisation__supergroup--margin-bottom">
+        <div class="govuk-grid-column-one-half organisation__supergroup--margin-bottom" data-ga4-section-documents>
           <%= render "govuk_publishing_components/components/heading", {
             text: supergroup[:title],
             padding: true,
@@ -19,7 +19,12 @@
             lang: supergroup[:lang]
           } %>
           <%= render "govuk_publishing_components/components/document_list", supergroup[:documents].merge({ ga4_extra_data: { section: t('organisations.document_types.documents', locale: :en)}}) %>
-          <a href="<%= supergroup[:finder_link][:path] %>" class="govuk-link brand__color" <%= supergroup[:finder_link][:lang] %>>
+          <a
+            href="<%= supergroup[:finder_link][:path] %>"
+            class="govuk-link brand__color"
+            <%= supergroup[:finder_link][:lang] %>
+            data-module="ga4-link-tracker"
+            data-ga4-link="<%= { event_name: 'navigation', type: 'see all', section: supergroup[:ga4_english_title] }.to_json %>">
             <%= supergroup[:finder_link][:text] %>
           </a>
         </div>
