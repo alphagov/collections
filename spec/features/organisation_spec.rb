@@ -479,4 +479,22 @@ RSpec.describe "Organisation pages" do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     test_ga4_email_links("#freedom-of-information", "Make an FOI request")
   end
+
+  it "has GA4 tracking on organisation__supergroup 'see all' links" do
+    # Ensure English section headings are used on English pages, as well as on pages written in other languages
+    section_headings = [
+      "Guidance and regulation",
+      "News and communications",
+      "Research and statistics",
+      "Policy papers and consultations",
+      "Transparency and freedom of information releases",
+      "Services",
+    ]
+
+    visit "/government/organisations/attorney-generals-office"
+    test_ga4_organisation_supergroup_links(section_headings)
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    test_ga4_organisation_supergroup_links(section_headings)
+  end
 end

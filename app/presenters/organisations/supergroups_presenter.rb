@@ -21,9 +21,15 @@ module Organisations
 
         exclude_metadata = exclude_metadata_for.include? supergroup.content_purpose_supergroup
 
+        ga4_english_title = ""
+        I18n.with_locale(:en) do
+          ga4_english_title = I18n.t(:title, scope: [:organisations, :document_types, supergroup.content_purpose_supergroup], lang: :en)
+        end
+
         {
           documents: search_results_to_documents(supergroup.documents, @org, include_metadata: !exclude_metadata),
           title: I18n.t(:title, scope: [:organisations, :document_types, supergroup.content_purpose_supergroup]),
+          ga4_english_title:,
           lang: t_fallback("organisations.document_types.#{supergroup.content_purpose_supergroup}.title"),
           finder_link: finder_link(supergroup),
         }
