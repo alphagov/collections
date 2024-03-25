@@ -49,10 +49,6 @@ class MainstreamBrowsePage
     @lists ||= ListSet.new("section", @content_item.content_id, details["groups"])
   end
 
-  def related_topics
-    linked_items("related_topics")
-  end
-
   def slug
     base_path.sub(%r{\A/browse/}, "")
   end

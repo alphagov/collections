@@ -178,49 +178,6 @@ RSpec.describe MainstreamBrowsePage do
     end
   end
 
-  describe "related_topics" do
-    it "returns the title, base_path and description for all related topics" do
-      api_data["links"]["related_topics"] = [
-        {
-          "title" => "Foo",
-          "description" => "All about foo",
-          "base_path" => "/browse/foo",
-        },
-        {
-          "title" => "Bar",
-          "description" => "All about bar",
-          "base_path" => "/browse/bar",
-        },
-      ]
-
-      expect(page.related_topics[1].title).to eq("Foo")
-      expect(page.related_topics[0].base_path).to eq("/browse/bar")
-      expect(page.related_topics[1].description).to eq("All about foo")
-    end
-
-    it "returns related topics alphabetised" do
-      api_data["links"]["related_topics"] = [
-        {
-          "title" => "Foo",
-        },
-        {
-          "title" => "Bar",
-        },
-      ]
-
-      expect(page.related_topics.map(&:title)).to eq(%w[Bar Foo])
-    end
-
-    it "returns empty array with no items" do
-      expect(page.related_topics).to eq([])
-    end
-
-    it "returns empty array when the links field is missing" do
-      api_data.delete("links")
-      expect(page.related_topics).to eq([])
-    end
-  end
-
   describe "slug" do
     it "returns the slug for a top-level browse page" do
       api_data["base_path"] = "/browse/benefits"

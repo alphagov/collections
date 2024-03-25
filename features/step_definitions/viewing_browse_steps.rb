@@ -140,6 +140,5 @@ def add_second_level_browse_pages(second_level_browse_pages)
                                   title: "Crime and justice",
                                   base_path: "/browse/crime-and-justice",
                                 }],
-                                related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
                               }
 end

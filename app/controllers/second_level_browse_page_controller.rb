@@ -30,17 +30,13 @@ private
   end
 
   def count_link_sections(page)
-    page.lists.count + page.related_topics.count
+    page.lists.count
   end
 
   def count_total_links(page)
     link_count = 0
     page.lists.each do |list|
       link_count += list.contents.count
-    end
-
-    if page.related_topics.any?
-      link_count += page.related_topics.count
     end
 
     link_count
