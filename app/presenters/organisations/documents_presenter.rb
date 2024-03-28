@@ -46,9 +46,16 @@ module Organisations
     end
 
     def latest_documents
-      @latest_documents ||= Services.cached_search(
+      @latest_documents ||= latest_documents_excluding_org_page
+      search_results_to_documents(@latest_documents, @org)
+    end
+
+  private
+
+    def latest_documents_excluding_org_page
+      documents = Services.cached_search(
         {
-          count: 3,
+          count: 4,
           order: "-public_timestamp",
           filter_organisations: @org.slug,
           fields: %w[title link content_store_document_type public_timestamp],
@@ -56,10 +63,8 @@ module Organisations
         metric_key: "organisations.search.request_time",
       )["results"]
 
-      search_results_to_documents(@latest_documents, @org)
+      documents.reject { |doc| doc["link"] == @org.base_path }.take(3)
     end
-
-  private
 
     def items_for_a_promotional_feature(feature)
       number_of_items = feature["items"].length
