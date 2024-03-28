@@ -141,6 +141,17 @@ RSpec.describe Organisations::DocumentsPresenter do
       expect(documents_presenter.latest_documents).to eq(expected)
     end
 
+    context "The returned latest documents include the organisation page" do
+      before do
+        stub_search_api_latest_documents_request_includes_org_page(documents_presenter.org.slug)
+      end
+
+      it "doesn't return the organisation page in the latest documents" do
+        expect(documents_presenter.latest_documents[:items].count).to eq(1)
+        expect(documents_presenter.latest_documents[:items].first["link"]).not_to eq("/government/organisations/#{documents_presenter.org.slug}")
+      end
+    end
+
     it "formats document types with acronyms correctly" do
       # This only applies to types containing "FOI" and "DFID"
       stub_search_api_latest_content_with_acronym("attorney-generals-office")
