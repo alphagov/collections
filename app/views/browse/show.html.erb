@@ -1,4 +1,5 @@
 <% add_view_stylesheet("browse") %>
+
 <% content_for :title, page.title %>
 
 <%= render 'shared/tag_meta', tag: page %>
@@ -29,8 +30,6 @@
     inverse: true
   } %>
 <% end %>
-
-<%= render partial: 'shared/intervention_banner' %>
 
 <% if display_action_links_for_slug?(page.slug) %>
   <div class="govuk-width-container">
