@@ -251,7 +251,7 @@ RSpec.describe "Organisation pages" do
     expect(page).to have_css("a[href='/government/organisations/attorney-generals-office/about']", text: "Read more about what we do")
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
-    expect(page).to have_css("a[href='/government/organisations/office-of-the-secretary-of-state-for-wales/about.cy']", text: "Darllenwch fwy am beth rydyn ni'n wneud")
+    expect(page).to have_css("a[href='/government/organisations/office-of-the-secretary-of-state-for-wales/about.cy']", text: "Darllen rhagor am ein gwaith")
   end
 
   it "shows translated text on welsh pages" do
