@@ -22,7 +22,7 @@ RSpec.describe Organisations::ContactsPresenter do
           links: [
             "<a class=\"govuk-link brand__color\" href=\"/to/some/foi/stuff\">Click me</a>",
           ],
-          description: "<p>FOI requests<br/><br/>are possible</p>",
+          description: "<p class=\"govuk-body\">FOI requests<br/><br/>are possible</p>",
         },
         {
           locale: "en",
@@ -37,7 +37,7 @@ RSpec.describe Organisations::ContactsPresenter do
           links: [
             "<a class=\"govuk-link brand__color\" href=\"/foi/stuff\">FOI contact form</a>",
           ],
-          description: "<p>Something here<br/><br/>Something there</p>",
+          description: "<p class=\"govuk-body\">Something here<br/><br/>Something there</p>",
         },
         {
           locale: "en",
