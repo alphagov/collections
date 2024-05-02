@@ -32,12 +32,21 @@ th:
         other: โพสต์บล็อก
       business_finance_support_scheme:
         other: โครงการสนับสนุนการเงินแก่ธุรกิจ
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         other: การรณรงค์
       careers:
         other: อาชีพ
       case_study:
         other: กรณีศึกษา
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         other: การให้คำปรึกษาที่ปิดแล้ว
       cma_case:
@@ -143,6 +152,9 @@ th:
         other: สถิติของราชการ
       official_statistics_announcement:
         other: ประกาศสถิติของราชการ
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         other: การให้คำปรึกษาที่เปิดอยู่
       oral_statement:

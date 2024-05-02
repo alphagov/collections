@@ -43,6 +43,12 @@ es-419:
       business_finance_support_scheme:
         one: Programa de apoyo financiero a empresas
         other: Programas de apoyo financiero a empresas
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: Campaña
         other: Campañas
@@ -52,6 +58,9 @@ es-419:
       case_study:
         one: Estudio de caso
         other: Estudios de caso
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Consulta restringida
         other: Consultas restringidas
@@ -208,6 +217,9 @@ es-419:
       official_statistics_announcement:
         one: Anuncio de estadísticas oficiales
         other: Anuncios de estadísticas oficiales
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Consulta pública
         other: Consultas públicas

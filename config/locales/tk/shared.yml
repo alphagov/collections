@@ -43,6 +43,12 @@ tk:
       business_finance_support_scheme:
         one: Telekeçiligi maliýeleşdirmegiň shemasy
         other: Telekeçiligi maliýeleşdirmegi goldamak shemalary
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: Kompaniýa
         other: Kompaniýalar
@@ -52,6 +58,9 @@ tk:
       case_study:
         one: Ýagdaý seljermesi
         other: Ýagdaý seljermeleri
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Ýapyk maslahat
         other: Ýapyk maslahatlar
@@ -208,6 +217,9 @@ tk:
       official_statistics_announcement:
         one: Resmi statistika bildirişi
         other: Resmi statistika bildirişleri
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Açyk maslahat
         other: Açyk maslahatlar

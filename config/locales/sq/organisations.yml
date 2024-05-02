@@ -3,6 +3,7 @@ sq:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Administruar nga
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: Gjykatat dhe Tribunalet
       organisations: Organizatat
@@ -63,6 +64,8 @@ sq:
     index_title: "%{title}"
     jobs_contracts: Punë dhe kontrata
     latest_from: I fundit nga %{title}
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} quhet tani <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title} është trup i <a href='%{link_href}'>%{link_text}</a>"
@@ -107,6 +110,7 @@ sq:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunali
+    videos:
     what_we_do:
     works_with_statement:
       one: Punon me %{works_with_count} organ publik
