@@ -43,6 +43,12 @@ hi:
       business_finance_support_scheme:
         one: व्यावसायिक वित्त सहायता योजना
         other: व्यावसायिक वित्त सहायता योजनाएं
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: अभियान
         other: अभियान
@@ -52,6 +58,9 @@ hi:
       case_study:
         one: विषय अध्ययन
         other: विषय अध्ययन
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: बंद कमरे में परामर्श
         other: बंद कमरे में परामर्श
@@ -208,6 +217,9 @@ hi:
       official_statistics_announcement:
         one: आधिकारिक सांख्यिकी की घोषणा
         other: आधिकारिक सांख्यिकी की घोषणाएं
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: खुला परामर्श
         other: खुले परामर्श

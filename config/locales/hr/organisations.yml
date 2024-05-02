@@ -3,6 +3,7 @@ hr:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Administrira
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: Sudovi i tribunali
       organisations: Organizacije
@@ -63,6 +64,8 @@ hr:
     index_title: "%{title}"
     jobs_contracts: Poslovi i ugovori
     latest_from: Najnovije od %{title}
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} sada se naziva <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title} je tijelo od <a href='%{link_href}'>%{link_text}</a>"
@@ -107,6 +110,7 @@ hr:
       special_health_authority:
       sub_organisation:
       tribunal: Sud
+    videos:
     what_we_do:
     works_with_statement:
       few:

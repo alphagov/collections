@@ -87,6 +87,12 @@ cy:
         other: Cynlluniau cymorth cyllid busnes
         two:
         zero:
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         few:
         many:
@@ -108,6 +114,9 @@ cy:
         other: Astudiaethau achos
         two:
         zero:
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         few:
         many:
@@ -468,6 +477,9 @@ cy:
         other: Cyhoeddiadau o ystadegau swyddogol
         two:
         zero:
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         few:
         many:

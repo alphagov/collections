@@ -65,6 +65,12 @@ mt:
         many:
         one: Skema ta' għajnuna għall-finanzjament tan-negozju
         other: Skemi ta' għajnuna għall-finanzjament tan-negozju
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         few:
         many:
@@ -80,6 +86,9 @@ mt:
         many:
         one: Studju ta' każ
         other: Studju ta' każijiet
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         few:
         many:
@@ -338,6 +347,9 @@ mt:
         many:
         one: Avviż dwar statistiċi uffiċjali
         other: Avviżi dwar statistiċi uffiċjali
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         few:
         many:

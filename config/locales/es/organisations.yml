@@ -3,6 +3,7 @@ es:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Administrado por
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: Juzgados y Tribunales
       organisations: Organizaciones
@@ -63,6 +64,8 @@ es:
     index_title: "%{title}"
     jobs_contracts: Trabajos y contratos
     latest_from: Más reciente de %{title}
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} ahora se denomina <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title} es un cuerpo de <a href='%{link_href}'>%{link_text}</a>"
@@ -107,6 +110,7 @@ es:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunal
+    videos:
     what_we_do:
     works_with_statement:
       one: Funciona con el cuerpo público %{works_with_count}

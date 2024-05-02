@@ -3,6 +3,7 @@ he:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: מנוהל על ידי
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: בתי משפט ובתי דין
       organisations: ארגונים
@@ -65,6 +66,8 @@ he:
     index_title: "%{title}"
     jobs_contracts: משרות וחוזים
     latest_from: עדכון אחרון מתוך %{title}
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} נקרא כעת <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title}הוא גוף של <a href='%{link_href}'>%{link_text}</a>"
@@ -109,6 +112,7 @@ he:
       special_health_authority:
       sub_organisation:
       tribunal: 'בית דין '
+    videos:
     what_we_do:
     works_with_statement:
       one: עובד עם %{works_with_count} גוף ציבורי

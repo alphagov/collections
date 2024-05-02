@@ -3,6 +3,7 @@ de:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Verwaltet durch
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: Gerichte und Gerichtshöfe
       organisations: Organisationen
@@ -65,6 +66,8 @@ de:
     index_title: "%{title}"
     jobs_contracts: Arbeitsplätze und Verträge
     latest_from: Aktuelles von %{title}
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} heißt jetzt <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title} ist eine Körperschaft von <a href='%{link_href}'>%{link_text}</a>"
@@ -109,6 +112,7 @@ de:
       special_health_authority:
       sub_organisation:
       tribunal: Gerichtshof
+    videos:
     what_we_do:
     works_with_statement:
       one: Arbeitet mit %{works_with_count} öffentlichen Einrichtungen

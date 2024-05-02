@@ -43,6 +43,12 @@ sq:
       business_finance_support_scheme:
         one: Skema e mbështetjes së financimit të biznesit
         other: Skemat e mbështetjes së financimit të biznesit
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: Fushatë
         other: Fushata
@@ -52,6 +58,9 @@ sq:
       case_study:
         one: Rast studimi
         other: Raste studimi
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Konsultim i mbyllur
         other: Konsultime të mbyllura
@@ -208,6 +217,9 @@ sq:
       official_statistics_announcement:
         one: Njoftimi i statistikave zyrtare
         other: Njoftime të statistikave zyrtare
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Konsultim i hapur
         other: Konsultime te hapura

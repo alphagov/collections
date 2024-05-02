@@ -54,6 +54,12 @@ lt:
         few:
         one: Verslo finansų paramos planas
         other: Verslo finansų paramos planai
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         few:
         one: Kampanija
@@ -66,6 +72,9 @@ lt:
         few:
         one: Atvejo analizė
         other: Atvejų analizės
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         few:
         one: Pasibaigusi konsultacija
@@ -273,6 +282,9 @@ lt:
         few:
         one: Oficialios statistikos pranešimas
         other: Oficialios statistikos pranešimasi
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         few:
         one: Atvira konsultacija

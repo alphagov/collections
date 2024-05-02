@@ -3,6 +3,7 @@ be:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Кіруецца
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: Суды і трыбуналы
       organisations: Арганізацыі
@@ -65,6 +66,8 @@ be:
     index_title: "%{title}"
     jobs_contracts: Праца і кантакты
     latest_from: Апошняе ад %{title}
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} зараз завецца <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title} з'яўляецца органам <a href='%{link_href}'>%{link_text}</a>"
@@ -109,6 +112,7 @@ be:
       special_health_authority:
       sub_organisation:
       tribunal: Трыбунал
+    videos:
     what_we_do:
     works_with_statement:
       few:

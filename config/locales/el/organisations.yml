@@ -3,6 +3,7 @@ el:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Διοικείται από
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: Δικαστήρια και Διαιτητικά όργανα
       organisations: Οργανισμοί
@@ -65,6 +66,8 @@ el:
     index_title: "%{title}"
     jobs_contracts: Θέσεις εργασίας και συμβάσεις
     latest_from: Τελευταία από %{title}
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} ονομάζεται τώρα <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: Το %{title} είναι ένα σώμα του <a href='%{link_href}'>%{link_text}</a>
@@ -109,6 +112,7 @@ el:
       special_health_authority:
       sub_organisation:
       tribunal: Δικαστήριο
+    videos:
     what_we_do:
     works_with_statement:
       one: Λειτουργεί με %{works_with_count} δημόσιο φορέα

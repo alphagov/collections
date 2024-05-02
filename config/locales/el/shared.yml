@@ -43,6 +43,12 @@ el:
       business_finance_support_scheme:
         one: Πρόγραμμα στήριξης χρηματοδότησης επιχειρήσεων
         other: Προγράμματα στήριξης χρηματοδότησης επιχειρήσεων
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: Καμπάνια
         other: Καμπάνιες
@@ -52,6 +58,9 @@ el:
       case_study:
         one: Μελέτη περίπτωσης
         other: Μελέτες περιπτώσεων
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Κλειστή διαβούλευση
         other: Κλειστές διαβουλεύσεις
@@ -208,6 +217,9 @@ el:
       official_statistics_announcement:
         one: Επίσημη ανακοίνωση στατιστικών
         other: Επίσημες ανακοινώσεις στατιστικών
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Ανοιχτή διαβούλευση
         other: Ανοιχτές διαβουλεύσεις
