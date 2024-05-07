@@ -1,6 +1,8 @@
 module Organisations
   class DocumentsPresenter
     include OrganisationHelper
+    include PromotionalFeatureHelper
+
     attr_reader :org
 
     def initialize(organisation)
@@ -23,22 +25,6 @@ module Organisations
       return featured_news(org.ordered_featured_documents).map { |news| news.merge({ font_size: "s" }) } if org.is_no_10?
 
       featured_news(org.ordered_featured_documents)
-    end
-
-    def has_promotional_features?
-      org.ordered_promotional_features.present?
-    end
-
-    def promotional_features
-      org.ordered_promotional_features.map do |feature|
-        number_of_items = feature["items"].length
-        {
-          title: feature["title"],
-          number_of_items:,
-          child_column_class: promotions_child_column_class(number_of_items),
-          items: items_for_a_promotional_feature(feature),
-        }
-      end
     end
 
     def has_latest_documents?
@@ -66,41 +52,6 @@ module Organisations
       documents.reject { |doc| doc["link"] == @org.base_path }.take(3)
     end
 
-    def items_for_a_promotional_feature(feature)
-      number_of_items = feature["items"].length
-      feature["items"].map do |item|
-        data = {
-          description: item["summary"].gsub("\r\n", "<br/>").html_safe,
-          href: promotional_feature_link(item["href"]),
-          image_src: item.dig("image", "url"),
-          image_alt: item.dig("image", "alt_text"),
-          youtube_video_id: item.dig("youtube_video", "id"),
-          youtube_video_alt: item.dig("youtube_video", "alt_text"),
-          extra_details: item["links"].map do |link|
-            {
-              text: link["title"],
-              href: link["href"],
-            }
-          end,
-          brand: org.brand,
-          heading_level: 3,
-          extra_details_no_indent: true,
-        }.merge(make_full_width(number_of_items))
-
-        if item["title"].present?
-          data[:heading_text] = item["title"]
-        end
-
-        data
-      end
-    end
-
-    def make_full_width(number_of_items)
-      return {} unless number_of_items == 1
-
-      { large: true }
-    end
-
     def featured_news(featured, first_featured: false)
       news_stories = []
 
@@ -126,16 +77,6 @@ module Organisations
       end
 
       news_stories
-    end
-
-    def promotions_child_column_class(number_of_items)
-      return "govuk-grid-column-one-half" if number_of_items == 2
-
-      "govuk-grid-column-one-third" if number_of_items == 3
-    end
-
-    def promotional_feature_link(link)
-      link.presence
     end
   end
 end
