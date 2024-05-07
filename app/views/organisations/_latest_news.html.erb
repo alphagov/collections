@@ -1,0 +1,33 @@
+<%
+  ga4_image_card_json = {
+    "event_name": "navigation",
+    "type": "image card",
+    "section": t("organisations.latest_news", lang: :en)
+  }.to_json
+%>
+<section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="latest-news">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+          text: t("organisations.latest_news"),
+          padding: true,
+          margin_bottom: 3,
+          lang: "en"
+      } %>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half" data-module="ga4-link-tracker" data-ga4-link="<%= ga4_image_card_json %>" data-ga4-track-links-only>
+      <% latest_news_items = latest_news_items(@organisation, get_first_image: true) %>
+      <%= render "govuk_publishing_components/components/image_card", latest_news_items.shift %>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <%= render "govuk_publishing_components/components/list",
+        brand: @organisation.brand,
+        extra_spacing: true,
+        items: latest_news_items.map { |item| sanitize("<a href=\"#{item[:href]}\" rel=\"noopener\" class=\"govuk-link brand__color\">#{item[:text]}</a>") }
+      %>
+    </div>
+  </div>
+</section>

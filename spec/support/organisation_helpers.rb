@@ -66,6 +66,13 @@ module OrganisationHelpers
     stub_content_store_has_item(latest_news_search_response.first[:link], latest_news_content_item_with_image.to_json)
   end
 
+  def stub_latest_news_for_organisation_missing_item(organisation_slug)
+    stub_request(:get, Plek.new.find("search-api") + "/search.json?count=5&filter_content_purpose_supergroup%5B%5D=news_and_communications&filter_organisations%5B%5D=#{organisation_slug}&order=-public_timestamp")
+      .to_return(body: { results: latest_news_search_response }.to_json)
+
+    stub_content_store_does_not_have_item(latest_news_search_response.first[:link])
+  end
+
   def stub_search_api_latest_documents_request(organisation_slug)
     stub_request(:get, Plek.new.find("search-api") + "/search.json?count=4&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp")
       .to_return(body: { results: [search_response] }.to_json)
@@ -92,7 +99,7 @@ module OrganisationHelpers
 
   def latest_news_content_item_with_image
     {
-      details: { image: "https://www.example.com/latest-news-item-with-image.png" },
+      details: { image: { url: "https://www.example.com/latest-news-item-with-image.png", alt_text: "Example Image" } },
     }
   end
 
