@@ -76,3 +76,13 @@
   background-position: 50% 0;
   text-align: center;
 }
+
+.organisation__no10-yt-link {
+  display: none;
+}
+
+.js-enabled {
+  .organisation__no10-yt-link {
+    display: block;
+  }
+}
