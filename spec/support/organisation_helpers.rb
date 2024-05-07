@@ -59,6 +59,13 @@ module OrganisationHelpers
     stub_request(:get, url).to_return(body: build_result_body("other", true).to_json)
   end
 
+  def stub_latest_news_for_organisation(organisation_slug)
+    stub_request(:get, Plek.new.find("search-api") + "/search.json?count=5&filter_content_purpose_supergroup%5B%5D=news_and_communications&filter_organisations%5B%5D=#{organisation_slug}&order=-public_timestamp")
+      .to_return(body: { results: latest_news_search_response }.to_json)
+
+    stub_content_store_has_item(latest_news_search_response.first[:link], latest_news_content_item_with_image.to_json)
+  end
+
   def stub_search_api_latest_documents_request(organisation_slug)
     stub_request(:get, Plek.new.find("search-api") + "/search.json?count=4&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp")
       .to_return(body: { results: [search_response] }.to_json)
@@ -81,6 +88,29 @@ module OrganisationHelpers
       content_store_document_type: "press release",
       public_timestamp: "2020-07-26T23:15:09.000+00:00",
     }
+  end
+
+  def latest_news_content_item_with_image
+    {
+      details: { image: "https://www.example.com/latest-news-item-with-image.png" },
+    }
+  end
+
+  def latest_news_search_response
+    [
+      {
+        title: "Latest news item with image",
+        link: "/government/news/latest-news-item-with-image",
+        content_store_document_type: "press release",
+        public_timestamp: "2020-07-26T23:15:29.000+00:00",
+      },
+      {
+        title: "Latest news item (link only)",
+        link: "/government/news/latest-news-item-link-only",
+        content_store_document_type: "press release",
+        public_timestamp: "2020-07-26T23:15:09.000+00:00",
+      },
+    ]
   end
 
   def org_page_search_response(organisation_slug)
@@ -815,9 +845,9 @@ module OrganisationHelpers
                 title: "",
                 href: "https://www.gov.uk/government/policies/3-1",
                 summary: "Story 3-1\r\n\r\nAnd a new line",
-                image: {
-                  url: "https://assets.publishing.service.gov.uk/government/uploads/3-1.jpg",
-                  alt_text: "Image 3-1",
+                youtube_video: {
+                  id: "fFmDQn9Lbl4",
+                  alt_text: "YouTube video alt text.",
                 },
                 links: [
                   {
@@ -853,10 +883,11 @@ module OrganisationHelpers
                 title: "An unexpected title",
                 href: "https://www.gov.uk/government/policies/3-3",
                 summary: "Story 3-3",
-                youtube_video: {
-                  id: "fFmDQn9Lbl4",
-                  alt_text: "YouTube video alt text.",
+                image: {
+                  url: "https://assets.publishing.service.gov.uk/government/uploads/3-3.jpg",
+                  alt_text: "Image 3-3",
                 },
+
                 links: [
                   {
                     title: "Single departmental plans",
