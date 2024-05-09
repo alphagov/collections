@@ -1,4 +1,5 @@
 @import "govuk_publishing_components/individual_component_support";
+@import "govuk_publishing_components/components/mixins/prefixed-transform";
 
 // This dark grey is the background colour for the browse pages.
 //
@@ -85,5 +86,77 @@ $browse-header-background-colour: #263135;
 
   @include govuk-media-query($from: "tablet") {
     margin-bottom: govuk-spacing(6);
+  }
+}
+
+// chevron-card added from `frontend` for A/B testing
+.browse__chevron-cards {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.chevron-card {
+  border-top: 1px solid $govuk-border-colour;
+  padding: govuk-spacing(1) 0 govuk-spacing(4);
+
+  &:last-child {
+    border-bottom: 1px solid $govuk-border-colour;
+  }
+}
+
+.chevron-card__wrapper {
+  padding: 19px 0 4px;
+  position: relative;
+
+  .govuk-heading-s,
+  .chevron-card__description {
+    margin: 0 govuk-spacing(6) 0 0;
+
+    // Ensure card content width is constrained to two thirds on desktop
+    @include govuk-media-query($from: "desktop") {
+      max-width: 66.6667%;
+    }
+  }
+}
+
+.chevron-card__link {
+  &::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &::before {
+    $dimension: 7px;
+    $width: 3px;
+
+    border-right: $width solid $govuk-brand-colour;
+    border-top: $width solid $govuk-brand-colour;
+    content: "";
+    display: block;
+    height: $dimension;
+    position: absolute;
+    right: govuk-spacing(1);
+    top: 50%;
+    margin-top: 5px;
+    @include prefixed-transform($rotate: 45deg);
+    width: $dimension;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $govuk-link-hover-colour;
+    }
+  }
+
+  &:focus {
+    &::before {
+      border-color: $govuk-focus-text-colour;
+    }
   }
 }
