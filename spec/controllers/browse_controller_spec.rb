@@ -40,7 +40,7 @@ RSpec.describe BrowseController do
       it "responds to html by default" do
         get :show, params: { top_level_slug: "benefits" }
         expect(response.content_type).to eq "text/html; charset=utf-8"
-        expect(response).to render_template(partial: "_cards")
+        expect(response).to render_template(partial: "_chevron_card")
       end
     end
 
