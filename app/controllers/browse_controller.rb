@@ -10,6 +10,8 @@ class BrowseController < ApplicationController
   end
 
   def show
+    set_new_browse_response_header if new_browse_page_under_test?
+
     page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
     setup_content_item_and_navigation_helpers(page)
 
