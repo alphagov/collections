@@ -22,7 +22,7 @@ module NewBrowseAbTestable
   end
 
   def new_browse_variant_b?
-    page_under_test? && new_browse_variant.variant?("B")
+    new_browse_page_under_test? && new_browse_variant.variant?("B")
   end
 
   def new_browse_page_under_test?
