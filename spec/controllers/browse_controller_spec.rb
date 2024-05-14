@@ -50,11 +50,21 @@ RSpec.describe BrowseController do
       context "NewBrowse AB test" do
         subject { get :show, params: { top_level_slug: "benefits" } }
 
-        %w[A B Z].each do |variant|
-          it "with variant #{variant}" do
-            with_variant NewBrowse: variant do
-              expect(subject).to render_template(:show)
-            end
+        it "with variant A" do
+          with_variant NewBrowse: "A" do
+            expect(subject).to render_template(partial: "_browse_grid")
+          end
+        end
+
+        it "with variant B" do
+          with_variant NewBrowse: "B" do
+            expect(subject).to render_template(partial: "_browse_list")
+          end
+        end
+
+        it "with variant Z" do
+          with_variant NewBrowse: "Z" do
+            expect(subject).to render_template(partial: "_browse_grid")
           end
         end
       end
