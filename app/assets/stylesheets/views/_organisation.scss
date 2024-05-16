@@ -25,7 +25,7 @@
   }
 
   .organisation__secondary-corporate-information {
-    @include govuk-font(16);
+    @include govuk-font(19);
 
     a:focus {
       @include govuk-focused-text;
@@ -38,6 +38,7 @@
 
   .organisation__address {
     font-style: normal;
+    @include govuk-font(19);
   }
 
   .organisation__contact-number {
@@ -45,8 +46,12 @@
   }
 }
 
+.organisation__paragraph {
+  @include govuk-font(19);
+}
+
 .organisation__parent-organisations {
-  @include govuk-font(16);
+  @include govuk-font(19);
   margin-top: govuk-spacing(3);
 }
 
