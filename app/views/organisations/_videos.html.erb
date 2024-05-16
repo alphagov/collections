@@ -11,12 +11,18 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+          text: @documents.promotional_video_feature_title,
+          heading_level: 3,
+          margin_bottom: 3,
+          font_size: "s",
+          lang: "en"
+      } %>
       <%= render "govuk_publishing_components/components/govspeak" do %>
         <a href="<%= @documents.promotional_video_feature_youtube_url %>" class="govuk-link brand__color"><%= @documents.promotional_video_feature_youtube_url %></a>
       <% end %>
-      <p class="govuk-heading-s govuk-!-margin-top-1"><%= @documents.promotional_video_feature_title %></p>
     </div>
-    <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <div class="govuk-grid-column-one-third govuk-!-margin-top-7">
      <%= render "govuk_publishing_components/components/list",
       extra_spacing: true,
      items: @documents.promotional_video_feature_item_links.map { |item| sanitize("<a href=\"#{item[:href]}\" rel=\"noopener\" class=\"govuk-link brand__color\">#{item[:text]}</a>") }
