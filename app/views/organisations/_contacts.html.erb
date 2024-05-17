@@ -27,13 +27,14 @@
           <% if contact[:email_addresses].any? %>
             <div class="organisation__margin-bottom">
               <% if I18n.exists?('organisations.contact.email', contact[:locale]) %>
-                <p><%= t('organisations.contact.email') %></p>
+                <p class="organisation__paragraph"><%= t('organisations.contact.email') %></p>
               <% else %>
-                <p lang="en"><%= t('organisations.contact.email') %></p>
+                <p class="organisation__paragraph" lang="en"><%= t('organisations.contact.email') %></p>
               <% end %>
 
               <% contact[:email_addresses].each do |email| %>
                 <p
+                  class="organisation__paragraph"
                   data-module="ga4-link-tracker"
                   data-ga4-track-links-only
                   data-ga4-do-not-redact
@@ -47,7 +48,7 @@
           <% if contact[:links].any? %>
             <div class="organisation__margin-bottom">
               <% contact[:links].each do |link| %>
-                <p><%= link.html_safe %></p>
+                <p class="organisation__paragraph"><%= link.html_safe %></p>
               <% end %>
             </div>
           <% end %>
@@ -55,8 +56,8 @@
           <% if contact[:phone_numbers] %>
             <div class="organisation__margin-bottom">
               <% contact[:phone_numbers].each do |phone| %>
-                <p><%= phone[:title] %></p>
-                <p class="organisation__contact-number"><%= phone[:number] %></p>
+                <p class="organisation__paragraph"><%= phone[:title] %></p>
+                <p class="organisation__contact-number organisation__paragraph"><%= phone[:number] %></p>
               <% end %>
             </div>
           <% end %>
