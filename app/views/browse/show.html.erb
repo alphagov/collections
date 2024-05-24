@@ -61,9 +61,5 @@
 <% end %>
 
 <%= render "shared/browse_cards_container" do %>
-  <% if new_browse_variant_b? %>
-    <%= render partial: "browse/browse_list", locals: { page: page } %>
-  <% else %>
-    <%= render partial: "browse/browse_grid", locals: { page: page } %>
-  <% end %>
+  <%= render partial: "browse/browse_grid", locals: { page: page } %>
 <% end %>

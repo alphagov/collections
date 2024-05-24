@@ -1,5 +1,4 @@
 class BrowseController < ApplicationController
-  include NewBrowseAbTestable
   slimmer_template "gem_layout_full_width"
 
   def index
@@ -20,8 +19,6 @@ class BrowseController < ApplicationController
   end
 
 private
-
-  helper_method :new_browse_variant_b?
 
   def show_html(page)
     template = :show
