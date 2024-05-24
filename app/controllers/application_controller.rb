@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Template
 
-  helper_method :level_two_browse_variant
   helper_method :content_item_h
 
   protect_from_forgery with: :exception
