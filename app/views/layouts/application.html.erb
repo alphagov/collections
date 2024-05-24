@@ -39,7 +39,6 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
-  <%= new_browse_variant.analytics_meta_tag.html_safe if new_browse_page_under_test? %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>
   <%=
     render_component_stylesheets
