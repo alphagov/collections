@@ -1,10 +1,7 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Template
-  include NewBrowseAbTestable
 
-  helper_method :new_browse_variant
   helper_method :content_item_h
-  helper_method :new_browse_page_under_test?
 
   protect_from_forgery with: :exception
 

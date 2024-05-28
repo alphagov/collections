@@ -16,10 +16,6 @@ RSpec.describe BrowseController do
 
       expect(response.headers["Cache-Control"]).to eq("max-age=300, public")
     end
-
-    it "is not included in the newbrowse AB test" do
-      assert_response_not_modified_for_ab_test("NewBrowse")
-    end
   end
 
   describe "GET top_level_browse_page" do
@@ -45,28 +41,6 @@ RSpec.describe BrowseController do
         get :show, params: { top_level_slug: "benefits" }
         expect(response.content_type).to eq "text/html; charset=utf-8"
         expect(response).to render_template(partial: "_cards")
-      end
-
-      context "NewBrowse AB test" do
-        subject { get :show, params: { top_level_slug: "benefits" } }
-
-        it "with variant A" do
-          with_variant NewBrowse: "A" do
-            expect(subject).to render_template(partial: "_browse_grid")
-          end
-        end
-
-        it "with variant B" do
-          with_variant NewBrowse: "B" do
-            expect(subject).to render_template(partial: "_browse_list")
-          end
-        end
-
-        it "with variant Z" do
-          with_variant NewBrowse: "Z" do
-            expect(subject).to render_template(partial: "_browse_grid")
-          end
-        end
       end
     end
 
