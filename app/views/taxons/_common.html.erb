@@ -9,6 +9,17 @@
   } %>
 <% end %>
 
+<% content_for :breadcrumbs do %>
+  <div class="taxon-page__breadcrumbs-wrapper">
+    <div class="govuk-width-container">
+      <%= render 'govuk_publishing_components/components/breadcrumbs', {
+        breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
+        collapse_on_mobile: true,
+        inverse: true
+      } %>
+    </div>
+  </div>
+<% end %>
 <%= render partial: 'page_header', locals: { presented_taxon: presented_taxon } %>
 
 <% if taxon_is_live?(presented_taxon) %>
