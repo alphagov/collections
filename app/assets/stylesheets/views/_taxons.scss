@@ -8,6 +8,15 @@
   }
 }
 
+.taxon-page__breadcrumbs-wrapper {
+  background-color: govuk-colour("blue");
+  padding: govuk-spacing(3) 0 govuk-spacing(4);
+
+  @include govuk-media-query($from: tablet) {
+    padding-bottom: govuk-spacing(8);
+  }
+}
+
 .taxon-page__email-link-wrapper {
   background-color: govuk-colour("light-grey");
   margin-top: -(govuk-spacing(6));

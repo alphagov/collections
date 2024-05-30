@@ -1,12 +1,15 @@
-<%= render "govuk_publishing_components/components/inverse_header", { full_width: true } do %>
+<%= render "govuk_publishing_components/components/inverse_header", { 
+  full_width: true,         
+  padding_top: false
+ } do %>
   <div class="govuk-width-container">
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
           title: presented_taxon.title,
           average_title_length: 'long',
-          inverse: true
+          inverse: true,
+          margin_top: 0
         } %>
 
         <%= render 'govuk_publishing_components/components/lead_paragraph', {
