@@ -2,6 +2,7 @@ if ENV["USE_SIMPLECOV"]
   require "simplecov"
   require "simplecov-rcov"
   SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
+  SimpleCov.start
 end
 
 if ENV["USE_I18N_COVERAGE"]
