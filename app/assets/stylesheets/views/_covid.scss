@@ -13,9 +13,20 @@ $c19-landing-page-header-background: govuk-colour("blue");
   }
 }
 
+@include govuk-media-query($from: desktop) {
+  .covid__page-header {
+    border-top: solid govuk-spacing(2) $c19-landing-page-header-background;
+  }
+}
+
+@include govuk-media-query($until: desktop) {
+  .covid__page-header {
+    margin-top: govuk-spacing(-3);
+  }
+}
+
 .covid__page-header {
   margin-bottom: govuk-spacing(8);
-  border-top: solid govuk-spacing(2) $covid-yellow;
   background-color: $c19-landing-page-header-background;
   color: govuk-colour("white");
 }
