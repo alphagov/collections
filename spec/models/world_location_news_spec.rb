@@ -116,6 +116,90 @@ RSpec.describe WorldLocationNews do
 
       world_location_news.statistics
     end
+
+    it "should correctly combine announcements, publications and statistics into latest" do
+      announcements = [
+        {
+          link: {
+            text: "Changes to Birth and Death Registrations Overseas",
+            path: "/government/news/changes-to-birth-and-death-registrations-overseas--2",
+          },
+          metadata: {
+            public_updated_at: 5.days.ago,
+            document_type: "News story",
+          },
+        },
+        {
+          link: {
+            text: "Foreign Secretary statement on the death of Nelson Mandela",
+            path: "/government/news/foreign-secretary-statement-on-the-death-of-nelson-mandela",
+          },
+          metadata:
+          {
+            public_updated_at: 1.day.ago,
+            document_type: "Press release",
+          },
+        },
+      ]
+      publications = [
+        {
+          link: {
+            text: "Overseas business risk for Zimbabwe",
+            path: "/government/publications/overseas-business-risk-zimbabwe",
+          },
+          metadata: {
+            public_updated_at: 3.days.ago,
+            document_type: "Guidance",
+          },
+        },
+        {
+          link: {
+            text: "UK-Zimbabwe development partnership summary",
+            path: "/government/publications/uk-zimbabwe-development-partnership-summary",
+          },
+          metadata: {
+            public_updated_at: 4.days.ago,
+            document_type: "Policy paper",
+          },
+        },
+      ]
+      statistics = [
+        {
+          link: {
+            text: "German Wages Statistics",
+            path: "/government/publications/german-wages-statistics",
+          },
+          metadata: {
+            public_updated_at: 8.days.ago,
+            document_type: "Statistics",
+          },
+        },
+        {
+          link: {
+            text: "French Migration Statistics",
+            path: "/government/publications/french-migration-statistics",
+          },
+          metadata: {
+            public_updated_at: 2.days.ago,
+            document_type: "Statistics",
+          },
+        },
+      ]
+      expect(world_location_news)
+        .to receive(:announcements)
+        .with(no_args)
+        .and_return(announcements)
+      expect(world_location_news)
+        .to receive(:publications)
+        .with(no_args)
+        .and_return(publications)
+      expect(world_location_news)
+        .to receive(:statistics)
+        .with(no_args)
+        .and_return(statistics)
+      expect(world_location_news.latest)
+        .to eq([announcements[1], statistics[1], publications[0]])
+    end
   end
 
   it "should include the type" do

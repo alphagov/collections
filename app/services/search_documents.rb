@@ -1,5 +1,6 @@
 class SearchDocuments
   include SearchApiFields
+  DEFAULT_COUNT = 3
 
   def initialize(slug, filter_field)
     @slug = slug
@@ -15,7 +16,7 @@ private
 
   def default_search_options
     { @filter_field.to_sym => [@slug],
-      count: 3,
+      count: DEFAULT_COUNT,
       order: "-public_timestamp",
       fields: TOPICAL_EVENTS_SEARCH_FIELDS }
   end
