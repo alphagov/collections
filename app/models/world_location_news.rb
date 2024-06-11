@@ -67,7 +67,10 @@ class WorldLocationNews
   end
 
   def latest
-    @latest ||= @documents_service.fetch_related_documents_with_format
+    @latest ||= [*announcements, *publications, *statistics]
+        .select { |entry| entry.dig(:metadata, :public_updated_at).present? }
+        .sort { |entry1, entry2| - (entry1.dig(:metadata, :public_updated_at) <=> entry2.dig(:metadata, :public_updated_at)) }
+        .first(SearchDocuments::DEFAULT_COUNT)
   end
 
   def announcements
