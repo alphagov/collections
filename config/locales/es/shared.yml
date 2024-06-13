@@ -333,3 +333,4 @@ es:
         other: Declaraciones escritas
     topics:
       title: "%{title}: información detallada"
+    visually_hidden_get_emails:

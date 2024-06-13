@@ -333,3 +333,4 @@ ka:
         other: წერილობითი განცხადებები პარლამენტში
     topics:
       title: "%{title}: დეტალური ინფორმაცია"
+    visually_hidden_get_emails:

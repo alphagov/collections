@@ -227,3 +227,4 @@ ja:
         other: 議会への書面による声明
     topics:
       title: "％{title}：詳細情報"
+    visually_hidden_get_emails:

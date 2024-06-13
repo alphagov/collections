@@ -227,3 +227,4 @@ id:
         other: Pernyataan tertulis kepada Parlemen
     topics:
       title: "%{title}: informasi terperinci"
+    visually_hidden_get_emails:

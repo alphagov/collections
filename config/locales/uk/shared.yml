@@ -545,3 +545,4 @@ uk:
         other: Письмові заяви до Парламенту
     topics:
       title: "%{title}: детальна інформація"
+    visually_hidden_get_emails:

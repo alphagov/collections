@@ -7,6 +7,7 @@ en:
       title: Browse GOV.UK
     featured: Featured
     get_emails: Get emails for this topic
+    visually_hidden_get_emails: 'Get emails about the topic: %{topic}'
     language_direction: ltr
     language_name: English
     schema_name:
