@@ -26,6 +26,17 @@ $browse-header-background-colour: #263135;
   overflow: auto;
 }
 
+.browse__breadcrumb-border {
+  background: govuk-colour("blue");
+  height: 10px;
+}
+
+.global-bar-present {
+  .browse__breadcrumb-border {
+    height: 0;
+  }
+}
+
 // The header spacings are a work in progress.
 .browse__header-wrapper {
   padding-bottom: govuk-spacing(7);
