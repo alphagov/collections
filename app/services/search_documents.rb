@@ -2,23 +2,34 @@ class SearchDocuments
   include SearchApiFields
   DEFAULT_COUNT = 3
 
-  def initialize(slug, filter_field)
-    @slug = slug
-    @filter_field = filter_field
+  def initialize(slug_array)
+    @slug_array = slug_array
   end
 
   def fetch_related_documents_with_format(filter_format = {})
-    search_response = Services.search_api.search(default_search_options.merge(filter_format))
+    search_response = Services.cached_search(default_search_options.merge(filter_format))
     format_results(search_response)
+  end
+
+  def filter_field
+    Raise NotImplementedError
+  end
+
+  def fields
+    Raise NotImplementedError
+  end
+
+  def order
+    Raise NotImplementedError
   end
 
 private
 
   def default_search_options
-    { @filter_field.to_sym => [@slug],
+    { filter_field.to_sym => @slug_array,
       count: DEFAULT_COUNT,
-      order: "-public_timestamp",
-      fields: TOPICAL_EVENTS_SEARCH_FIELDS }
+      order:,
+      fields: }
   end
 
   def display_type(document)
