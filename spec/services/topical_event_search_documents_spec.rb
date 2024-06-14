@@ -1,11 +1,11 @@
-RSpec.describe SearchDocuments do
+RSpec.describe TopicalEventSearchDocuments do
   include SearchApiHelpers
 
   context "for topical events" do
     describe "#fetch_related_documents_with_format" do
       before do
         @slug = "/some/slug"
-        @documents_service = SearchDocuments.new(@slug, "filter_topical_events")
+        @documents_service = TopicalEventSearchDocuments.new([@slug], "filter_topical_events")
       end
 
       it "makes the correct call to search api" do
@@ -70,7 +70,7 @@ RSpec.describe SearchDocuments do
     describe "#fetch_related_documents_with_format" do
       before do
         @slug = "mock-country"
-        @documents_service = SearchDocuments.new(@slug, "filter_world_locations")
+        @documents_service = TopicalEventSearchDocuments.new([@slug], "filter_world_locations")
       end
 
       it "makes the correct call to search api" do
