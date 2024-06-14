@@ -3,7 +3,7 @@ class TopicalEvent
 
   def initialize(content_item)
     @content_item = content_item
-    @documents_service = SearchDocuments.new(slug, "filter_topical_events")
+    @documents_service = TopicalEventSearchDocuments
   end
 
   def self.find!(base_path)
@@ -92,24 +92,28 @@ class TopicalEvent
     end
   end
 
+  def documents_service
+    @documents_service.new(slug)
+  end
+
   def latest
-    @latest ||= @documents_service.fetch_related_documents_with_format
+    @latest ||= documents_service.fetch_related_documents_with_format
   end
 
   def publications
-    @publications ||= @documents_service.fetch_related_documents_with_format({ filter_format: "publication" })
+    @publications ||= documents_service.fetch_related_documents_with_format({ filter_format: "publication" })
   end
 
   def consultations
-    @consultations ||= @documents_service.fetch_related_documents_with_format({ filter_format: "consultation" })
+    @consultations ||= documents_service.fetch_related_documents_with_format({ filter_format: "consultation" })
   end
 
   def announcements
-    @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications", reject_content_purpose_subgroup: %w[decisions updates_and_alerts] })
+    @announcements ||= documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications", reject_content_purpose_subgroup: %w[decisions updates_and_alerts] })
   end
 
   def guidance_and_regulation
-    @guidance_and_regulation ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "guidance_and_regulation" })
+    @guidance_and_regulation ||= documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "guidance_and_regulation" })
   end
 
   def organisations
