@@ -9,7 +9,6 @@ RSpec.feature "Mainstream browsing" do
 
     schemas.each do |content_item|
       stub_content_store_has_item(content_item["base_path"], content_item)
-
       search_api_has_documents_for_browse_page(
         content_item["content_id"],
         %w[
@@ -22,6 +21,7 @@ RSpec.feature "Mainstream browsing" do
         ],
         page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
+      search_api_has_popular_documents_for_level_one_browse(content_item)
 
       visit content_item["base_path"]
 

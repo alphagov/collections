@@ -178,6 +178,18 @@ module SearchApiHelpers
     }
   end
 
+  def search_api_document_for_browse(slug)
+    { "content_store_document_type" => "transaction",
+      "link" => "/#{slug}",
+      "public_timestamp" => "2019-11-21T14:44:36Z",
+      "title" => slug.gsub!(/[^a-z]/, " ").to_s,
+      "index" => "govuk",
+      "es_score" => nil,
+      "_id" => "/#{slug}",
+      "elasticsearch_type" => "edition",
+      "document_type" => "edition" }
+  end
+
   def search_api_has_latest_documents_for_subtopic(subtopic_content_id, document_slugs, page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
       search_api_document_for_slug(slug, (i + 1).hours.ago)
@@ -239,6 +251,31 @@ module SearchApiHelpers
       }
       stub_search(params:, body:)
     end
+  end
+
+  def search_api_has_popular_documents_for_level_one_browse(browse_content_item)
+    return if browse_content_item["links"]["second_level_browse_pages"].blank?
+
+    level_two_browse_slugs =
+      browse_content_item["links"]["second_level_browse_pages"].map do |link|
+        link["base_path"].sub(%r{\A/browse/}, "")
+      end
+
+    fields = SearchApiFields::POPULAR_BROWSE_SEARCH_FIELDS
+
+    params = {
+      count: "3",
+      filter_any_mainstream_browse_pages: webmock_match_array(level_two_browse_slugs),
+      order: "-popularity",
+      fields: webmock_match_array(fields),
+    }
+
+    results = %w[slug-a slug-2].map do |slug|
+      search_api_document_for_slug(slug, 1.hour.ago, "guide")
+    end
+
+    body = { results: }
+    stub_search(params:, body:)
   end
 
   def section_tagged_content_list(doc_type, count = 1)

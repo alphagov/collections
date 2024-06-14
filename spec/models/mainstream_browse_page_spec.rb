@@ -209,4 +209,45 @@ RSpec.describe MainstreamBrowsePage do
       expect(page.lists).to be_an_instance_of(ListSet)
     end
   end
+
+  describe "popular_content" do
+    let(:top_level_browse_page) { GovukSchemas::Example.find("mainstream_browse_page", example_name: "top_level_page") }
+    let(:second_level_browse_page) { GovukSchemas::Example.find("mainstream_browse_page", example_name: "level_2_page") }
+    let(:root_browse_page) { GovukSchemas::Example.find("mainstream_browse_page", example_name: "root_page") }
+
+    let(:documents_service) do
+      instance_double("BrowseSearchDocuments", fetch_related_documents_with_format: [{ title: "foo", link: "/foo" }])
+    end
+
+    it "fetches tagged content from the BrowseSearchDocuments class on top level browse pages" do
+      api_data["base_path"] = top_level_browse_page["base_path"]
+      api_data["links"] = top_level_browse_page["links"]
+
+      second_level_browse_pages = top_level_browse_page["links"]["second_level_browse_pages"]
+      slugs = second_level_browse_pages.map { |page| page["base_path"].gsub("/browse/", "") }
+
+      allow(BrowseSearchDocuments)
+      .to receive(:new)
+      .with(slugs)
+      .and_return(documents_service)
+
+      expect(page.popular_content).to eq [{ title: "foo", link: "/foo" }]
+    end
+
+    it "does not call the BrowseSearchDocuments class on level two browse pages" do
+      api_data["base_path"] = second_level_browse_page["base_path"]
+      api_data["links"] = second_level_browse_page["links"]
+
+      expect(documents_service).not_to have_received(:fetch_related_documents_with_format)
+      expect(page.popular_content).to be_nil
+    end
+
+    it "does not call the BrowseSearchDocuments class on the root browse page" do
+      api_data["base_path"] = root_browse_page["base_path"]
+      api_data["links"] = root_browse_page["links"]
+
+      expect(documents_service).not_to have_received(:fetch_related_documents_with_format)
+      expect(page.popular_content).to be_nil
+    end
+  end
 end

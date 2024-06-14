@@ -19,6 +19,7 @@ class MainstreamBrowsePage
 
   def initialize(content_item)
     @content_item = content_item
+    @documents_service = BrowseSearchDocuments
   end
 
   def top_level_browse_pages
@@ -49,7 +50,18 @@ class MainstreamBrowsePage
     @lists ||= ListSet.new("section", @content_item.content_id, details["groups"])
   end
 
-  def slug
-    base_path.sub(%r{\A/browse/}, "")
+  def slug(path = base_path)
+    path.sub(%r{\A/browse/}, "")
+  end
+
+  def top_level_browse_page?
+    top_level_browse_pages.any? { |page| page.base_path == base_path }
+  end
+
+  def popular_content
+    return unless top_level_browse_page?
+
+    slugs = second_level_browse_pages.map { |page| slug(page.base_path) }
+    @documents_service.new(slugs).fetch_related_documents_with_format
   end
 end
