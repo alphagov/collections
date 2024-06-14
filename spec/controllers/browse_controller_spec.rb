@@ -1,5 +1,6 @@
 RSpec.describe BrowseController do
   include GovukAbTesting::RspecHelpers
+  include SearchApiHelpers
   render_views
   describe "GET index" do
     before do
@@ -30,6 +31,11 @@ RSpec.describe BrowseController do
             second_level_browse_pages:,
           },
         )
+        stub_search(body: {
+          "results" => [],
+          "start" => 0,
+          "total" => 0,
+        })
       end
 
       it "sets correct expiry headers" do

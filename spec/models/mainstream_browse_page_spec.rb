@@ -209,4 +209,39 @@ RSpec.describe MainstreamBrowsePage do
       expect(page.lists).to be_an_instance_of(ListSet)
     end
   end
+
+  describe "popular_content" do
+    let(:second_level_browse_page1) do
+      {
+        "content_id" => "1",
+        "title" => "Foo",
+        "description" => "All about foo",
+        "base_path" => "/browse/foo",
+      }
+    end
+    let(:second_level_browse_page2) do
+      {
+        "content_id" => "2",
+        "title" => "Bar",
+        "description" => "All about bar",
+        "base_path" => "/browse/bar",
+      }
+    end
+
+    before do
+      api_data["details"]["ordered_second_level_browse_pages"] = %w[1 2]
+      api_data["links"]["second_level_browse_pages"] = [
+        second_level_browse_page2,
+        second_level_browse_page1,
+      ]
+    end
+
+    it "calls the PopularBrowseSearchDocuments class" do
+      allow_any_instance_of(SearchDocuments::PopularBrowseSearchDocuments)
+      .to receive(:fetch_related_documents_with_format)
+      .and_return("popular_content")
+
+      expect(page.popular_content).to eq "popular_content"
+    end
+  end
 end
