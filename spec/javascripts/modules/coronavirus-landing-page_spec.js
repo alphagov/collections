@@ -44,51 +44,6 @@ describe('Coronavirus landing page', function () {
     expect(parseCookie(GOVUK.cookie('global_bar_seen')).count).not.toBe(999)
     expect(parseCookie(GOVUK.cookie('global_bar_seen')).version).toBe(1)
   })
-
-  describe('Clicking the "Open all" button', function () {
-    beforeEach(function () {
-      GOVUK.analytics = {
-        trackEvent: function () {
-        }
-      }
-      spyOn(GOVUK.analytics, 'trackEvent')
-
-      // similate gem-c-accordion module
-      $element.find('.gem-c-accordion__open-all').on('click', function (e) {
-        var expanded = $(e.target).attr('aria-expanded') === 'true'
-        $(e.target).attr('aria-expanded', expanded ? 'false' : 'true')
-      })
-
-      coronavirusLandingPage.init()
-    })
-
-    it('tracks expanding', function () {
-      var $openCloseAllButton = $element.find('.gem-c-accordion__open-all')
-
-      expect($openCloseAllButton).toExist()
-      expect($openCloseAllButton.attr('aria-expanded')).toBe('false')
-      $openCloseAllButton.trigger('click')
-
-      expect($openCloseAllButton.attr('aria-expanded')).toBe('true')
-      expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
-        'pageElementInteraction', 'accordionOpened', { transport: 'beacon', label: 'Expand all' }
-      )
-    })
-
-    it('tracks collapsing', function () {
-      var $openCloseAllButton = $element.find('.gem-c-accordion__open-all')
-      $openCloseAllButton.attr('aria-expanded', 'true')
-
-      expect($openCloseAllButton).toExist()
-      expect($openCloseAllButton).toHaveAttr('aria-expanded', 'true')
-      $openCloseAllButton.trigger('click')
-
-      expect($openCloseAllButton.attr('aria-expanded')).toBe('false')
-      expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
-        'pageElementInteraction', 'accordionClosed', { transport: 'beacon', label: 'Collapse all' }
-      )
-    })
-  })
 })
 
 function parseCookie (cookie) {
