@@ -19,14 +19,13 @@
           <% contents = capture do %>
             <%= render 'components/taxon_list', {
                 heading_level: 3,
-                items: taxon_list_params(taxon, data_options_type: :options_for_accordion_content, section_index: index)
+                items: taxon_list_params(taxon, section_index: index)
              } %>
           <% end %>
           <%
             id = taxon.base_path || taxon.title.downcase.tr(" ","-")
             items << {
               data_attributes: {
-                "track-count": "accordionSection",
                 id: "section-panel-#{id}-#{index + 1}"
               },
               heading: {

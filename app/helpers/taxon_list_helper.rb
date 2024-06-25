@@ -1,5 +1,5 @@
 module TaxonListHelper
-  def taxon_list_params(presented_taxon, data_options_type:, section_index: nil)
+  def taxon_list_params(presented_taxon, section_index: nil)
     presented_taxon.tagged_content.each_with_index.map do |content_item, index|
       data_attributes = if section_index
                           presented_taxon.send(data_options_type, index:, section_index:)
