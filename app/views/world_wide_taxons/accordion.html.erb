@@ -19,7 +19,7 @@
           <% contents = capture do %>
             <%= render 'components/taxon_list', {
                 heading_level: 3,
-                items: taxon_list_params(taxon, section_index: index)
+                items: taxon_list_params(taxon)
              } %>
           <% end %>
           <%

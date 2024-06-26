@@ -18,13 +18,12 @@ module Supergroups
       document.content_store_document_type == "guide" || document.content_store_document_type == "answer"
     end
 
-    def format_document_data(documents, data_category: "")
-      documents.each.with_index(1).map do |document, index|
+    def format_document_data(documents)
+      documents.each.map do |document|
         data = {
           link: {
             text: document.title,
             path: document.base_path,
-            data_attributes: data_attributes(document.base_path, document.title, index),
           },
           metadata: {
             document_type: document.content_store_document_type.humanize,
