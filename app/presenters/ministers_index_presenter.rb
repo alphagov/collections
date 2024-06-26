@@ -16,19 +16,22 @@ class MinistersIndexPresenter
   end
 
   def cabinet_ministers
-    @ministers_index.content_item_data.dig("links", "ordered_cabinet_ministers").map do |minister_data|
+    ordered_cabinet_ministers = @ministers_index.content_item_data.dig("links", "ordered_cabinet_ministers") || []
+    ordered_cabinet_ministers.map do |minister_data|
       Minister.new(minister_data)
     end
   end
 
   def also_attends_cabinet
-    @ministers_index.content_item_data.dig("links", "ordered_also_attends_cabinet").map do |minister_data|
+    ordered_also_attends_cabinet = @ministers_index.content_item_data.dig("links", "ordered_also_attends_cabinet") || []
+    ordered_also_attends_cabinet.map do |minister_data|
       Minister.new(minister_data)
     end
   end
 
   def by_organisation
-    @ministers_index.content_item_data.dig("links", "ordered_ministerial_departments").map do |department_data|
+    ordered_ministerial_departments = @ministers_index.content_item_data.dig("links", "ordered_ministerial_departments") || []
+    ordered_ministerial_departments.map do |department_data|
       Department.new(
         url: department_data.fetch("web_url"),
         title: department_data.fetch("title"),
@@ -46,7 +49,8 @@ class MinistersIndexPresenter
 
   def whips
     ordered_whip_organisations.each do |whip_org|
-      whip_org.ministers = @ministers_index.content_item_data.dig("links", whip_org.item_key).map do |minister_data|
+      ordered_whip_organisation = @ministers_index.content_item_data.dig("links", whip_org.item_key) || []
+      whip_org.ministers = ordered_whip_organisation.map do |minister_data|
         Minister.new(minister_data, whip_only: true)
       end
     end

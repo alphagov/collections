@@ -113,4 +113,17 @@ RSpec.feature "Ministers index page" do
       expect(page).not_to have_selector(".gem-c-heading", text: I18n.t("ministers.whips"))
     end
   end
+
+  context "during a reshuffle preview" do
+    let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on-preview") }
+
+    scenario "renders the sections and contents even with empty roles sets" do
+      expect(page.status_code).to eq(200)
+      expect(page).to have_selector(".gem-c-lead-paragraph")
+      expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.cabinet"))
+      expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.also_attends"))
+      expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.by_department"))
+      expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.whips"))
+    end
+  end
 end
