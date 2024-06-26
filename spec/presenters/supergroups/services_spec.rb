@@ -16,15 +16,6 @@ RSpec.describe Supergroups::Services do
             text: "Tagged Content Title",
             path: "/government/tagged/content",
             description: "Description of tagged content",
-            data_attributes: {
-              module: "gem-track-click",
-              track_category: "servicesDocumentListClicked",
-              track_action: 1,
-              track_label: "/government/tagged/content",
-              track_options: {
-                dimension29: "Tagged Content Title",
-              },
-            },
           },
         },
       ]

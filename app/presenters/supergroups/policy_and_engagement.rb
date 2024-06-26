@@ -68,11 +68,6 @@ module Supergroups
         if consultation?(document.content_store_document_type)
           data[:metadata][:closing_date] = consultation_closing_date(document)
         end
-
-        if data_category.present?
-          data[:link][:data_attributes][:track_category] = data_module_label + data_category
-        end
-
         data
       end
     end

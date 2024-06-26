@@ -23,10 +23,6 @@ module Supergroups
           },
         }
 
-        if data_category.present?
-          data[:link][:data_attributes][:track_category] = data_module_label + data_category
-        end
-
         data
       end
     end
