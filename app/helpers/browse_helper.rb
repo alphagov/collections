@@ -15,7 +15,8 @@ module BrowseHelper
   end
 
   def action_link_data(slug)
-    links = ACTION_LINK_DATA[slug.to_sym]
+    links = PopularTasks.find(date, slug)
+    # links = ACTION_LINK_DATA[slug.to_sym]
     return [] unless links
 
     links.each_with_index do |link, index|
