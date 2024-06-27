@@ -1,7 +1,5 @@
-<% track_action ||= "contentLink" %>
-
 <% total_links = list.count.to_s %>
-<ul class="govuk-list browse__list" data-module="gem-track-click">
+<ul class="govuk-list browse__list">
   <% list.each_with_index do |list_item, index| %>
     <li class="browse__list-item">
       <%= link_to(
@@ -9,15 +7,6 @@
         list_item.base_path,
         class: "govuk-link",
         data: {
-          track_category: "browseClicked",
-          track_count: "contentLink",
-          track_action: track_action,
-          track_label: list_item.base_path,
-          track_options: {
-            dimension28: total_links,
-            dimension29: list_item.title,
-            dimension114: "#{list_index + 1}.#{index + 1}",
-          },
           ga4_link: {
             event_name: "navigation",
             type: "browse list",
