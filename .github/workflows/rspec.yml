@@ -47,3 +47,10 @@ jobs:
           RAILS_ENV: test
           GOVUK_CONTENT_SCHEMAS_PATH: vendor/publishing-api/content_schemas
         run: bundle exec rake spec
+
+      - name: Store test coverage statistics
+        uses: actions/upload-artifact@v4
+        with:
+          name: rspec-test-coverage
+          path: coverage/statistics.txt
+          retention-days: 1

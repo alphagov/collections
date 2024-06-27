@@ -87,4 +87,20 @@ jobs:
       - name: Run cucumber
         env:
           RAILS_ENV: test
+          TEST_COVERAGE_EXCLUDED_PATHS: '**/*'
         run: bundle exec rails cucumber
+
+      - name: Store test coverage statistics
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-test-coverage
+          path: coverage/statistics.txt
+          retention-days: 1
+
+  test-coverage:
+    name: Check test coverage
+    needs:
+      - test-ruby
+      - pact-tests
+      - integration-tests
+    uses: ./.github/workflows/test-coverage.yml

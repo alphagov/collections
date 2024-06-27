@@ -1,5 +1,7 @@
 ENV["PACT_DO_NOT_TRACK"] = "true"
 
+require_relative "../test_coverage"
+TestCoverage.start
 require "pact/provider/rspec"
 require "webmock/rspec"
 require "gds_api"

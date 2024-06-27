@@ -1,9 +1,5 @@
-if ENV["USE_SIMPLECOV"]
-  require "simplecov"
-  require "simplecov-rcov"
-  SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
-  SimpleCov.start "rails"
-end
+require_relative "../../spec/test_coverage"
+TestCoverage.start
 
 # Duplicated in test_helper.rb
 ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"

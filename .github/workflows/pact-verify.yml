@@ -39,6 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
+      TEST_COVERAGE_EXCLUDED_PATHS: '**/*'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -58,3 +59,10 @@ jobs:
           path: tmp/pacts
       - if: inputs.pact_artifact != ''
         run: bundle exec rake pact:verify:at[tmp/pacts/${{ inputs.pact_artifact_file_to_verify }}]
+
+      - name: Store test coverage statistics
+        uses: actions/upload-artifact@v4
+        with:
+          name: pact-test-coverage
+          path: coverage/statistics.txt
+          retention-days: 1
