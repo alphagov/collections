@@ -75,20 +75,12 @@ RSpec.describe "taxon_list component", type: :view do
 
   it "renders a list item with data attribute" do
     data_attributes = {
-      "ecommerce-row": true,
-      track_category: "trackCategory",
-      track_action: 1.1,
-      track_label: "/track-path",
-      track_options: {
-        dimension28: 2,
-        dimension29: "Environmental taxes, reliefs and schemes for businesses",
-      },
+      test_attribute: "hello",
     }
 
     item2[:data_attributes] = data_attributes
     render_component(items: [item2], heading_level: 3)
 
-    expect(rendered).to have_selector(".app-c-taxon-list__link[data-track-category=trackCategory]")
-    expect(rendered).to have_selector(".app-c-taxon-list__link[data-ecommerce-row=true]")
+    expect(rendered).to have_selector(".app-c-taxon-list__link[data-test-attribute=hello]")
   end
 end
