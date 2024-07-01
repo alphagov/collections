@@ -1,12 +1,6 @@
 <% guidance ||= nil %>
 
-<div
-  class="govuk-body"
-  data-module="gem-track-click"
-  data-track-category="pageElementInteraction"
-  data-track-action="AccordionClick"
-  data-track-links-only>
-
+<div class="govuk-body">
   <% if guidance.present? && guidance[:links].present? %>
       <ul class="govuk-list">
       <% guidance[:links].each do |link| %>

@@ -51,12 +51,4 @@ RSpec.feature "Taxon Browsing" do
     and_i_can_see_the_in_page_nav
     and_i_can_see_the_sub_topic_nav
   end
-
-  it "has tracking on all links" do
-    given_there_is_a_taxon_with_children
-    and_the_taxon_is_live
-    and_the_taxon_has_tagged_content
-    when_i_visit_that_taxon
-    then_all_links_have_tracking_data
-  end
 end

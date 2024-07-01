@@ -28,27 +28,17 @@ examples:
         path: '/more'
   with_data_attributes:
     description: |
-      Arbitrary data attributes can be included with each link, usually for analytics tracking.
+      Arbitrary data attributes can be included with each link.
     data:
       items:
       - text: 'Environmental taxes, reliefs and schemes for businesses'
         path: '/green-taxes-and-reliefs'
         data_attributes:
-          track_category: 'navSubtopicContentItemLinkClicked'
-          track_action: 1.1
-          track_label: '/green-taxes-and-reliefs'
-          track_options:
-            dimension28: 2
-            dimension29: 'Environmental taxes, reliefs and schemes for businesses'
+          example: 'hello world'
       - text: 'Aggregates Levy: register or change your details'
         path: '/guidance/aggregates-levy-register-or-change-your-details'
         data_attributes:
-          track_category: 'navSubtopicContentItemLinkClicked'
-          track_action: 1.2
-          track_label: '/guidance/aggregates-levy-register-or-change-your-details'
-          track_options:
-            dimension28: 2
-            dimension29: 'Aggregates Levy: register or change your details'
+          random: 'hello world'
   with_branding:
     description: Organisation [colour branding](https://github.com/alphagov/govuk_publishing_components/blob/master/docs/component_branding.md) can be added to the component as shown.
     data:

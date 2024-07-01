@@ -15,12 +15,7 @@
             simple: true,
             href: item["url"],
             text: item["label"],
-            margin_bottom: 1,
-            data_attributes: {
-              track_category: "pageElementInteraction",
-              track_action: "AccordionFeatureClick",
-              track_label: item["url"],
-            }
+            margin_bottom: 1
           }%>
           <% item_description = item["description"] %>
           <% if item_description %>
@@ -32,12 +27,7 @@
           <%= link_to(
             item["label"],
             item["url"],
-            class: "govuk-link",
-            data: {
-              track_category: "pageElementInteraction",
-              track_action: "AccordionClick",
-              track_label: item["url"],
-            }
+            class: "govuk-link"
           ) %>
         <% end %>
       </li>

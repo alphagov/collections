@@ -7,7 +7,6 @@ RSpec.feature "Worldwide taxon browsing" do
     then_i_see_the_taxon_page
     and_i_can_see_the_email_signup_link
     and_i_can_see_the_content_tagged_to_the_taxon
-    and_the_page_is_tracked_as_a_leaf_node_taxon
   end
 
   scenario "renders an accordion page for world content" do
@@ -16,7 +15,6 @@ RSpec.feature "Worldwide taxon browsing" do
     then_i_see_the_taxon_page
     and_i_can_see_the_email_signup_link
     and_i_can_see_links_to_the_child_taxons_in_an_accordion
-    and_the_page_is_tracked_as_an_accordion
   end
 
   def given_there_is_a_world_wide_country_taxon_without_children
@@ -83,14 +81,6 @@ RSpec.feature "Worldwide taxon browsing" do
     child_taxons.each do |child_taxon|
       expect(page).to have_content(child_taxon["title"])
     end
-  end
-
-  def and_the_page_is_tracked_as_an_accordion
-    expect_navigation_page_type_tracking("accordion")
-  end
-
-  def and_the_page_is_tracked_as_a_leaf_node_taxon
-    expect_navigation_page_type_tracking("leaf")
   end
 
   def expect_navigation_page_type_tracking(expected_page_type)

@@ -18,13 +18,12 @@ module Supergroups
       document.content_store_document_type == "guide" || document.content_store_document_type == "answer"
     end
 
-    def format_document_data(documents, data_category: "")
-      documents.each.with_index(1).map do |document, index|
+    def format_document_data(documents)
+      documents.each.map do |document|
         data = {
           link: {
             text: document.title,
             path: document.base_path,
-            data_attributes: data_attributes(document.base_path, document.title, index),
           },
           metadata: {
             document_type: document.content_store_document_type.humanize,
@@ -36,10 +35,6 @@ module Supergroups
         else
           data[:metadata][:public_updated_at] = document.public_updated_at
           data[:metadata][:organisations] = document.organisations
-        end
-
-        if data_category.present?
-          data[:link][:data_attributes][:track_category] = data_module_label + data_category
         end
 
         data

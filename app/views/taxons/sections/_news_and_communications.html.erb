@@ -13,12 +13,6 @@
           date: featured_item[:metadata][:public_updated_at],
           text: featured_item[:metadata][:document_type]
         },
-        href_data_attributes: {
-          track_category: featured_item[:link][:data_attributes][:track_category],
-          track_action: featured_item[:link][:data_attributes][:track_action],
-          track_label: featured_item[:link][:data_attributes][:track_label],
-          track_options: featured_item[:link][:data_attributes][:track_options]
-        }
     } %>
   </div>
 <% end %>

@@ -12,11 +12,6 @@
       <li class="covid__topic-list-item">
         <%= link_to(
           link["label"], link["url"], class: 'covid__topic-list-link govuk-link',
-          data: {
-            track_category: "pageElementInteraction",
-            track_action: "RelatedTopics",
-            track_label: link["url"],
-          }
         ) %>
       </li>
     <% end %>

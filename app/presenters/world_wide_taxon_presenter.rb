@@ -52,28 +52,6 @@ class WorldWideTaxonPresenter
     accordion_items
   end
 
-  def options_for_leaf_content(index:)
-    {
-      module: "gem-track-click",
-      track_category: "navLeafLinkClicked",
-      track_action: (index + 1).to_s,
-      track_label: tagged_content[index].base_path,
-      track_options: { dimension28: tagged_content.size.to_s,
-                       dimension29: tagged_content[index].title },
-    }
-  end
-
-  def options_for_accordion_content(index:, section_index:)
-    {
-      module: "gem-track-click",
-      track_category: "navAccordionLinkClicked",
-      track_action: "#{section_index + 1}.#{index + 1}",
-      track_label: tagged_content[index].base_path,
-      track_options: { dimension28: tagged_content.size.to_s,
-                       dimension29: tagged_content[index].title },
-    }
-  end
-
 private
 
   def ordered_child_taxons

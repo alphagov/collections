@@ -31,11 +31,6 @@ class TaxonPresenter
 
   def options_for_child_taxon(index:)
     {
-      module: "gem-track-click",
-      track_category: "navGridContentClicked",
-      track_action: (index + 1).to_s,
-      track_label: child_taxons[index].preferred_url,
-      track_options: {},
       ga4_link: {
         event_name: "navigation",
         type: "subtopic list",

@@ -3,8 +3,6 @@ class BrowseController < ApplicationController
 
   def index
     page = MainstreamBrowsePage.find("/browse")
-    @dimension26 = 1
-    @dimension27 = page.top_level_browse_pages.count || 0
     setup_content_item_and_navigation_helpers(page)
     render :index, locals: { page: }
   end

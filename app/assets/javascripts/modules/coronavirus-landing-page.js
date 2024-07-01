@@ -13,8 +13,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     if (this.checkOnLandingPage()) {
       this.globarBarSeen()
     }
-
-    this.addAccordionOpenAllTracking()
   }
 
   CoronavirusLandingPage.prototype.checkOnLandingPage = function () {
@@ -28,26 +26,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       // Automatically hide the additional information section in the banner by setting the cookie
       window.GOVUK.setCookie('global_bar_seen', JSON.stringify({ count: 999, version: currentBannerVersion }), { days: 84 })
-    }
-  }
-
-  // we want to track the accordion show/hide all control but this is added dynamically
-  // after page load by the accordion component, so we attach the event listener to the
-  // accordion parent element then filter click events to only track that control
-  CoronavirusLandingPage.prototype.addAccordionOpenAllTracking = function () {
-    var accordions = this.module.querySelectorAll('.gem-c-accordion')
-    for (var i = 0; i < accordions.length; i++) {
-      accordions[i].addEventListener('click', function (e) {
-        var clicked = e.target.closest('button')
-        if (clicked && clicked.classList.contains('gem-c-accordion__open-all')) {
-          var expanded = clicked.getAttribute('aria-expanded') === 'true'
-          var label = expanded ? 'Expand all' : 'Collapse all'
-          var action = expanded ? 'accordionOpened' : 'accordionClosed'
-          var options = { transport: 'beacon', label: label }
-
-          GOVUK.analytics.trackEvent('pageElementInteraction', action, options)
-        }
-      })
     }
   }
 

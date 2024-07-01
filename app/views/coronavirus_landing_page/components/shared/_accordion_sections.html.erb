@@ -21,16 +21,6 @@
       content: {
         html: content,
       },
-      data_attributes: {
-        toggle_attribute: "data-track-action",
-        when_closed_text: "accordionClosed",
-        when_open_text: "accordionOpened",
-        track_category: "pageElementInteraction",
-        track_action: "accordionClosed",
-        track_label: section["title"],
-        track_dimension: number_of_accordion_sections,
-        track_dimension_index: 26
-      }
     }
 
     additional_contents[:summary] = { text: section["sub_heading"] } if section["sub_heading"]
@@ -44,12 +34,10 @@
   border_top: border_top,
   font_size: "m"
 } if heading %>
-<div data-module="gem-track-click">
-  <div data-module="toggle-attribute">
-    <%= render 'govuk_publishing_components/components/accordion', {
-      heading_level: 3,
-      items: accordion_contents,
-      margin_bottom: 3
-    } %>
-  </div>
+<div data-module="toggle-attribute">
+  <%= render 'govuk_publishing_components/components/accordion', {
+    heading_level: 3,
+    items: accordion_contents,
+    margin_bottom: 3
+  } %>
 </div>

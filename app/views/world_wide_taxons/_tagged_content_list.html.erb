@@ -4,7 +4,7 @@
       <% heading_level = heading_level ? heading_level : false %>
       <%= render 'components/taxon_list', {
           heading_level: heading_level,
-          items: taxon_list_params(presented_taxon, data_options_type: :options_for_leaf_content)
+          items: taxon_list_params(presented_taxon)
       } %>
     </div>
   </div>

@@ -47,7 +47,7 @@ private
         url: org.link,
         brand: org.brand,
         crest: org.crest,
-        data_attributes: data_attributes(org.link, org.title, index + 1),
+        data_attributes: data_attributes(index + 1),
       }
     end
   end
@@ -55,27 +55,21 @@ private
   def organisation_list_without_logos
     organisations_without_logos = organisations - organisations_with_logos
 
-    tracking_number = organisations_with_logos.count
+    ga4_tracking_number = organisations_with_logos.count
 
     organisations_without_logos.map.with_index(1) do |organisation, index|
       {
         link: {
           text: organisation.title,
           path: organisation.link,
-          data_attributes: data_attributes(organisation.link, organisation.title, tracking_number + index),
+          data_attributes: data_attributes(ga4_tracking_number + index),
         },
       }
     end
   end
 
-  def data_attributes(base_path, link_text, index)
+  def data_attributes(index)
     {
-      track_category: "organisationsDocumentListClicked",
-      track_action: index,
-      track_label: base_path,
-      track_options: {
-        dimension29: link_text,
-      },
       ga4_link: {
         event_name: "navigation",
         type: "organisation logo",

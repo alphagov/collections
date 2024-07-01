@@ -50,9 +50,7 @@
 
       <div class="govuk-grid-column-two-thirds">
         <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: {
-          topic_section: details.topic_section,
-          tracking_category: "pageElementInteraction",
-          tracking_action: "CoronavirusInformation",
+          topic_section: details.topic_section
         } %>
       </div>
     </div>
@@ -75,11 +73,6 @@
       link_text:  "Sign up to get emails when we change any COVID-19 information on the GOV.UK website",
       link_href: "/email-signup?topic=/coronavirus-taxon",
       heading: "Stay up to date with GOV.UK",
-      data: {
-        "module": "gem-track-click",
-        "track-category": "emailAlertLinkClicked",
-        "track-action": "/coronavirus"
-      },
       background: true
     }
   end %>

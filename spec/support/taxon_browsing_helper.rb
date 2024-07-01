@@ -129,9 +129,6 @@ module TaxonBrowsingHelper
   def and_i_can_see_the_email_signup_link
     link_text = I18n.t("shared.get_emails")
     expect(page).to have_link(link_text, href: "/email-signup/?link=#{current_path}")
-    expect(page).to have_selector("a[data-track-category='emailAlertLinkClicked']", text: link_text)
-    expect(page).to have_selector("a[data-track-action=\"#{current_path}\"]", text: link_text)
-    expect(page).to have_selector("a[data-track-label=\"\"]", text: link_text)
   end
 
   def and_i_cannot_see_an_email_signup_link
@@ -288,15 +285,10 @@ module TaxonBrowsingHelper
       expect(page).to have_selector("h2", text: "Explore sub-topics")
       child_taxons = @content_item["links"]["child_taxons"]
 
-      child_taxons.each_with_index do |child_taxon, index|
+      child_taxons.each do |child_taxon|
         taxon = Taxon.new(ContentItem.new(child_taxon))
 
         expect(page).to have_link(taxon.title, href: taxon.preferred_url)
-        element = find("a[href='#{taxon.preferred_url}']")
-        expect(element["data-track-category"]).to eq("navGridContentClicked")
-        expect(element["data-track-action"]).to eq((index + 1).to_s)
-        expect(element["data-track-label"]).to eq(taxon.preferred_url)
-        expect(element["data-track-options"]).to eq("{}")
       end
     end
   end
@@ -315,20 +307,6 @@ module TaxonBrowsingHelper
 
   def then_the_page_is_not_noindexed
     expect(page).not_to have_selector('meta[name="robots"]', visible: false)
-  end
-
-  def then_all_links_have_tracking_data
-    [
-      "services",
-      "guidance and regulation",
-      "news and communications",
-      "research and statistics",
-      "policy papers and consultations",
-      "transparency and freedom of information releases",
-    ].each do |section|
-      expect(page).to have_selector("a[data-track-category='SeeAllLinkClicked']", text: "See more #{section} in this topic")
-      expect(page).to have_selector("a[data-track-action=\"/foo\"]", text: "See more #{section} in this topic")
-    end
   end
 
   def base_path

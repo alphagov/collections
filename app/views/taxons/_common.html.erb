@@ -32,13 +32,7 @@
     >
       <%= render "govuk_publishing_components/components/signup_link", {
         link_text: t("shared.get_emails"),
-        link_href: "/email-signup/?link=#{presented_taxon.base_path}",
-        data: {
-          "module": "gem-track-click",
-          "track-category": "emailAlertLinkClicked",
-          "track-action": presented_taxon.base_path,
-          "track-label": ""
-        }
+        link_href: "/email-signup/?link=#{presented_taxon.base_path}"
       } %>
     </div>
   </div>

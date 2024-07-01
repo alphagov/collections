@@ -15,15 +15,6 @@ RSpec.describe Supergroups::GuidanceAndRegulation do
           link: {
             text: "Tagged Content Title",
             path: "/government/tagged/content",
-            data_attributes: {
-              module: "gem-track-click",
-              track_category: "guidanceAndRegulationDocumentListClicked",
-              track_action: 1,
-              track_label: "/government/tagged/content",
-              track_options: {
-                dimension29: "Tagged Content Title",
-              },
-            },
           },
           metadata: {
             public_updated_at: "2018-02-28T08:01:00.000+00:00",
@@ -47,16 +38,6 @@ RSpec.describe Supergroups::GuidanceAndRegulation do
             text: "Tagged Content Title",
             path: "/government/tagged/content",
             description: "Description of tagged content",
-            data_attributes: {
-              module: "gem-track-click",
-              track_category: "guidanceAndRegulationDocumentListClicked",
-              track_action: 1,
-              track_label: "/government/tagged/content",
-              track_options: {
-                dimension29: "Tagged Content Title",
-              },
-
-            },
           },
           metadata: {
             document_type: "Guide",

@@ -65,26 +65,16 @@ examples:
         path: /childcare-grant
   with_data_attributes:
     description: |
-      Arbitrary data attributes can be included with each link, usually for analytics tracking.
+      Arbitrary data attributes can be included with each link.
     data:
       items:
       - text: Adult Dependants' Grant
         path: /adult-dependants-grant
         description: Adult Dependants' Grant for full-time students who financially support an adult - funding, how to apply, eligibility
         data_attributes:
-          track_category: 'navSubtopicContentItemLinkClicked'
-          track_action: 1.1
-          track_label: '/green-taxes-and-reliefs'
-          track_options:
-            dimension28: 2
-            dimension29: 'Environmental taxes, reliefs and schemes for businesses'
+          example: 'your data here'
       - text: Care to Learn
         path: /care-to-learn
         description: Care to Learn helps pay for childcare while you're studying - how to apply, money you get, courses that qualify, eligibility
         data_attributes:
-          track_category: 'navSubtopicContentItemLinkClicked'
-          track_action: 1.2
-          track_label: '/guidance/aggregates-levy-register-or-change-your-details'
-          track_options:
-            dimension28: 2
-            dimension29: 'Aggregates Levy: register or change your details'
+          hello_world: 'some more data here'

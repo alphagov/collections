@@ -29,12 +29,6 @@ RSpec.describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
-              track_category: "organisationsDocumentListClicked",
-              track_action: 1,
-              track_label: "/government/organisations/department-for-education",
-              track_options: {
-                dimension29: "Department for Education",
-              },
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
@@ -67,12 +61,6 @@ RSpec.describe TaxonOrganisationsPresenter do
           brand: "department-for-education",
           crest: "single-identity",
           data_attributes: {
-            track_category: "organisationsDocumentListClicked",
-            track_action: 1,
-            track_label: "/government/organisations/department-for-education",
-            track_options: {
-              dimension29: "Department for Education",
-            },
             ga4_link: {
               event_name: "navigation",
               type: "organisation logo",
@@ -103,12 +91,6 @@ RSpec.describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
-              track_category: "organisationsDocumentListClicked",
-              track_action: 1,
-              track_label: "/government/organisations/department-for-education",
-              track_options: {
-                dimension29: "Department for Education",
-              },
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
@@ -143,12 +125,6 @@ RSpec.describe TaxonOrganisationsPresenter do
           brand: "department-for-education",
           crest: "single-identity",
           data_attributes: {
-            track_category: "organisationsDocumentListClicked",
-            track_action: index + 1,
-            track_label: "/government/organisations/department-for-education",
-            track_options: {
-              dimension29: "Department for Education",
-            },
             ga4_link: {
               event_name: "navigation",
               type: "organisation logo",
@@ -181,12 +157,6 @@ RSpec.describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
-              track_category: "organisationsDocumentListClicked",
-              track_action: index + 1,
-              track_label: "/government/organisations/department-for-education",
-              track_options: {
-                dimension29: "Department for Education",
-              },
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
@@ -223,12 +193,6 @@ RSpec.describe TaxonOrganisationsPresenter do
           brand: "department-for-education",
           crest: "single-identity",
           data_attributes: {
-            track_category: "organisationsDocumentListClicked",
-            track_action: index + 1,
-            track_label: "/government/organisations/department-for-education",
-            track_options: {
-              dimension29: "Department for Education",
-            },
             ga4_link: {
               event_name: "navigation",
               type: "organisation logo",
@@ -248,12 +212,6 @@ RSpec.describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
-              track_category: "organisationsDocumentListClicked",
-              track_action: 4,
-              track_label: "/government/organisations/department-for-education",
-              track_options: {
-                dimension29: "Department for Education",
-              },
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
@@ -290,12 +248,6 @@ RSpec.describe TaxonOrganisationsPresenter do
           brand: "department-for-education",
           crest: "single-identity",
           data_attributes: {
-            track_category: "organisationsDocumentListClicked",
-            track_action: 6,
-            track_label: "/government/organisations/department-for-education",
-            track_options: {
-              dimension29: "Department for Education",
-            },
             ga4_link: {
               event_name: "navigation",
               type: "organisation logo",
@@ -328,12 +280,6 @@ RSpec.describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
-              track_category: "organisationsDocumentListClicked",
-              track_action: 6,
-              track_label: "/government/organisations/department-for-education",
-              track_options: {
-                dimension29: "Department for Education",
-              },
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
