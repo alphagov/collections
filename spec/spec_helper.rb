@@ -1,8 +1,9 @@
-if ENV["USE_SIMPLECOV"]
-  require "simplecov"
-  require "simplecov-rcov"
-  SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
-  SimpleCov.start
+require "simplecov"
+require "simplecov-rcov"
+SimpleCov.start do
+  formatter SimpleCov::Formatter::RcovFormatter
+  enable_coverage :branch
+  minimum_coverage 95
 end
 
 if ENV["USE_I18N_COVERAGE"]
