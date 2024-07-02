@@ -3,6 +3,7 @@ fi:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Hallinnoija
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: Tuomioistuimet
       organisations: Organisaatiot
@@ -65,6 +66,8 @@ fi:
     index_title: "%{title}"
     jobs_contracts: Työt ja sopimukset
     latest_from: Latest from %{title}
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} on nyt nimeltään <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title} on elin <a href='%{link_href}'>%{link_text}</a>"
@@ -109,6 +112,7 @@ fi:
       special_health_authority:
       sub_organisation:
       tribunal: Tuomioistuin
+    videos:
     what_we_do:
     works_with_statement:
       one: Toimii %{works_with_count} julkisen elimen kanssa

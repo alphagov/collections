@@ -3,6 +3,7 @@ ka:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: ადმინისტრირებულია
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: სასამართლოებისა და ტრიბუნალების მიერ
       organisations: ორგანიზაციები
@@ -63,6 +64,8 @@ ka:
     index_title: "%{title}"
     jobs_contracts: ვაკანსიები და კონტრაქტები
     latest_from: ბოლო %{title}-დან
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} ახლა ეწოდება <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title} არის ორგანო <a href='%{link_href}'>%{link_text}</a>"
@@ -107,6 +110,7 @@ ka:
       special_health_authority:
       sub_organisation:
       tribunal: ტრიბუნალი
+    videos:
     what_we_do:
     works_with_statement:
       one: მუშაობს %{works_with_count} საჯარო ორგანოსთან

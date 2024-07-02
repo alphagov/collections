@@ -3,6 +3,7 @@ ja:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: 管理者：
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: 裁判所及び審判所
       organisations: 組織
@@ -65,6 +66,8 @@ ja:
     index_title: "％{title} - GOV.UK"
     jobs_contracts: 仕事と契約
     latest_from: "％{title}からの最新情報"
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "％{title}は、<a href='%{link_href}'>％{link_text} </a>と呼ばれるようになりました"
       devolved_html: "％{title}は、<a href='%{link_href}'>％{link_text} </a>の主体です"
@@ -109,6 +112,7 @@ ja:
       special_health_authority:
       sub_organisation:
       tribunal: 審判所
+    videos:
     what_we_do:
     works_with_statement:
       one:

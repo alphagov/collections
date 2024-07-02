@@ -43,6 +43,12 @@
       business_finance_support_scheme:
         one: Skjema for forretningsfinansieringsstøtteordning
         other: Skjema for forretningsfinansieringsstøtteordning
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: Kampanje
         other: Kampanjer
@@ -52,6 +58,9 @@
       case_study:
         one: Casestudie
         other: Casestudier
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Lukket konsultasjon
         other: Lukkede konsultasjoner
@@ -208,6 +217,9 @@
       official_statistics_announcement:
         one: Offisiell statistikkunngjøring
         other: Offisielle statistikkkunngjøringer
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Åpen konsultasjon
         other: Åpne konsultasjoner

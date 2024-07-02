@@ -32,12 +32,21 @@ ko:
         other: 블로그 포스트
       business_finance_support_scheme:
         other: 비즈니스 재무 지원 계획
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         other: 캠페인
       careers:
         other: 커리어
       case_study:
         other: 사례 연구
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         other: 종결된 상담
       cma_case:
@@ -143,6 +152,9 @@ ko:
         other: 공식 통계
       official_statistics_announcement:
         other: 공식 통계 발표
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         other: 공개 상담
       oral_statement:

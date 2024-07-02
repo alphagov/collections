@@ -32,12 +32,21 @@ id:
         other: Posting blog
       business_finance_support_scheme:
         other: Skema dukungan keuangan bisnis
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         other: Kampanye
       careers:
         other: karier
       case_study:
         other: Studi kasus
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         other: Konsultasi tertutup
       cma_case:
@@ -143,6 +152,9 @@ id:
         other: Statistik Resmi
       official_statistics_announcement:
         other: Pengumuman statistik resmi
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         other: Konsultasi terbuka
       oral_statement:

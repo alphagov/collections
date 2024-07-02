@@ -43,6 +43,12 @@ ps:
       business_finance_support_scheme:
         one: د سوداګرۍ مالي ملاتړ سکیم
         other: د سوداګرۍ مالي ملاتړ سکیمونه
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: کمپاین
         other: کمپاینونه
@@ -52,6 +58,9 @@ ps:
       case_study:
         one: د قضیې مطالعه
         other: د قضیې مطالعات
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: تړلې مشوره
         other: تړلې مشورې
@@ -208,6 +217,9 @@ ps:
       official_statistics_announcement:
         one: د رسمي احصایې اعلان
         other: د رسمي احصایې اعلانونه
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: خلاص مشوره
         other: مشورې خلاص کړئ

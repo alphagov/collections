@@ -43,6 +43,12 @@ is:
       business_finance_support_scheme:
         one: Ráðagerð um fjárhagslegan stuðning við fyrirtæki
         other: Ráðagerðir um fjárhagslegan stuðning við fyrirtæki
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: Herferð
         other: Herferðir
@@ -52,6 +58,9 @@ is:
       case_study:
         one: Ferilsathugun
         other: Ferilsathuganir
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Lokuð ráðgjöf
         other: Lokaðar ráðgjafir
@@ -208,6 +217,9 @@ is:
       official_statistics_announcement:
         one: Tilkynning um opinbera tölfræði
         other: Tilkynningar um opinbera tölfræði
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Opin ráðgjöf
         other: Opnar ráðgjafir

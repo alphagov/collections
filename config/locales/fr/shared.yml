@@ -43,6 +43,12 @@ fr:
       business_finance_support_scheme:
         one: Programme d'aide au financement des entreprises
         other: Programmes d'aide au financement des entreprises
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: Campagne
         other: Campagnes
@@ -52,6 +58,9 @@ fr:
       case_study:
         one: Etude de cas
         other: Etudes de cas
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Consultation fermée
         other: Consultations fermées
@@ -208,6 +217,9 @@ fr:
       official_statistics_announcement:
         one: Annonce des statistiques officielles
         other: Annonces des statistiques officielles
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Consultation ouverte
         other: Consultations ouvertes

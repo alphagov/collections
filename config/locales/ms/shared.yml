@@ -32,12 +32,21 @@ ms:
         other: Siaran blog
       business_finance_support_scheme:
         other: Skim sokongan kewangan perniagaan
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         other: Kempen
       careers:
         other: kerjaya
       case_study:
         other: Kajian kes
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         other: Rundingan tertutup
       cma_case:
@@ -143,6 +152,9 @@ ms:
         other: Statistik Rasmi
       official_statistics_announcement:
         other: Pengumuman statistik rasmi
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         other: Rundingan terbuka
       oral_statement:

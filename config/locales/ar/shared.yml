@@ -87,6 +87,12 @@ ar:
         other: مخططات دعم تمويل الأعمال
         two:
         zero:
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         few:
         many:
@@ -108,6 +114,9 @@ ar:
         other: دراسات الحالة
         two:
         zero:
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         few:
         many:
@@ -468,6 +477,9 @@ ar:
         other: إعلانات للإحصاءات الرسمية
         two:
         zero:
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         few:
         many:

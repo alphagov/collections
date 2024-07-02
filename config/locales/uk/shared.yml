@@ -65,6 +65,12 @@ uk:
         many:
         one: Схема підтримки фінансування бізнесу
         other: Схеми підтримки фінансування бізнесу
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         few:
         many:
@@ -80,6 +86,9 @@ uk:
         many:
         one: Аналіз ситуації
         other: Аналізи ситуації
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         few:
         many:
@@ -338,6 +347,9 @@ uk:
         many:
         one: Оголошення даних офіційної статистики
         other: Оголошення даних офіційної статистики
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         few:
         many:

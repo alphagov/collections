@@ -3,6 +3,7 @@ mt:
   organisations:
     about_page_path: government/organisations/%{organisation}/about.%{language_code}
     administered_by: Amministrat minn
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: Qorti u Tribunali
       organisations: Organizazzjonijiet
@@ -63,6 +64,8 @@ mt:
     index_title: "%{title}"
     jobs_contracts: Impjiegi u kuntratti
     latest_from: L-iktar riċenti minn %{title}
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} issa jismu<a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title}huwa korp ta' <a href='%{link_href}'>%{link_text}</a>"
@@ -107,6 +110,7 @@ mt:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunal
+    videos:
     what_we_do:
     works_with_statement:
       few:
