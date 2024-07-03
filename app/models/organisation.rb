@@ -62,6 +62,10 @@ class Organisation
     logo["crest"]
   end
 
+  def custom_contextual_banner
+    details["custom_contextual_banner"]
+  end
+
   def formatted_title
     logo["formatted_title"]
   end

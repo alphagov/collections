@@ -42,6 +42,9 @@ class OrganisationsController < ApplicationController
 private
 
   def organisation_view
+    # TODO: we'll want to be able to display the contextual banner irrespective of
+    # whether or not the organisation is live. Requires investigation into why
+    # we have two different templates and whether it's possible to consolidate.
     @organisation.is_live? ? "show" : "separate_website"
   end
 

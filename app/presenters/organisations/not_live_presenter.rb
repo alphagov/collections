@@ -7,6 +7,7 @@ module Organisations
     end
 
     def non_live_organisation_notice
+      return custom_contextual_banner if @org.custom_contextual_banner
       return has_no_website if @org.is_exempt? && @org.no_website?
       return separate_website_notice if @org.is_exempt?
       return changed_name_notice if @org.is_changed_name? || @org.is_closed?
@@ -21,6 +22,11 @@ module Organisations
     end
 
   private
+
+    def custom_contextual_banner
+      # TODO: render GovSpeak
+      (@org.custom_contextual_banner).html_safe
+    end
 
     def has_no_website
       I18n.t("organisations.notices.no_website", title: @org.title).html_safe
