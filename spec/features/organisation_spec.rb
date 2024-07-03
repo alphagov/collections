@@ -497,4 +497,46 @@ RSpec.describe "Organisation pages" do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     test_ga4_organisation_supergroup_links(section_headings)
   end
+
+  describe "the `custom_banner` method" do
+    it "defines a custom banner for specific organisations" do
+      stub_const "Organisation::CUSTOM_BANNERS_DATA", { "foo-org" => "Custom banner" }
+      org = Organisation.new(double("content_item", content_item_data: { "base_path" => "/government/organisations/foo-org" }))
+      expect(org.custom_banner).to eq("Custom banner")
+    end
+
+    it "does not provide a custom banner by default" do
+      org = Organisation.new(double("content_item", content_item_data: { "base_path" => "/government/organisations/anything-else" }))
+      expect(org.custom_banner).to eq(false)
+    end
+  end
+
+  describe "displaying the banner" do
+    before do
+      content_item_attorney_general["details"]["organisation_govuk_status"] ["status"] = "live"
+      stub_content_store_has_item("/government/organisations/attorney-generals-office", content_item_attorney_general)
+
+      content_item_blank["details"]["organisation_govuk_status"]["status"] = "no_longer_exists"
+      stub_content_store_has_item("/government/organisations/civil-service-resourcing", content_item_blank)
+    end
+
+    let(:custom_banners_data) do
+      {
+        "attorney-generals-office" => "banner one",
+        "civil-service-resourcing" => "banner two",
+      }
+    end
+
+    it "displays the custom banner (if provided) on open organisation" do
+      stub_const "Organisation::CUSTOM_BANNERS_DATA", custom_banners_data
+      visit "/government/organisations/attorney-generals-office"
+      expect(page).to have_css(".govuk-notification-banner", text: "banner one")
+    end
+
+    it "displays the custom banner (if provided) on closed organisation" do
+      stub_const "Organisation::CUSTOM_BANNERS_DATA", custom_banners_data
+      visit "/government/organisations/civil-service-resourcing"
+      expect(page).to have_css(".govuk-notification-banner", text: "banner two")
+    end
+  end
 end

@@ -7,6 +7,10 @@ class Organisation
 
   HMCTS_CONTENT_ID = "6f757605-ab8f-4b62-84e4-99f79cf085c2".freeze
 
+  CUSTOM_BANNERS_DATA = {
+    "org-slug-tbc" => "This organisation is changing. Read the <a href=\"#\">latest updates on government departments</a>. (Placeholder message)",
+  }.freeze
+
   def initialize(content_item)
     @content_item = content_item
   end
@@ -14,6 +18,10 @@ class Organisation
   def self.find!(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
+  end
+
+  def custom_banner
+    CUSTOM_BANNERS_DATA[slug] || false
   end
 
   def title
