@@ -1,4 +1,4 @@
-//= require govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind
+//= require govuk_publishing_components/vendor/polyfills-govuk-frontend-v4/Function/prototype/bind
 
 //= require govuk_publishing_components/lib
 //= require govuk_publishing_components/components/details
