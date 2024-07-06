@@ -38,7 +38,7 @@ class MinistersIndexPresenter
         crest: department_data.dig("details", "logo", "crest"),
         formatted_title: department_data.dig("details", "logo", "formatted_title"),
         brand: department_data.dig("details", "brand"),
-        ministers: department_data.dig("links", "ordered_ministers").map do |minister_data|
+        ministers: (department_data.dig("links", "ordered_ministers") || []).map do |minister_data|
           Minister.new(minister_data, org_role_ids: role_ids_for_organisation(department_data))
         end,
       )
