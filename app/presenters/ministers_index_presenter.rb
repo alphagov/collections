@@ -109,7 +109,7 @@ class MinistersIndexPresenter
   private
 
     def current_role_appointments
-      @data.dig("links", "role_appointments").select do |role_app|
+      (@data.dig("links", "role_appointments") || []).select do |role_app|
         role_app.dig("details", "current") && role_app.dig("links", "role").first["web_url"].present?
       end
     end
@@ -145,6 +145,6 @@ private
   WhipOrganisation = Struct.new(:item_key, :name_key, :ministers, keyword_init: true)
 
   def role_ids_for_organisation(org_data)
-    org_data.dig("links", "ordered_roles").map { |role| role["content_id"] }
+    (org_data.dig("links", "ordered_roles") || []).map { |role| role["content_id"] }
   end
 end
