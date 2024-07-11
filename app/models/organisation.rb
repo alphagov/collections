@@ -7,6 +7,11 @@ class Organisation
 
   HMCTS_CONTENT_ID = "6f757605-ab8f-4b62-84e4-99f79cf085c2".freeze
 
+  CUSTOM_BANNERS_DATA = {
+    "department-for-levelling-up-housing-and-communities" => "This organisation is changing. It’s now called the <a href=\"/government/organisations/ministry-of-housing-communities-local-government\">Ministry of Housing, Communities and Local Government</a>.",
+    "ministry-of-housing-communities-local-government" => "This is a new organisation. It was previously called the <a href=\"/government/organisations/department-for-levelling-up-housing-and-communities\">Department for Levelling Up, Housing and Communities</a>.",
+  }.freeze
+
   def initialize(content_item)
     @content_item = content_item
   end
@@ -14,6 +19,10 @@ class Organisation
   def self.find!(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
+  end
+
+  def custom_banner
+    CUSTOM_BANNERS_DATA[slug] || false
   end
 
   def title

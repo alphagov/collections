@@ -9,7 +9,7 @@
   content_item: organisation.content_item.content_item_data %>
 
 <%= render "govuk_publishing_components/components/notice", {
-  title: @not_live.non_live_organisation_notice
+  title: sanitize(@organisation.custom_banner ? @organisation.custom_banner : @not_live.non_live_organisation_notice)
 } %>
 
 <div class="govuk-grid-row organisation__margin-bottom">
