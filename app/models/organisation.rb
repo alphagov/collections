@@ -8,7 +8,8 @@ class Organisation
   HMCTS_CONTENT_ID = "6f757605-ab8f-4b62-84e4-99f79cf085c2".freeze
 
   CUSTOM_BANNERS_DATA = {
-    "org-slug-tbc" => "This organisation is changing. Read the <a href=\"#\">latest updates on government departments</a>. (Placeholder message)",
+    "department-for-levelling-up-housing-and-communities" => "This organisation is changing. It’s now called the <a href=\"/government/organisations/ministry-of-housing-communities-local-government\">Ministry of Housing, Communities and Local Government</a>.",
+    "ministry-of-housing-communities-local-government" => "This is a new organisation. It was previously called the <a href=\"/government/organisations/department-for-levelling-up-housing-and-communities\">Department for Levelling Up, Housing and Communities</a>.",
   }.freeze
 
   def initialize(content_item)
