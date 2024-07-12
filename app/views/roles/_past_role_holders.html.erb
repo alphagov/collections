@@ -2,6 +2,7 @@
   <section id="past-role-holders" class="govuk-!-padding-bottom-9">
     <%= render "govuk_publishing_components/components/heading", {
       text: t("roles.previous_holders"),
+      margin_bottom: 2,
     } %>
     <p class="govuk-body" lang="en">
       <%= t("roles.find_out_more_html", link: link_to(t("roles.past") + " #{role.title.pluralize}", role.past_holders_url, class: "govuk-link")) %>
@@ -11,6 +12,7 @@
   <section id="past-role-holders" class="govuk-!-padding-bottom-9">
     <%= render "govuk_publishing_components/components/heading", {
       text: t("roles.previous_holders"),
+      margin_bottom: 2,
     } %>
     <%= render "components/taxon_list", {
       heading_level: 3,
