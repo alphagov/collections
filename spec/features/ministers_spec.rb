@@ -98,6 +98,11 @@ RSpec.feature "Ministers index page" do
     expect(kemi_badenoch_uef).to_not have_text("Secretary of State for Business and Trade")
   end
 
+  scenario "the ministers by department section does not show departments without ministers appointed" do
+    expect(page).not_to have_selector("#office-of-the-advocate-general-for-scotland")
+    expect(page).not_to have_text("Office of the Advocate General for Scotland")
+  end
+
   context "during a reshuffle" do
     let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
 
