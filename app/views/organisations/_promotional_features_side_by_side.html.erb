@@ -1,0 +1,40 @@
+<% if @documents.has_promotional_features? %>
+  <section class="organisation__margin-bottom organisation__section-wrap">
+    <div class="govuk-grid-row">
+      <% @documents.promotional_image_features.first(2).each do |feature| %>
+        <%
+          ga4_image_card_json = {
+            "event_name": "navigation",
+            "type": "image card",
+            "section": feature[:title]
+          }.to_json
+        %>
+        <div class="govuk-grid-column-one-half">
+          <div class="organisation__promotion" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
+            <%= render "govuk_publishing_components/components/heading", {
+              text: feature[:title],
+              heading_level: 2,
+              padding: true,
+              margin_bottom: 3,
+              border_top: 5,
+              brand: @organisation.brand
+            } %>
+            <% if feature[:number_of_items] > 1 %>
+              <div class="govuk-grid-row">
+                <% feature[:items].each do |item| %>
+                  <div class="<%= feature[:child_column_class] %>">
+                    <%= render "govuk_publishing_components/components/image_card", item.merge({ large: false }) %>
+                  </div>
+                <% end %>
+              </div>
+            <% else %>
+              <% feature[:items].each do |item| %>
+                <%= render "govuk_publishing_components/components/image_card", item.merge({ large: false }) %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
+<% end %>

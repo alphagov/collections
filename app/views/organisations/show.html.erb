@@ -11,13 +11,14 @@
 <%= render 'govuk_publishing_components/components/machine_readable_metadata',
            schema: :organisation,
            content_item: @organisation.content_item.content_item_data %>
-<%= render partial: 'featured_news' %>
 
 <% if @organisation.is_no_10? %>
-  <%= render partial: 'promotional_features' %>
-  <%= render partial: 'what_we_do' %>
-  <%= render partial: 'latest_documents' %>
+  <%= render partial: 'latest_news' %>
+  <%= render partial: 'featured_news_small' %>
+  <%= render partial: 'videos' if @documents.has_promotional_video_feature? %>
+  <%= render partial: 'promotional_features_side_by_side' %>
 <% else %>
+  <%= render partial: 'featured_news' %>
   <%= render partial: 'latest_documents' %>
   <%= render partial: 'what_we_do' %>
   <% if @organisation.is_promotional_org? %>

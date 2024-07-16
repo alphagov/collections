@@ -3,6 +3,7 @@ cy:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Gweinyddwyd gan
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: Llysoedd a Thribiwnlysoedd
       organisations: Sefydliadau
@@ -65,6 +66,8 @@ cy:
     index_title: "%{title}"
     jobs_contracts: Swyddi a chontractau
     latest_from: Y diweddaraf gennym
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: Mae %{title} bellach yn cael ei alw'n <a href='%{link_href}'>%{link_text}</a>
       devolved_html: Mae %{title} yn gorff o <a href='%{link_href}'>%{link_text}</a>
@@ -109,6 +112,7 @@ cy:
       special_health_authority:
       sub_organisation:
       tribunal: Tribiwnlys
+    videos:
     what_we_do: Ein gwaith
     works_with_statement:
       few:

@@ -32,12 +32,21 @@ vi:
         other: Bài viết trên blog
       business_finance_support_scheme:
         other: Kế hoạch hỗ trợ tài chính doanh nghiệp
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         other: Chiến dịch
       careers:
         other: nghề nghiệp
       case_study:
         other: Nghiên cứu điển hình
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         other: Tham vấn kín
       cma_case:
@@ -143,6 +152,9 @@ vi:
         other: Thống kê Chính thức
       official_statistics_announcement:
         other: Thông báo thống kê chính thức
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         other: Tham vấn mở
       oral_statement:

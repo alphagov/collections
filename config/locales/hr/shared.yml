@@ -65,6 +65,12 @@ hr:
         many:
         one: Shema potpore poslovnom financiranju
         other: Sheme potpore poslovnom financiranju
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         few:
         many:
@@ -80,6 +86,9 @@ hr:
         many:
         one: Studija slučaja
         other: Studije slučaja
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         few:
         many:
@@ -338,6 +347,9 @@ hr:
         many:
         one: Objava službene statistike
         other: Objave službene statistike
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         few:
         many:

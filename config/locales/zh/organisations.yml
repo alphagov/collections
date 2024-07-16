@@ -3,6 +3,7 @@ zh:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: 管理者
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: 法院和法庭
       organisations: 组织机构
@@ -63,6 +64,8 @@ zh:
     index_title: "%{title}"
     jobs_contracts: 工作和联系人
     latest_from: "%{title} 的最新消息"
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title} 现在称为 <a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title} 是 <a href='%{link_href}'>%{link_text}</a> 的实体"
@@ -107,6 +110,7 @@ zh:
       special_health_authority:
       sub_organisation:
       tribunal: 法庭
+    videos:
     what_we_do:
     works_with_statement:
       one:

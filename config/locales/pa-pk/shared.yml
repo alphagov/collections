@@ -43,6 +43,12 @@ pa-pk:
       business_finance_support_scheme:
         one: بزنس فنانس دی مدد لئی منصوبہ
         other: بزنس فنانس دی مدد لئی منصوبے
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         one: مہم
         other: مہمات
@@ -52,6 +58,9 @@ pa-pk:
       case_study:
         one: مقدمے دی پڑھائی
         other: مقدمے دیاں پڑھائیاں
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: مشورہ ختم ہوئے
         other: مشورے ختم ہوئے
@@ -208,6 +217,9 @@ pa-pk:
       official_statistics_announcement:
         one: سرکاری  اعداد و شمار بارے اعلان
         other: سرکاری اعداد و شمار بارے اعلانات
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: کُھلا صلاح مشورہ
         other: کُھلے صلاح مشورے

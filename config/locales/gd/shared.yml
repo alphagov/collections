@@ -65,6 +65,12 @@ gd:
         one: Scéim tacaíochta maoinithe gnó
         other: Meicníochtaí tacaíochta do mhaoiniú gnó
         two:
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         few:
         one: Gníomhaíocht
@@ -80,6 +86,9 @@ gd:
         one: Cás-staidéir
         other: Tuarascálacha staidéir
         two:
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         few:
         one: Nós imeachta comhairliúcháin dúnta
@@ -338,6 +347,9 @@ gd:
         one: Fógra staitisticí oifigiúla
         other: Fógraí staitisticí oifigiúla
         two:
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         few:
         one: Comhairliúcháin oscailte

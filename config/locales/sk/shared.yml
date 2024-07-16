@@ -54,6 +54,12 @@ sk:
         few:
         one: Schéma podpory financovania podnikov
         other: Systémy podpory financovania podnikov
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         few:
         one: Kampaň
@@ -66,6 +72,9 @@ sk:
         few:
         one: Prípadová štúdia
         other: Prípadové štúdie
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         few:
         one: Uzavretá konzultácia
@@ -273,6 +282,9 @@ sk:
         few:
         one: Oficiálne štatistické oznámenie
         other: Oficiálne štatistické oznámenia
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         few:
         one: Otvorená konzultácia

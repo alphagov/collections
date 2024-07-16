@@ -3,6 +3,7 @@ dr:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: اداره شده توسط
+    all_news_link:
     breadcrumbs:
       courts_and_tribunals: محاکم و دادگاه ها
       organisations: سازمان ها
@@ -68,6 +69,8 @@ dr:
     index_title: "%{title}"
     jobs_contracts: وظایف و قرار داد ها
     latest_from: جدید ترین از{title}%
+    latest_news:
+    more_videos_link:
     notices:
       changed_name_html: "%{title}اکنون نامیده میشود<a href='%{link_href}'>%{link_text}</a>"
       devolved_html: "%{title}یک مجموعهء از<a href='%{link_href}'>%{link_text}</a>"
@@ -112,6 +115,7 @@ dr:
       special_health_authority:
       sub_organisation:
       tribunal: دادگاه
+    videos:
     what_we_do:
     works_with_statement:
       one: کار میکند با{works_with_count}%نهاد عامه

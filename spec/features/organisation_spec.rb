@@ -50,6 +50,7 @@ RSpec.describe "Organisation pages" do
     stub_content_and_search(content_item_wales_office)
     stub_content_and_search(content_item_blank)
     stub_content_and_search(content_item_separate_student_loans)
+    stub_latest_news_for_organisation("prime-ministers-office-10-downing-street")
     stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", content_item_wales_office_cy)
   end
 
@@ -69,6 +70,17 @@ RSpec.describe "Organisation pages" do
     expect(page).to have_selector("meta[name='robots'][content='max-image-preview:none']", visible: :hidden)
     expect(page).to have_css("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: :hidden)
     expect(page).to have_css("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: :hidden)
+  end
+
+  context "with latest news items that lack an image" do
+    before do
+      stub_content_store_does_not_have_item("/government/news/latest-news-item-with-image")
+    end
+
+    it "records the problem" do
+      expect(GovukError).to receive(:notify)
+      visit "/government/organisations/prime-ministers-office-10-downing-street"
+    end
   end
 
   it "displays breadcrumbs" do
@@ -98,9 +110,9 @@ RSpec.describe "Organisation pages" do
   end
 
   describe "no10 banner" do
-    it "shows only on no10's page" do
+    it "doesnt show on no10's page" do
       visit "/government/organisations/prime-ministers-office-10-downing-street"
-      expect(page).to have_css(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
+      expect(page).not_to have_css(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
     end
 
     it "doesn't show on other org pages" do
@@ -117,7 +129,7 @@ RSpec.describe "Organisation pages" do
 
   it "renders the logo and logo brand correctly" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    expect(page).not_to have_css(".gem-c-organisation-logo")
+    expect(page).to have_css(".gem-c-organisation-logo.brand--prime-ministers-office-10-downing-street .gem-c-organisation-logo__name", text: "Prime Minister's Office, 10 Downing Street")
 
     visit "/government/organisations/attorney-generals-office"
     expect(page).to have_css(".gem-c-organisation-logo.brand--attorney-generals-office .gem-c-organisation-logo__name", text: "Attorney General's Office")
@@ -193,10 +205,10 @@ RSpec.describe "Organisation pages" do
     expect(page).to have_css("a[href='/email-signup?link=/government/organisations/attorney-generals-office']", text: "Get emails")
   end
 
-  it "shows the 'what we do' section" do
+  it "shows the 'what we do' section, but not on the no. 10 page" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    expect(page).to have_css("section#what-we-do")
-    expect(page).to have_content(/10 Downing Street is the official residence and the office of the British Prime Minister/i)
+    expect(page).not_to have_css("section#what-we-do")
+    expect(page).not_to have_content(/10 Downing Street is the official residence and the office of the British Prime Minister/i)
 
     visit "/government/organisations/attorney-generals-office"
     expect(page).to have_css("section#what-we-do")
@@ -405,10 +417,10 @@ RSpec.describe "Organisation pages" do
 
   it "shows promotional features on the right pages" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    expect(page).to have_content(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
+    expect(page).to have_content(/became Prime Minister in/i)
 
     visit "/government/organisations/attorney-generals-office"
-    expect(page).not_to have_content(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
+    expect(page).not_to have_content(/became Prime Minister in/i)
   end
 
   it "full org pages have GovernmentOrganization schema.org information" do
@@ -433,8 +445,9 @@ RSpec.describe "Organisation pages" do
 
   it "has GA4 tracking on image cards" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    test_ga4_image_cards("#featured-documents div")
+    test_ga4_image_cards("#featured-documents-small div")
     test_ga4_image_cards("div.organisation__promotion")
+    test_ga4_image_cards("#latest-news div")
 
     visit "/government/organisations/attorney-generals-office"
     test_ga4_image_cards("#featured-documents div")
@@ -448,9 +461,6 @@ RSpec.describe "Organisation pages" do
   end
 
   it "has GA4 tracking on the see all latest documents link" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
-    test_ga4_see_all_link
-
     visit "/government/organisations/attorney-generals-office"
     test_ga4_see_all_link
 
@@ -459,9 +469,6 @@ RSpec.describe "Organisation pages" do
   end
 
   it "has GA4 tracking on the get emails link" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
-    test_ga4_get_emails_link
-
     visit "/government/organisations/attorney-generals-office"
     test_ga4_get_emails_link
 

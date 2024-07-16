@@ -55,6 +55,14 @@ class Organisation
     is_no_10? || organisation_type == "civil_service"
   end
 
+  def has_more_videos_link?
+    more_videos_link.present?
+  end
+
+  def more_videos_link
+    is_no_10? ? "https://www.youtube.com/number10gov" : nil
+  end
+
   def is_sub_organisation?
     organisation_type == "sub_organisation"
   end

@@ -65,6 +65,12 @@ sl:
         one: Program podpore za poslovne finance
         other: Programi podpore za poslovne finance
         two:
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       campaign:
         few:
         one: Kampanja
@@ -80,6 +86,9 @@ sl:
         one: Študija primera
         other: Študije primera
         two:
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         few:
         one: Tesno posvetovanje
@@ -338,6 +347,9 @@ sl:
         one: Objava uradne statistike
         other: Objave uradne statistike
         two:
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         few:
         one: Odprto posvetovanje
