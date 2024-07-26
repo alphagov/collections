@@ -61,7 +61,7 @@
 .taxon-page__show-more-toggle {
   display: none;
 
-  .js-enabled & {
+  .govuk-frontend-supported & {
     display: block;
     margin-bottom: govuk-spacing(4);
   }
