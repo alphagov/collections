@@ -1,3 +1,18 @@
+GIT
+  remote: https://github.com/alphagov/govuk_publishing_components.git
+  revision: bd1b10f4e5abffeac984ea62485275df3dba564e
+  branch: test-one-column-card-component
+  specs:
+    govuk_publishing_components (41.0.0)
+      govuk_app_config
+      govuk_personalisation (>= 0.7.0)
+      kramdown
+      plek
+      rails (>= 6)
+      rouge
+      sprockets (>= 3)
+      sprockets-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -216,15 +231,6 @@ GEM
     govuk_personalisation (0.16.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (41.0.0)
-      govuk_app_config
-      govuk_personalisation (>= 0.7.0)
-      kramdown
-      plek
-      rails (>= 6)
-      rouge
-      sprockets (>= 3)
-      sprockets-rails
     govuk_schemas (5.0.4)
       faker (~> 3.4.1)
       json-schema (>= 2.8, < 4.4)
@@ -785,7 +791,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_document_types
-  govuk_publishing_components
+  govuk_publishing_components!
   govuk_schemas
   govuk_test
   i18n-coverage
