@@ -62,6 +62,12 @@ class MainstreamBrowsePage
     return if second_level_browse_pages.blank?
 
     slugs = second_level_browse_pages.map { |page| slug(page.base_path) }
-    @documents_service.new(slugs, "filter_any_mainstream_browse_pages").fetch_related_documents_with_format
+    service_pages_tagged_to_browse_subtopics(slugs)
+  end
+
+  def service_pages_tagged_to_browse_subtopics(subtopic_slugs)
+    @documents_service.new(
+      subtopic_slugs, "filter_any_mainstream_browse_pages"
+    ).fetch_related_documents_with_format({ filter_format: "transaction" })
   end
 end
