@@ -170,10 +170,10 @@ GEM
       parslet
     faker (3.4.1)
       i18n (>= 1.8.11, < 2)
-    faraday (2.10.0)
+    faraday (2.10.1)
       faraday-net_http (>= 2.0, < 3.2)
       logger
-    faraday-net_http (3.1.0)
+    faraday-net_http (3.1.1)
       net-http
     ffi (1.16.3)
     find_a_port (1.0.1)
