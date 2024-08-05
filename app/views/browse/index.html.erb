@@ -17,9 +17,12 @@
 <% end %>
 
 <%= render "shared/browse_header", { margin_bottom: 9 } do %>
-  <h1 class="browse__heading govuk-heading-xl">
-    <%= t("browse.title") %>
-  </h1>
+  <%= render "govuk_publishing_components/components/heading", {
+    text: t("browse.title"),
+    inverse: true,
+    font_size: "xl",
+    margin_bottom: 6,
+  } %>
   <%= render "govuk_publishing_components/components/lead_paragraph", {
     text: t("browse.description"),
     margin_bottom: 2,
