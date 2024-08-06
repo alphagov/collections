@@ -1,12 +1,28 @@
 ---
 ar:
   browse:
+    popular_links:
+      benefits:
+        - title:
+          url: /check-benefits-financial-support
+          analytics_label_key: check_benefits_and_financial_support
+      business:
+        - title:
+          url: /log-in-register-hmrc-online-services
+          analytics_label_key: hmrc_online_services
+        - title:
+          url: /self-assessment-tax-returns
+          analytics_label_key: self_assessment_tax_returns
+        - title:
+          url: /pay-paye-tax
+          analytics_label_key: pay_employers_paye
     all_categories: جميع الفئات
-    check_benefits_and_financial_support:
+    analytics_labels:
+      check_benefits_and_financial_support:
+      hmrc_online_services:
+      self_assessment_tax_returns:
+      pay_employers_paye:
     description:
-    hmrc_online_services:
-    pay_employers_paye:
     popular_tasks:
-    self_assessment_tax_returns:
     title:
     topics:

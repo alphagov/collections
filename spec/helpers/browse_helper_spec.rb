@@ -1,16 +1,52 @@
 RSpec.describe BrowseHelper do
-  describe "action links on browse pages" do
-    it "returns expected data for a browse page with action links" do
-      expected = [
-        { text: t("browse.hmrc_online_services"), ga4_text: t("browse.hmrc_online_services", locale: :en), lang: "browse.hmrc_online_services", href: "/log-in-register-hmrc-online-services", index_link: 1, index_total: 3 },
-        { text: t("browse.self_assessment_tax_returns"), ga4_text: t("browse.self_assessment_tax_returns", locale: :en), lang: "browse.self_assessment_tax_returns", href: "/self-assessment-tax-returns", index_link: 2, index_total: 3 },
-        { text: t("browse.pay_employers_paye"), ga4_text: t("browse.pay_employers_paye", locale: :en), lang: "browse.pay_employers_paye", href: "/pay-paye-tax", index_link: 3, index_total: 3 },
-      ]
-      expect(helper.action_link_data("business")).to eq(expected)
+  describe "#display_popular_links_for_slug?" do
+    it "returns true for existing slug" do
+      expect(helper.display_popular_links_for_slug?("business")).to be(true)
     end
 
-    it "returns nothing where there are no action links" do
-      expect(helper.action_link_data("not-a-page")).to eq([])
+    it "returns fails for nonexisting slug" do
+      expect(helper.display_popular_links_for_slug?("random12345")).to be(false)
+    end
+  end
+
+  describe "#each_popular_link_for_slug" do
+    it "iterates over popular links" do
+      yielded_links = []
+      yielded_analytics_labels = []
+      yielded_link_indexes = []
+      yielded_link_counts = []
+      helper.each_popular_link_for_slug("business") do |link, analytics_label, link_index, link_count|
+        yielded_links << link
+        yielded_analytics_labels << analytics_label
+        yielded_link_indexes << link_index
+        yielded_link_counts << link_count
+      end
+      expected_links = [
+        {
+          title: "HMRC online services: sign in or set up an account",
+          url: "/log-in-register-hmrc-online-services",
+          analytics_label_key: "hmrc_online_services",
+        },
+        {
+          title: "Self Assessment tax returns",
+          url: "/self-assessment-tax-returns",
+          analytics_label_key: "self_assessment_tax_returns",
+        },
+        {
+          title: "Pay employers' PAYE",
+          url: "/pay-paye-tax",
+          analytics_label_key: "pay_employers_paye",
+        },
+      ]
+      expected_analytics_labels = [
+        "HMRC online services: sign in or set up an account",
+        "Self Assessment tax returns",
+        "Pay employers' PAYE",
+      ]
+      expect(yielded_links).to eq(expected_links)
+      expect(yielded_analytics_labels).to eq(expected_analytics_labels)
+      expect(yielded_link_indexes).to eq([1, 2, 3])
+      expect(yielded_link_counts).to eq([3, 3, 3])
     end
   end
 end

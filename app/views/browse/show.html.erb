@@ -31,7 +31,7 @@
   } %>
 <% end %>
 
-<% if display_action_links_for_slug?(page.slug) %>
+<% if display_popular_links_for_slug?(page.slug) %>
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
@@ -42,9 +42,12 @@
             font_size: "m"
           } %>
           <ul class="govuk-list govuk-!-margin-bottom-7">
-            <% action_link_data(page.slug).each do |link| %>
-              <li>
-                <%= render "shared/browse_action_link", locals: link %>
+            <% each_popular_link_for_slug(page.slug) do |link, analytics_label, link_index, link_count| %>
+              <li
+                  data-module="ga4-link-tracker"
+                  data-ga4-track-links-only=""
+                  data-ga4-link='{"event_name":"navigation","type":"action","index_link":<%= link_index %>,"index_total":<%= link_count %>,"text":"<%= analytics_label %>"}'>
+                <%= render partial: "shared/browse_action_link", locals: {link:} %>
               </li>
             <% end %>
           </ul>
@@ -80,6 +83,6 @@
         description: second_level_browse_page.description,
       }
     end,
-    sub_heading_level: display_action_links_for_slug?(page.slug) ? 3 : 2,
+    sub_heading_level: display_popular_links_for_slug?(page.slug) ? 3 : 2,
   } %>
 <% end %>
