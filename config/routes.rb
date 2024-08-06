@@ -21,9 +21,7 @@ Rails.application.routes.draw do
   unless Rails.env.production?
     get "/development", to: "development#index"
   end
-
-  get "/browse.json" => redirect("/api/content/browse")
-
+  
   resources :browse, only: %i[index show], param: :top_level_slug do
     get ":second_level_slug", on: :member, to: "second_level_browse_page#show"
   end
