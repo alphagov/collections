@@ -1,16 +1,64 @@
 RSpec.describe BrowseHelper do
-  describe "action links on browse pages" do
-    it "returns expected data for a browse page with action links" do
-      expected = [
-        { text: t("browse.hmrc_online_services"), ga4_text: t("browse.hmrc_online_services", locale: :en), lang: "browse.hmrc_online_services", href: "/log-in-register-hmrc-online-services", index_link: 1, index_total: 3 },
-        { text: t("browse.self_assessment_tax_returns"), ga4_text: t("browse.self_assessment_tax_returns", locale: :en), lang: "browse.self_assessment_tax_returns", href: "/self-assessment-tax-returns", index_link: 2, index_total: 3 },
-        { text: t("browse.pay_employers_paye"), ga4_text: t("browse.pay_employers_paye", locale: :en), lang: "browse.pay_employers_paye", href: "/pay-paye-tax", index_link: 3, index_total: 3 },
-      ]
-      expect(helper.action_link_data("business")).to eq(expected)
+  describe "#display_popular_links_for_slug?" do
+    it "returns true for existing slug" do
+      expect(helper.display_popular_links_for_slug?("business")).to be(true)
     end
 
-    it "returns nothing where there are no action links" do
-      expect(helper.action_link_data("not-a-page")).to eq([])
+    it "returns false for nonexisting slug" do
+      expect(helper.display_popular_links_for_slug?("random12345")).to be(false)
+    end
+  end
+
+  describe "#popular_links_for_slug" do
+    it "returns popular links data" do
+      expected_links = [
+        {
+          text: "HMRC online services: sign in or set up an account",
+          href: "/log-in-register-hmrc-online-services",
+          data_attributes: {
+            module: "ga4-link-tracker",
+            ga4_track_links_only: "",
+            ga4_link: {
+              event_name: "navigation",
+              type: "action",
+              index_link: 1,
+              index_total: 3,
+              text: "HMRC online services: sign in or set up an account",
+            },
+          },
+        },
+        {
+          text: "Self Assessment tax returns",
+          href: "/self-assessment-tax-returns",
+          data_attributes: {
+            module: "ga4-link-tracker",
+            ga4_track_links_only: "",
+            ga4_link: {
+              event_name: "navigation",
+              type: "action",
+              index_link: 2,
+              index_total: 3,
+              text: "Self Assessment tax returns",
+            },
+          },
+        },
+        {
+          text: "Pay employers' PAYE",
+          href: "/pay-paye-tax",
+          data_attributes: {
+            module: "ga4-link-tracker",
+            ga4_track_links_only: "",
+            ga4_link: {
+              event_name: "navigation",
+              type: "action",
+              index_link: 3,
+              index_total: 3,
+              text: "Pay employers' PAYE",
+            },
+          },
+        },
+      ]
+      expect(helper.popular_links_for_slug("business")).to eq(expected_links)
     end
   end
 end

@@ -1,12 +1,19 @@
 ---
 ru:
   browse:
+    popular_links:
+      benefits:
+        - title:
+          url:
+      business:
+        - title:
+          url:
+        - title:
+          url:
+        - title:
+          url:
     all_categories: Все категории
-    check_benefits_and_financial_support:
     description:
-    hmrc_online_services:
-    pay_employers_paye:
     popular_tasks:
-    self_assessment_tax_returns:
     title:
     topics:
