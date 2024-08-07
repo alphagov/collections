@@ -19,6 +19,7 @@ class MainstreamBrowsePage
 
   def initialize(content_item)
     @content_item = content_item
+    @documents_service = PopularBrowseSearchDocuments
   end
 
   def top_level_browse_pages
@@ -49,7 +50,24 @@ class MainstreamBrowsePage
     @lists ||= ListSet.new("section", @content_item.content_id, details["groups"])
   end
 
-  def slug
-    base_path.sub(%r{\A/browse/}, "")
+  def slug(path = base_path)
+    path.sub(%r{\A/browse/}, "")
+  end
+
+  def display_popular_tasks?
+    %w[benefits business].include?(slug)
+  end
+
+  def popular_tasks
+    return if second_level_browse_pages.blank?
+
+    slugs = second_level_browse_pages.map { |page| slug(page.base_path) }
+    service_pages_tagged_to_browse_subtopics(slugs)
+  end
+
+  def service_pages_tagged_to_browse_subtopics(subtopic_slugs)
+    @documents_service.new(
+      subtopic_slugs, "filter_any_mainstream_browse_pages"
+    ).fetch_related_documents_with_format({ filter_format: "transaction" })
   end
 end
