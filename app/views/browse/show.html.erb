@@ -52,12 +52,6 @@
             <% end %>
           </ul>
         </div>
-
-        <%= render "govuk_publishing_components/components/heading", {
-          text: t("browse.topics"),
-          margin_bottom: 6,
-          font_size: "m"
-        } %>
       </div>
     </div>
   </div>
@@ -66,6 +60,7 @@
 <% total_links = page.second_level_browse_pages.count.to_s %>
 <%= render "shared/browse_cards_container" do %>
   <%= render "govuk_publishing_components/components/cards", {
+    heading: display_action_links_for_slug?(page.slug) ? t("browse.topics") : nil,
     items: page.second_level_browse_pages.map.with_index do |second_level_browse_page, index|
       {
         link: {
