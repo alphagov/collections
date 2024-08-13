@@ -512,6 +512,12 @@ RSpec.describe "Organisation pages" do
       expect(org.custom_banner).to eq("Custom banner")
     end
 
+    it "supports non-English locales" do
+      stub_const "Organisation::CUSTOM_BANNERS_DATA", { "foo-org.cy" => "Custom banner in Welsh" }
+      org = Organisation.new(double("content_item", content_item_data: { "base_path" => "/government/organisations/foo-org.cy" }))
+      expect(org.custom_banner).to eq("Custom banner in Welsh")
+    end
+
     it "does not provide a custom banner by default" do
       org = Organisation.new(double("content_item", content_item_data: { "base_path" => "/government/organisations/anything-else" }))
       expect(org.custom_banner).to eq(false)

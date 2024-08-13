@@ -10,6 +10,10 @@ class Organisation
   CUSTOM_BANNERS_DATA = {
     "department-for-levelling-up-housing-and-communities" => "This organisation is changing. It’s now called the <a href=\"/government/organisations/ministry-of-housing-communities-local-government\">Ministry of Housing, Communities and Local Government</a>.",
     "ministry-of-housing-communities-local-government" => "This is a new organisation. It was previously called the <a href=\"/government/organisations/department-for-levelling-up-housing-and-communities\">Department for Levelling Up, Housing and Communities</a>.",
+    "office-of-the-secretary-of-state-for-wales" => "This organisation is changing. It’s now called the <a href=\"https://www.gov.uk/government/organisations/wales-office\">Wales Office</a>.",
+    "wales-office" => "This is a new organisation. It was previously called the <a href=\"https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales\">Office of the Secretary of State for Wales</a>.",
+    "office-of-the-secretary-of-state-for-wales.cy" => "Mae'r sefydliad hwn yn newid. Fe’i gelwir bellach yn <a href=\"https://www.gov.uk/government/organisations/wales-office.cy\">Swyddfa Cymru</a>.",
+    "wales-office.cy" => "Mae hwn yn sefydliad newydd. Yn flaenorol fe'i gelwid yn <a href=\"https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales.cy\">Swyddfa Ysgrifennydd Gwladol Cymru</a>.",
   }.freeze
 
   def initialize(content_item)
@@ -22,7 +26,7 @@ class Organisation
   end
 
   def custom_banner
-    CUSTOM_BANNERS_DATA[slug] || false
+    CUSTOM_BANNERS_DATA[slug_with_locale] || false
   end
 
   def title
