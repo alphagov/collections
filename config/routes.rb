@@ -94,17 +94,9 @@ Rails.application.routes.draw do
       to: "embassies#index",
       as: :embassies
 
-  get "/world/:name/news(.:locale).atom",
-      to: "world_location_news#show",
-      as: :world_location_news_feed
-
   get "/world/:name/news(.:locale)",
       to: "world_location_news#show",
       as: :world_location_news
-
-  get "/world/:name(.:locale).atom",
-      to: "world_location_news#show",
-      as: :international_delegation_news_feed
 
   get "/world/*taxon_base_path", to: "world_wide_taxons#show"
 
