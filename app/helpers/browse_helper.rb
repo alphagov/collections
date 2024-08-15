@@ -1,28 +1,27 @@
 module BrowseHelper
-  ACTION_LINK_DATA = {
-    benefits: [
-      { lang: "browse.check_benefits_and_financial_support", href: "/check-benefits-financial-support" },
-    ],
-    business: [
-      { lang: "browse.hmrc_online_services", href: "/log-in-register-hmrc-online-services" },
-      { lang: "browse.self_assessment_tax_returns", href: "/self-assessment-tax-returns" },
-      { lang: "browse.pay_employers_paye", href: "/pay-paye-tax" },
-    ],
-  }.freeze
-
-  def display_action_links_for_slug?(slug)
-    ACTION_LINK_DATA.key?(slug.to_sym)
+  def display_popular_links_for_slug?(slug)
+    I18n.exists?(slug.to_s, scope: "browse.popular_links")
   end
 
-  def action_link_data(slug)
-    links = ACTION_LINK_DATA[slug.to_sym]
-    return [] unless links
-
-    links.each_with_index do |link, index|
-      link[:text] = I18n.t(link[:lang])
-      link[:ga4_text] = I18n.t(link[:lang], locale: :en)
-      link[:index_link] = index + 1
-      link[:index_total] = links.length
+  def popular_links_for_slug(slug)
+    links = I18n.t(slug.to_s, scope: "browse.popular_links")
+    count = links.length
+    links.map.with_index(1) do |link, index|
+      {
+        text: link[:title],
+        href: link[:url],
+        data_attributes: {
+          module: "ga4-link-tracker",
+          ga4_track_links_only: "",
+          ga4_link: {
+            event_name: "navigation",
+            type: "action",
+            index_link: index,
+            index_total: count,
+            text: link[:title],
+          },
+        },
+      }
     end
   end
 end
