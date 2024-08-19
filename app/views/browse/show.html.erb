@@ -12,6 +12,7 @@
       section: page.title.downcase,
     }
   } %>
+  <%= popular_tasks_variant.analytics_meta_tag.html_safe if popular_tasks_page_under_test? %>
 <% end %>
 
 <% content_for :breadcrumbs do %>

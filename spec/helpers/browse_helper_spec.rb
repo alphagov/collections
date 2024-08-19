@@ -1,4 +1,16 @@
 RSpec.describe BrowseHelper do
+  before do
+    class << helper
+      def popular_tasks_variant_a_page?
+        false
+      end
+
+      def popular_tasks_variant_b_page?
+        false
+      end
+    end
+  end
+
   describe "#display_popular_links_for_slug?" do
     it "returns true for existing slug" do
       expect(helper.display_popular_links_for_slug?("business")).to be(true)

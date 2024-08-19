@@ -3,15 +3,25 @@ hr:
   browse:
     popular_links:
       benefits:
-        - title:
-          url:
+        control:
+          - title:
+            url:
+        variant_a:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
       business:
-        - title:
-          url:
-        - title:
-          url:
-        - title:
-          url:
+        control:
+          - title:
+            url:
+        variant_a:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
     all_categories: Sve kategorije
     description:
     popular_tasks:
