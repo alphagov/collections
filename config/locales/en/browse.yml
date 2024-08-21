@@ -2,6 +2,21 @@
 en:
   browse:
     popular_links:
+      abroad:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
       benefits:
         control:
           - title: Check benefits and financial support you can get
@@ -9,7 +24,30 @@ en:
         variant_a:
           - title:
             url:
+          - title:
+            url:
+          - title:
+            url:
         variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      births-deaths-marriages:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
           - title:
             url:
       business:
@@ -23,7 +61,195 @@ en:
         variant_a:
           - title:
             url:
+          - title:
+            url:
+          - title:
+            url:
         variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      childcare-parenting:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      citizenship:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      disabilities:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      driving:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      education:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      employing-people:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      environment-countryside:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      housing-local-services:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      justice:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      tax:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      visas-immigration:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+      working:
+        variant_a:
+          - title:
+            url:
+          - title:
+            url:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+          - title:
+            url:
           - title:
             url:
     all_categories: All categories
