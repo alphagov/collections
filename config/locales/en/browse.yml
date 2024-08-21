@@ -1,19 +1,33 @@
 ---
 en:
   browse:
+    popular_links:
+      benefits:
+        control:
+          - title: Check benefits and financial support you can get
+            url: /check-benefits-financial-support
+        variant_a:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+      business:
+        control:
+          - title: "HMRC online services: sign in or set up an account"
+            url: /log-in-register-hmrc-online-services
+          - title: Self Assessment tax returns
+            url: /self-assessment-tax-returns
+          - title: "Pay employers' PAYE"
+            url: /pay-paye-tax
+        variant_a:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
     all_categories: All categories
     popular_tasks: Popular tasks
     topics: Topics
     description: Find the government services, forms and accounts you need to use
     title: Services and information
-    popular_links:
-      benefits:
-        - title: Check benefits and financial support you can get
-          url: /check-benefits-financial-support
-      business:
-        - title: "HMRC online services: sign in or set up an account"
-          url: /log-in-register-hmrc-online-services
-        - title: Self Assessment tax returns
-          url: /self-assessment-tax-returns
-        - title: "Pay employers' PAYE"
-          url: /pay-paye-tax
