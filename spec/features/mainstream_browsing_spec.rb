@@ -141,4 +141,17 @@ RSpec.feature "Mainstream browsing" do
       end
     end
   end
+
+  it "renders the GOV.UK Chat promo" do
+    content_item = GovukSchemas::Example.find("mainstream_browse_page", example_name: "top_level_page").tap do |item|
+      item["base_path"] = GovukChatPromoHelper::GOVUK_CHAT_PROMO_BASE_PATHS.first
+    end
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    ClimateControl.modify GOVUK_CHAT_PROMO_ENABLED: "true" do
+      visit content_item["base_path"]
+      expect(page).to have_selector(".gem-c-chat-entry")
+    end
+  end
 end

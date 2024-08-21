@@ -93,3 +93,16 @@ $browse-header-background-colour: #263135;
     margin-bottom: govuk-spacing(6);
   }
 }
+
+.browse__govuk-chat-promo {
+  @include govuk-media-query($until: "tablet") {
+    border-top: 4px solid govuk-colour("blue");
+    padding-top: govuk-spacing(5);
+  }
+}
+
+.browse__govuk-chat-promo--second-level {
+  @include govuk-media-query($until: "tablet") {
+    border-top-width: 2px;
+  }
+}
