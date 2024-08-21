@@ -4,12 +4,12 @@ en:
     popular_links:
       abroad:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Get access to your eVisa
+            url: /get-access-evisa
+          - title: Track your passport application
+            url: /track-passport-application
+          - title: Online immigration status (eVisa)
+            url: /guidance/online-immigration-status-evisa
         variant_b:
           - title:
             url:
@@ -22,12 +22,12 @@ en:
           - title: Check benefits and financial support you can get
             url: /check-benefits-financial-support
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Universal Credit
+            url: /universal-credit
+          - title: Sign in to your Universal Credit account
+            url: /sign-in-universal-credit
+          - title: Child Benefit
+            url: /child-benefit
         variant_b:
           - title:
             url:
@@ -37,12 +37,12 @@ en:
             url:
       births-deaths-marriages:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Order a birth, death, marriage or civil partnership certificate
+            url: /order-copy-birth-death-marriage-certificate
+          - title: Research your family history using the General Register Office
+            url: /research-family-history
+          - title: Search probate records for documents and wills (England and Wales)
+            url: /search-will-probate
         variant_b:
           - title:
             url:
@@ -59,12 +59,12 @@ en:
           - title: "Pay employers' PAYE"
             url: /pay-paye-tax
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Searching the Companies House register
+            url: /guidance/search-the-companies-house-register
+          - title: Get information about a company
+            url: /get-information-about-a-company
+          - title: What a sole trader is
+            url: /become-sole-trader
         variant_b:
           - title:
             url:
@@ -74,12 +74,12 @@ en:
             url:
       childcare-parenting:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Sign in to your childcare account
+            url: /sign-in-childcare-account
+          - title: Child Benefit
+            url: /child-benefit
+          - title: Child Benefit when your child turns 16
+            url: /child-benefit-16-19
         variant_b:
           - title:
             url:
@@ -89,12 +89,12 @@ en:
             url:
       citizenship:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: "View and prove your immigration status: get a share code"
+            url: /view-prove-immigration-status
+          - title: Get access to your eVisa
+            url: /get-access-evisa
+          - title: Apply to the EU Settlement Scheme (settled and pre-settled status)
+            url: /settled-status-eu-citizens-families
         variant_b:
           - title:
             url:
@@ -104,12 +104,12 @@ en:
             url:
       disabilities:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Apply for or renew a Blue Badge
+            url: /apply-blue-badge
+          - title: Disability Living Allowance (DLA) for children
+            url: /disability-living-allowance-children
+          - title: Personal Independence Payment (PIP)
+            url: /pip
         variant_b:
           - title:
             url:
@@ -119,12 +119,12 @@ en:
             url:
       driving:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Apply for your first provisional driving licence
+            url: /apply-first-provisional-driving-licence
+          - title: Change the address on your driving licence
+            url: /change-address-driving-licence
+          - title: Book and manage driving and riding tests for your pupils
+            url: /book-pupil-driving-test
         variant_b:
           - title:
             url:
@@ -134,12 +134,12 @@ en:
             url:
       education:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Student visa
+            url: /student-visa
+          - title: Free courses for jobs
+            url: /guidance/free-courses-for-jobs
+          - title: Child Benefit when your child turns 16
+            url: /child-benefit-16-19
         variant_b:
           - title:
             url:
@@ -149,12 +149,12 @@ en:
             url:
       employing-people:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Find a job
+            url: /find-a-job
+          - title: Find an apprenticeship
+            url: /apply-apprenticeship
+          - title: Prove your right to work to an employer
+            url: /prove-right-to-work
         variant_b:
           - title:
             url:
@@ -164,12 +164,12 @@ en:
             url:
       environment-countryside:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: "Hedgerow management rules: cutting and trimming"
+            url: /guidance/hedgerow-management-rules-cutting-and-trimming
+          - title: Find out your rubbish collection day
+            url: /rubbish-collection-day
+          - title: Report a pothole
+            url: /report-pothole
         variant_b:
           - title:
             url:
@@ -179,12 +179,12 @@ en:
             url:
       housing-local-services:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Search for land and property information
+            url: /search-property-information-land-registry
+          - title: Housing Benefit
+            url: /housing-benefit
+          - title: Tell HMRC when you change your address
+            url: /tell-hmrc-change-address
         variant_b:
           - title:
             url:
@@ -194,12 +194,12 @@ en:
             url:
       justice:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Request a basic DBS check
+            url: /request-copy-criminal-record
+          - title: "DBS checks: detailed guidance"
+            url: /government/collections/dbs-checking-service-guidance--2
+          - title: Find a job
+            url: /find-a-job
         variant_b:
           - title:
             url:
@@ -209,12 +209,12 @@ en:
             url:
       tax:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Tax your vehicle
+            url: /vehicle-tax
+          - title: Check how to claim a tax refund
+            url: /claim-tax-refund
+          - title: "Personal tax account: sign in or set up"
+            url: /personal-tax-account
         variant_b:
           - title:
             url:
@@ -224,12 +224,12 @@ en:
             url:
       visas-immigration:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Get access to your eVisa
+            url: /get-access-evisa
+          - title: Online immigration status (eVisa)
+            url: /guidance/online-immigration-status-evisa
+          - title: "View and prove your immigration status: get a share code"
+            url: /view-prove-immigration-status
         variant_b:
           - title:
             url:
@@ -239,12 +239,12 @@ en:
             url:
       working:
         variant_a:
-          - title:
-            url:
-          - title:
-            url:
-          - title:
-            url:
+          - title: Find an apprenticeship
+            url: /apply-apprenticeship
+          - title: Prove your right to work to an employer
+            url: /prove-right-to-work
+          - title: "View and prove your immigration status: get a share code"
+            url: /view-prove-immigration-status
         variant_b:
           - title:
             url:
