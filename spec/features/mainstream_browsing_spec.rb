@@ -42,6 +42,74 @@ RSpec.feature "Mainstream browsing" do
       end
     end
 
+    context "Control variants" do
+      scenario "when visiting business and benefits i.e. pages that originally had popular tasks" do
+        with_variant PopularTasks: "C" do
+          content_item["base_path"] = "/browse/business"
+          stub_content_store_has_item("/browse/business", content_item)
+          visit "/browse/business"
+          expect(page).to have_content("Popular tasks")
+
+          links = I18n.t("browse.popular_links.business.control")
+          links.each do |link|
+            expect(page).to have_link(link["title"])
+          end
+
+          content_item["base_path"] = "/browse/benefits"
+          stub_content_store_has_item("/browse/benefits", content_item)
+          visit "/browse/benefits"
+          expect(page).to have_content("Popular tasks")
+
+          links = I18n.t("browse.popular_links.benefits.control")
+          links.each do |link|
+            expect(page).to have_link(link["title"])
+          end
+        end
+
+        with_variant PopularTasks: "Z" do
+          content_item["base_path"] = "/browse/business"
+          stub_content_store_has_item("/browse/business", content_item)
+          visit "/browse/business"
+          expect(page).to have_content("Popular tasks")
+
+          links = I18n.t("browse.popular_links.business.control")
+          links.each do |link|
+            expect(page).to have_link(link["title"])
+          end
+
+          content_item["base_path"] = "/browse/benefits"
+          stub_content_store_has_item("/browse/benefits", content_item)
+          visit "/browse/benefits"
+          expect(page).to have_content("Popular tasks")
+
+          links = I18n.t("browse.popular_links.benefits.control")
+          links.each do |link|
+            expect(page).to have_link(link["title"])
+          end
+        end
+      end
+
+      scenario "when visiting pages that originally had no popular tasks" do
+        slugs_with_no_popular_tasks_originally = browse_slugs - %i[benefits business]
+
+        slugs_with_no_popular_tasks_originally.each do |browse_slug|
+          browse_path = "/browse/#{browse_slug}"
+          content_item["base_path"] = browse_path
+          stub_content_store_has_item(browse_path, content_item)
+
+          with_variant PopularTasks: "C" do
+            visit browse_path
+            expect(page).not_to have_content("Popular tasks")
+          end
+
+          with_variant PopularTasks: "Z" do
+            visit browse_path
+            expect(page).not_to have_content("Popular tasks")
+          end
+        end
+      end
+    end
+
     browse_slugs.each do |browse_slug|
       browse_path = "/browse/#{browse_slug}"
 

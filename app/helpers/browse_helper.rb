@@ -1,50 +1,32 @@
 module BrowseHelper
-  def variant_a_popular_links?(slug)
-    I18n.exists?("#{slug}.variant_a", scope: "browse.popular_links")
+  def display_popular_links_for_slug?(slug)
+    popular_links_data(slug).present?
   end
 
-  def variant_a_popular_links(slug)
-    I18n.t("#{slug}.variant_a", scope: "browse.popular_links")
-  end
-
-  def variant_b_popular_links?(slug)
-    I18n.exists?("#{slug}.variant_b", scope: "browse.popular_links")
-  end
-
-  def variant_b_popular_links(slug)
-    I18n.t("#{slug}.variant_b", scope: "browse.popular_links")
-  end
-
-  def control_popular_links?(slug)
+  def control_key_is_present?(slug)
     I18n.exists?("#{slug}.control", scope: "browse.popular_links")
   end
 
-  def control_popular_links(slug)
-    I18n.t("#{slug}.control", scope: "browse.popular_links")
-  end
-
-  def display_popular_links_for_slug?(slug)
-    if popular_tasks_variant_a_page?
-      variant_a_popular_links?(slug)
-    elsif popular_tasks_variant_b_page?
-      variant_b_popular_links?(slug)
+  def control_data(slug)
+    if control_key_is_present?(slug)
+      I18n.t("browse.popular_links.#{slug}.control")
     else
-      control_popular_links?(slug)
+      []
     end
   end
 
-  def variant_popular_links_for_slug(slug)
+  def popular_links_data(slug)
     if popular_tasks_variant_a_page?
-      variant_a_popular_links(slug)
+      I18n.t("browse.popular_links.#{slug}.variant_a")
     elsif popular_tasks_variant_b_page?
-      variant_b_popular_links(slug)
+      I18n.t("browse.popular_links.#{slug}.variant_b")
     else
-      control_popular_links(slug)
+      control_data(slug)
     end
   end
 
   def popular_links_for_slug(slug)
-    links = variant_popular_links_for_slug(slug)
+    links = popular_links_data(slug)
     count = links.length
     links.map.with_index(1) do |link, index|
       {
