@@ -60,6 +60,16 @@ RSpec.feature "Mainstream browsing" do
             end
           end
         end
+
+        scenario "variant B" do
+          with_variant PopularTasks: "B" do
+            visit browse_path
+            links = I18n.t("browse.popular_links.#{browse_slug}.variant_b")
+            links.each do |link|
+              expect(page).to have_link(link["title"])
+            end
+          end
+        end
       end
     end
   end

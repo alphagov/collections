@@ -12,7 +12,7 @@ module BrowseHelper
   end
 
   def variant_b_popular_links(slug)
-    I18n.t("#{slug}.control", scope: "browse.popular_links")
+    I18n.t("#{slug}.variant_b", scope: "browse.popular_links")
   end
 
   def control_popular_links?(slug)
