@@ -5,6 +5,7 @@ RSpec.describe "locales files" do
       roles.heading
       organisations.type
       organisations.works_with_statement
+      browse.popular_links
     ]
     checker = RailsTranslationManager::LocaleChecker.new("config/locales/*/*.yml", skip_validation)
     expect(checker.validate_locales).to be_truthy
