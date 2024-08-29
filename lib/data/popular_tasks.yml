@@ -1,97 +1,97 @@
 popular_tasks:
   abroad:
-    - abroad/1
-    - abroad/2
-    - abroad/3
-    - abroad/4
-    - abroad/5
+    - /get-access-evisa
+    - https://www.nhs.uk/using-the-nhs/healthcare-abroad/apply-for-a-free-uk-global-health-insurance-card-ghic/
+    - /track-passport-application
+    - /guidance/online-immigration-status-evisa
+    - /view-prove-immigration-status
   benefits:
-    - benefits/1
-    - benefits/2
-    - benefits/3
-    - benefits/4
-    - benefits/5
+    - /universal-credit
+    - /sign-in-universal-credit
+    - /child-benefit/how-to-claim
+    - /child-benefit
+    - /pip
   births-deaths-marriages:
-    - births-deaths-marriages/1
-    - births-deaths-marriages/2
-    - births-deaths-marriages/3
-    - births-deaths-marriages/4
-    - births-deaths-marriages/5
+    - /order-copy-birth-death-marriage-certificate
+    - /research-family-history
+    - /search-will-probate
+    - /government/publications/birth-certificate-application-form
+    - /government/publications/family-tree-guide-to-death-certificates/guide-to-death-certificates-accessible
   business:
-    - business/1
-    - business/2
-    - business/3
-    - business/4
-    - business/5
+    - /guidance/search-the-companies-house-register
+    - /get-information-about-a-company
+    - /become-sole-trader
+    - /government/organisations/companies-house
+    - /find-utr-number
   childcare-parenting:
-    - childcare-parenting/1
-    - childcare-parenting/2
-    - childcare-parenting/3
-    - childcare-parenting/4
-    - childcare-parenting/5
+    - /sign-in-childcare-account
+    - /child-benefit/how-to-claim
+    - /child-benefit
+    - /child-benefit-16-19
+    - /child-benefit/make-a-change-to-your-claim
   citizenship:
-    - citizenship/1
-    - citizenship/2
-    - citizenship/3
-    - citizenship/4
-    - citizenship/5
+    - /view-prove-immigration-status
+    - /get-access-evisa
+    - /settled-status-eu-citizens-families
+    - /guidance/online-immigration-status-evisa
+    - /prove-right-to-work
   disabilities:
-    - disabilities/1
-    - disabilities/2
-    - disabilities/3
-    - disabilities/4
-    - disabilities/5
+    - /apply-blue-badge
+    - /disability-living-allowance-children
+    - /pip/how-to-claim
+    - /budgeting-help-benefits
+    - /pip/change-of-circumstances
   driving:
-    - driving/1
-    - driving/2
-    - driving/3
-    - driving/4
-    - driving/5
+    - /apply-first-provisional-driving-licence
+    - /change-address-driving-licence
+    - /change-address-driving-licence/apply-online
+    - /book-pupil-driving-test
+    - /dvlaforms
   education:
-    - education/1
-    - education/2
-    - education/3
-    - education/4
-    - education/5
+    - /student-visa
+    - /guidance/free-courses-for-jobs
+    - /child-benefit-16-19
+    - /government/organisations/health-education-england
+    - /improve-english-maths-it-skills
   employing-people:
-    - employing-people/1
-    - employing-people/2
-    - employing-people/3
-    - employing-people/4
-    - employing-people/5
+    - /find-a-job
+    - /apply-apprenticeship
+    - /prove-right-to-work
+    - /view-prove-immigration-status
+    - /government/publications/register-of-licensed-sponsors-workers
   environment-countryside:
-    - environment-countryside/1
-    - environment-countryside/2
-    - environment-countryside/3
-    - environment-countryside/4
-    - environment-countryside/5
+    - /guidance/hedgerow-management-rules-cutting-and-trimming
+    - /rubbish-collection-day
+    - /government/collections/radon
+    - /government/publications/poultry-including-game-birds-registration-rules-and-forms
+    - /government/publications/code-of-practice-on-how-to-prevent-the-spread-of-ragwort
   housing-local-services:
-    - housing-local-services/1
-    - housing-local-services/2
-    - housing-local-services/3
-    - housing-local-services/4
-    - housing-local-services/5
+    - /search-property-information-land-registry
+    - /housing-benefit/eligibility
+    - /tell-hmrc-change-address
+    - /government/organisations/land-registry
+    - /get-information-about-property-and-land/search-the-register
   justice:
-    - justice/1
-    - justice/2
-    - justice/3
-    - justice/4
-    - justice/5
+    - /request-copy-criminal-record
+    - /government/collections/dbs-checking-service-guidance--2
+    - /find-a-job
+    - /send-prisoner-money
+    - /government/organisations/disclosure-and-barring-service
   tax:
-    - tax/1
-    - tax/2
-    - tax/3
-    - tax/4
-    - tax/5
+    - /vehicle-tax
+    - /claim-tax-refund
+    - /personal-tax-account
+    - /log-in-register-hmrc-online-services
+    - /tax-overpayments-and-underpayments/if-youre-due-a-refund
   visas-immigration:
-    - visas-immigration/1
-    - visas-immigration/2
-    - visas-immigration/3
-    - visas-immigration/4
-    - visas-immigration/5
+    - /get-access-evisa
+    - /guidance/online-immigration-status-evisa
+    - /view-prove-immigration-status
+    - /guidance/using-your-uk-visas-and-immigration-account
+    - /get-access-evisa/check-access-your-evisa
   working:
-    - working/1
-    - working/2
-    - working/3
-    - working/4
-    - working/5
+    - /apply-apprenticeship
+    - /prove-right-to-work
+    - /view-prove-immigration-status
+    - /check-national-insurance-record
+    - /find-a-job

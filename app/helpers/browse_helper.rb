@@ -1,6 +1,6 @@
 module BrowseHelper
-  def display_popular_links_for_slug?(slug)
-    popular_links_data(slug).present?
+  def display_popular_links_for_slug?(_slug)
+    true
   end
 
   def control_key_is_present?(slug)
@@ -26,24 +26,6 @@ module BrowseHelper
   end
 
   def popular_links_for_slug(slug)
-    links = popular_links_data(slug)
-    count = links.length
-    links.map.with_index(1) do |link, index|
-      {
-        text: link[:title],
-        href: link[:url],
-        data_attributes: {
-          module: "ga4-link-tracker",
-          ga4_track_links_only: "",
-          ga4_link: {
-            event_name: "navigation",
-            type: "action",
-            index_link: index,
-            index_total: count,
-            text: link[:title],
-          },
-        },
-      }
-    end
+    PopularTasks.new.popular_links_for_slug(slug)
   end
 end
