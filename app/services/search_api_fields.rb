@@ -35,4 +35,9 @@ module SearchApiFields
                                          content_id
                                          organisations
                                          document_collections].freeze
+
+  POPULARITY_SEARCH_FIELDS = %w[link
+                                title
+                                popularity
+                                popularity_b].freeze
 end

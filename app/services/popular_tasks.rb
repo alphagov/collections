@@ -6,4 +6,11 @@ class PopularTasks
     data = YAML.load_file(source_data_path)
     data["popular_tasks"]
   end
+
+  def fetch_popularity(url)
+    Services.cached_search(
+      filter_link: url,
+      fields: SearchApiFields::POPULARITY_SEARCH_FIELDS,
+    )
+  end
 end
