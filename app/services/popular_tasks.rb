@@ -9,8 +9,11 @@ class PopularTasks
 
   def fetch_popularity(url)
     Services.cached_search(
-      filter_link: url,
-      fields: SearchApiFields::POPULARITY_SEARCH_FIELDS,
+      {
+        filter_link: url,
+        fields: SearchApiFields::POPULARITY_SEARCH_FIELDS,
+      },
+      expiry: 12.hours,
     )
   end
 end
