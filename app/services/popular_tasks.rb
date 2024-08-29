@@ -26,7 +26,7 @@ class PopularTasks
       search_response = fetch_popularity(link)
       search_response["results"].first
     end
-    links.sort_by { |k| -k["popularity"] }
+    links.compact.sort_by { |k| -k["popularity"] }
   end
 
   def popular_links_for_slug(slug)
