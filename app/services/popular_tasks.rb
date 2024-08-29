@@ -1,5 +1,6 @@
 class PopularTasks
   POPULAR_TASKS_SOURCE_DATA_FILE_PATH = "lib/data/popular_tasks.yml".freeze
+  NUMBER_OF_TASKS_TO_DISPLAY = 3
 
   def popular_tasks_source_data
     source_data_path = Rails.root.join(POPULAR_TASKS_SOURCE_DATA_FILE_PATH)
@@ -29,8 +30,12 @@ class PopularTasks
     links.compact.sort_by { |k| -k["popularity"] }
   end
 
+  def links_to_display(slug)
+    links_ordered_by_popularity(slug).first(NUMBER_OF_TASKS_TO_DISPLAY)
+  end
+
   def popular_links_for_slug(slug)
-    links = links_ordered_by_popularity(slug)
+    links = links_to_display(slug)
     count = links.length
     links.map.with_index(1) do |link, index|
       {
