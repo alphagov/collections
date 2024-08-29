@@ -7,6 +7,10 @@ class PopularTasks
     data["popular_tasks"]
   end
 
+  def unordered_links(slug)
+    @unordered_links ||= popular_tasks_source_data[slug]
+  end
+
   def fetch_popularity(url)
     Services.cached_search(
       {
@@ -15,5 +19,13 @@ class PopularTasks
       },
       expiry: 12.hours,
     )
+  end
+
+  def links_ordered_by_popularity(slug)
+    links = unordered_links(slug).map do |link|
+      search_response = fetch_popularity(link)
+      search_response["results"].first
+    end
+    links.sort_by { |k| -k["popularity"] }
   end
 end
