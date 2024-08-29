@@ -26,6 +26,6 @@ module BrowseHelper
   end
 
   def popular_links_for_slug(slug)
-    PopularTasks.new.popular_links_for_slug(slug)
+    PopularTasks.new(slug).popular_links_for_slug
   end
 end
