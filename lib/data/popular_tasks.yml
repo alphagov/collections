@@ -1,0 +1,97 @@
+popular_tasks:
+  abroad:
+    - abroad/1
+    - abroad/2
+    - abroad/3
+    - abroad/4
+    - abroad/5
+  benefits:
+    - benefits/1
+    - benefits/2
+    - benefits/3
+    - benefits/4
+    - benefits/5
+  births-deaths-marriages:
+    - births-deaths-marriages/1
+    - births-deaths-marriages/2
+    - births-deaths-marriages/3
+    - births-deaths-marriages/4
+    - births-deaths-marriages/5
+  business:
+    - business/1
+    - business/2
+    - business/3
+    - business/4
+    - business/5
+  childcare-parenting:
+    - childcare-parenting/1
+    - childcare-parenting/2
+    - childcare-parenting/3
+    - childcare-parenting/4
+    - childcare-parenting/5
+  citizenship:
+    - citizenship/1
+    - citizenship/2
+    - citizenship/3
+    - citizenship/4
+    - citizenship/5
+  disabilities:
+    - disabilities/1
+    - disabilities/2
+    - disabilities/3
+    - disabilities/4
+    - disabilities/5
+  driving:
+    - driving/1
+    - driving/2
+    - driving/3
+    - driving/4
+    - driving/5
+  education:
+    - education/1
+    - education/2
+    - education/3
+    - education/4
+    - education/5
+  employing-people:
+    - employing-people/1
+    - employing-people/2
+    - employing-people/3
+    - employing-people/4
+    - employing-people/5
+  environment-countryside:
+    - environment-countryside/1
+    - environment-countryside/2
+    - environment-countryside/3
+    - environment-countryside/4
+    - environment-countryside/5
+  housing-local-services:
+    - housing-local-services/1
+    - housing-local-services/2
+    - housing-local-services/3
+    - housing-local-services/4
+    - housing-local-services/5
+  justice:
+    - justice/1
+    - justice/2
+    - justice/3
+    - justice/4
+    - justice/5
+  tax:
+    - tax/1
+    - tax/2
+    - tax/3
+    - tax/4
+    - tax/5
+  visas-immigration:
+    - visas-immigration/1
+    - visas-immigration/2
+    - visas-immigration/3
+    - visas-immigration/4
+    - visas-immigration/5
+  working:
+    - working/1
+    - working/2
+    - working/3
+    - working/4
+    - working/5
