@@ -37,7 +37,6 @@
   <title><%= yield :title %> - <%= t('application.title.suffix')%></title>
   <%= javascript_include_tag "test-dependencies", type: "module" if Rails.env.test? %>
   <%= javascript_include_tag "application", type: "module" %>
-  <%= javascript_include_tag 'es6-components', type: "module" %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>
