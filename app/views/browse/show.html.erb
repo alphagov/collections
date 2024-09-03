@@ -37,9 +37,9 @@
 
 <% if display_popular_links_for_slug?(page.slug) %>
   <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <div class="browse__action-links">
+    <div class="browse__action-links">
+      <div class="govuk-grid-row">
+        <div class="<%= show_govuk_chat_promo?(page.base_path) ? "govuk-grid-column-one-half govuk-grid-column-two-thirds-from-desktop" : "govuk-grid-column-full" %>">
           <%= render "govuk_publishing_components/components/heading", {
             text: t("browse.popular_tasks"),
             margin_bottom: 6,
@@ -53,6 +53,14 @@
             <% end %>
           </ul>
         </div>
+
+        <% if show_govuk_chat_promo?(page.base_path) %>
+          <div class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop">
+            <div class="browse__govuk-chat-promo">
+              <%= render "govuk_publishing_components/components/chat_entry" %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

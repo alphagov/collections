@@ -34,8 +34,16 @@
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds" data-module="ga4-link-tracker">
+    <div class="govuk-grid-column-one-half govuk-grid-column-two-thirds-from-desktop" data-module="ga4-link-tracker">
       <%= render partial: curated_partial, locals: { page: page } %>
     </div>
+
+    <% if show_govuk_chat_promo?(page.base_path) %>
+      <div class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop">
+        <div class="browse__govuk-chat-promo browse__govuk-chat-promo--second-level">
+          <%= render "govuk_publishing_components/components/chat_entry" %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
