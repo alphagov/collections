@@ -186,7 +186,7 @@ GEM
       rest-client (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (4.27.3)
+    google-protobuf (4.28.0)
       bigdecimal
       rake (>= 13)
     googleapis-common-protos-types (1.15.0)
@@ -215,10 +215,10 @@ GEM
       sentry-ruby (~> 5.3)
       statsd-ruby (~> 1.5)
     govuk_document_types (3.0.0)
-    govuk_personalisation (0.16.0)
+    govuk_personalisation (1.0.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (43.0.1)
+    govuk_publishing_components (43.1.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -299,7 +299,7 @@ GEM
     mutex_m (0.2.0)
     net-http (0.4.1)
       uri
-    net-imap (0.4.14)
+    net-imap (0.4.16)
       date
       net-protocol
     net-pop (0.1.2)
@@ -314,7 +314,7 @@ GEM
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     null_logger (0.0.1)
-    opentelemetry-api (1.3.0)
+    opentelemetry-api (1.4.0)
     opentelemetry-common (0.21.0)
       opentelemetry-api (~> 1.0)
     opentelemetry-exporter-otlp (0.28.1)
@@ -629,8 +629,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rexml (3.3.6)
-      strscan
+    rexml (3.3.7)
     rinku (2.0.6)
     rouge (4.3.0)
     rspec (3.13.0)
@@ -730,7 +729,6 @@ GEM
       sprockets (>= 3.0.0)
     statsd-ruby (1.5.0)
     stringio (3.1.1)
-    strscan (3.1.0)
     sync (0.5.0)
     sys-uname (1.2.3)
       ffi (~> 1.1)
@@ -741,7 +739,7 @@ GEM
       unicode-display_width (>= 1.1.1, < 3)
     terser (1.2.3)
       execjs (>= 0.3.0, < 3)
-    thor (1.3.1)
+    thor (1.3.2)
     timecop (0.9.10)
     timeout (0.4.1)
     tins (1.33.0)
@@ -765,7 +763,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.17)
+    zeitwerk (2.6.18)
 
 PLATFORMS
   ruby
