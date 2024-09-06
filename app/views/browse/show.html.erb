@@ -45,9 +45,11 @@
             font_size: "m"
           } %>
           <ul class="govuk-list govuk-!-margin-bottom-7">
-            <% popular_links_for_slug(page.slug).each do |link| %>
+            <% popular_tasks_for_slug.each do |task| %>
               <li>
-                <%= render partial: "shared/browse_action_link", locals: {link:} %>
+                <a href="<%= task[:url] %>">
+                <%= task[:title] %>
+                </a>
               </li>
             <% end %>
           </ul>
