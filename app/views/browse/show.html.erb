@@ -34,7 +34,7 @@
   } %>
 <% end %>
 
-<% if display_popular_links_for_slug?(page.slug) %>
+<% if display_popular_tasks_for_slug?(page.slug) %>
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
@@ -45,9 +45,25 @@
             font_size: "m"
           } %>
           <ul class="govuk-list govuk-!-margin-bottom-7">
-            <% popular_links_for_slug(page.slug).each do |link| %>
+            <% popular_links_for_slug(page.slug).each_with_index do |task, index| %>
               <li>
-                <%= render partial: "shared/browse_action_link", locals: {link:} %>
+                <%= render "govuk_publishing_components/components/action_link", {
+                  text: task[:url],
+                  href: task[:url],
+                  dark_large_icon: true,
+                  margin_bottom: 3,
+                  data_attributes: {
+                    module: "ga4-link-tracker",
+                    ga4_track_links_only: "",
+                    ga4_link: {
+                      event_name: "navigation",
+                      type: "action",
+                      index_link: index + 1 ,
+                      index_total: popular_links_for_slug(page.slug).length,
+                      text: task[:url]
+                    }
+                  }
+                } %>
               </li>
             <% end %>
           </ul>
@@ -60,7 +76,7 @@
 <% total_links = page.second_level_browse_pages.count.to_s %>
 <%= render "shared/browse_cards_container" do %>
   <%= render "govuk_publishing_components/components/cards", {
-    heading: display_popular_links_for_slug?(page.slug) ? t("browse.topics") : nil,
+    heading: display_popular_tasks_for_slug?(page.slug) ? t("browse.topics") : nil,
     items: page.second_level_browse_pages.map.with_index do |second_level_browse_page, index|
       {
         link: {
@@ -78,6 +94,6 @@
         description: second_level_browse_page.description,
       }
     end,
-    sub_heading_level: display_popular_links_for_slug?(page.slug) ? 3 : 2,
+    sub_heading_level: display_popular_tasks_for_slug?(page.slug) ? 3 : 2,
   } %>
 <% end %>
