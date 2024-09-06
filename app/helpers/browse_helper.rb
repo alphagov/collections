@@ -7,16 +7,19 @@ module BrowseHelper
     %w[benefits business].include?(slug)
   end
 
-  def select_browse_page(browse_page = "/browse/benefits")
-    browse_page = slug(browse_page)
-    popular_task_data = PopularTasks.new.fetch_data
-    popular_task_data.select { |link| link[:browse_page] == "/browse/#{browse_page}" }
-  end
-
   def popular_links_for_slug(slug)
-    links = select_browse_page(slug)
-    return [] unless links
+    browse_page = slug(slug)
 
-    links
+    # Try to fetch the cache first
+    popular_task_data = Rails.cache.read("popular_tasks_#{browse_page}_#{Date.yesterday.strftime("%Y-%m-%d")}")
+
+    # If cache is empty fetch fresh data and cache it
+    if popular_task_data.nil?
+      popular_task_data = PopularTasks.new.fetch_data("/browse/#{browse_page}")
+    end
+
+    return [] unless popular_task_data
+
+    popular_task_data
   end
 end
