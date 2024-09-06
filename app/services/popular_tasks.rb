@@ -1,5 +1,6 @@
 class PopularTasks
   CACHE_EXPIRATION = 24.hours # Set the cache expiration time
+  BACKUP_CACHE_EXPIRATION = 7.days # Backup cache can have a longer expiration
 
   def initialize; end
 
@@ -11,10 +12,10 @@ class PopularTasks
     @fetch_data = client
     @date = date.strftime("%Y-%m-%d")
 
-    # Define cache keys for the specific browse page
-    cache_key = "popular_tasks_#{browse_page}_#{@date}"
+    cache_key_latest = "popular_tasks_#{browse_page}_#{@date}"
+    cache_key_backup = "popular_tasks_backup_#{browse_page}"
 
-    Rails.cache.fetch(cache_key, expires_in: CACHE_EXPIRATION) do
+    Rails.cache.fetch(cache_key_latest, expires_in: CACHE_EXPIRATION) do
       # If cache is empty, this block is executed
       query = <<~SQL
         WITH cte1 as (SELECT
@@ -60,6 +61,11 @@ class PopularTasks
         }
       end
       @results.sort_by { |link| link[:rank] } # Order the links by their rank
+
+      # Cache the results in the backup cache as well
+      Rails.cache.write(cache_key_backup, @results, expires_in: BACKUP_CACHE_EXPIRATION)
+
+      @results
     end
   end
 end
