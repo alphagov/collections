@@ -1,17 +1,17 @@
+<% content_for :breadcrumbs do %>
+  <%= render 'coronavirus_landing_page/components/shared/breadcrumbs', {
+    breadcrumbs: breadcrumbs
+  } %>
+<% end %>
+
 <header class="covid__page-header covid__page-header--landing-page">
   <div class="govuk-width-container">
-    <%= render 'govuk_publishing_components/components/breadcrumbs', {
-      breadcrumbs: breadcrumbs,
-      collapse_on_mobile: true,
-      inverse: true
-    } %>
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
           title: raw(title),
           inverse: true,
-          margin_top: 4
+          margin_top: 0
         } %>
       </div>
     </div>

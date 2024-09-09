@@ -12,7 +12,7 @@
 
 <% content_for :body do %>
   <%= yield :back_link %>
-  <% unless (content_for(:is_full_width_header) || content_for(:back_link)) %>
+  <% unless content_for(:back_link) %>
     <% if content_for?(:breadcrumbs) %>
       <%= yield :breadcrumbs %>
     <% else %>

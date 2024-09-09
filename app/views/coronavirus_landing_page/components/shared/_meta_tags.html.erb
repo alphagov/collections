@@ -2,7 +2,6 @@
   corona_opengraph_images ||= false
 %>
 
-<% content_for :is_full_width_header, true %>
 <% content_for :title, metadata[:title] %>
 <% content_for :meta_tags do %>
   <% page_url = File.join(request.base_url, request.path) %>
