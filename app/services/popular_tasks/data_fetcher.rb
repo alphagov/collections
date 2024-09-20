@@ -11,6 +11,7 @@ module PopularTasks
     end
 
     # These tables don't exist and are just for illustration:
+
     def sql_query(browse_page, raw_date)
       <<~SQL
         WITH CTE1 AS (
@@ -28,7 +29,10 @@ module PopularTasks
 
     def popular_task_data(page, date)
       todays_popular_tasks_query = sql_query(page, date)
-      client.query(todays_popular_tasks_query).all
+
+      Rails.cache.fetch("popular_tasks_for_#{page}", expires_in: 12.hours) do
+        client.query(todays_popular_tasks_query).all
+      end
     end
   end
 end
