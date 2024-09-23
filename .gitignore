@@ -28,3 +28,6 @@
 # vim swap files and tags
 *.sw[a-z]
 /tags
+
+# Ignore local config
+config/local_env.yml
