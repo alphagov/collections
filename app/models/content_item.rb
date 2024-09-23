@@ -8,6 +8,20 @@ class ContentItem
       "max_age" => content_item.cache_control["max-age"],
       "public" => !content_item.cache_control.private?,
     }
+    # See if we're extending this content item
+    content_id = content_item["content_id"]
+    content_extensions = []
+    if content_id.present?
+      Dir.glob(Rails.root.join("data", "content_extensions", content_id, "*.yaml")) do |filename|
+        content_extensions << YAML.load_file(filename)
+      end
+    end
+    if content_extensions.any?
+      links = content_item_hash.fetch("links", {})
+      links["content_extensions"] = content_extensions
+      content_item_hash["links"] = links
+    end
+    puts content_item_hash
     new(content_item_hash)
   end
 

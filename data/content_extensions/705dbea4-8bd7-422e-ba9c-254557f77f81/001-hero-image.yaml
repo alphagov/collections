@@ -1,0 +1,11 @@
+# This is just an example of the sort of thing we might put in this directory
+# Once the designs have crystallized a little bit, we should be able to hardcode
+# some more compelling bits of content here.
+document_type: 'hero_image'
+schema_name: 'hero_image'
+locale: 'en'
+title: "Prime Minister's Office, 10 Downing Street"
+details:
+  image: 'app/assets/images/prime-ministers-office-header.jpg'
+  image_alt: '' # Intentionally left blank, image is decorative
+  text: "Number 10! It's really cool!"
