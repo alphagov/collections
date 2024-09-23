@@ -4,6 +4,7 @@ class Organisation
   include ActiveModel::Model
 
   attr_reader :content_item
+  delegate :content_extensions, to: :content_item
 
   HMCTS_CONTENT_ID = "6f757605-ab8f-4b62-84e4-99f79cf085c2".freeze
 

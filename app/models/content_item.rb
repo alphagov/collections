@@ -35,6 +35,12 @@ class ContentItem
     end
   end
 
+  %i[content_extensions].each do |field|
+    define_method field do
+      (@content_item_data["links"] || {})[field.to_s]
+    end
+  end
+
   def details
     @content_item_data["details"] || {}
   end

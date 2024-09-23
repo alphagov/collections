@@ -12,6 +12,10 @@
            schema: :organisation,
            content_item: @organisation.content_item.content_item_data %>
 
+<% @organisation.content_extensions&.each do |content_extension| %>
+  <%= render partial: "content_extension_#{content_extension["document_type"]}", locals: { content_extension: } %>
+<% end %>
+
 <% if @organisation.is_no_10? %>
   <%= render partial: 'latest_news' %>
   <%= render partial: 'featured_news_small' %>
