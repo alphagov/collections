@@ -13,7 +13,7 @@
            content_item: @organisation.content_item.content_item_data %>
 
 <% @organisation.content_extensions&.each do |content_extension| %>
-  <%= render partial: "content_extension_#{content_extension["document_type"]}", locals: { content_extension: } %>
+  <%= render partial: "shared/content_extension_#{content_extension["document_type"]}", locals: { content_extension: } %>
 <% end %>
 
 <% if @organisation.is_no_10? %>

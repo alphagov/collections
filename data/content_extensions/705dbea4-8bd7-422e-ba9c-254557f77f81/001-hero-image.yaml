@@ -6,6 +6,6 @@ schema_name: 'hero_image'
 locale: 'en'
 title: "Prime Minister's Office, 10 Downing Street"
 details:
-  image: 'app/assets/images/prime-ministers-office-header.jpg'
+  image: 'https://placehold.co/1792x400'
   image_alt: '' # Intentionally left blank, image is decorative
   text: "Number 10! It's really cool!"
