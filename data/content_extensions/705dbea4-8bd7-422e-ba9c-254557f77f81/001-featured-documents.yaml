@@ -1,0 +1,75 @@
+---
+document_type: 'featured_documents'
+featured_documents:
+- document_type: News story
+  href: "/government/news/how-were-protecting-renters"
+  image:
+    alt_text: ''
+    high_resolution_url: https://assets.publishing.service.gov.uk/media/66e19529caa02d92e72c8d7f/s712_Renters_Rights_Bill_GOVUK_v2_RentersGOVUK_960x640__1_.jpg
+    medium_resolution_url: https://assets.publishing.service.gov.uk/media/66e195293b0c9e88544a000f/s465_Renters_Rights_Bill_GOVUK_v2_RentersGOVUK_960x640__1_.jpg
+    url: https://assets.publishing.service.gov.uk/media/66e19529951c1776394a0012/Renters_Rights_Bill_GOVUK_v2_RentersGOVUK_960x640__1_.jpg
+  public_updated_at: '2024-09-11T00:00:00.000+01:00'
+  summary: |-
+    <div class="govspeak"><p>We’re giving greater rights and protections to people renting their homes - including ending unfair no-fault evictions.</p>
+    </div>
+  title: How we’re protecting renters
+- document_type: News story
+  href: "/government/news/our-plan-to-build-more-homes"
+  image:
+    alt_text: ''
+    high_resolution_url: https://assets.publishing.service.gov.uk/media/66b219eefc8e12ac3edb0b3b/s712_2024-07-30_BluePrint_GOVUK_DO.png
+    medium_resolution_url: https://assets.publishing.service.gov.uk/media/66b219ee0808eaf43b50ddac/s465_2024-07-30_BluePrint_GOVUK_DO.png
+    url: https://assets.publishing.service.gov.uk/media/66b219eea3c2a28abb50dd84/2024-07-30_BluePrint_GOVUK_DO.png
+  public_updated_at: '2024-07-30T00:00:00.000+01:00'
+  summary: |-
+    <div class="govspeak"><p>New targets will boost housebuilding in areas most in need.</p>
+    </div>
+  title: Our plan to build more homes
+- document_type: News story
+  href: "/government/news/pension-credit-what-you-need-to-know--2"
+  image:
+    alt_text: ''
+    high_resolution_url: https://assets.publishing.service.gov.uk/media/66c5aeafcbe60889bddd2773/s712_Pension_Credit_Reminder_GOV_Website.jpg
+    medium_resolution_url: https://assets.publishing.service.gov.uk/media/66c5aeaf29be2af083dd2772/s465_Pension_Credit_Reminder_GOV_Website.jpg
+    url: https://assets.publishing.service.gov.uk/media/66c5aeaf95bd109d30d76607/Pension_Credit_Reminder_GOV_Website.jpg
+  public_updated_at: '2024-08-21T10:03:54.000+01:00'
+  summary: |-
+    <div class="govspeak"><p>Up to 880,000 households across the UK may be missing out on support worth on average over £3,900 a year. Read more about claiming for yourself or a loved one.</p>
+    </div>
+  title: 'Pension Credit: What you need to know'
+- document_type: News story
+  href: "/government/news/our-first-steps-for-change"
+  image:
+    alt_text: Our first steps for change
+    high_resolution_url: https://assets.publishing.service.gov.uk/media/668e5497d9d35187868f4825/s712_2024-07-09_6Things_DO.png
+    medium_resolution_url: https://assets.publishing.service.gov.uk/media/668e54977541f54efe51bd6d/s465_2024-07-09_6Things_DO.png
+    url: https://assets.publishing.service.gov.uk/media/668e5497541aeb9e928f482c/2024-07-09_6Things_DO.png
+  public_updated_at: '2024-07-10T00:00:00.000+01:00'
+  summary: |-
+    <div class="govspeak"><p>We’ll make an immediate impact on people’s lives with our six first steps for change.</p>
+    </div>
+  title: Our first steps for change
+- document_type: News story
+  href: "/government/news/what-changes-are-we-making-to-the-minimum-wage"
+  image:
+    alt_text: Our plan for the Minimum Wage
+    high_resolution_url: https://assets.publishing.service.gov.uk/media/66a8e3ccab418ab055592fc7/s712_2024-07-30_Minimum_Wage_GOVUK_DO.png
+    medium_resolution_url: https://assets.publishing.service.gov.uk/media/66a8e3ccce1fd0da7b592fa7/s465_2024-07-30_Minimum_Wage_GOVUK_DO.png
+    url: https://assets.publishing.service.gov.uk/media/66a8e3cca3c2a28abb50d9c5/2024-07-30_Minimum_Wage_GOVUK_DO.png
+  public_updated_at: '2024-07-30T13:30:57.000+01:00'
+  summary: |-
+    <div class="govspeak"><p>We’re changing the way the Minimum Wage is set so it keeps in line with the cost of living.</p>
+    </div>
+  title: What changes are we making to the Minimum Wage?
+- document_type: News story
+  href: "/government/news/our-plan-to-clean-up-the-water-sector"
+  image:
+    alt_text: ''
+    high_resolution_url: https://assets.publishing.service.gov.uk/media/66e059cb2db8ab721102053f/s712_Water_Bill_Route_3_GOVUK_960x640_1.jpg
+    medium_resolution_url: https://assets.publishing.service.gov.uk/media/66e059cbbee923ae21daef3e/s465_Water_Bill_Route_3_GOVUK_960x640_1.jpg
+    url: https://assets.publishing.service.gov.uk/media/66e059cb49788a5d35020535/Water_Bill_Route_3_GOVUK_960x640_1.jpg
+  public_updated_at: '2024-09-06T16:34:44.000+01:00'
+  summary: |-
+    <div class="govspeak"><p>We’re taking action to clean up our rivers, lakes and seas.  </p>
+    </div>
+  title: Our plan to clean up the water sector

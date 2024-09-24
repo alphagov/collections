@@ -22,9 +22,8 @@ class ContentItem
       end
     end
     if content_extensions.any?
-      links = content_item_hash.fetch("links", {})
-      links["content_extensions"] = content_extensions
-      content_item_hash["links"] = links
+      details = content_item_hash["details"]
+      details["content_extensions"] = content_extensions if details.present?
     end
     new(content_item_hash)
   end
@@ -41,7 +40,7 @@ class ContentItem
 
   %i[content_extensions].each do |field|
     define_method field do
-      (@content_item_data["links"] || {})[field.to_s]
+      (@content_item_data["details"] || {})[field.to_s]
     end
   end
 

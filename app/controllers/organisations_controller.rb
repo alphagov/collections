@@ -60,7 +60,7 @@ private
       layout = theme_config["layout"]
       case layout
       when "full_width"
-        response.headers[Slimmer::Headers::TEMPLATE_HEADER] = "gem_layout_full_width"
+        slimmer_template "gem_layout_full_width"
       else
         raise "Unrecognised layout #{layout.inspect}"
       end
