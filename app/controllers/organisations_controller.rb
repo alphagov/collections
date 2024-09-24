@@ -4,6 +4,7 @@ class OrganisationsController < ApplicationController
     set_expiry content_item.max_age, public_cache: content_item.public_cache
   end
   around_action :switch_locale, only: %i[show court]
+  after_action :override_theme
 
   def index
     @organisations = ContentStoreOrganisations.find!("/government/organisations")
@@ -51,5 +52,18 @@ private
 
   def locale
     ".#{params[:locale]}" if params[:locale]
+  end
+
+  def override_theme
+    theme_config = @content_item.dig("details", "theme_config")
+    if theme_config.present?
+      layout = theme_config["layout"]
+      case layout
+      when "full_width"
+        response.headers[Slimmer::Headers::TEMPLATE_HEADER] = "gem_layout_full_width"
+      else
+        raise "Unrecognised layout #{layout.inspect}"
+      end
+    end
   end
 end
