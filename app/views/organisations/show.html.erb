@@ -1,6 +1,11 @@
 <% add_view_stylesheet("organisation") %>
 
 <%= render partial: 'meta', locals: { organisation: @organisation } %>
+
+<% @organisation.content_extensions&.each do |content_extension| %>
+  <%= render partial: "shared/content_extension_#{content_extension["document_type"]}", locals: { content_extension: } %>
+<% end %>
+
 <%= render partial: 'breadcrumb' %>
 <%= render partial: 'header' %>
 <% if @organisation.custom_banner %>
@@ -11,10 +16,6 @@
 <%= render 'govuk_publishing_components/components/machine_readable_metadata',
            schema: :organisation,
            content_item: @organisation.content_item.content_item_data %>
-
-<% @organisation.content_extensions&.each do |content_extension| %>
-  <%= render partial: "shared/content_extension_#{content_extension["document_type"]}", locals: { content_extension: } %>
-<% end %>
 
 <% if @organisation.is_no_10? %>
   <%= render partial: 'latest_news' %>
