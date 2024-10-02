@@ -12,8 +12,6 @@ class Organisation
     "wales-office" => "This is a new organisation. It was previously called the <a href=\"https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales\">Office of the Secretary of State for Wales</a>.",
     "office-of-the-secretary-of-state-for-wales.cy" => "Mae'r sefydliad hwn yn newid. Fe’i gelwir bellach yn <a href=\"https://www.gov.uk/government/organisations/wales-office.cy\">Swyddfa Cymru</a>.",
     "wales-office.cy" => "Mae hwn yn sefydliad newydd. Yn flaenorol fe'i gelwid yn <a href=\"https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales.cy\">Swyddfa Ysgrifennydd Gwladol Cymru</a>.",
-    "office-of-the-secretary-of-state-for-scotland" => "This organisation is changing. It’s now called the <a href=\"https://www.gov.uk/government/organisations/scotland-office\">Scotland Office</a>.",
-    "scotland-office" => "This is a new organisation. It was previously called the <a href=\"https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-scotland\">Office of the Secretary of State for Scotland</a>.",
   }.freeze
 
   def initialize(content_item)
