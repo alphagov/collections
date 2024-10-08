@@ -7,12 +7,7 @@ class Organisation
 
   HMCTS_CONTENT_ID = "6f757605-ab8f-4b62-84e4-99f79cf085c2".freeze
 
-  CUSTOM_BANNERS_DATA = {
-    "office-of-the-secretary-of-state-for-wales" => "This organisation is changing. It’s now called the <a href=\"https://www.gov.uk/government/organisations/wales-office\">Wales Office</a>.",
-    "wales-office" => "This is a new organisation. It was previously called the <a href=\"https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales\">Office of the Secretary of State for Wales</a>.",
-    "office-of-the-secretary-of-state-for-wales.cy" => "Mae'r sefydliad hwn yn newid. Fe’i gelwir bellach yn <a href=\"https://www.gov.uk/government/organisations/wales-office.cy\">Swyddfa Cymru</a>.",
-    "wales-office.cy" => "Mae hwn yn sefydliad newydd. Yn flaenorol fe'i gelwid yn <a href=\"https://www.gov.uk/government/organisations/office-of-the-secretary-of-state-for-wales.cy\">Swyddfa Ysgrifennydd Gwladol Cymru</a>.",
-  }.freeze
+  CUSTOM_BANNERS_DATA = {}.freeze
 
   def initialize(content_item)
     @content_item = content_item
