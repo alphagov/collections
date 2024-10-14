@@ -15,8 +15,8 @@ en:
             url: /apply-renew-passport
           - title: Foreign travel advice
             url: /foreign-travel-advice
-          - title: Get a passport urgently
-            url: /get-a-passport-urgently
+          - title: Get a passport photo
+            url: /photos-for-passports
       benefits:
         control:
           - title: Check benefits and financial support you can get
@@ -48,8 +48,8 @@ en:
             url: /get-tax-free-childcare
           - title: Tax-Free Childcare
             url: /tax-free-childcare
-          - title: Child Benefit when your child turns 16
-            url: /child-benefit-16-19
+          - title: Help paying for childcare
+            url: /help-with-childcare-costs
       business:
         control:
           - title: "HMRC online services: sign in or set up an account"
@@ -66,12 +66,12 @@ en:
           - title: Searching the Companies House register
             url: /guidance/search-the-companies-house-register
         variant_b:
+          - title: "HMRC online services: sign in or set up an account"
+            url: /log-in-register-hmrc-online-services
           - title: Get information about a company
             url: /get-information-about-a-company
           - title: Find an energy certificate
             url: /find-energy-certificate
-          - title: "Trade Tariff: look up commodity codes, duty and VAT rates"
-            url: /trade-tariff
       childcare-parenting:
         variant_a:
           - title: Sign in to your childcare account
@@ -156,8 +156,8 @@ en:
           - title: UK visa sponsorship for employers
             url: /uk-visa-sponsorship-employers
         variant_b:
-          - title: UK bank holidays
-            url: /bank-holidays
+          - title: "HMRC online services: sign in or set up an account"
+            url: /log-in-register-hmrc-online-services
           - title: "Check a job applicant's right to work: use their share code"
             url: /view-right-to-work
           - title: DBS Update Service
@@ -171,12 +171,12 @@ en:
           - title: Poultry welfare off the farm
             url: /guidance/poultry-welfare-off-the-farm
         variant_b:
-          - title: Buy a rod fishing licence
-            url: /fishing-licences
-          - title: Find out your rubbish collection day
-            url: /rubbish-collection-day
           - title: Check the long term flood risk for an area in England
             url: /check-long-term-flood-risk
+          - title: Find out your rubbish collection day
+            url: /rubbish-collection-day
+          - title: Check for flooding
+            url: /check-flooding
       housing-local-services:
         variant_a:
           - title: Tell HMRC when you change your address
@@ -205,8 +205,8 @@ en:
             url: /send-prisoner-money
           - title: Visit someone in prison
             url: /prison-visits
-          - title: Report benefit fraud
-            url: /report-benefit-fraud
+          - title: Make a court claim for money
+            url: /make-court-claim-for-money
       tax:
         variant_a:
           - title: Tax your vehicle
@@ -216,10 +216,10 @@ en:
           - title: Pay your Self Assessment tax bill
             url: /pay-self-assessment-tax-bill
         variant_b:
+          - title: "HMRC online services: sign in or set up an account"
+            url: /log-in-register-hmrc-online-services
           - title: "Personal tax account: sign in or set up"
             url: /personal-tax-account
-          - title: Estimate your Income Tax for the current year
-            url: /estimate-income-tax
           - title: Check how to register for Self Assessment
             url: /register-for-self-assessment
       visas-immigration:
@@ -235,8 +235,8 @@ en:
             url: /view-prove-immigration-status
           - title: Get access to your eVisa
             url: /get-access-evisa
-          - title: Prove your right to work to an employer
-            url: /prove-right-to-work
+          - title: Online immigration status (eVisa)
+            url: /guidance/online-immigration-status-evisa
       working:
         variant_a:
           - title: Find an apprenticeship
