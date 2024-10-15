@@ -17,8 +17,17 @@
       } %>
     </div>
   </div>
-
-  <% @documents.remaining_featured_news.first(6).in_groups_of(3, false) do |news| %>
+  <%
+    first_document = @documents.remaining_featured_news.first
+    first_document[:context][:text] = "Featured"
+    documents_without_first = @documents.remaining_featured_news.drop(1).first(6)
+  %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
+      <%= render "govuk_publishing_components/components/image_card", first_document.merge({ large: true }) %>
+    </div>
+  </div>
+  <% documents_without_first.in_groups_of(3, false) do |news| %>
     <div class="govuk-grid-row" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
       <% news.each do |news_item| %>
         <% classes = %w[] %>
