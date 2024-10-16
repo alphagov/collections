@@ -16,28 +16,36 @@ RSpec.describe Organisations::DocumentsPresenter do
     end
 
     context "page is No. 10 organisation page" do
-      it "formats news stories correctly" do
+      it "formats the first news story correctly" do
+        time_stamps = [
+          documents_of_no_10[0]["public_updated_at"],
+          documents_of_no_10[1]["public_updated_at"],
+        ]
+
+        expected = {
+          href: "/government/news/new-head-of-the-serious-fraud-office-announced",
+          image_src: "https://assets.publishing.service.gov.uk/media/s712_asset_manager_id/s712_jeremy.jpg",
+          image_alt: "Attorney General Jeremy Wright QC MP",
+          context: {
+            date: Date.parse(time_stamps[0]),
+            text: "Press release",
+          },
+          heading_text: "New head of the Serious Fraud Office announced",
+          description: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
+          brand: "prime-ministers-office-10-downing-street",
+          large: true,
+          heading_level: 3,
+        }
+        expect(documents_presenter_no_10.first_featured_news).to eq(expected)
+      end
+
+      it "formats the remaining news stories correctly" do
         time_stamps = [
           documents_of_no_10[0]["public_updated_at"],
           documents_of_no_10[1]["public_updated_at"],
         ]
 
         expected = [
-          {
-            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
-            image_src: "https://assets.publishing.service.gov.uk/media/s465_asset_manager_id/s465_jeremy.jpg",
-            image_alt: "Attorney General Jeremy Wright QC MP",
-            context: {
-              date: Date.parse(time_stamps[0]),
-              text: "Press release",
-            },
-            heading_text: "New head of the Serious Fraud Office announced",
-            description: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
-            brand: "prime-ministers-office-10-downing-street",
-            large: true,
-            font_size: "s",
-            heading_level: 3,
-          },
           {
             href: "/government/news/new-head-of-a-different-office-announced",
             image_src: "https://assets.publishing.service.gov.uk/media/s465_asset_manager_id/s465_john.jpg",
