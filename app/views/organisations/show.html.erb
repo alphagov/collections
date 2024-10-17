@@ -13,8 +13,8 @@
            content_item: @organisation.content_item.content_item_data %>
 
 <% if @organisation.is_no_10? %>
+  <%= render partial: 'featured_news_no10' %>
   <%= render partial: 'latest_news' %>
-  <%= render partial: 'featured_news_small' %>
   <%= render partial: 'videos' if @documents.has_promotional_video_feature? %>
   <%= render partial: 'promotional_features_side_by_side' %>
 <% else %>

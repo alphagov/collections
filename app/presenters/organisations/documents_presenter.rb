@@ -22,7 +22,7 @@ module Organisations
     def remaining_featured_news
       return featured_news(org.ordered_featured_documents.drop(1)) if org.is_news_organisation? && !org.is_no_10?
 
-      return featured_news(org.ordered_featured_documents).map { |news| news.merge({ font_size: "s" }) } if org.is_no_10?
+      return featured_news(org.ordered_featured_documents.drop(1)).map { |news| news.merge({ font_size: "s" }) } if org.is_no_10?
 
       featured_news(org.ordered_featured_documents)
     end
