@@ -1,3 +1,14 @@
+PATH
+  remote: ../gds-api-adapters
+  specs:
+    gds-api-adapters (97.0.0)
+      addressable
+      link_header
+      null_logger
+      plek (>= 1.9.0)
+      rack (>= 2.2.0)
+      rest-client (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -175,13 +186,6 @@ GEM
       net-http
     ffi (1.16.3)
     find_a_port (1.0.1)
-    gds-api-adapters (97.0.0)
-      addressable
-      link_header
-      null_logger
-      plek (>= 1.9.0)
-      rack (>= 2.2.0)
-      rest-client (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     google-protobuf (4.28.3)
@@ -781,7 +785,7 @@ DEPENDENCIES
   dartsass-rails
   erb_lint
   faraday
-  gds-api-adapters
+  gds-api-adapters!
   govspeak
   govuk_ab_testing
   govuk_app_config

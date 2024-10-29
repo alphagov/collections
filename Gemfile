@@ -8,7 +8,7 @@ gem "bootsnap", require: false
 gem "dalli"
 gem "dartsass-rails"
 gem "faraday"
-gem "gds-api-adapters"
+gem "gds-api-adapters", path: "../gds-api-adapters"
 gem "govspeak"
 gem "govuk_ab_testing"
 gem "govuk_app_config"
