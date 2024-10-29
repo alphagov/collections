@@ -1,6 +1,4 @@
 class BrowseController < ApplicationController
-  include PopularTasksAbTestable
-
   slimmer_template "gem_layout_full_width"
 
   def index
