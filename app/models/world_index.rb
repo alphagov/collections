@@ -6,7 +6,30 @@ class WorldIndex
   end
 
   def self.find!(base_path)
-    content_item = ContentItem.find!(base_path)
-    new(content_item)
+    query = "fragment worldLocationInfo on WorldLocation {
+      active
+      name
+      slug
+    }
+
+    {
+      edition(basePath: \"#{base_path}\") {
+        ... on WorldIndex {
+          title
+
+          worldLocations {
+            ...worldLocationInfo
+          }
+
+          internationalDelegations {
+            ...worldLocationInfo
+          }
+        }
+      }
+    }"
+
+    content_item = Services.publishing_api.get_grapqhl_data(query)
+    content_item_hash = content_item.to_h.dig("data", "edition")
+    new(content_item_hash)
   end
 end

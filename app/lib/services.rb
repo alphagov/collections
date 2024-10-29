@@ -14,6 +14,10 @@ module Services
     end
   end
 
+  def self.publishing_api
+    @publishing_api ||= GdsApi::PublishingApi.new(Plek.new.find("publishing-api"))
+  end
+
   def self.search_api
     @search_api ||= GdsApi.search
   end

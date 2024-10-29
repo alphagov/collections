@@ -9,7 +9,7 @@ class WorldIndexPresenter
   end
 
   def title
-    @world_index.content_item.title
+    @world_index.content_item["title"]
   end
 
   def grouped_world_locations
@@ -19,7 +19,7 @@ class WorldIndexPresenter
   end
 
   def international_delegations
-    details["international_delegations"]
+    @world_index.content_item["internationalDelegations"]
   end
 
   def world_location_link(world_location)
@@ -49,6 +49,6 @@ private
   end
 
   def world_locations
-    details["world_locations"]
+    @world_index.content_item["worldLocations"]
   end
 end
