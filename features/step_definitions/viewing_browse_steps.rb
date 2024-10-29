@@ -2,7 +2,7 @@ Given(/^there is a browse page set up with links$/) do
   second_level_browse_pages = [{
     content_id: "judges-content-id",
     title: "Judges",
-    base_path: "/browse/crime-and-justice/judges",
+    base_path: "/browse/justice/judges",
   }]
 
   add_browse_pages
@@ -26,12 +26,12 @@ Given(/^that there are curated second level browse pages$/) do
     {
       content_id: "judges-content-id",
       title: "Judges",
-      base_path: "/browse/crime-and-justice/judges",
+      base_path: "/browse/justice/judges",
     },
     {
       content_id: "courts-content-id",
       title: "Courts",
-      base_path: "/browse/crime-and-justice/courts",
+      base_path: "/browse/justice/courts",
     },
   ]
 
@@ -53,7 +53,7 @@ end
 
 Then(/^I see the list of top level browse pages$/) do
   expect(page).to have_link("Benefits", href: "/browse/benefits")
-  expect(page).to have_link("Crime and justice", href: "/browse/crime-and-justice")
+  expect(page).to have_link("Crime and justice", href: "/browse/justice")
 end
 
 When(/^I click on a top level browse page$/) do
@@ -61,12 +61,12 @@ When(/^I click on a top level browse page$/) do
 end
 
 Then(/^I see the list of second level browse pages$/) do
-  expect(page).to have_selector("a[href='/browse/crime-and-justice/judges']", text: "Judges")
+  expect(page).to have_selector("a[href='/browse/justice/judges']", text: "Judges")
 end
 
 Then(/^I see the curated list of second level browse pages$/) do
-  expect(page).to have_link("Judges", href: "/browse/crime-and-justice/judges")
-  expect(page).to have_link("Courts", href: "/browse/crime-and-justice/courts")
+  expect(page).to have_link("Judges", href: "/browse/justice/judges")
+  expect(page).to have_link("Courts", href: "/browse/justice/courts")
 end
 
 When(/^I click on a second level browse page$/) do
@@ -86,15 +86,15 @@ Then(/^the A to Z label should not be present$/) do
 end
 
 When(/^I visit that browse page$/) do
-  visit "/browse/crime-and-justice/judges"
+  visit "/browse/justice/judges"
 end
 
 def top_level_browse_pages
   [
     {
-      content_id: "content-id-for-crime-and-justice",
+      content_id: "content-id-for-justice",
       title: "Crime and justice",
-      base_path: "/browse/crime-and-justice",
+      base_path: "/browse/justice",
     },
     {
       content_id: "content-id-for-benefits",
@@ -113,8 +113,8 @@ end
 
 def add_first_level_browse_pages(child_pages:, order_type:)
   stub_content_store_has_item(
-    "/browse/crime-and-justice",
-    base_path: "/browse/crime-and-justice",
+    "/browse/justice",
+    base_path: "/browse/justice",
     title: "Crime and Justice",
     links: {
       top_level_browse_pages:,
@@ -128,17 +128,17 @@ def add_first_level_browse_pages(child_pages:, order_type:)
 end
 
 def add_second_level_browse_pages(second_level_browse_pages)
-  stub_content_store_has_item "/browse/crime-and-justice/judges",
+  stub_content_store_has_item "/browse/justice/judges",
                               content_id: "judges-content-id",
                               title: "Judges",
-                              base_path: "/browse/crime-and-justice/judges",
+                              base_path: "/browse/justice/judges",
                               links: {
                                 top_level_browse_pages:,
                                 second_level_browse_pages:,
                                 active_top_level_browse_page: [{
-                                  content_id: "content-id-for-crime-and-justice",
+                                  content_id: "content-id-for-justice",
                                   title: "Crime and justice",
-                                  base_path: "/browse/crime-and-justice",
+                                  base_path: "/browse/justice",
                                 }],
                               }
 end
