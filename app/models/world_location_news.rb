@@ -3,7 +3,7 @@ class WorldLocationNews
 
   def initialize(content_item)
     @content_item = content_item
-    @documents_service = SearchDocuments.new(slug, "filter_world_locations")
+    @documents_service = WorldLocationNewsSearchDocuments
   end
 
   def self.find!(base_path)
@@ -70,19 +70,23 @@ class WorldLocationNews
     @latest ||= [*announcements, *publications, *statistics]
         .select { |entry| entry.dig(:metadata, :public_updated_at).present? }
         .sort { |entry1, entry2| - (entry1.dig(:metadata, :public_updated_at) <=> entry2.dig(:metadata, :public_updated_at)) }
-        .first(SearchDocuments::DEFAULT_COUNT)
+        .first(@documents_service::DEFAULT_COUNT)
+  end
+
+  def documents_service
+    @documents_service.new(slug)
   end
 
   def announcements
-    @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications" })
+    @announcements ||= documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications" })
   end
 
   def publications
-    @publications ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: %w[guidance_and_regulation policy_and_engagement transparency] })
+    @publications ||= documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: %w[guidance_and_regulation policy_and_engagement transparency] })
   end
 
   def statistics
-    @statistics ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_subgroup: "statistics" })
+    @statistics ||= documents_service.fetch_related_documents_with_format({ filter_content_purpose_subgroup: "statistics" })
   end
 
   def type
