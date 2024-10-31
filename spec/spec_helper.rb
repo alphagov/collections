@@ -24,6 +24,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require "rspec/rails"
 require "gds_api/test_helpers/search"
 require "gds_api/test_helpers/content_store"
+require "gds_api/test_helpers/publishing_api"
 require "webmock/rspec"
 WebMock.disable_net_connect!(
   allow_localhost: true,
@@ -42,6 +43,7 @@ end
 RSpec.configure do |config|
   config.include GdsApi::TestHelpers::Search
   config.include GdsApi::TestHelpers::ContentStore
+  config.include GdsApi::TestHelpers::PublishingApi
   config.include ActiveSupport::Testing::TimeHelpers
   config.use_active_record = false
   config.infer_spec_type_from_file_location!
