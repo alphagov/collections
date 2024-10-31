@@ -87,7 +87,7 @@ RSpec.describe WorldIndexPresenter do
   describe "#international_delegations_count" do
     subject { world_index_presenter.international_delegations_count }
 
-    it "returns the number of world locations" do
+    it "returns the number of international delegations" do
       expect(subject).to be 10
     end
   end
