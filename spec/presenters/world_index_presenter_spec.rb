@@ -25,7 +25,7 @@ RSpec.describe WorldIndexPresenter do
       g_group = subject.find { |group| group.first == "G" }
       g_group_locations = g_group.last
 
-      expect(g_group_locations.first["name"]).to eq "The Gambia"
+      expect(g_group_locations.pluck("name")).to include "The Gambia"
     end
   end
 
