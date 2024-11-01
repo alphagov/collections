@@ -34,7 +34,7 @@
   } %>
 <% end %>
 
-<% if display_popular_links_for_slug?(page.slug) %>
+<% if page.popular_list %>
   <div class="govuk-width-container">
     <div class="browse__action-links">
       <div class="govuk-grid-row">
@@ -45,7 +45,7 @@
             font_size: "m"
           } %>
           <ul class="govuk-list govuk-!-margin-bottom-7">
-            <% popular_links_for_slug(page.slug).each do |link| %>
+            <% with_tracking_data(page.popular_list).each do |link| %>
               <li>
                 <%= render partial: "shared/browse_action_link", locals: {link:} %>
               </li>
@@ -68,7 +68,7 @@
 <% total_links = page.second_level_browse_pages.count.to_s %>
 <%= render "shared/browse_cards_container" do %>
   <%= render "govuk_publishing_components/components/cards", {
-    heading: display_popular_links_for_slug?(page.slug) ? t("browse.topics") : nil,
+    heading: page.popular_list ? t("browse.topics") : nil,
     items: page.second_level_browse_pages.map.with_index do |second_level_browse_page, index|
       {
         link: {
@@ -86,6 +86,6 @@
         description: second_level_browse_page.description,
       }
     end,
-    sub_heading_level: display_popular_links_for_slug?(page.slug) ? 3 : 2,
+    sub_heading_level: page.popular_list ? 3 : 2,
   } %>
 <% end %>

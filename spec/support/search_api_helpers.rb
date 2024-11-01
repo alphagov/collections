@@ -253,6 +253,24 @@ module SearchApiHelpers
     end
   end
 
+  def search_api_has_popular_documents_for_level_one_browse(browse_content_ids)
+    fields = SearchApiFields::POPULAR_BROWSE_SEARCH_FIELDS
+
+    params = {
+      count: "3",
+      filter_any_mainstream_browse_page_content_ids: webmock_match_array(browse_content_ids),
+      order: "-popularity",
+      fields: webmock_match_array(fields),
+    }
+
+    results = %w[anything anything_else].map do |slug|
+      search_api_document_for_slug(slug, 1.hour.ago, "guide")
+    end
+
+    body = { results: }
+    stub_search(params:, body:)
+  end
+
   def section_tagged_content_list(doc_type, count = 1)
     content_list = []
 
