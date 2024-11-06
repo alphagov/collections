@@ -1,9 +1,8 @@
-RSpec.describe WorldIndexPresenter do
+RSpec.describe WorldIndexGraphqlPresenter do
   before do
-    fixture = GovukSchemas::Example.find("world_index", example_name: "world_index")
-    content_item = ContentItem.new(fixture)
-    world_index = WorldIndex.new(content_item)
-    @world_index_presenter ||= described_class.new(world_index)
+    fixture = fetch_graphql_fixture("world_index").dig("data", "edition")
+    content_item = WorldIndexGraphql.new(fixture)
+    @world_index_presenter ||= described_class.new(content_item)
   end
 
   describe "#title" do

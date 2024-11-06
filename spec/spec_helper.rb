@@ -24,6 +24,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require "rspec/rails"
 require "gds_api/test_helpers/search"
 require "gds_api/test_helpers/content_store"
+require "gds_api/test_helpers/publishing_api"
 require "webmock/rspec"
 WebMock.disable_net_connect!(
   allow_localhost: true,
@@ -42,6 +43,7 @@ end
 RSpec.configure do |config|
   config.include GdsApi::TestHelpers::Search
   config.include GdsApi::TestHelpers::ContentStore
+  config.include GdsApi::TestHelpers::PublishingApi
   config.include ActiveSupport::Testing::TimeHelpers
   config.use_active_record = false
   config.infer_spec_type_from_file_location!
@@ -62,6 +64,13 @@ def fetch_fixture(filename)
   JSON.parse(json)
 end
 
+def fetch_graphql_fixture(filename)
+  json = File.read(
+    Rails.root.join("spec", "fixtures", "graphql", "#{filename}.json"),
+  )
+  JSON.parse(json)
+end
+
 def search_api_response(titles_and_links_hash)
   results_array = titles_and_links_hash.to_a.map do |title, link|
     {
@@ -72,4 +81,8 @@ def search_api_response(titles_and_links_hash)
     }
   end
   { 'results': results_array }
+end
+
+def enable_graphql_feature_flag
+  Features.stub(:graphql_feature_enabled?).and_return(true)
 end

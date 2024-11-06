@@ -84,11 +84,11 @@ Rails.application.routes.draw do
       to: "organisations#court",
       as: :court
 
+  get "/world", to: "world#index"
+
   constraints DocumentTypeRoutingConstraint.new("step_by_step_nav") do
     get "/:slug", to: "step_nav#show"
   end
-
-  get "/world", to: "world#index"
 
   get "/world/embassies",
       to: "embassies#index",
