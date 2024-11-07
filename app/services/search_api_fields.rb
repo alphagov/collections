@@ -35,4 +35,10 @@ module SearchApiFields
                                          content_id
                                          organisations
                                          document_collections].freeze
+
+  POPULAR_BROWSE_SEARCH_FIELDS = %w[ title
+                                     link
+                                     public_timestamp
+                                     display_type
+                                     content_store_document_type].freeze
 end

@@ -178,6 +178,18 @@ module SearchApiHelpers
     }
   end
 
+  def search_api_document_for_browse(slug)
+    { "content_store_document_type" => "transaction",
+      "link" => "/#{slug}",
+      "public_timestamp" => "2019-11-21T14:44:36Z",
+      "title" => slug.titleize.humanize.to_s,
+      "index" => "govuk",
+      "es_score" => nil,
+      "_id" => "/#{slug}",
+      "elasticsearch_type" => "edition",
+      "document_type" => "edition" }
+  end
+
   def search_api_has_latest_documents_for_subtopic(subtopic_content_id, document_slugs, page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
       search_api_document_for_slug(slug, (i + 1).hours.ago)
