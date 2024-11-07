@@ -209,4 +209,37 @@ RSpec.describe MainstreamBrowsePage do
       expect(page.lists).to be_an_instance_of(ListSet)
     end
   end
+
+  describe "popular_lists" do
+    let(:top_level_browse_page) { GovukSchemas::Example.find("mainstream_browse_page", example_name: "top_level_page") }
+    let(:second_level_browse_page) { GovukSchemas::Example.find("mainstream_browse_page", example_name: "level_2_page") }
+    let(:root_browse_page) { GovukSchemas::Example.find("mainstream_browse_page", example_name: "root_page") }
+
+    it "passes the content item to PopularListSet on top level browse pages" do
+      api_data["base_path"] = top_level_browse_page["base_path"]
+      api_data["links"] = top_level_browse_page["links"]
+      list = [{ title: "foo", link: "/foo" }]
+
+      allow(PopularListSet)
+        .to receive(:fetch)
+        .with(content_item)
+        .and_return(list)
+
+      expect(page.popular_list).to eq list
+    end
+
+    it "returns nil on the root browse page" do
+      api_data["base_path"] = root_browse_page["base_path"]
+      api_data["links"] = root_browse_page["links"]
+
+      expect(page.popular_list).to be_nil
+    end
+
+    it "returns nil on second level browse pages" do
+      api_data["base_path"] = second_level_browse_page["base_path"]
+      api_data["links"] = second_level_browse_page["links"]
+
+      expect(page.popular_list).to be_nil
+    end
+  end
 end
