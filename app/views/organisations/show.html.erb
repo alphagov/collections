@@ -2,6 +2,7 @@
 
 <%= render partial: 'meta', locals: { organisation: @organisation } %>
 <%= render partial: 'breadcrumb' %>
+<%= render 'shared/intervention_banner' %>
 <%= render partial: 'header' %>
 <% if @organisation.custom_banner %>
   <%= render "govuk_publishing_components/components/notice", {
