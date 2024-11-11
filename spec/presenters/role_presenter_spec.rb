@@ -1,4 +1,4 @@
-RSpec.describe Role do
+RSpec.describe RolePresenter do
   include SearchApiHelpers
 
   let(:api_data) do
@@ -51,8 +51,8 @@ RSpec.describe Role do
     }
   end
 
-  let(:content_item) { ContentItem.new(api_data) }
-  let(:role) { described_class.new(content_item) }
+  let(:content_item_data) { ContentItem.new(api_data).content_item_data }
+  subject(:presented_role) { described_class.new(content_item_data) }
 
   describe "organisations" do
     it "should have organisations title and base_path" do
@@ -66,7 +66,7 @@ RSpec.describe Role do
           "base_path" => "/government/organisations/prime-ministers-office-10-downing-street",
         },
       ]
-      expect(role.organisations).to eq(expected)
+      expect(presented_role.organisations).to eq(expected)
     end
   end
 
@@ -82,15 +82,15 @@ RSpec.describe Role do
     end
 
     it "should have title and base_path" do
-      expect(role.current_holder).to eq(expected)
+      expect(presented_role.current_holder).to eq(expected)
     end
 
     it "should have body with biography" do
-      expect(role.current_holder_biography).to eq(expected["details"]["body"])
+      expect(presented_role.current_holder_biography).to eq(expected["details"]["body"])
     end
 
     it "should have link to person" do
-      expect(role.link_to_person).to eq(expected["base_path"])
+      expect(presented_role.link_to_person).to eq(expected["base_path"])
     end
 
     context "without a current holder" do
@@ -99,8 +99,8 @@ RSpec.describe Role do
       end
 
       it "should return nil" do
-        role = described_class.new(content_item)
-        expect(role.current_holder).to be_nil
+        presented_role = described_class.new(content_item_data)
+        expect(presented_role.current_holder).to be_nil
       end
     end
   end
@@ -129,26 +129,26 @@ RSpec.describe Role do
     end
 
     it "should have announcements" do
-      expect(role.announcements.items.first[:link][:text]).to eq("PM statement at NATO meeting: 4 December 2019")
+      expect(presented_role.announcements.items.first[:link][:text]).to eq("PM statement at NATO meeting: 4 December 2019")
     end
 
     it "should have link to email signup" do
-      expect(role.announcements.links[:email_signup]).to eq("/email-signup?link=/government/ministers/prime-minister")
+      expect(presented_role.announcements.links[:email_signup]).to eq("/email-signup?link=/government/ministers/prime-minister")
     end
 
     it "should have link to subscription atom feed" do
-      expect(role.announcements.links[:subscribe_to_feed]).to eq("/search/news-and-communications.atom?roles=prime-minister")
+      expect(presented_role.announcements.links[:subscribe_to_feed]).to eq("/search/news-and-communications.atom?roles=prime-minister")
     end
 
     it "should have link to news and communications finder" do
-      expect(role.announcements.links[:link_to_news_and_communications]).to eq("/search/news-and-communications?roles=prime-minister")
+      expect(presented_role.announcements.links[:link_to_news_and_communications]).to eq("/search/news-and-communications?roles=prime-minister")
     end
   end
 
   describe "supports_historical_accounts" do
     context "without a historical account page" do
       it "does not support historical accounts by default" do
-        expect(role.supports_historical_accounts?).to be_falsey
+        expect(presented_role.supports_historical_accounts?).to be_falsey
       end
     end
 
@@ -158,11 +158,11 @@ RSpec.describe Role do
       end
 
       it "supports historical accounts" do
-        expect(role.supports_historical_accounts?).to be(true)
+        expect(presented_role.supports_historical_accounts?).to be(true)
       end
 
       it "points to the correct historical account page" do
-        expect(role.past_holders_url).to eq("/government/history/past-prime-ministers")
+        expect(presented_role.past_holders_url).to eq("/government/history/past-prime-ministers")
       end
     end
 
@@ -173,7 +173,7 @@ RSpec.describe Role do
       end
 
       it "points to the correct historical account page" do
-        expect(role.past_holders_url).to eq("/government/history/past-chancellors")
+        expect(presented_role.past_holders_url).to eq("/government/history/past-chancellors")
       end
     end
 
@@ -184,7 +184,7 @@ RSpec.describe Role do
       end
 
       it "points to the correct historical account page" do
-        expect(role.past_holders_url).to eq("/government/history/past-foreign-secretaries")
+        expect(presented_role.past_holders_url).to eq("/government/history/past-foreign-secretaries")
       end
     end
   end
