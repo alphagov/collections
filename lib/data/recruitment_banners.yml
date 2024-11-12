@@ -9,3 +9,10 @@
   #     - /foreign-travel-advice
 
 banners:
+- name: UKVI banner 11/11/24
+  suggestion_text: "Help improve GOV.UK"
+  suggestion_link_text: "Sign up to take part in user research (opens in a new tab)"
+  survey_url: https://google.com
+  page_paths:
+    - /browse/visas-immigration
+    - /government/organisations/uk-visas-and-immigration
