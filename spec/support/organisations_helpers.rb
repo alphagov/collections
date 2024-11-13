@@ -89,4 +89,46 @@ module OrganisationsHelpers
       },
     }.with_indifferent_access
   end
+
+  def department_with_joining_organisation_hash
+    {
+      "title": "Departments, agencies and public bodies",
+      details: {
+        ordered_agencies_and_other_public_bodies: [
+          {
+            title: "Coal Authority",
+            href: "/government/organisations/the-coal-authority",
+            brand: nil,
+            govuk_status: "live",
+          },
+          {
+            title: "Mining Remediation Authority",
+            href: "/government/organisations/mining-remediation-authority",
+            brand: nil,
+            govuk_status: "joining",
+          },
+        ],
+        ordered_ministerial_departments: [
+          {
+            title: "Department for Energy Security and Net Zero",
+            href: "/government/organisation…y-security-and-net-zero",
+            brand: "department-for-business-innovation-skills",
+            govuk_status: "live",
+            works_with: {
+              executive_ndpb: [
+                {
+                  title: "Coal Authority",
+                  href: "/government/organisations/the-coal-authority",
+                },
+                {
+                  title: "Mining Remediation Authority",
+                  href: "/government/organisations/mining-remediation-authority",
+                },
+              ],
+            },
+          },
+        ],
+      },
+    }.with_indifferent_access
+  end
 end

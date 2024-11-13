@@ -129,6 +129,17 @@ RSpec.describe Organisations::IndexPresenter do
 
       expect(organisations_presenter.works_with_statement(test_org)).to eq("Works with 2 agencies and public bodies")
     end
+
+    context "when joining organisation present" do
+      let(:organisations_presenter) { presenter_from_hash(department_with_joining_organisation_hash) }
+      let(:department) do
+        department_with_joining_organisation_hash.dig("details", "ordered_ministerial_departments", 0)
+      end
+
+      it "does not include joining organisation in returned string" do
+        expect(organisations_presenter.works_with_statement(department)).to eq("Works with 1 public body")
+      end
+    end
   end
 
   describe "#ordered_works_with" do
@@ -178,6 +189,29 @@ RSpec.describe Organisations::IndexPresenter do
       ]
 
       expect(organisations_presenter.ordered_works_with(test_org)).to eq(expected)
+    end
+
+    context "when joining organisation present" do
+      let(:organisations_presenter) { presenter_from_hash(department_with_joining_organisation_hash) }
+      let(:department) do
+        department_with_joining_organisation_hash.dig("details", "ordered_ministerial_departments", 0)
+      end
+
+      it "does not include joining organisation in returned value" do
+        expected = [
+          [
+            "executive_ndpb",
+            [
+              {
+                "title" => "Coal Authority",
+                "href" => "/government/organisations/the-coal-authority",
+              },
+            ],
+          ],
+        ]
+
+        expect(organisations_presenter.ordered_works_with(department)).to eq(expected)
+      end
     end
   end
 
