@@ -50,6 +50,24 @@ class ContentStoreOrganisations
     details["ordered_devolved_administrations"]
   end
 
+  def all
+    @all ||= [
+      *number_10,
+      *ministerial_departments,
+      *non_ministerial_departments,
+      *agencies_and_other_public_bodies,
+      *high_profile_groups,
+      *public_corporations,
+      *devolved_administrations,
+    ]
+  end
+
+  def by_href
+    @by_href ||= all.index_by do |organisation|
+      organisation["href"]
+    end
+  end
+
   def count_by_type(organisation_type)
     details[organisation_type].count
   end

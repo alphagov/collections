@@ -2,7 +2,7 @@ module Organisations
   class IndexPresenter
     include ActionView::Helpers::TagHelper
     include ActionView::Helpers::UrlHelper
-    include OrganisationsHelper
+    include OrganisationsSupport
 
     LISTING_ORDER = %w[
       executive_office
@@ -41,13 +41,13 @@ module Organisations
     def all_organisations
       {
         number_10: @organisations.number_10,
-        ministerial_departments: filter_not_joining(
+        ministerial_departments: reject_joining_organisations(
           @organisations.ministerial_departments,
         ),
-        non_ministerial_departments: filter_not_joining(
+        non_ministerial_departments: reject_joining_organisations(
           @organisations.non_ministerial_departments,
         ),
-        agencies_and_other_public_bodies: filter_not_joining(
+        agencies_and_other_public_bodies: reject_joining_organisations(
           @organisations.agencies_and_other_public_bodies,
         ),
         high_profile_groups: @organisations.high_profile_groups,
@@ -66,19 +66,15 @@ module Organisations
       count
     end
 
-    def filter_not_joining(organisations)
-      organisations.filter do |organisation|
-        organisation["govuk_status"] != "joining"
-      end
-    end
-
     def ordered_works_with(organisation)
-      organisation.fetch("works_with", []).to_a.sort_by { |type, _departments| LISTING_ORDER.index(type) || 999 }
+      non_joining_works_with_categorised_links(organisation, @organisations.by_href)
+        .to_a
+        .sort_by { |type, _departments| LISTING_ORDER.index(type) || 999 }
     end
 
     def works_with_statement(organisation)
       if organisation["works_with"].present? && organisation["works_with"].any?
-        works_with_count = child_organisations_count(organisation)
+        works_with_count = non_joining_works_with_links_count(organisation, @organisations.by_href)
         if works_with_count == 1
           I18n.t("organisations.works_with_statement.one", works_with_count:)
         elsif works_with_count > 1
