@@ -14,7 +14,6 @@ gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_document_types"
 gem "govuk_publishing_components", git: 'https://github.com/alphagov/govuk_publishing_components.git', branch: 'temp-chat-entry-changes'
-gem "govuk_publishing_components"
 gem "plek"
 gem "rack-utf8_sanitizer"
 gem "rails-i18n"
