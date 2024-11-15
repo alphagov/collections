@@ -19,6 +19,9 @@ Given(/^there is a browse page set up with links$/) do
     ],
     page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
   )
+
+  content_ids = second_level_browse_pages.map { |link| link[:content_id] }
+  search_api_has_popular_documents_for_level_one_browse(content_ids)
 end
 
 Given(/^that there are curated second level browse pages$/) do
@@ -41,6 +44,9 @@ Given(/^that there are curated second level browse pages$/) do
     order_type: "curated",
   )
   add_second_level_browse_pages(second_level_browse_pages)
+
+  content_ids = second_level_browse_pages.map { |link| link[:content_id] }
+  search_api_has_popular_documents_for_level_one_browse(content_ids)
 end
 
 Then(/^I see the links tagged to the browse page/) do

@@ -45,8 +45,18 @@ class MainstreamBrowsePage
     details["second_level_ordering"] == "curated"
   end
 
+  def top_level_browse_page?
+    top_level_browse_pages.any? { |page| page.base_path == base_path }
+  end
+
   def lists
     @lists ||= ListSet.new("section", @content_item.content_id, details["groups"])
+  end
+
+  def popular_list
+    return unless top_level_browse_page?
+
+    @popular_list ||= PopularListSet.fetch(@content_item)
   end
 
   def slug

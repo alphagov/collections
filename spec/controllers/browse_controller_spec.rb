@@ -1,5 +1,7 @@
 RSpec.describe BrowseController do
   include GovukAbTesting::RspecHelpers
+  include SearchApiHelpers
+
   render_views
   describe "GET index" do
     before do
@@ -21,15 +23,20 @@ RSpec.describe BrowseController do
   describe "GET top_level_browse_page" do
     describe "for a valid browse page" do
       before do
-        stub_content_store_has_item(
-          "/browse/benefits",
+        content_item = {
           base_path: "/browse/benefits",
           title: "foo",
           links: {
             top_level_browse_pages:,
             second_level_browse_pages:,
           },
+        }
+        stub_content_store_has_item(
+          "/browse/benefits",
+          content_item,
         )
+
+        search_api_has_popular_documents_for_level_one_browse(level_two_browse_content_ids)
       end
 
       it "sets correct expiry headers" do
@@ -74,5 +81,9 @@ RSpec.describe BrowseController do
       title: "Entitlement",
       base_path: "/browse/benefits/entitlement",
     }]
+  end
+
+  def level_two_browse_content_ids
+    second_level_browse_pages.map { |link| link[:content_id] }
   end
 end
