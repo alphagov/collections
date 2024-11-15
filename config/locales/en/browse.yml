@@ -3,255 +3,117 @@ en:
   browse:
     popular_links:
       abroad:
-        variant_a:
-          - title: Renew or replace your adult passport
-            url: /renew-adult-passport
-          - title: How to apply for a visa to come to the UK
-            url: /apply-to-come-to-the-uk
-          - title: Update your UK Visas and Immigration account details
-            url: /update-uk-visas-immigration-account-details
-        variant_b:
-          - title: Apply online for a UK passport
-            url: /apply-renew-passport
-          - title: Foreign travel advice
-            url: /foreign-travel-advice
-          - title: Get a passport photo
-            url: /photos-for-passports
+        - title: Apply online for a UK passport
+          url: /apply-renew-passport
+        - title: Foreign travel advice
+          url: /foreign-travel-advice
+        - title: Get a passport photo
+          url: /photos-for-passports
       benefits:
-        control:
-          - title: Check benefits and financial support you can get
-            url: /check-benefits-financial-support
-        variant_a:
-          - title: Personal Independence Payment (PIP)
-            url: /pip
-          - title: Pension Credit
-            url: /pension-credit
-          - title: Pension Credit calculator
-            url: /pension-credit-calculator
-        variant_b:
-          - title: Sign in to your Universal Credit account
-            url: /sign-in-universal-credit
-          - title: Sign in to your childcare account
-            url: /sign-in-childcare-account
-          - title: Universal Credit
-            url: /universal-credit
+        - title: Sign in to your Universal Credit account
+          url: /sign-in-universal-credit
+        - title: Sign in to your childcare account
+          url: /sign-in-childcare-account
+        - title: Universal Credit
+          url: /universal-credit
       births-deaths-marriages:
-        variant_a:
-          - title: Order a birth, death, marriage or civil partnership certificate
-            url: /order-copy-birth-death-marriage-certificate
-          - title: Research your family history using the General Register Office
-            url: /research-family-history
-          - title: Search probate records for documents and wills (England and Wales)
-            url: /search-will-probate
-        variant_b:
-          - title: "Get Tax-Free Childcare: step by step"
-            url: /get-tax-free-childcare
-          - title: Tax-Free Childcare
-            url: /tax-free-childcare
-          - title: Help paying for childcare
-            url: /help-with-childcare-costs
+        - title: "Get Tax-Free Childcare: step by step"
+          url: /get-tax-free-childcare
+        - title: Tax-Free Childcare
+          url: /tax-free-childcare
+        - title: Help paying for childcare
+          url: /help-with-childcare-costs
       business:
-        control:
-          - title: "HMRC online services: sign in or set up an account"
-            url: /log-in-register-hmrc-online-services
-          - title: Self Assessment tax returns
-            url: /self-assessment-tax-returns
-          - title: "Pay employers' PAYE"
-            url: /pay-paye-tax
-        variant_a:
-          - title: Self Assessment tax returns
-            url: /self-assessment-tax-returns
-          - title: Get information about a company
-            url: /get-information-about-a-company
-          - title: Searching the Companies House register
-            url: /guidance/search-the-companies-house-register
-        variant_b:
-          - title: "HMRC online services: sign in or set up an account"
-            url: /log-in-register-hmrc-online-services
-          - title: Get information about a company
-            url: /get-information-about-a-company
-          - title: Find an energy certificate
-            url: /find-energy-certificate
+        - title: "HMRC online services: sign in or set up an account"
+          url: /log-in-register-hmrc-online-services
+        - title: Get information about a company
+          url: /get-information-about-a-company
+        - title: Find an energy certificate
+          url: /find-energy-certificate
       childcare-parenting:
-        variant_a:
-          - title: Sign in to your childcare account
-            url: /sign-in-childcare-account
-          - title: Child Benefit
-            url: /child-benefit
-          - title: Child Maintenance Service
-            url: /child-maintenance-service
-        variant_b:
-          - title: Sign in to your childcare account
-            url: /sign-in-childcare-account
-          - title: "Get Tax-Free Childcare: step by step"
-            url: /get-tax-free-childcare
-          - title: Tax-Free Childcare
-            url: /tax-free-childcare
+        - title: Sign in to your childcare account
+          url: /sign-in-childcare-account
+        - title: "Get Tax-Free Childcare: step by step"
+          url: /get-tax-free-childcare
+        - title: Tax-Free Childcare
+          url: /tax-free-childcare
       citizenship:
-        variant_a:
-          - title: "View and prove your immigration status: get a share code"
-            url: /view-prove-immigration-status
-          - title: Get access to your eVisa
-            url: /get-access-evisa
-          - title: Online immigration status (eVisa)
-            url: /guidance/online-immigration-status-evisa
-        variant_b:
-          - title: "View and prove your immigration status: get a share code"
-            url: /view-prove-immigration-status
-          - title: Prove your right to work to an employer
-            url: /prove-right-to-work
-          - title: Register to vote
-            url: /register-to-vote
+        - title: "View and prove your immigration status: get a share code"
+          url: /view-prove-immigration-status
+        - title: Prove your right to work to an employer
+          url: /prove-right-to-work
+        - title: Register to vote
+          url: /register-to-vote
       disabilities:
-        variant_a:
-          - title: Apply for or renew a Blue Badge
-            url: /apply-blue-badge
-          - title: Personal Independence Payment (PIP)
-            url: /pip
-          - title: Apply for a disabled person's bus pass
-            url: /apply-for-disabled-bus-pass
-        variant_b:
-          - title: Universal Credit
-            url: /universal-credit
-          - title: Benefits calculators
-            url: /benefits-calculators
-          - title: Apply for or renew a Blue Badge
-            url: /apply-blue-badge
+        - title: Universal Credit
+          url: /universal-credit
+        - title: Benefits calculators
+          url: /benefits-calculators
+        - title: Apply for or renew a Blue Badge
+          url: /apply-blue-badge
       driving:
-        variant_a:
-          - title: Apply for your first provisional driving licence
-            url: /apply-first-provisional-driving-licence
-          - title: Change the address on your driving licence
-            url: /change-address-driving-licence
-          - title: Replace a lost, stolen, damaged or destroyed driving licence
-            url: /apply-online-to-replace-a-driving-licence
-        variant_b:
-          - title: Check the MOT history of a vehicle
-            url: /check-mot-history
-          - title: Tax your vehicle
-            url: /vehicle-tax
-          - title: Check if a vehicle is taxed
-            url: /check-vehicle-tax
+        - title: Check the MOT history of a vehicle
+          url: /check-mot-history
+        - title: Tax your vehicle
+          url: /vehicle-tax
+        - title: Check if a vehicle is taxed
+          url: /check-vehicle-tax
       education:
-        variant_a:
-          - title: Free courses for jobs
-            url: /guidance/free-courses-for-jobs
-          - title: Student visa
-            url: /student-visa
-          - title: Find an apprenticeship
-            url: /apply-apprenticeship
-        variant_b:
-          - title: Student finance login
-            url: /student-finance-register-login
-          - title: Manage your student loan balance
-            url: /sign-in-to-manage-your-student-loan-balance
-          - title: Find an apprenticeship
-            url: /apply-apprenticeship
+        - title: Student finance login
+          url: /student-finance-register-login
+        - title: Manage your student loan balance
+          url: /sign-in-to-manage-your-student-loan-balance
+        - title: Find an apprenticeship
+          url: /apply-apprenticeship
       employing-people:
-        variant_a:
-          - title: Find a job
-            url: /find-a-job
-          - title: Find an apprenticeship
-            url: /apply-apprenticeship
-          - title: UK visa sponsorship for employers
-            url: /uk-visa-sponsorship-employers
-        variant_b:
-          - title: "HMRC online services: sign in or set up an account"
-            url: /log-in-register-hmrc-online-services
-          - title: "Check a job applicant's right to work: use their share code"
-            url: /view-right-to-work
-          - title: DBS Update Service
-            url: /dbs-update-service
+        - title: "HMRC online services: sign in or set up an account"
+          url: /log-in-register-hmrc-online-services
+        - title: "Check a job applicant's right to work: use their share code"
+          url: /view-right-to-work
+        - title: DBS Update Service
+          url: /dbs-update-service
       environment-countryside:
-        variant_a:
-          - title: "Poultry and other captive birds: registration rules and forms"
-            url: /government/publications/poultry-including-game-birds-registration-rules-and-forms
-          - title: Register as a keeper of less than 50 poultry or other captive birds
-            url: /guidance/register-as-a-keeper-of-less-than-50-poultry-or-other-captive-birds
-          - title: Poultry welfare off the farm
-            url: /guidance/poultry-welfare-off-the-farm
-        variant_b:
-          - title: Check the long term flood risk for an area in England
-            url: /check-long-term-flood-risk
-          - title: Find out your rubbish collection day
-            url: /rubbish-collection-day
-          - title: Check for flooding
-            url: /check-flooding
+        - title: Check the long term flood risk for an area in England
+          url: /check-long-term-flood-risk
+        - title: Find out your rubbish collection day
+          url: /rubbish-collection-day
+        - title: Check for flooding
+          url: /check-flooding
       housing-local-services:
-        variant_a:
-          - title: Tell HMRC when you change your address
-            url: /tell-hmrc-change-address
-          - title: "View and prove your immigration status: get a share code"
-            url: /view-prove-immigration-status
-          - title: Get help with the cost of living from your local council
-            url: /cost-living-help-local-council
-        variant_b:
-          - title: Find an energy certificate
-            url: /find-energy-certificate
-          - title: Find your local council
-            url: /find-local-council
-          - title: Check your Council Tax band
-            url: /council-tax-bands
+        - title: Find an energy certificate
+          url: /find-energy-certificate
+        - title: Find your local council
+          url: /find-local-council
+        - title: Check your Council Tax band
+          url: /council-tax-bands
       justice:
-        variant_a:
-          - title: Request a basic DBS check
-            url: /request-copy-criminal-record
-          - title: Pay a court fine
-            url: /pay-court-fine-online
-          - title: "DBS checks: detailed guidance"
-            url: /government/collections/dbs-checking-service-guidance--2
-        variant_b:
-          - title: Send money to someone in prison
-            url: /send-prisoner-money
-          - title: Visit someone in prison
-            url: /prison-visits
-          - title: Make a court claim for money
-            url: /make-court-claim-for-money
+        - title: Send money to someone in prison
+          url: /send-prisoner-money
+        - title: Visit someone in prison
+          url: /prison-visits
+        - title: Make a court claim for money
+          url: /make-court-claim-for-money
       tax:
-        variant_a:
-          - title: Tax your vehicle
-            url: /vehicle-tax
-          - title: Check how to claim a tax refund
-            url: /claim-tax-refund
-          - title: Pay your Self Assessment tax bill
-            url: /pay-self-assessment-tax-bill
-        variant_b:
-          - title: "HMRC online services: sign in or set up an account"
-            url: /log-in-register-hmrc-online-services
-          - title: "Personal tax account: sign in or set up"
-            url: /personal-tax-account
-          - title: Check how to register for Self Assessment
-            url: /register-for-self-assessment
+        - title: "HMRC online services: sign in or set up an account"
+          url: /log-in-register-hmrc-online-services
+        - title: "Personal tax account: sign in or set up"
+          url: /personal-tax-account
+        - title: Check how to register for Self Assessment
+          url: /register-for-self-assessment
       visas-immigration:
-        variant_a:
-          - title: Get access to your eVisa
-            url: /get-access-evisa
-          - title: Online immigration status (eVisa)
-            url: /guidance/online-immigration-status-evisa
-          - title: "View and prove your immigration status: get a share code"
-            url: /view-prove-immigration-status
-        variant_b:
-          - title: "View and prove your immigration status: get a share code"
-            url: /view-prove-immigration-status
-          - title: Get access to your eVisa
-            url: /get-access-evisa
-          - title: Online immigration status (eVisa)
-            url: /guidance/online-immigration-status-evisa
+        - title: "View and prove your immigration status: get a share code"
+          url: /view-prove-immigration-status
+        - title: Get access to your eVisa
+          url: /get-access-evisa
+        - title: Online immigration status (eVisa)
+          url: /guidance/online-immigration-status-evisa
       working:
-        variant_a:
-          - title: Find an apprenticeship
-            url: /apply-apprenticeship
-          - title: Check your National Insurance record
-            url: /check-national-insurance-record
-          - title: Prove your right to work to an employer
-            url: /prove-right-to-work
-        variant_b:
-          - title: Universal Credit
-            url: /universal-credit
-          - title: Prove your right to work to an employer
-            url: /prove-right-to-work
-          - title: Check your State Pension forecast
-            url: /check-state-pension
+        - title: Universal Credit
+          url: /universal-credit
+        - title: Prove your right to work to an employer
+          url: /prove-right-to-work
+        - title: Check your State Pension forecast
+          url: /check-state-pension
     all_categories: All categories
     popular_tasks: Popular tasks
     topics: Topics

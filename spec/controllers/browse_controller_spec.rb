@@ -42,17 +42,6 @@ RSpec.describe BrowseController do
         expect(response.content_type).to eq "text/html; charset=utf-8"
         expect(response).to render_template(partial: "_cards")
       end
-
-      it "sets Popular Tasks AB test response header" do
-        get :show, params: { top_level_slug: "benefits" }
-        expect(response.headers["vary"]).to eq("GOVUK-ABTest-PopularTasks")
-      end
-
-      it "renders Popular Tasks AB test meta tag" do
-        get :show, params: { top_level_slug: "benefits" }
-        meta_tag = %r{<meta +name="govuk:ab-test" +content="PopularTasks:Z" +data-allowed-variants="A,B,C,Z">}
-        expect(response.body).to match(meta_tag)
-      end
     end
 
     it "404 if the browse page does not exist" do
