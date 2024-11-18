@@ -1,6 +1,6 @@
 class WorldController < ApplicationController
   def index
-    if Features.graphql_feature_enabled?
+    if Features.graphql_feature_enabled? || params.include?(:graphql)
       index = WorldIndexGraphql.find!("/world")
       @presented_index = WorldIndexGraphqlPresenter.new(index)
     else
