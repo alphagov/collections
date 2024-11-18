@@ -92,4 +92,16 @@ RSpec.feature "World index page" do
 
     it_behaves_like "world index page"
   end
+
+  context "with the GraphQL query string" do
+    before do
+      stub_publishing_api_graphql_query(
+        Graphql::WorldIndexQuery.new("/world").query,
+        fetch_graphql_fixture("world_index"),
+      )
+      visit "/world?graphql=true"
+    end
+
+    it_behaves_like "world index page"
+  end
 end
