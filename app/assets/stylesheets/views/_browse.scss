@@ -102,6 +102,6 @@ $browse-header-background-colour: #263135;
 
 .browse__govuk-chat-promo--second-level {
   @include govuk-media-query($until: "tablet") {
-    border-top-width: 2px;
+    padding-top: 0;
   }
 }
