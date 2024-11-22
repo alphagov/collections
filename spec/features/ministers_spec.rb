@@ -123,24 +123,53 @@ RSpec.feature "Ministers index page" do
     end
   end
 
-  let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
+  context "without the graphql feature flag" do
+    let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
 
-  before do
-    stub_content_store_has_item("/government/ministers", document)
-    visit "/government/ministers"
+    before do
+      stub_content_store_has_item("/government/ministers", document)
+      visit "/government/ministers"
+    end
+
+    it_behaves_like "ministers index page"
+
+    context "during a reshuffle" do
+      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
+
+      it_behaves_like "ministers index page during a reshuffle"
+    end
+
+    context "during a reshuffle preview" do
+      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on-preview") }
+
+      it_behaves_like "ministers index page during a reshuffle preview"
+    end
   end
 
-  it_behaves_like "ministers index page"
+  context "with the GraphQL feature flag" do
+    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
 
-  context "during a reshuffle" do
-    let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
+    before do
+      enable_graphql_feature_flag
+      stub_publishing_api_graphql_query(
+        Graphql::MinistersIndexQuery.new("/government/ministers").query,
+        document,
+      )
+      visit "/government/ministers"
+    end
 
-    it_behaves_like "ministers index page during a reshuffle"
-  end
+    it_behaves_like "ministers index page"
 
-  context "during a reshuffle preview" do
-    let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on-preview") }
+    context "during a reshuffle" do
+      let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-on") }
 
-    it_behaves_like "ministers index page during a reshuffle preview"
+      it_behaves_like "ministers index page during a reshuffle"
+    end
+
+    context "during a reshuffle preview" do
+      let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-on-preview") }
+
+      it_behaves_like "ministers index page during a reshuffle preview"
+    end
   end
 end

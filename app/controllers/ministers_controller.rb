@@ -2,8 +2,15 @@ class MinistersController < ApplicationController
   around_action :switch_locale
 
   def index
-    ministers_index = MinistersIndex.find!(request.path)
-    @presented_ministers = MinistersIndexPresenter.new(ministers_index.content_item.content_item_data)
+    if Features.graphql_feature_enabled? || params.include?(:graphql)
+      ministers_index = Graphql::MinistersIndex.find!(request.path)
+      content_item_data = ministers_index.content_item
+    else
+      ministers_index = MinistersIndex.find!(request.path)
+      content_item_data = ministers_index.content_item.content_item_data
+    end
+
+    @presented_ministers = MinistersIndexPresenter.new(content_item_data)
     setup_content_item_and_navigation_helpers(ministers_index)
   end
 end
