@@ -1,36 +1,36 @@
 class MinistersIndexPresenter
-  def initialize(ministers_index)
-    @ministers_index = ministers_index.content_item
+  def initialize(content_item_data)
+    @content_item_data = content_item_data
   end
 
   def lead_paragraph
-    @ministers_index.details.fetch("body", nil)
+    @content_item_data.fetch("details", {})["body"]
   end
 
   def is_during_reshuffle?
-    @ministers_index.details.fetch("reshuffle", nil)
+    @content_item_data.fetch("details", {})["reshuffle"]
   end
 
   def reshuffle_messaging
-    @ministers_index.details.dig("reshuffle", "message")
+    @content_item_data.dig("details", "reshuffle", "message")
   end
 
   def cabinet_ministers
-    ordered_cabinet_ministers = @ministers_index.content_item_data.dig("links", "ordered_cabinet_ministers") || []
+    ordered_cabinet_ministers = @content_item_data.dig("links", "ordered_cabinet_ministers") || []
     ordered_cabinet_ministers.map do |minister_data|
       Minister.new(minister_data)
     end
   end
 
   def also_attends_cabinet
-    ordered_also_attends_cabinet = @ministers_index.content_item_data.dig("links", "ordered_also_attends_cabinet") || []
+    ordered_also_attends_cabinet = @content_item_data.dig("links", "ordered_also_attends_cabinet") || []
     ordered_also_attends_cabinet.map do |minister_data|
       Minister.new(minister_data)
     end
   end
 
   def by_organisation
-    ordered_ministerial_departments = @ministers_index.content_item_data.dig("links", "ordered_ministerial_departments") || []
+    ordered_ministerial_departments = @content_item_data.dig("links", "ordered_ministerial_departments") || []
     ordered_ministerial_departments.map do |department_data|
       Department.new(
         url: department_data.fetch("web_url"),
@@ -49,7 +49,7 @@ class MinistersIndexPresenter
 
   def whips
     ordered_whip_organisations.each do |whip_org|
-      ordered_whip_organisation = @ministers_index.content_item_data.dig("links", whip_org.item_key) || []
+      ordered_whip_organisation = @content_item_data.dig("links", whip_org.item_key) || []
       whip_org.ministers = ordered_whip_organisation.map do |minister_data|
         Minister.new(minister_data, whip_only: true)
       end
