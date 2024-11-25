@@ -1,0 +1,67 @@
+{
+  "data": {
+    "edition": {
+      "basePath": "/government/ministers/prime-minister",
+      "title": "Prime Minister",
+      "details": {
+        "body": "\u003cp\u003eThe Prime Minister is the leader of His Majesty’s Government and is ultimately responsible for the policy and decisions of the government. \u003c/p\u003e\n\n\u003cp\u003eAs leader of the UK government the Prime Minister also: \u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003eoversees the \u003ca href=\"https://www.gov.uk/government/ministers/minister-for-the-civil-service\"\u003eoperation of the Civil Service\u003c/a\u003e and government agencies \u003c/li\u003e\n  \u003cli\u003echooses members of the government \u003c/li\u003e\n  \u003cli\u003eis the principal government figure in the House of Commons \u003c/li\u003e\n\u003c/ul\u003e\n",
+        "supportsHistoricalAccounts": true
+      },
+      "locale": "en",
+      "links": {
+        "availableTranslations": [
+          {
+            "basePath": "/government/ministers/prime-minister",
+            "locale": "en"
+          }
+        ],
+        "roleAppointments": [
+          {
+            "details": {
+              "current": true,
+              "endedOn": null,
+              "startedOn": "2024-07-05T00:00:00+01:00"
+            },
+            "links": {
+              "person": [
+                {
+                  "basePath": "/government/people/keir-starmer",
+                  "details": {
+                    "body": "\u003cp\u003eSir Keir Starmer became Prime Minister on 5 July 2024.  \u003c/p\u003e\n\n\u003ch2 id=\"education\"\u003eEducation\u003c/h2\u003e\n\n\u003cp\u003eKeir attended Reigate Grammar School,before studying Law at the University of Leeds. He went on to do postgraduate studies at the University of Oxford,receiving a Bachelor of Civil Law (BCL) degree.\u003c/p\u003e\n\n\u003ch2 id=\"political-career\"\u003ePolitical Career\u003c/h2\u003e\n\n\u003cp\u003eKeir was elected a Member of Parliament for Holborn and St Pancras in May 2015. He was elected leader of the Labour Party in April 2020.\u003c/p\u003e\n\n\u003ch2 id=\"career-before-politics\"\u003eCareer before politics\u003c/h2\u003e\n\n\u003cp\u003eKeir qualified as a barrister in 1987 working in private practice before working as a legal advisor to the Northern Ireland Policing Board.\u003c/p\u003e\n\n\u003cp\u003eHe was appointed Queen’s Counsel (QC) in 2002.\u003c/p\u003e\n\n\u003cp\u003eIn 2008,Keir was appointed Director of Public Prosecutions,leading the Crown Prosecution Service until 2013.\u003c/p\u003e\n\n\u003cp\u003eHe received a knighthood in 2014 for services to criminal justice.\u003c/p\u003e\n\n\u003ch2 id=\"personal-life\"\u003ePersonal Life\u003c/h2\u003e\n\n\u003cp\u003eKeir is married and has two children.\u003c/p\u003e\n"
+                  },
+                  "title": "The Rt Hon Sir Keir Starmer KCB KC MP"
+                }
+              ]
+            }
+          },
+          {
+            "details": {
+              "current": false,
+              "endedOn": "2024-07-05T00:00:00+01:00",
+              "startedOn": "2022-10-25T00:00:00+01:00"
+            },
+            "links": {
+              "person": [
+                {
+                  "basePath": "/government/people/rishi-sunak",
+                  "details": {},
+                  "title": "The Rt Hon Rishi Sunak MP"
+                }
+              ]
+            }
+          }
+        ],
+        "orderedParentOrganisations": [
+          {
+            "basePath": "/government/organisations/cabinet-office",
+            "title": "Cabinet Office"
+          },
+          {
+            "basePath": "/government/organisations/prime-ministers-office-10-downing-street",
+            "title": "Prime Minister's Office, 10 Downing Street"
+          }
+        ]
+      }
+    }
+  }
+}
