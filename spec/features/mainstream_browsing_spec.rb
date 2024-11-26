@@ -69,7 +69,7 @@ RSpec.feature "Mainstream browsing" do
 
   it "renders the GOV.UK Chat promo" do
     content_item = GovukSchemas::Example.find("mainstream_browse_page", example_name: "top_level_page").tap do |item|
-      item["base_path"] = GovukChatPromoHelper::GOVUK_CHAT_PROMO_BASE_PATHS.first
+      item["base_path"] = "/browse/business"
     end
 
     stub_content_store_has_item(content_item["base_path"], content_item)
