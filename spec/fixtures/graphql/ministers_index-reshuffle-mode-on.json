@@ -1,0 +1,13 @@
+{
+  "data": {
+    "edition": {
+      "basePath": "/government/ministers",
+      "links": {},
+      "details": {
+        "reshuffle": {
+          "message": "<p>Check <a href=\"/government/news/ministerial-appointments-february-2023\" class=\"govuk-link\">latest appointments</a>.</p>\n"
+        }
+      }
+    }
+  }
+}
