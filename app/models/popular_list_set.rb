@@ -29,7 +29,7 @@ private
       order: "-popularity",
       fields: SearchApiFields::POPULAR_BROWSE_SEARCH_FIELDS,
     }
-    Services.cached_search(params)
+    Services.cached_search(params, expires_in: 12.hours)
   rescue GdsApi::HTTPServerError
     {}
   end
