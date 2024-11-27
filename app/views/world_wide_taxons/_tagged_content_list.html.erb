@@ -1,10 +1,10 @@
 <% if presented_taxon.tagged_content.any? %>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <% heading_level = heading_level ? heading_level : false %>
-      <%= render 'components/taxon_list', {
-          heading_level: heading_level,
-          items: taxon_list_params(presented_taxon)
+      <%= render "govuk_publishing_components/components/document_list", {
+        remove_top_border: true,
+        disable_ga4: true,
+        items: taxon_list_params(presented_taxon)
       } %>
     </div>
   </div>
