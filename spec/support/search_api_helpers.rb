@@ -1,6 +1,10 @@
 module SearchApiHelpers
   include SearchApiFields
 
+  def stub_search_api_isnt_available
+    stub_request(:any, /#{Plek.find('search-api')}\/.*/).to_return(status: 503)
+  end
+
   def stub_search(body:, params: nil)
     if params
       stub_any_search

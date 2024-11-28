@@ -39,5 +39,12 @@ RSpec.describe PopularListSet do
       stub_search(params:, body: search_response)
       expect(popular_list.formatted_results).to eq expected_results
     end
+
+    context "SearchAPI is unavailable" do
+      it "returns nil" do
+        stub_search_api_isnt_available
+        expect(popular_list.formatted_results).to eq nil
+      end
+    end
   end
 end

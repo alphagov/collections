@@ -30,6 +30,8 @@ private
       fields: SearchApiFields::POPULAR_BROWSE_SEARCH_FIELDS,
     }
     Services.cached_search(params)
+  rescue GdsApi::HTTPServerError
+    {}
   end
 
   def second_level_browse_content_ids
