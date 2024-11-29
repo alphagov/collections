@@ -18,6 +18,7 @@ module GovukChatPromoHelper
     /browse/working/state-pension
     /browse/working/time-off
     /browse/working/workplace-personal-pensions
+    /import-goods-into-uk
     /set-up-as-sole-trader
     /set-up-limited-company
   ].freeze
