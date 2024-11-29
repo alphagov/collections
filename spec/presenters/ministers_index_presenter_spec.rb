@@ -1,19 +1,9 @@
 RSpec.describe MinistersIndexPresenter do
-  let(:ministers_index) do
-    content_item = double("content item", details:, content_item_data:)
-    double("ministers_index", content_item:)
-  end
-  let(:details) do
-    {
-      "body" => "Foo",
-      "reshuffle" => nil,
-    }
-  end
   let(:content_item_data) { { "links" => {} } }
 
   describe "#cabinet_ministers" do
     it "defaults to empty array if no ordered_cabinet_ministers provided" do
-      presenter = MinistersIndexPresenter.new(ministers_index)
+      presenter = MinistersIndexPresenter.new(content_item_data)
       expect(presenter.cabinet_ministers).to eq([])
     end
 
@@ -30,7 +20,7 @@ RSpec.describe MinistersIndexPresenter do
         stubbed_minister = double("MinistersIndexPresenter::Minister")
         allow(MinistersIndexPresenter::Minister).to receive(:new).and_return(stubbed_minister)
 
-        presenter = MinistersIndexPresenter.new(ministers_index)
+        presenter = MinistersIndexPresenter.new(content_item_data)
         expect(presenter.cabinet_ministers).to eq([stubbed_minister])
       end
     end
@@ -38,7 +28,7 @@ RSpec.describe MinistersIndexPresenter do
 
   describe "#also_attends_cabinet" do
     it "defaults to empty array if no ordered_also_attends_cabinet provided" do
-      presenter = MinistersIndexPresenter.new(ministers_index)
+      presenter = MinistersIndexPresenter.new(content_item_data)
       expect(presenter.also_attends_cabinet).to eq([])
     end
 
@@ -55,7 +45,7 @@ RSpec.describe MinistersIndexPresenter do
         stubbed_minister = double("MinistersIndexPresenter::Minister")
         allow(MinistersIndexPresenter::Minister).to receive(:new).and_return(stubbed_minister)
 
-        presenter = MinistersIndexPresenter.new(ministers_index)
+        presenter = MinistersIndexPresenter.new(content_item_data)
         expect(presenter.also_attends_cabinet).to eq([stubbed_minister])
       end
     end
@@ -63,7 +53,7 @@ RSpec.describe MinistersIndexPresenter do
 
   describe "#by_organisation" do
     it "defaults to empty array if no ordered_ministerial_departments provided" do
-      presenter = MinistersIndexPresenter.new(ministers_index)
+      presenter = MinistersIndexPresenter.new(content_item_data)
       expect(presenter.by_organisation).to eq([])
     end
 
@@ -98,7 +88,7 @@ RSpec.describe MinistersIndexPresenter do
         stubbed_department = double("MinistersIndexPresenter::Department")
         allow(MinistersIndexPresenter::Department).to receive(:new).and_return(stubbed_department)
 
-        presenter = MinistersIndexPresenter.new(ministers_index)
+        presenter = MinistersIndexPresenter.new(content_item_data)
         expect(presenter.by_organisation).to eq([stubbed_department])
       end
 
@@ -108,7 +98,7 @@ RSpec.describe MinistersIndexPresenter do
         stubbed_department = double("MinistersIndexPresenter::Department", ministers: [stubbed_minister])
         allow(MinistersIndexPresenter::Department).to receive(:new).and_return(stubbed_department)
 
-        presenter = MinistersIndexPresenter.new(ministers_index)
+        presenter = MinistersIndexPresenter.new(content_item_data)
         expect(presenter.by_organisation.first.ministers).to eq([stubbed_minister])
       end
 
@@ -118,7 +108,7 @@ RSpec.describe MinistersIndexPresenter do
         it "has departments' ministers defaulting to empty array" do
           allow_any_instance_of(MinistersIndexPresenter::Department).to receive(:ministers).and_call_original
 
-          presenter = MinistersIndexPresenter.new(ministers_index)
+          presenter = MinistersIndexPresenter.new(content_item_data)
           expect(presenter.by_organisation.first.ministers).to eq([])
         end
       end
