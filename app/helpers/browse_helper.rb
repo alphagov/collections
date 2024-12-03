@@ -14,7 +14,7 @@ module BrowseHelper
             index_link: index,
             index_total: count,
             text: link[:title],
-            section: "Popular tasks",
+            section: "Most viewed",
           },
         },
       }
