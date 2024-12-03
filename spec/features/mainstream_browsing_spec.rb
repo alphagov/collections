@@ -44,7 +44,7 @@ RSpec.feature "Mainstream browsing" do
 
       visit content_item["base_path"]
       expect(page).to have_css(".browse__action-links")
-      expect(page).to have_content("Popular tasks")
+      expect(page).to have_content("Most viewed")
     end
   end
 
@@ -54,7 +54,7 @@ RSpec.feature "Mainstream browsing" do
 
     visit content_item["base_path"]
     expect(page).not_to have_css(".browse__action-links")
-    expect(page).not_to have_content("Popular tasks")
+    expect(page).not_to have_content("Most viewed")
   end
 
   it "does not render on level two browse pages" do
@@ -64,7 +64,7 @@ RSpec.feature "Mainstream browsing" do
 
     visit content_item["base_path"]
     expect(page).not_to have_css(".browse__action-links")
-    expect(page).not_to have_content("Popular tasks")
+    expect(page).not_to have_content("Most viewed")
   end
 
   it "renders the GOV.UK Chat promo" do
