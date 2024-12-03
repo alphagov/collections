@@ -2,7 +2,7 @@ class MinistersController < ApplicationController
   around_action :switch_locale
 
   def index
-    if Features.graphql_feature_enabled? || params.include?(:graphql)
+    if params.include?(:graphql)
       ministers_index = Graphql::MinistersIndex.find!(request.path)
       content_item_data = ministers_index.content_item
     else

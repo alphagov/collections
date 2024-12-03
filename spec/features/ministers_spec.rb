@@ -146,16 +146,15 @@ RSpec.feature "Ministers index page" do
     end
   end
 
-  context "with the GraphQL feature flag" do
+  context "with the GraphQL query param set" do
     let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
 
     before do
-      enable_graphql_feature_flag
       stub_publishing_api_graphql_query(
         Graphql::MinistersIndexQuery.new("/government/ministers").query,
         document,
       )
-      visit "/government/ministers"
+      visit "/government/ministers?graphql=true"
     end
 
     it_behaves_like "ministers index page"
