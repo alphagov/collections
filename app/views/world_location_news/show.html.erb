@@ -20,9 +20,8 @@
         no_margin_top: true,
       } %>
     <% end %>
-
-    <%= render "components/document_navigation_list", {
-        items: @world_location_news.ordered_featured_links,
+    <%= render "shared/featured_links", {
+      items: @world_location_news.ordered_featured_links,
     } %>
   </div>
 </div>
