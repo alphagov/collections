@@ -68,7 +68,8 @@ RSpec.feature "Worldwide taxon browsing" do
 
   def and_i_can_see_the_content_tagged_to_the_taxon
     tagged_content.each do |content|
-      expect(page).to have_link(content["title"])
+      expect(page).to have_link(content["title"], href: content["link"], class: "govuk-link")
+      expect(page.has_css?(".gem-c-document-list__item-description", text: content["description"])).to be(true)
     end
   end
 
@@ -116,8 +117,16 @@ private
 
   def tagged_content
     [
-      { title: "Hey hello" },
-      { title: "How are you" },
+      {
+        "title" => "Hey hello",
+        "link" => "hey-hello",
+        "description" => "Description for hey hello",
+      },
+      {
+        "title" => "How are you",
+        "link" => "how-are-you",
+        "description" => "Description for how are you",
+      },
     ]
   end
 end
