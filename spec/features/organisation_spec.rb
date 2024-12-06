@@ -148,18 +148,18 @@ RSpec.describe "Organisation pages" do
     it "does not display them if they are absent from content item" do
       visit "/government/organisations/prime-ministers-office-10-downing-street"
       expect(page).not_to have_css("section#featured-documents")
-      expect(page).not_to have_css(".app-c-document-navigation-list.app-c-document-navigation-list--small")
+      expect(page).not_to have_css(".govuk-link.govuk-link--no-underline.govuk-\\!-font-weight-bold.govuk-body-s.brand__color")
     end
 
     it "displays them if they are present" do
       visit "/government/organisations/attorney-generals-office"
       expect(page).to have_css("section#featured-documents")
-      expect(page).to have_css(".app-c-document-navigation-list.app-c-document-navigation-list--small .app-c-document-navigation-list__link", text: "Attorney General's guidance to the legal profession")
+      expect(page).to have_css(".gem-c-list .govuk-link.govuk-link--no-underline.govuk-\\!-font-weight-bold.govuk-body-s.brand__color", text: "Attorney General's guidance to the legal profession")
 
       visit "/government/organisations/charity-commission"
       expect(page).to have_css("section#featured-documents")
-      expect(page).to have_css(".app-c-document-navigation-list .app-c-document-navigation-list__link", text: "Find a charity")
-      expect(page).not_to have_css(".app-c-document-navigation-list.app-c-document-navigation-list--small")
+      expect(page).to have_css(".gem-c-list .govuk-link.govuk-link--no-underline.govuk-\\!-font-weight-bold", text: "Find a charity")
+      expect(page).not_to have_css(".govuk-link.govuk-link--no-underline.govuk-\\!-font-weight-bold.govuk-body-s.brand__color")
     end
   end
 
@@ -352,8 +352,8 @@ RSpec.describe "Organisation pages" do
       visit "/government/organisations/attorney-generals-office"
       expect(page).to have_css("section#high-profile-groups")
       expect(page).to have_css(".gem-c-heading", text: "High profile groups within AGO")
-      expect(page).to have_css(".app-c-document-navigation-list__link[href='/government/organisations/attorney-generals-office-1']", text: "High Profile Group 1")
-      expect(page).to have_css(".app-c-document-navigation-list__link[href='/government/organisations/attorney-generals-office-2']", text: "High Profile Group 2")
+      expect(page).to have_css(".gem-c-list .govuk-link[href='/government/organisations/attorney-generals-office-1']", text: "High Profile Group 1")
+      expect(page).to have_css(".gem-c-list .govuk-link[href='/government/organisations/attorney-generals-office-2']", text: "High Profile Group 2")
     end
 
     it "does not show section for organisations without high profile groups" do
@@ -382,9 +382,9 @@ RSpec.describe "Organisation pages" do
       visit "/government/organisations/attorney-generals-office"
       expect(page).to have_css("div#corporate-info")
       expect(page).to have_css(".gem-c-heading", text: "Corporate information")
-      expect(page).to have_css(".app-c-document-navigation-list__link[href='/government/organisations/attorney-generals-office/about/complaints-procedure']", text: "Complaints procedure")
+      expect(page).to have_css(".gem-c-list .govuk-link[href='/government/organisations/attorney-generals-office/about/complaints-procedure']", text: "Complaints procedure")
       expect(page).to have_css(".gem-c-heading", text: "Jobs and contracts")
-      expect(page).to have_css(".app-c-document-navigation-list__link[href='https://www.civilservicejobs.service.gov.uk/csr']", text: "Jobs")
+      expect(page).to have_css(".gem-c-list .govuk-link[href='https://www.civilservicejobs.service.gov.uk/csr']", text: "Jobs")
     end
 
     it "does not show corporate info pages if data is unavailable" do
