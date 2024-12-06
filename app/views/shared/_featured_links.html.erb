@@ -1,0 +1,45 @@
+<%
+  items ||= []
+  small ||= false
+  margin_bottom ||= false
+  ga4_data ||= {}
+
+  wrapper_data_attributes = { "module": "ga4-link-tracker", "ga4-track-links-only": "" } if !ga4_data.empty?
+
+  brand ||= false
+  brand_helper = GovukPublishingComponents::AppHelpers::BrandHelper.new(brand)
+
+  wrapper_classes = %w[]
+  wrapper_classes << "govuk-!-margin-bottom-6" if margin_bottom
+  wrapper_classes << brand_helper.brand_class if brand
+
+  link_classes = %w[govuk-link govuk-link--no-underline govuk-!-font-weight-bold]
+  link_classes << "govuk-body-s" if small
+  link_classes << brand_helper.color_class if brand
+
+  featured_links = items.map.with_index { |item, index|
+    ga4_link_data = ga4_data.empty? ? {} : {
+      ga4_link: {
+        event_name: "navigation",
+        type: "document list",
+        index_link: index + 1,
+        index_total: items.count,
+        section: ga4_data[:section],
+      }
+    }
+    ga4_link_data[:ga4_link] = ga4_link_data[:ga4_link].merge(ga4_data) unless ga4_data.empty?
+
+    link_to(item[:text], item[:path], {
+      data: {**item[:data_attributes] || {}}.merge(ga4_link_data),
+      class: link_classes,
+    })
+  }
+%>
+<% if items.any? %>
+  <%= tag.div(class: wrapper_classes, lang: "en", data: wrapper_data_attributes) do %>
+    <%= render "govuk_publishing_components/components/list", {
+      extra_spacing: !small,
+      items: featured_links
+    } %>
+  <% end %>
+<% end %>
