@@ -6,6 +6,8 @@
 //= require govuk_publishing_components/components/metadata
 //= require govuk_publishing_components/components/step-by-step-nav
 
+//= require govuk_web_banners/dependencies
+
 //= require support
 //= require modules/list-filter
 //= require modules/toggle-attribute
