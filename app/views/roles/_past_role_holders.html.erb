@@ -14,14 +14,15 @@
       text: t("roles.previous_holders"),
       margin_bottom: 2,
     } %>
-    <%= render "components/taxon_list", {
-      heading_level: 3,
+    <%= render "govuk_publishing_components/components/list", {
+      list_type: "number",
       items: role.past_holders.map do |rh|
-        {
-          text: rh['title'],
-          path: rh['base_path'],
-          description: "#{rh['details']['start_year']} to #{rh['details']['end_year']}",
-        }
+        sanitize(
+          "<h3 class='govuk-heading-s govuk-!-margin-bottom-1'>
+            <a href=#{rh['base_path']} class='govuk-link'>#{rh['title']}</a>
+          </h3>
+          <p class='govuk-body'>#{rh['details']['start_year']} to #{rh['details']['end_year']}</p>"
+        )
       end
     } %>
   </section>
