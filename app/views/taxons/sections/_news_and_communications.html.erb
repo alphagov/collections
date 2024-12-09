@@ -19,6 +19,7 @@
 
 <% if section[:documents].any? %>
   <%= render 'govuk_publishing_components/components/document_list',
+    disable_ga4: true,
     items: section[:documents_with_promoted],
     margin_bottom: 7
   %>
