@@ -95,13 +95,12 @@ $browse-header-background-colour: #263135;
 }
 
 .browse__govuk-chat-promo {
-  @include govuk-media-query($until: "tablet") {
-    padding-top: govuk-spacing(4);
-  }
-}
+  background-color: govuk-tint(govuk-colour("blue"), 90%);
+  padding: govuk-spacing(4) 0;
 
-.browse__govuk-chat-promo--second-level {
-  @include govuk-media-query($until: "tablet") {
-    padding-top: 0;
+  // we're using this component in an unconventional way so need to undo
+  // basic styling
+  .gem-c-chat-entry {
+    padding: 0;
   }
 }
