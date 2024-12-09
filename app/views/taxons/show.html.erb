@@ -62,7 +62,7 @@
               }
             %>
             <%= content_tag(:div, data: ga4_data) do %>
-              <%= render(partial: section[:partial_template], locals: { section: section }) %>
+              <%= render(partial: section[:partial_template], locals: { section: section, disable_ga4: true }) %>
             <% end %>
             <% if section[:see_more_link] %>
               <%

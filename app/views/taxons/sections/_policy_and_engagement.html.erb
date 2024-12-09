@@ -1,4 +1,8 @@
+<%
+  disable_ga4 ||= false
+%>
 <%= render 'govuk_publishing_components/components/document_list',
+  disable_ga4: ,
   items: section[:documents],
   margin_bottom: 7
 %>
