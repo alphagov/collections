@@ -1,5 +1,6 @@
 <%
   featured_item = section[:promoted_content].first
+  disable_ga4 ||= false
 %>
 <% if section[:documents].empty? %>
   <div class="taxon-page__featured-item taxon-page__featured-item--single">
@@ -19,6 +20,7 @@
 
 <% if section[:documents].any? %>
   <%= render 'govuk_publishing_components/components/document_list',
+    disable_ga4: ,
     items: section[:documents_with_promoted],
     margin_bottom: 7
   %>
