@@ -20,6 +20,7 @@
 <%= render "shared/browse_header", {
   margin_bottom: 8,
   two_thirds: true,
+  govuk_chat_promo: show_govuk_chat_promo?(page.base_path),
 } do %>
   <%= render "govuk_publishing_components/components/heading", {
     font_size: "xl",
@@ -49,13 +50,5 @@
         </div>
       <% end %>
     </div>
-
-    <% if show_govuk_chat_promo?(page.base_path) %>
-      <div class="govuk-grid-column-one-third-from-desktop">
-        <div class="browse__govuk-chat-promo">
-          <%= render "govuk_publishing_components/components/chat_entry" %>
-        </div>
-      </div>
-    <% end %>
   </div>
 </div>

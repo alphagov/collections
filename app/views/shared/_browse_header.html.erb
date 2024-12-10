@@ -1,23 +1,47 @@
 <%
-   two_thirds ||= false
-   margin_bottom ||= 0
-   padding_top ||= false
+  two_thirds ||= false
+  margin_bottom ||= 0
+  padding_top ||= false
+  govuk_chat_promo ||= false
 
-   header_wrapper_classes = %w(browse__header-wrapper)
-   header_wrapper_classes << "govuk-!-margin-bottom-#{margin_bottom}" if !margin_bottom.zero?
+  header_wrapper_classes = []
+  header_wrapper_classes << "govuk-!-margin-bottom-#{margin_bottom}" if !margin_bottom.zero?
 
-   header_wrapper_classes << "govuk-!-padding-top-#{padding_top}" if padding_top.is_a? Numeric
+  header_wrapper_classes << "govuk-!-padding-top-#{padding_top}" if padding_top.is_a? Numeric
 
-   column_classes = %w()
-   column_classes << (two_thirds ? "govuk-grid-column-two-thirds" : "govuk-grid-column-full")
+  column_classes = %w()
+  column_classes << (two_thirds ? "govuk-grid-column-two-thirds" : "govuk-grid-column-full")
 %>
 
 <div class="<%= header_wrapper_classes.join(' ') %>">
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="<%= column_classes.join(' ') %>">
-        <%= yield %>
+  <%#
+    .browse__header-wrapper is a separate element to enable the govuk-chat
+    promo, once this is disabled we can remove this element and add the
+    ".browse__header-wrapper" class back to the array of header_wrapper_classes
+  %>
+  <div class="browse__header-wrapper">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="<%= column_classes.join(' ') %>">
+          <%= yield %>
+        </div>
       </div>
     </div>
   </div>
+
+  <% if govuk_chat_promo %>
+    <div class="browse__govuk-chat-promo">
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <%= render "govuk_publishing_components/components/chat_entry", {
+              margin_bottom: 0,
+              heading_text: "Ask GOV.UK Chat about business and tax",
+              description_text: "Get quick, tailored answers with GOV.UK’s experimental AI chat",
+            } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
