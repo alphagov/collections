@@ -3,7 +3,7 @@ RSpec.describe WorldIndexPresenter do
     fixture = GovukSchemas::Example.find("world_index", example_name: "world_index")
     content_item = ContentItem.new(fixture)
     world_index = WorldIndex.new(content_item)
-    @world_index_presenter ||= described_class.new(world_index)
+    @world_index_presenter ||= described_class.new(world_index.content_item.content_item_data)
   end
 
   describe "#title" do
