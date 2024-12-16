@@ -4,22 +4,22 @@ class WorldIndexPresenter
   delegate :count, to: :world_locations, prefix: true
   delegate :count, to: :international_delegations, prefix: true
 
-  def initialize(world_index)
-    @world_index = world_index
+  def initialize(content_item_data)
+    @content_item_data = content_item_data
   end
 
   def title
-    @world_index.content_item.title
+    @content_item_data.fetch("title")
   end
 
   def grouped_world_locations
-    world_locations
+    @content_item_data.dig("details", "world_locations")
       .group_by { |location| location_group(location) }
       .sort
   end
 
   def international_delegations
-    details["international_delegations"]
+    @content_item_data.dig("details", "international_delegations")
   end
 
   def world_location_link(world_location)
@@ -45,10 +45,10 @@ private
   end
 
   def details
-    @world_index.content_item.details
+    @content_item_data.fetch("details")
   end
 
   def world_locations
-    details["world_locations"]
+    @content_item_data.dig("details", "world_locations")
   end
 end

@@ -1,13 +1,14 @@
 class WorldController < ApplicationController
   def index
     if Features.graphql_feature_enabled? || params.include?(:graphql)
-      index = WorldIndexGraphql.find!("/world")
-      @presented_index = WorldIndexGraphqlPresenter.new(index)
+      world_index = Graphql::WorldIndex.find!(request.path)
+      content_item_data = world_index.content_item
     else
-      index = WorldIndex.find!("/world")
-      @presented_index = WorldIndexPresenter.new(index)
+      world_index = WorldIndex.find!(request.path)
+      content_item_data = world_index.content_item.content_item_data
     end
 
-    setup_content_item_and_navigation_helpers(index)
+    @presented_index = WorldIndexPresenter.new(content_item_data)
+    setup_content_item_and_navigation_helpers(world_index)
   end
 end

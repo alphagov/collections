@@ -16,12 +16,14 @@ class Graphql::WorldIndexQuery
           ... on WorldIndex {
             title
 
-            worldLocations {
-              ...worldLocationInfo
-            }
+            details {
+              worldLocations {
+                ...worldLocationInfo
+              }
 
-            internationalDelegations {
-              ...worldLocationInfo
+              internationalDelegations {
+                ...worldLocationInfo
+              }
             }
           }
         }
