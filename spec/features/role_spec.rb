@@ -27,12 +27,12 @@ RSpec.feature "Role page" do
       let(:role_edition_data) do
         fetch_graphql_fixture("prime_minister")
           .tap do |fixture|
-            any_current = fixture["data"]["edition"]["links"]["roleAppointments"]
+            any_current = fixture["data"]["edition"]["links"]["role_appointments"]
               .any? { |ra| ra["details"]["current"] == true }
 
             unless any_current
               links = fixture["data"]["edition"]["links"]
-              links["roleAppointments"][0]["details"]["current"] = true
+              links["role_appointments"][0]["details"]["current"] = true
             end
           end
       end
@@ -46,12 +46,12 @@ RSpec.feature "Role page" do
       let(:role_edition_data) do
         fetch_graphql_fixture("prime_minister")
           .tap do |fixture|
-            current = fixture["data"]["edition"]["links"]["roleAppointments"]
+            current = fixture["data"]["edition"]["links"]["role_appointments"]
               .find { |ra| ra["details"]["current"] == true }
 
             if current
               current["details"]["current"] = false
-              current["details"]["endedOn"] = Time.zone.now
+              current["details"]["ended_on"] = Time.zone.now
             end
           end
       end
@@ -65,7 +65,7 @@ RSpec.feature "Role page" do
       let(:role_edition_data) do
         fetch_graphql_fixture("prime_minister")
           .tap do |fixture|
-            fixture["data"]["edition"]["details"]["supportsHistoricalAccounts"] = true
+            fixture["data"]["edition"]["details"]["supports_historical_accounts"] = true
           end
       end
 
@@ -78,7 +78,7 @@ RSpec.feature "Role page" do
       let(:role_edition_data) do
         fetch_graphql_fixture("prime_minister")
           .tap do |fixture|
-            fixture["data"]["edition"]["details"]["supportsHistoricalAccounts"] = false
+            fixture["data"]["edition"]["details"]["supports_historical_accounts"] = false
           end
       end
 

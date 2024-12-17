@@ -1,23 +1,23 @@
 {
   "data": {
     "edition": {
-      "basePath": "/government/ministers",
+      "base_path": "/government/ministers",
       "details": {
         "body": "Read biographies and responsibilities of <a href=\"#cabinet-ministers\" class=\"govuk-link\">Cabinet ministers</a> and all <a href=\"#ministers-by-department\" class=\"govuk-link\">ministers by department</a>, as well as the <a href=\"#whips\" class=\"govuk-link\">whips</a> who help co-ordinate parliamentary business."
       },
       "links": {
-        "orderedAlsoAttendsCabinet": [
+        "ordered_also_attends_cabinet": [
           {
-            "basePath": "/government/people/simon-hart",
+            "base_path": "/government/people/simon-hart",
             "details": {
               "image": {
-                "altText": "The Rt Hon Simon Hart MP",
+                "alt_text": "The Rt Hon Simon Hart MP",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3188/s465_Simon_Hart_960-640.jpg"
               },
-              "privyCounsellor": true
+              "privy_counsellor": true
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -25,17 +25,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "845e6a56-c0f1-11e4-8223-005056011aef",
+                        "content_id": "845e6a56-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 0,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "House of Commons",
-                            "sortOrder": 1
+                            "sort_order": 1
                           }
                         },
                         "title": "Parliamentary Secretary to the Treasury (Chief Whip)",
-                        "webUrl": "https://www.gov.uk/government/ministers/parliamentary-secretary-to-the-treasury-and-chief-whip"
+                        "web_url": "https://www.gov.uk/government/ministers/parliamentary-secretary-to-the-treasury-and-chief-whip"
                       }
                     ]
                   }
@@ -43,19 +43,19 @@
               ]
             },
             "title": "The Rt Hon Simon Hart MP",
-            "webUrl": "https://www.gov.uk/government/people/simon-hart"
+            "web_url": "https://www.gov.uk/government/people/simon-hart"
           },
           {
-            "basePath": "/government/people/john-glen",
+            "base_path": "/government/people/john-glen",
             "details": {
               "image": {
-                "altText": "The Rt Hon John Glen MP",
+                "alt_text": "The Rt Hon John Glen MP",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3123/s465_John_Glen_GOVUK.jpg"
               },
-              "privyCounsellor": true
+              "privy_counsellor": true
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -63,14 +63,14 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "845e6667-c0f1-11e4-8223-005056011aef",
+                        "content_id": "845e6667-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": "Unpaid",
+                          "role_payment_type": "Unpaid",
                           "seniority": 1,
-                          "whipOrganisation": {}
+                          "whip_organisation": {}
                         },
                         "title": "Chief Secretary to the Treasury",
-                        "webUrl": "https://www.gov.uk/government/ministers/chief-secretary-to-the-treasury"
+                        "web_url": "https://www.gov.uk/government/ministers/chief-secretary-to-the-treasury"
                       }
                     ]
                   }
@@ -78,21 +78,21 @@
               ]
             },
             "title": "The Rt Hon John Glen MP",
-            "webUrl": "https://www.gov.uk/government/people/john-glen"
+            "web_url": "https://www.gov.uk/government/people/john-glen"
           }
         ],
-        "orderedAssistantWhips": [
+        "ordered_assistant_whips": [
           {
-            "basePath": "/government/people/ruth-edwards",
+            "base_path": "/government/people/ruth-edwards",
             "details": {
               "image": {
-                "altText": "Ruth Edwards MP",
+                "alt_text": "Ruth Edwards MP",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/5345/s465_Ruth_Edwards.jpg"
               },
-              "privyCounsellor": false
+              "privy_counsellor": false
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -100,17 +100,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "c4760cc3-8145-4d5f-a0f0-a7b43fe53396",
+                        "content_id": "c4760cc3-8145-4d5f-a0f0-a7b43fe53396",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 100,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "Assistant Whips",
-                            "sortOrder": 3
+                            "sort_order": 3
                           }
                         },
                         "title": "Assistant Government Whip",
-                        "webUrl": "https://www.gov.uk/government/ministers/assistant-government-whip--27"
+                        "web_url": "https://www.gov.uk/government/ministers/assistant-government-whip--27"
                       }
                     ]
                   }
@@ -118,16 +118,16 @@
               ]
             },
             "title": "Ruth Edwards MP",
-            "webUrl": "https://www.gov.uk/government/people/ruth-edwards"
+            "web_url": "https://www.gov.uk/government/people/ruth-edwards"
           },
           {
-            "basePath": "/government/people/joy-morrissey",
+            "base_path": "/government/people/joy-morrissey",
             "details": {
               "image": null,
-              "privyCounsellor": false
+              "privy_counsellor": false
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -135,17 +135,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "bac019ff-68c6-4ea3-b997-864ec4e01f05",
+                        "content_id": "bac019ff-68c6-4ea3-b997-864ec4e01f05",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 100,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "Assistant Whips",
-                            "sortOrder": 3
+                            "sort_order": 3
                           }
                         },
                         "title": "Assistant Government Whip",
-                        "webUrl": "https://www.gov.uk/government/ministers/assistant-government-whip--31"
+                        "web_url": "https://www.gov.uk/government/ministers/assistant-government-whip--31"
                       }
                     ]
                   }
@@ -153,18 +153,18 @@
               ]
             },
             "title": "Joy Morrissey MP",
-            "webUrl": "https://www.gov.uk/government/people/joy-morrissey"
+            "web_url": "https://www.gov.uk/government/people/joy-morrissey"
           }
         ],
-        "orderedBaronessesAndLordsInWaitingWhips": [
+        "ordered_baronesses_and_lords_in_waiting_whips": [
           {
-            "basePath": "/government/people/baroness-bloomfield-of-hinton-waldrist",
+            "base_path": "/government/people/baroness-bloomfield-of-hinton-waldrist",
             "details": {
               "image": null,
-              "privyCounsellor": false
+              "privy_counsellor": false
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -172,17 +172,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "84614ae7-c0f1-11e4-8223-005056011aef",
+                        "content_id": "84614ae7-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 100,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "Baronesses and Lords in Waiting",
-                            "sortOrder": 5
+                            "sort_order": 5
                           }
                         },
                         "title": "Baroness in Waiting (Government Whip)",
-                        "webUrl": "https://www.gov.uk/government/ministers/baroness-northover"
+                        "web_url": "https://www.gov.uk/government/ministers/baroness-northover"
                       }
                     ]
                   }
@@ -190,19 +190,19 @@
               ]
             },
             "title": "Baroness Bloomfield of Hinton Waldrist",
-            "webUrl": "https://www.gov.uk/government/people/baroness-bloomfield-of-hinton-waldrist"
+            "web_url": "https://www.gov.uk/government/people/baroness-bloomfield-of-hinton-waldrist"
           },
           {
-            "basePath": "/government/people/lord-caine",
+            "base_path": "/government/people/lord-caine",
             "details": {
               "image": {
-                "altText": "Lord Caine",
+                "alt_text": "Lord Caine",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/4907/s465_Untitled_design__3___1_.png"
               },
-              "privyCounsellor": false
+              "privy_counsellor": false
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -210,14 +210,14 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "5b63ecfc-583e-4193-82ec-ddec3daaae74",
+                        "content_id": "5b63ecfc-583e-4193-82ec-ddec3daaae74",
                         "details": {
-                          "rolePaymentType": "Unpaid",
+                          "role_payment_type": "Unpaid",
                           "seniority": 100,
-                          "whipOrganisation": {}
+                          "whip_organisation": {}
                         },
                         "title": "Parliamentary Under Secretary of State ",
-                        "webUrl": "https://www.gov.uk/government/ministers/parliamentary-under-secretary-of-state--154"
+                        "web_url": "https://www.gov.uk/government/ministers/parliamentary-under-secretary-of-state--154"
                       }
                     ]
                   }
@@ -229,17 +229,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "bed8196a-257f-4389-b254-3aee0606477d",
+                        "content_id": "bed8196a-257f-4389-b254-3aee0606477d",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 100,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "Baronesses and Lords in Waiting",
-                            "sortOrder": 5
+                            "sort_order": 5
                           }
                         },
                         "title": "Lord in Waiting",
-                        "webUrl": "https://www.gov.uk/government/ministers/lord-in-waiting--4"
+                        "web_url": "https://www.gov.uk/government/ministers/lord-in-waiting--4"
                       }
                     ]
                   }
@@ -247,21 +247,21 @@
               ]
             },
             "title": "Lord Caine",
-            "webUrl": "https://www.gov.uk/government/people/lord-caine"
+            "web_url": "https://www.gov.uk/government/people/lord-caine"
           }
         ],
-        "orderedCabinetMinisters": [
+        "ordered_cabinet_ministers": [
           {
-            "basePath": "/government/people/rishi-sunak",
+            "base_path": "/government/people/rishi-sunak",
             "details": {
               "image": {
-                "altText": "The Rt Hon Rishi Sunak MP",
+                "alt_text": "The Rt Hon Rishi Sunak MP",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3339/s465_Rishi_profile.jpg"
               },
-              "privyCounsellor": true
+              "privy_counsellor": true
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -269,14 +269,14 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "845e5811-c0f1-11e4-8223-005056011aef",
+                        "content_id": "845e5811-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 0,
-                          "whipOrganisation": {}
+                          "whip_organisation": {}
                         },
                         "title": "Prime Minister",
-                        "webUrl": "https://www.gov.uk/government/ministers/prime-minister"
+                        "web_url": "https://www.gov.uk/government/ministers/prime-minister"
                       }
                     ]
                   }
@@ -288,14 +288,14 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "846a754c-c0f1-11e4-8223-005056011aef",
+                        "content_id": "846a754c-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 1,
-                          "whipOrganisation": {}
+                          "whip_organisation": {}
                         },
                         "title": "First Lord of the Treasury",
-                        "webUrl": "https://www.gov.uk/government/ministers/first-lord-of-the-treasury"
+                        "web_url": "https://www.gov.uk/government/ministers/first-lord-of-the-treasury"
                       }
                     ]
                   }
@@ -307,14 +307,14 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "041f4e4c-45f8-44b0-a7d8-ae1eb11370a2",
+                        "content_id": "041f4e4c-45f8-44b0-a7d8-ae1eb11370a2",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 3,
-                          "whipOrganisation": {}
+                          "whip_organisation": {}
                         },
                         "title": "Minister for the Union",
-                        "webUrl": "https://www.gov.uk/government/ministers/minister-for-the-union"
+                        "web_url": "https://www.gov.uk/government/ministers/minister-for-the-union"
                       }
                     ]
                   }
@@ -326,14 +326,14 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "846a7351-c0f1-11e4-8223-005056011aef",
+                        "content_id": "846a7351-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 2,
-                          "whipOrganisation": {}
+                          "whip_organisation": {}
                         },
                         "title": "Minister for the Civil Service",
-                        "webUrl": "https://www.gov.uk/government/ministers/minister-for-the-civil-service"
+                        "web_url": "https://www.gov.uk/government/ministers/minister-for-the-civil-service"
                       }
                     ]
                   }
@@ -341,19 +341,19 @@
               ]
             },
             "title": "The Rt Hon Rishi Sunak MP",
-            "webUrl": "https://www.gov.uk/government/people/rishi-sunak"
+            "web_url": "https://www.gov.uk/government/people/rishi-sunak"
           },
           {
-            "basePath": "/government/people/greg-hands",
+            "base_path": "/government/people/greg-hands",
             "details": {
               "image": {
-                "altText": "The Rt Hon Greg Hands MP",
+                "alt_text": "The Rt Hon Greg Hands MP",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/397/s465_Greg_Hands_May2015_GOVUK.jpg"
               },
-              "privyCounsellor": true
+              "privy_counsellor": true
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -361,14 +361,14 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "d7f7603e-ac5b-40cf-bafe-6765d6ffb53b",
+                        "content_id": "d7f7603e-ac5b-40cf-bafe-6765d6ffb53b",
                         "details": {
-                          "rolePaymentType": "Unpaid",
+                          "role_payment_type": "Unpaid",
                           "seniority": 29,
-                          "whipOrganisation": {}
+                          "whip_organisation": {}
                         },
                         "title": "Minister without Portfolio",
-                        "webUrl": "https://www.gov.uk/government/ministers/minister-without-portfolio--8"
+                        "web_url": "https://www.gov.uk/government/ministers/minister-without-portfolio--8"
                       }
                     ]
                   }
@@ -376,21 +376,21 @@
               ]
             },
             "title": "The Rt Hon Greg Hands MP",
-            "webUrl": "https://www.gov.uk/government/people/greg-hands"
+            "web_url": "https://www.gov.uk/government/people/greg-hands"
           }
         ],
-        "orderedHouseLordsWhips": [
+        "ordered_house_lords_whips": [
           {
-            "basePath": "/government/people/susan-williams-of-trafford",
+            "base_path": "/government/people/susan-williams-of-trafford",
             "details": {
               "image": {
-                "altText": "The Rt Hon Baroness Williams of Trafford",
+                "alt_text": "The Rt Hon Baroness Williams of Trafford",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/1552/s465_Baroness_Williams_-_Official_-_960_x_640.jpg"
               },
-              "privyCounsellor": true
+              "privy_counsellor": true
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -398,17 +398,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "84619671-c0f1-11e4-8223-005056011aef",
+                        "content_id": "84619671-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 100,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "House of Lords",
-                            "sortOrder": 4
+                            "sort_order": 4
                           }
                         },
                         "title": "Captain of the Honourable Corps of Gentlemen at Arms (Lords Chief Whip)",
-                        "webUrl": "https://www.gov.uk/government/ministers/lords-chief-whip-and-captain-of-the-honourable-corps-of-gentlemen-at-arms"
+                        "web_url": "https://www.gov.uk/government/ministers/lords-chief-whip-and-captain-of-the-honourable-corps-of-gentlemen-at-arms"
                       }
                     ]
                   }
@@ -416,19 +416,19 @@
               ]
             },
             "title": "The Rt Hon Baroness Williams of Trafford",
-            "webUrl": "https://www.gov.uk/government/people/susan-williams-of-trafford"
+            "web_url": "https://www.gov.uk/government/people/susan-williams-of-trafford"
           },
           {
-            "basePath": "/government/people/earl-of-courtown",
+            "base_path": "/government/people/earl-of-courtown",
             "details": {
               "image": {
-                "altText": "The Earl of Courtown",
+                "alt_text": "The Earl of Courtown",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2284/s465_Earl_of_Courtown.jpg"
               },
-              "privyCounsellor": false
+              "privy_counsellor": false
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -436,17 +436,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "84619907-c0f1-11e4-8223-005056011aef",
+                        "content_id": "84619907-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 100,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "House of Lords",
-                            "sortOrder": 4
+                            "sort_order": 4
                           }
                         },
                         "title": "Captain of the King's Bodyguard of the Yeomen of the Guard (Lords Deputy Chief Whip)",
-                        "webUrl": "https://www.gov.uk/government/ministers/government-deputy-chief-whip-and-captain-of-the-kings-bodyguard-of-the-yeomen-of-the-guard"
+                        "web_url": "https://www.gov.uk/government/ministers/government-deputy-chief-whip-and-captain-of-the-kings-bodyguard-of-the-yeomen-of-the-guard"
                       }
                     ]
                   }
@@ -454,21 +454,21 @@
               ]
             },
             "title": "The Earl of Courtown",
-            "webUrl": "https://www.gov.uk/government/people/earl-of-courtown"
+            "web_url": "https://www.gov.uk/government/people/earl-of-courtown"
           }
         ],
-        "orderedHouseOfCommonsWhips": [
+        "ordered_house_of_commons_whips": [
           {
-            "basePath": "/government/people/simon-hart",
+            "base_path": "/government/people/simon-hart",
             "details": {
               "image": {
-                "altText": "The Rt Hon Simon Hart MP",
+                "alt_text": "The Rt Hon Simon Hart MP",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3188/s465_Simon_Hart_960-640.jpg"
               },
-              "privyCounsellor": true
+              "privy_counsellor": true
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -476,17 +476,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "845e6a56-c0f1-11e4-8223-005056011aef",
+                        "content_id": "845e6a56-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 0,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "House of Commons",
-                            "sortOrder": 1
+                            "sort_order": 1
                           }
                         },
                         "title": "Parliamentary Secretary to the Treasury (Chief Whip)",
-                        "webUrl": "https://www.gov.uk/government/ministers/parliamentary-secretary-to-the-treasury-and-chief-whip"
+                        "web_url": "https://www.gov.uk/government/ministers/parliamentary-secretary-to-the-treasury-and-chief-whip"
                       }
                     ]
                   }
@@ -494,19 +494,19 @@
               ]
             },
             "title": "The Rt Hon Simon Hart MP",
-            "webUrl": "https://www.gov.uk/government/people/simon-hart"
+            "web_url": "https://www.gov.uk/government/people/simon-hart"
           },
           {
-            "basePath": "/government/people/marcus-jones",
+            "base_path": "/government/people/marcus-jones",
             "details": {
               "image": {
-                "altText": "The Rt Hon Marcus Jones MP",
+                "alt_text": "The Rt Hon Marcus Jones MP",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2268/s465_Marcus_Jones_-_Official_960x640.jpg"
               },
-              "privyCounsellor": true
+              "privy_counsellor": true
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -514,11 +514,11 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "84619b8e-c0f1-11e4-8223-005056011aef",
+                        "content_id": "84619b8e-c0f1-11e4-8223-005056011aef",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 100,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "House of Commons",
                             "sortOrder": 1
                           }
@@ -535,18 +535,18 @@
             "webUrl": "https://www.gov.uk/government/people/marcus-jones"
           }
         ],
-        "orderedJuniorLordsOfTheTreasuryWhips": [
+        "ordered_junior_lords_of_the_treasury_whips": [
           {
-            "basePath": "/government/people/amanda-solloway",
+            "base_path": "/government/people/amanda-solloway",
             "details": {
               "image": {
-                "altText": "Amanda Solloway MP",
+                "alt_text": "Amanda Solloway MP",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/4216/s465_amanda-solloway-cc-by-3.jpg"
               },
-              "privyCounsellor": false
+              "privy_counsellor": false
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -554,17 +554,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "4d415f0a-1c2e-4c11-9294-4838f756f509",
+                        "content_id": "4d415f0a-1c2e-4c11-9294-4838f756f509",
                         "details": {
-                          "rolePaymentType": "Paid as a whip",
+                          "role_payment_type": "Paid as a whip",
                           "seniority": 100,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "Junior Lords of the Treasury",
-                            "sortOrder": 2
+                            "sort_order": 2
                           }
                         },
                         "title": "Government Whip (Lord Commissioner of HM Treasury)",
-                        "webUrl": "https://www.gov.uk/government/ministers/government-whip-lord-commissioner-of-hm-treasury--19"
+                        "web_url": "https://www.gov.uk/government/ministers/government-whip-lord-commissioner-of-hm-treasury--19"
                       }
                     ]
                   }
@@ -576,14 +576,14 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "beb88ec6-58ea-4eec-ab83-4d5e80eabd11",
+                        "content_id": "beb88ec6-58ea-4eec-ab83-4d5e80eabd11",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 100,
-                          "whipOrganisation": {}
+                          "whip_organisation": {}
                         },
                         "title": "Parliamentary Under Secretary of State (Minister for Energy Consumers and Affordability)",
-                        "webUrl": "https://www.gov.uk/government/ministers/parliamentary-under-secretary-of-state-minister-for-energy-consumers-and-affordability"
+                        "web_url": "https://www.gov.uk/government/ministers/parliamentary-under-secretary-of-state-minister-for-energy-consumers-and-affordability"
                       }
                     ]
                   }
@@ -591,19 +591,19 @@
               ]
             },
             "title": "Amanda Solloway MP",
-            "webUrl": "https://www.gov.uk/government/people/amanda-solloway"
+            "web_url": "https://www.gov.uk/government/people/amanda-solloway"
           },
           {
-            "basePath": "/government/people/steve-double",
+            "base_path": "/government/people/steve-double",
             "details": {
               "image": {
-                "altText": "Steve Double MP",
+                "alt_text": "Steve Double MP",
                 "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/4847/s465_steve-double-960x640.jpg"
               },
-              "privyCounsellor": false
+              "privy_counsellor": false
             },
             "links": {
-              "roleAppointments": [
+              "role_appointments": [
                 {
                   "details": {
                     "current": true
@@ -611,17 +611,17 @@
                   "links": {
                     "role": [
                       {
-                        "contentId": "b5775e81-f891-4cef-8431-05e23e6339e4",
+                        "content_id": "b5775e81-f891-4cef-8431-05e23e6339e4",
                         "details": {
-                          "rolePaymentType": null,
+                          "role_payment_type": null,
                           "seniority": 100,
-                          "whipOrganisation": {
+                          "whip_organisation": {
                             "label": "Junior Lords of the Treasury",
-                            "sortOrder": 2
+                            "sort_order": 2
                           }
                         },
                         "title": "Government Whip (Lord Commissioner of HM Treasury)",
-                        "webUrl": "https://www.gov.uk/government/ministers/government-whip-lord-commissioner-of-hm-treasury--17"
+                        "web_url": "https://www.gov.uk/government/ministers/government-whip-lord-commissioner-of-hm-treasury--17"
                       }
                     ]
                   }
@@ -629,31 +629,31 @@
               ]
             },
             "title": "Steve Double MP",
-            "webUrl": "https://www.gov.uk/government/people/steve-double"
+            "web_url": "https://www.gov.uk/government/people/steve-double"
           }
         ],
-        "orderedMinisterialDepartments": [
+        "ordered_ministerial_departments": [
           {
             "details": {
               "brand": "cabinet-office",
               "logo": {
                 "crest": "single-identity",
-                "formattedTitle": "Cabinet Office"
+                "formatted_title": "Cabinet Office"
               }
             },
             "links": {
-              "orderedMinisters": [
+              "ordered_ministers": [
                 {
-                  "basePath": "/government/people/rishi-sunak",
+                  "base_path": "/government/people/rishi-sunak",
                   "details": {
                     "image": {
-                      "altText": "The Rt Hon Rishi Sunak MP",
+                      "alt_text": "The Rt Hon Rishi Sunak MP",
                       "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3339/s465_Rishi_profile.jpg"
                     },
-                    "privyCounsellor": true
+                    "privy_counsellor": true
                   },
                   "links": {
-                    "roleAppointments": [
+                    "role_appointments": [
                       {
                         "details": {
                           "current": true
@@ -661,14 +661,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "845e5811-c0f1-11e4-8223-005056011aef",
+                              "content_id": "845e5811-c0f1-11e4-8223-005056011aef",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 0,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Prime Minister",
-                              "webUrl": "https://www.gov.uk/government/ministers/prime-minister"
+                              "web_url": "https://www.gov.uk/government/ministers/prime-minister"
                             }
                           ]
                         }
@@ -680,14 +680,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "846a754c-c0f1-11e4-8223-005056011aef",
+                              "content_id": "846a754c-c0f1-11e4-8223-005056011aef",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 1,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "First Lord of the Treasury",
-                              "webUrl": "https://www.gov.uk/government/ministers/first-lord-of-the-treasury"
+                              "web_url": "https://www.gov.uk/government/ministers/first-lord-of-the-treasury"
                             }
                           ]
                         }
@@ -699,14 +699,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "041f4e4c-45f8-44b0-a7d8-ae1eb11370a2",
+                              "content_id": "041f4e4c-45f8-44b0-a7d8-ae1eb11370a2",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 3,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Minister for the Union",
-                              "webUrl": "https://www.gov.uk/government/ministers/minister-for-the-union"
+                              "web_url": "https://www.gov.uk/government/ministers/minister-for-the-union"
                             }
                           ]
                         }
@@ -718,14 +718,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "846a7351-c0f1-11e4-8223-005056011aef",
+                              "content_id": "846a7351-c0f1-11e4-8223-005056011aef",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 2,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Minister for the Civil Service",
-                              "webUrl": "https://www.gov.uk/government/ministers/minister-for-the-civil-service"
+                              "web_url": "https://www.gov.uk/government/ministers/minister-for-the-civil-service"
                             }
                           ]
                         }
@@ -733,19 +733,19 @@
                     ]
                   },
                   "title": "The Rt Hon Rishi Sunak MP",
-                  "webUrl": "https://www.gov.uk/government/people/rishi-sunak"
+                  "web_url": "https://www.gov.uk/government/people/rishi-sunak"
                 },
                 {
-                  "basePath": "/government/people/greg-hands",
+                  "base_path": "/government/people/greg-hands",
                   "details": {
                     "image": {
-                      "altText": "The Rt Hon Greg Hands MP",
+                      "alt_text": "The Rt Hon Greg Hands MP",
                       "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/397/s465_Greg_Hands_May2015_GOVUK.jpg"
                     },
-                    "privyCounsellor": true
+                    "privy_counsellor": true
                   },
                   "links": {
-                    "roleAppointments": [
+                    "role_appointments": [
                       {
                         "details": {
                           "current": true
@@ -753,14 +753,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "d7f7603e-ac5b-40cf-bafe-6765d6ffb53b",
+                              "content_id": "d7f7603e-ac5b-40cf-bafe-6765d6ffb53b",
                               "details": {
-                                "rolePaymentType": "Unpaid",
+                                "role_payment_type": "Unpaid",
                                 "seniority": 29,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Minister without Portfolio",
-                              "webUrl": "https://www.gov.uk/government/ministers/minister-without-portfolio--8"
+                              "web_url": "https://www.gov.uk/government/ministers/minister-without-portfolio--8"
                             }
                           ]
                         }
@@ -768,19 +768,19 @@
                     ]
                   },
                   "title": "The Rt Hon Greg Hands MP",
-                  "webUrl": "https://www.gov.uk/government/people/greg-hands"
+                  "web_url": "https://www.gov.uk/government/people/greg-hands"
                 },
                 {
-                  "basePath": "/government/people/nusrat-ghani",
+                  "base_path": "/government/people/nusrat-ghani",
                   "details": {
                     "image": {
-                      "altText": "Nusrat Ghani MP",
+                      "alt_text": "Nusrat Ghani MP",
                       "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3346/s465_nusrat-ghani.jpg"
                     },
-                    "privyCounsellor": false
+                    "privy_counsellor": false
                   },
                   "links": {
-                    "roleAppointments": [
+                    "role_appointments": [
                       {
                         "details": {
                           "current": true
@@ -788,14 +788,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "e901f3a3-b51c-4491-8667-6605155a3fcd",
+                              "content_id": "e901f3a3-b51c-4491-8667-6605155a3fcd",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 100,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Minister of State at the Department for Business and Trade",
-                              "webUrl": "https://www.gov.uk/government/ministers/minister-of-state--155"
+                              "web_url": "https://www.gov.uk/government/ministers/minister-of-state--155"
                             }
                           ]
                         }
@@ -807,14 +807,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "949c0326-a1ca-4fcd-8d0b-8d205ea8cbad",
+                              "content_id": "949c0326-a1ca-4fcd-8d0b-8d205ea8cbad",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 100,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Minister of State for the Investment Security Unit",
-                              "webUrl": "https://www.gov.uk/government/ministers/minister-of-state--156"
+                              "web_url": "https://www.gov.uk/government/ministers/minister-of-state--156"
                             }
                           ]
                         }
@@ -822,48 +822,48 @@
                     ]
                   },
                   "title": "Nusrat Ghani MP",
-                  "webUrl": "https://www.gov.uk/government/people/nusrat-ghani"
+                  "web_url": "https://www.gov.uk/government/people/nusrat-ghani"
                 }
               ],
-              "orderedRoles": [
+              "ordered_roles": [
                 {
-                  "contentId": "845e5811-c0f1-11e4-8223-005056011aef"
+                  "content_id": "845e5811-c0f1-11e4-8223-005056011aef"
                 },
                 {
-                  "contentId": "846a7351-c0f1-11e4-8223-005056011aef"
+                  "content_id": "846a7351-c0f1-11e4-8223-005056011aef"
                 },
                 {
-                  "contentId": "846a754c-c0f1-11e4-8223-005056011aef"
+                  "content_id": "846a754c-c0f1-11e4-8223-005056011aef"
                 },
                 {
-                  "contentId": "041f4e4c-45f8-44b0-a7d8-ae1eb11370a2"
+                  "content_id": "041f4e4c-45f8-44b0-a7d8-ae1eb11370a2"
                 }
               ]
             },
             "title": "Cabinet Office",
-            "webUrl": "https://www.gov.uk/government/organisations/cabinet-office"
+            "web_url": "https://www.gov.uk/government/organisations/cabinet-office"
           },
           {
             "details": {
               "brand": "department-for-business-and-trade",
               "logo": {
                 "crest": "dbt",
-                "formattedTitle": "Department for<br/>Business &amp; Trade"
+                "formatted_title": "Department for<br/>Business &amp; Trade"
               }
             },
             "links": {
-              "orderedMinisters": [
+              "ordered_ministers": [
                 {
-                  "basePath": "/government/people/kemi-badenoch",
+                  "base_path": "/government/people/kemi-badenoch",
                   "details": {
                     "image": {
-                      "altText": "The Rt Hon Kemi Badenoch MP",
+                      "alt_text": "The Rt Hon Kemi Badenoch MP",
                       "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/4010/s465_Kemi_gov.uk.png"
                     },
-                    "privyCounsellor": true
+                    "privy_counsellor": true
                   },
                   "links": {
-                    "roleAppointments": [
+                    "role_appointments": [
                       {
                         "details": {
                           "current": true
@@ -871,14 +871,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "5cb74a2c-7e9f-444a-8347-d944cc05b606",
+                              "content_id": "5cb74a2c-7e9f-444a-8347-d944cc05b606",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 21,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Secretary of State for Business and Trade",
-                              "webUrl": "https://www.gov.uk/government/ministers/secretary-of-state--2"
+                              "web_url": "https://www.gov.uk/government/ministers/secretary-of-state--2"
                             }
                           ]
                         }
@@ -890,14 +890,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "de3d5e37-ff1c-4111-b029-fc926da764e9",
+                              "content_id": "de3d5e37-ff1c-4111-b029-fc926da764e9",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 22,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "President of the Board of Trade",
-                              "webUrl": "https://www.gov.uk/government/ministers/president-of-the-board-of-trade"
+                              "web_url": "https://www.gov.uk/government/ministers/president-of-the-board-of-trade"
                             }
                           ]
                         }
@@ -909,14 +909,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "84753907-c0f1-11e4-8223-005056011aef",
+                              "content_id": "84753907-c0f1-11e4-8223-005056011aef",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 23,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Minister for Women and Equalities",
-                              "webUrl": "https://www.gov.uk/government/ministers/minister-for-women-and-equalities--3"
+                              "web_url": "https://www.gov.uk/government/ministers/minister-for-women-and-equalities--3"
                             }
                           ]
                         }
@@ -924,19 +924,19 @@
                     ]
                   },
                   "title": "The Rt Hon Kemi Badenoch MP",
-                  "webUrl": "https://www.gov.uk/government/people/kemi-badenoch"
+                  "web_url": "https://www.gov.uk/government/people/kemi-badenoch"
                 },
                 {
-                  "basePath": "/government/people/nusrat-ghani",
+                  "base_path": "/government/people/nusrat-ghani",
                   "details": {
                     "image": {
-                      "altText": "Nusrat Ghani MP",
+                      "alt_text": "Nusrat Ghani MP",
                       "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3346/s465_nusrat-ghani.jpg"
                     },
-                    "privyCounsellor": false
+                    "privy_counsellor": false
                   },
                   "links": {
-                    "roleAppointments": [
+                    "role_appointments": [
                       {
                         "details": {
                           "current": true
@@ -944,14 +944,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "e901f3a3-b51c-4491-8667-6605155a3fcd",
+                              "content_id": "e901f3a3-b51c-4491-8667-6605155a3fcd",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 100,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Minister of State at the Department for Business and Trade",
-                              "webUrl": "https://www.gov.uk/government/ministers/minister-of-state--155"
+                              "web_url": "https://www.gov.uk/government/ministers/minister-of-state--155"
                             }
                           ]
                         }
@@ -963,14 +963,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "949c0326-a1ca-4fcd-8d0b-8d205ea8cbad",
+                              "content_id": "949c0326-a1ca-4fcd-8d0b-8d205ea8cbad",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 100,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Minister of State for the Investment Security Unit",
-                              "webUrl": "https://www.gov.uk/government/ministers/minister-of-state--156"
+                              "web_url": "https://www.gov.uk/government/ministers/minister-of-state--156"
                             }
                           ]
                         }
@@ -978,42 +978,42 @@
                     ]
                   },
                   "title": "Nusrat Ghani MP",
-                  "webUrl": "https://www.gov.uk/government/people/nusrat-ghani"
+                  "web_url": "https://www.gov.uk/government/people/nusrat-ghani"
                 }
               ],
-              "orderedRoles": [
+              "ordered_roles": [
                 {
-                  "contentId": "5cb74a2c-7e9f-444a-8347-d944cc05b606"
+                  "content_id": "5cb74a2c-7e9f-444a-8347-d944cc05b606"
                 },
                 {
-                  "contentId": "de3d5e37-ff1c-4111-b029-fc926da764e9"
+                  "content_id": "de3d5e37-ff1c-4111-b029-fc926da764e9"
                 }
               ]
             },
             "title": "Department for Business and Trade",
-            "webUrl": "https://www.gov.uk/government/organisations/department-for-business-and-trade"
+            "web_url": "https://www.gov.uk/government/organisations/department-for-business-and-trade"
           },
           {
             "details": {
               "brand": "department-for-business-and-trade",
               "logo": {
                 "crest": "dbt",
-                "formattedTitle": "UK Export <br/>Finance"
+                "formatted_title": "UK Export <br/>Finance"
               }
             },
             "links": {
-              "orderedMinisters": [
+              "ordered_ministers": [
                 {
-                  "basePath": "/government/people/kemi-badenoch",
+                  "base_path": "/government/people/kemi-badenoch",
                   "details": {
                     "image": {
-                      "altText": "The Rt Hon Kemi Badenoch MP",
+                      "alt_text": "The Rt Hon Kemi Badenoch MP",
                       "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/4010/s465_Kemi_gov.uk.png"
                     },
-                    "privyCounsellor": true
+                    "privy_counsellor": true
                   },
                   "links": {
-                    "roleAppointments": [
+                    "role_appointments": [
                       {
                         "details": {
                           "current": true
@@ -1021,14 +1021,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "5cb74a2c-7e9f-444a-8347-d944cc05b606",
+                              "content_id": "5cb74a2c-7e9f-444a-8347-d944cc05b606",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 21,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Secretary of State for Business and Trade",
-                              "webUrl": "https://www.gov.uk/government/ministers/secretary-of-state--2"
+                              "web_url": "https://www.gov.uk/government/ministers/secretary-of-state--2"
                             }
                           ]
                         }
@@ -1040,14 +1040,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "de3d5e37-ff1c-4111-b029-fc926da764e9",
+                              "content_id": "de3d5e37-ff1c-4111-b029-fc926da764e9",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 22,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "President of the Board of Trade",
-                              "webUrl": "https://www.gov.uk/government/ministers/president-of-the-board-of-trade"
+                              "web_url": "https://www.gov.uk/government/ministers/president-of-the-board-of-trade"
                             }
                           ]
                         }
@@ -1059,14 +1059,14 @@
                         "links": {
                           "role": [
                             {
-                              "contentId": "84753907-c0f1-11e4-8223-005056011aef",
+                              "content_id": "84753907-c0f1-11e4-8223-005056011aef",
                               "details": {
-                                "rolePaymentType": null,
+                                "role_payment_type": null,
                                 "seniority": 23,
-                                "whipOrganisation": {}
+                                "whip_organisation": {}
                               },
                               "title": "Minister for Women and Equalities",
-                              "webUrl": "https://www.gov.uk/government/ministers/minister-for-women-and-equalities--3"
+                              "web_url": "https://www.gov.uk/government/ministers/minister-for-women-and-equalities--3"
                             }
                           ]
                         }
@@ -1074,50 +1074,50 @@
                     ]
                   },
                   "title": "The Rt Hon Kemi Badenoch MP",
-                  "webUrl": "https://www.gov.uk/government/people/kemi-badenoch"
+                  "web_url": "https://www.gov.uk/government/people/kemi-badenoch"
                 }
               ],
-              "orderedRoles": [
+              "ordered_roles": [
                 {
-                  "contentId": "845e61e9-c0f1-11e4-8223-005056011aef"
+                  "content_id": "845e61e9-c0f1-11e4-8223-005056011aef"
                 },
                 {
-                  "contentId": "846a61ea-c0f1-11e4-8223-005056011aef"
+                  "content_id": "846a61ea-c0f1-11e4-8223-005056011aef"
                 },
                 {
-                  "contentId": "30371bc0-0c68-4146-b5a1-2ba89b15516c"
+                  "content_id": "30371bc0-0c68-4146-b5a1-2ba89b15516c"
                 },
                 {
-                  "contentId": "de3d5e37-ff1c-4111-b029-fc926da764e9"
+                  "content_id": "de3d5e37-ff1c-4111-b029-fc926da764e9"
                 }
               ]
             },
             "title": "UK Export Finance",
-            "webUrl": "https://www.gov.uk/government/organisations/uk-export-finance"
+            "web_url": "https://www.gov.uk/government/organisations/uk-export-finance"
           },
           {
             "details": {
               "brand": "office-of-the-advocate-general-for-scotland",
               "logo": {
                 "crest": "so",
-                "formattedTitle": "Office of the<br/>Advocate General<br/>for Scotland"
+                "formatted_title": "Office of the<br/>Advocate General<br/>for Scotland"
               }
             },
             "links": {
-              "orderedRoles": [
+              "ordered_roles": [
                 {
-                  "contentId": "845e8426-c0f1-11e4-8223-005056011aef"
+                  "content_id": "845e8426-c0f1-11e4-8223-005056011aef"
                 },
                 {
-                  "contentId": "8461c3df-c0f1-11e4-8223-005056011aef"
+                  "content_id": "8461c3df-c0f1-11e4-8223-005056011aef"
                 },
                 {
-                  "contentId": "8461ca79-c0f1-11e4-8223-005056011aef"
+                  "content_id": "8461ca79-c0f1-11e4-8223-005056011aef"
                 }
               ]
             },
             "title": "Office of the Advocate General for Scotland",
-            "webUrl": "https://www.gov.uk/government/organisations/office-of-the-advocate-general-for-scotland"
+            "web_url": "https://www.gov.uk/government/organisations/office-of-the-advocate-general-for-scotland"
           }
         ]
       }

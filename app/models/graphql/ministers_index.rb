@@ -10,7 +10,6 @@ class Graphql::MinistersIndex
 
     edition = Services.publishing_api.graphql_query(query)
       .dig("data", "edition")
-      .deep_transform_keys(&:underscore)
 
     new(edition)
   end

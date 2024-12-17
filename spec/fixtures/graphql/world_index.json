@@ -3,7 +3,7 @@
     "edition": {
       "title": "Help and services around the world",
       "details": {
-        "worldLocations": [
+        "world_locations": [
           {
             "active": true,
             "name": "Afghanistan",
@@ -1150,7 +1150,7 @@
             "slug": "zimbabwe"
           }
         ],
-        "internationalDelegations": [
+        "international_delegations": [
           {
             "active": true,
             "name": "UK and the Commonwealth",

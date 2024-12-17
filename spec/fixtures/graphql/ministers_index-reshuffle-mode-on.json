@@ -1,7 +1,7 @@
 {
   "data": {
     "edition": {
-      "basePath": "/government/ministers",
+      "base_path": "/government/ministers",
       "links": {},
       "details": {
         "reshuffle": {

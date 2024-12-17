@@ -6,59 +6,59 @@ class Graphql::MinistersIndexQuery
   def query
     <<-QUERY
       {
-        edition(basePath: "#{@base_path}") {
+        edition(base_path: "#{@base_path}") {
           ... on MinistersIndex {
-            basePath
+            base_path
 
             links {
-              orderedCabinetMinisters {
+              ordered_cabinet_ministers {
                 ...basePersonInfo
               }
 
-              orderedAlsoAttendsCabinet {
+              ordered_also_attends_cabinet {
                 ...basePersonInfo
               }
 
-              orderedAssistantWhips {
+              ordered_assistant_whips {
                 ...basePersonInfo
               }
 
-              orderedBaronessesAndLordsInWaitingWhips {
+              ordered_baronesses_and_lords_in_waiting_whips {
                 ...basePersonInfo
               }
 
-              orderedHouseLordsWhips {
+              ordered_house_lords_whips {
                 ...basePersonInfo
               }
 
-              orderedHouseOfCommonsWhips {
+              ordered_house_of_commons_whips {
                 ...basePersonInfo
               }
 
-              orderedJuniorLordsOfTheTreasuryWhips {
+              ordered_junior_lords_of_the_treasury_whips {
                 ...basePersonInfo
               }
 
-              orderedMinisterialDepartments {
+              ordered_ministerial_departments {
                 title
-                webUrl
+                web_url
 
                 details {
                   brand
 
                   logo {
                     crest
-                    formattedTitle
+                    formatted_title
                   }
                 }
 
                 links {
-                  orderedMinisters {
+                  ordered_ministers {
                     ...basePersonInfo
                   }
 
-                  orderedRoles {
-                    contentId
+                  ordered_roles {
+                    content_id
                   }
                 }
               }
@@ -69,36 +69,36 @@ class Graphql::MinistersIndexQuery
 
       fragment basePersonInfo on MinistersIndexPerson {
         title
-        basePath
-        webUrl
+        base_path
+        web_url
 
         details {
-          privyCounsellor
+          privy_counsellor
 
           image {
             url
-            altText
+            alt_text
           }
         }
 
         links {
-          roleAppointments {
+          role_appointments {
             details {
               current
             }
 
             links {
               role {
-                contentId
+                content_id
                 title
-                webUrl
+                web_url
 
                 details {
-                  rolePaymentType
+                  role_payment_type
                   seniority
-                  whipOrganisation {
+                  whip_organisation {
                     label
-                    sortOrder
+                    sort_order
                   }
                 }
               }
