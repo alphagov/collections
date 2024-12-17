@@ -17,10 +17,11 @@
         %>
         <% presented_taxon.accordion_content.each_with_index do |taxon, index| %>
           <% contents = capture do %>
-            <%= render 'components/taxon_list', {
-                heading_level: 3,
-                items: taxon_list_params(taxon)
-             } %>
+            <%= render "govuk_publishing_components/components/document_list", {
+              remove_top_border: true,
+              disable_ga4: true,
+              items: taxon_list_params(taxon)
+            } %>
           <% end %>
           <%
             id = taxon.base_path || taxon.title.downcase.tr(" ","-")

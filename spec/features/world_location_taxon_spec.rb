@@ -25,6 +25,24 @@ RSpec.feature "World location taxon page" do
     expect(page).to have_selector("a[href='#{email_url}']", text: "Get emails for this topic")
   end
 
+  scenario "contains a link and description for each search result" do
+    world_usa = world_usa_taxon(base_path:, phase: "live")
+    world_usa_news_events = world_usa_news_events_taxon(base_path: child_taxon_base_path)
+
+    stub_content_store_has_item(base_path, world_usa)
+    stub_content_store_has_item(child_taxon_base_path, world_usa_news_events)
+    stub_content_for_taxon(taxon.content_id, search_results) # For the "general information" taxon
+    stub_most_popular_content_for_taxon(taxon.content_id, search_results, filter_content_store_document_type: nil)
+    stub_content_for_taxon(child_taxon.content_id, search_results)
+
+    visit base_path
+
+    search_results.each do |content|
+      expect(page).to have_link(content["title"], href: content["link"], class: "govuk-link")
+      expect(page.has_css?(".gem-c-document-list__item-description", text: content["description"])).to be(true)
+    end
+  end
+
 private
 
   def search_results
