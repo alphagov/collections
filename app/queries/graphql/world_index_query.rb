@@ -12,16 +12,16 @@ class Graphql::WorldIndexQuery
       }
 
       {
-        edition(basePath: "#{@base_path}") {
+        edition(base_path: "#{@base_path}") {
           ... on WorldIndex {
             title
 
             details {
-              worldLocations {
+              world_locations {
                 ...worldLocationInfo
               }
 
-              internationalDelegations {
+              international_delegations {
                 ...worldLocationInfo
               }
             }

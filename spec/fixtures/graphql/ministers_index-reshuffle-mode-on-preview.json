@@ -1,7 +1,7 @@
 {
   "data": {
     "edition": {
-      "basePath": "/government/ministers",
+      "base_path": "/government/ministers",
       "details": {
         "body": "Read biographies and responsibilities"
       },

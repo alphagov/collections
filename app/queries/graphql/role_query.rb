@@ -6,33 +6,33 @@ class Graphql::RoleQuery
   def query
     <<-QUERY
       {
-        edition(basePath: "#{@base_path}") {
+        edition(base_path: "#{@base_path}") {
           ... on Role {
-            basePath
+            base_path
             locale
             title
 
             details {
               body
-              supportsHistoricalAccounts
+              supports_historical_accounts
             }
 
             links {
-              availableTranslations {
-                basePath
+              available_translations {
+                base_path
                 locale
               }
 
-              roleAppointments {
+              role_appointments {
                 details {
                   current
-                  endedOn
-                  startedOn
+                  ended_on
+                  started_on
                 }
 
                 links {
                   person {
-                    basePath
+                    base_path
                     title
 
                     details {
@@ -42,8 +42,8 @@ class Graphql::RoleQuery
                 }
               }
 
-              orderedParentOrganisations {
-                basePath
+              ordered_parent_organisations {
+                base_path
                 title
               }
             }
