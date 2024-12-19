@@ -8,10 +8,12 @@
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <%= render "govuk_publishing_components/components/title", {
-          title: raw(title),
+        <%= render "govuk_publishing_components/components/heading", {
+          text: title,
+          heading_level: 1,
+          margin_bottom: 8,
           inverse: true,
-          margin_top: 0
+          font_size: "xl",
         } %>
       </div>
     </div>

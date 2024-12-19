@@ -8,7 +8,13 @@
 <body>
 <div id="wrapper">
   <main class="govspeak">
-    <%= render "govuk_publishing_components/components/title", title: "collections" %>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "collections",
+      heading_level: 1,
+      margin_bottom: 4,
+      font_size: "xl",
+      padding: true,
+    } %>
     <% html = capture do %>
       <p><%= t('development.header') %>.</p>
       <table>
