@@ -19,10 +19,9 @@
   }
 
   .world-locations-group__letter {
-    @include govuk-font(80);
-    font-weight: bold;
     text-indent: -4px;
     margin: 0;
+    @include govuk-font(80, $weight: bold);
   }
 
   .world_locations-group__item {
