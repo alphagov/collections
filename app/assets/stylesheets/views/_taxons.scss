@@ -26,8 +26,8 @@
 }
 
 .taxon-page__section-description {
-  @include govuk-font(19);
   margin-top: govuk-spacing(2);
+  @include govuk-font(19);
 }
 
 .taxon-page__section-group {
@@ -43,8 +43,8 @@
 }
 
 .taxon-page__featured-item {
-  @include govuk-clearfix;
   margin-top: govuk-spacing(4);
+  @include govuk-clearfix;
 
   &--single {
     min-width: 330px;
@@ -95,8 +95,8 @@
 }
 
 .taxon-page__link-list-item {
-  @include govuk-font(19);
   margin-bottom: govuk-spacing(2);
+  @include govuk-font(19);
 
   @include govuk-media-query($from: tablet) {
     margin-bottom: 5px;

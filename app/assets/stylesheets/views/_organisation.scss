@@ -51,8 +51,8 @@
 }
 
 .organisation__parent-organisations {
-  @include govuk-font(19);
   margin-top: govuk-spacing(3);
+  @include govuk-font(19);
 }
 
 .organisation__contact-section--border-top {
@@ -69,12 +69,12 @@
 }
 
 .organisation__no10-banner {
-  @include govuk-font(19);
   padding-top: 140px;
   background-image: url("prime-ministers-office-header.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   text-align: center;
+  @include govuk-font(19);
 }
 
 .organisation__no10-yt-link {
