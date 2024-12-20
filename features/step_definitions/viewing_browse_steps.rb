@@ -112,6 +112,7 @@ end
 
 def add_browse_pages
   stub_content_store_has_item "/browse",
+                              base_path: "/browse",
                               links: {
                                 top_level_browse_pages:,
                               }

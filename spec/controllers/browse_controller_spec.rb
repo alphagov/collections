@@ -7,6 +7,7 @@ RSpec.describe BrowseController do
     before do
       stub_content_store_has_item(
         "/browse",
+        base_path: "/browse",
         links: {
           top_level_browse_pages:,
         },

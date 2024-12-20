@@ -96,6 +96,7 @@ private
 
   def organisations_content_hash
     @content_hash = {
+      base_path: "/government/organisations",
       title: "Departments, agencies and public bodies",
       details: {
         ordered_ministerial_departments: [
