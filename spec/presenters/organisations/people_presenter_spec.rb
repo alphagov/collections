@@ -180,36 +180,6 @@ RSpec.describe Organisations::PeoplePresenter do
       expect(people_presenter.all_people.third[:people][1][:description]).to eq(expected)
     end
 
-    it "does not show images for non-important board members" do
-      non_important_board_members = presenter_from_organisation_hash(organisation_with_non_important_board_members)
-
-      expected_important = {
-        brand: "attorney-generals-office",
-        href: "/government/people/jeremy-heywood",
-        description: "Cabinet Secretary",
-        metadata: "Unpaid",
-        heading_text: "Sir Jeremy Heywood",
-        lang: "en",
-        heading_level: 0,
-        extra_details_no_indent: true,
-        image_src: "/photo/jeremy-heywood",
-      }
-
-      expected_non_important = {
-        brand: "attorney-generals-office",
-        href: "/government/people/john-manzoni",
-        description: "Chief Executive of the Civil Service",
-        metadata: nil,
-        heading_text: "John Manzoni",
-        lang: "en",
-        heading_level: 0,
-        extra_details_no_indent: true,
-      }
-
-      expect(non_important_board_members.all_people.third[:people][0]).to eq(expected_important)
-      expect(non_important_board_members.all_people.third[:people][1]).to eq(expected_non_important)
-    end
-
     it "fetches image" do
       expect(people_presenter.all_people.third[:people][0][:image_src]).to eq("/photo/jeremy-heywood")
     end

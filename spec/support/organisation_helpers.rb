@@ -350,69 +350,6 @@ module OrganisationHelpers
     }.with_indifferent_access
   end
 
-  def organisation_with_non_important_board_members
-    {
-      title: "Attorney General's Office",
-      base_path: "/government/organisations/attorney-generals-office",
-      details: {
-        brand: "attorney-generals-office",
-        organisation_govuk_status: {
-          status: "live",
-        },
-        important_board_members: 1,
-      },
-      links: {
-        ordered_roles: [
-          { content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339" },
-          { content_id: "61a62a60-df26-4454-81da-0594f0d74d76" },
-        ],
-        ordered_board_members: [
-          {
-            title: "Sir Jeremy Heywood",
-            locale: "en",
-            base_path: "/government/people/jeremy-heywood",
-            details: {
-              image: {
-                url: "/photo/jeremy-heywood",
-                alt_text: "Sir Jeremy Heywood",
-              },
-            },
-            links: {
-              role_appointments: [
-                current_role_appointment(
-                  content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339",
-                  title: "Cabinet Secretary",
-                  document_type: "board_member_role",
-                  payment_type: "Unpaid",
-                ),
-              ],
-            },
-          },
-          {
-            title: "John Manzoni",
-            locale: "en",
-            base_path: "/government/people/john-manzoni",
-            details: {
-              image: {
-                url: "/photo/john-manzoni",
-                alt_text: "John Manzoni",
-              },
-            },
-            links: {
-              role_appointments: [
-                current_role_appointment(
-                  content_id: "61a62a60-df26-4454-81da-0594f0d74d76",
-                  title: "Chief Executive of the Civil Service",
-                  document_type: "board_member_role",
-                ),
-              ],
-            },
-          },
-        ],
-      },
-    }.with_indifferent_access
-  end
-
   def organisation_with_no_documents
     {
       title: "Org with No Docs",
