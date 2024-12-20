@@ -7,7 +7,7 @@
     unless (!content_item_h["locale"])
       lang = content_item_h["locale"]
     end
-    unless content_item_h["base_path"].include? "/browse"
+    if content_item_h["base_path"].present? && content_item_h["base_path"].include? "/browse"
       call_recruitment_banner_partial = true
     end
   end
