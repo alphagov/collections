@@ -7,9 +7,6 @@
     unless (!content_item_h["locale"])
       lang = content_item_h["locale"]
     end
-    unless content_item_h["base_path"].include? "/browse"
-      call_recruitment_banner_partial = true
-    end
   end
 %>
 
@@ -21,9 +18,6 @@
     <% else %>
       <%= render 'breadcrumbs' %>
     <% end %>
-  <% end %>
-  <% if call_recruitment_banner_partial %>
-    <%= render "govuk_web_banners/recruitment_banner" %>
   <% end %>
   <%=
     content_tag(:main,
