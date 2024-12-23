@@ -164,7 +164,7 @@ GEM
       rainbow
       rubocop (>= 1)
       smart_properties
-    erubi (1.13.0)
+    erubi (1.13.1)
     execjs (2.9.1)
     expgen (0.1.1)
       parslet
@@ -238,9 +238,11 @@ GEM
       capybara (>= 3.36)
       puma
       selenium-webdriver (>= 4.0)
-    govuk_web_banners (0.2.0)
+    govuk_web_banners (0.3.0)
+      govuk_app_config
       govuk_publishing_components
       rails (>= 7)
+      redis
     hashdiff (1.1.1)
     highline (3.0.1)
     htmlentities (4.3.4)
@@ -636,6 +638,10 @@ GEM
     rake (13.2.1)
     rdoc (6.10.0)
       psych (>= 4.0.0)
+    redis (5.3.0)
+      redis-client (>= 0.22.0)
+    redis-client (0.23.0)
+      connection_pool
     regexp_parser (2.9.3)
     reline (0.6.0)
       io-console (~> 0.5)
