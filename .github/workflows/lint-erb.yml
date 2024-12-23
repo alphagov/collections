@@ -29,7 +29,7 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: Run erblint
+      - name: Run erb_lint
         env:
           RAILS_ENV: test
-        run: bundle exec erblint --lint-all
+        run: bundle exec erb_lint --lint-all
