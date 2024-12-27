@@ -84,5 +84,5 @@ def search_api_response(titles_and_links_hash)
 end
 
 def enable_graphql_feature_flag
-  Features.stub(:graphql_feature_enabled?).and_return(true)
+  allow(Features).to receive(:graphql_feature_enabled?).and_return(true)
 end
