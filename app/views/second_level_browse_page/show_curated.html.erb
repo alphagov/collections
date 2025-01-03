@@ -17,11 +17,7 @@
   <%= render "shared/browse_breadcrumbs" %>
 <% end %>
 
-<%= render "shared/browse_header", {
-  two_thirds: true,
-  margin_bottom: 8,
-  govuk_chat_promo: show_govuk_chat_promo?(page.base_path),
-} do %>
+<%= render "shared/browse_header", { two_thirds: true, margin_bottom: 8 } do %>
   <%= render "govuk_publishing_components/components/heading", {
     font_size: "xl",
     heading_level: 1,

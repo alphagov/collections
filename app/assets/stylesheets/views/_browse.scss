@@ -93,14 +93,3 @@ $browse-header-background-colour: #263135;
     margin-bottom: govuk-spacing(6);
   }
 }
-
-.browse__govuk-chat-promo {
-  background-color: govuk-tint(govuk-colour("blue"), 90%);
-  padding: govuk-spacing(4) 0;
-
-  // we're using this component in an unconventional way so need to undo
-  // basic styling
-  .gem-c-chat-entry {
-    padding: 0;
-  }
-}

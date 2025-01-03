@@ -36,19 +36,6 @@ RSpec.feature "Step by step nav pages" do
     expect(page).to have_title("#{content_item['title']} - GOV.UK")
   end
 
-  it "renders the GOV.UK Chat promo" do
-    content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: "step_by_step_nav")
-    ["/set-up-limited-company", "/set-up-as-sole-trader"].each do |path|
-      content_item["base_path"] = path
-      stub_content_store_has_item(content_item["base_path"], content_item)
-
-      ClimateControl.modify GOVUK_CHAT_PROMO_ENABLED: "true" do
-        visit content_item["base_path"]
-        expect(page).to have_selector(".gem-c-chat-entry")
-      end
-    end
-  end
-
   def step_nav_example
     schema = GovukSchemas::Schema.find(frontend_schema: "step_by_step_nav")
 

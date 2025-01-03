@@ -20,10 +20,7 @@
   } %>
 <% end %>
 
-<%= render "shared/browse_header", {
-  margin_bottom: page.slug == "benefits" ? 7 : 9,
-  govuk_chat_promo: show_govuk_chat_promo?(page.base_path),
-} do %>
+<%= render "shared/browse_header", { margin_bottom: page.slug == "benefits" ? 7 : 9 } do %>
   <%= render "govuk_publishing_components/components/heading", {
     text: page.title,
     inverse: true,
@@ -40,9 +37,9 @@
 <%= render "govuk_web_banners/recruitment_banner" %>
 <% if page.popular_list %>
   <div class="govuk-width-container">
-    <div class="browse__action-links">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="browse__action-links">
           <%= render "govuk_publishing_components/components/heading", {
             text: t("browse.popular_tasks"),
             margin_bottom: 6,
