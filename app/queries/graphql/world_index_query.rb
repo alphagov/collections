@@ -5,7 +5,7 @@ class Graphql::WorldIndexQuery
 
   def query
     <<-QUERY
-      fragment worldLocationInfo on WorldLocation {
+      fragment worldLocationInfo on Edition {
         active
         name
         slug
@@ -13,7 +13,7 @@ class Graphql::WorldIndexQuery
 
       {
         edition(base_path: "#{@base_path}") {
-          ... on WorldIndex {
+          ... on Edition {
             title
 
             details {

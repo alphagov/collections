@@ -7,7 +7,7 @@ class Graphql::RoleQuery
     <<-QUERY
       {
         edition(base_path: "#{@base_path}") {
-          ... on Role {
+          ... on Edition {
             base_path
             locale
             title
