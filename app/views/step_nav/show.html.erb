@@ -3,27 +3,19 @@
   <meta name="description" content="<%= step_by_step.description %>">
 <% end %>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half govuk-grid-column-two-thirds-from-desktop">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
         title: step_by_step.title,
         average_title_length: 'long',
         margin_bottom: 6 %>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half govuk-grid-column-two-thirds-from-desktop">
     <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
       <%= step_by_step.introduction %>
     <% end %>
-
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/step_by_step_nav", step_by_step.payload_for_component %>
   </div>
-
-  <% if show_govuk_chat_promo?(step_by_step.base_path) %>
-    <div class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop">
-      <%= render "govuk_publishing_components/components/chat_entry", { margin_top_until_tablet: true } %>
-    </div>
-  <% end %>
 </div>
