@@ -398,7 +398,7 @@ RSpec.describe "Organisation pages" do
     it "displays if present" do
       visit "/government/organisations/attorney-generals-office"
       expect(page).to have_css("section#org-contacts")
-      expect(page).to have_css("h2.gem-c-heading", text: "Contact AGO")
+      expect(page).to have_css(".gem-c-heading h2", text: "Contact AGO")
       expect(page).to have_content(/102 Petty France/i)
       expect(page).to have_content(/London/i)
       expect(page).to have_content(/SW1H 9EA/i)
