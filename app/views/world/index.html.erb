@@ -1,12 +1,15 @@
 <% content_for :title, @presented_index.title %>
-<% page_class "world-locations" %>
+<% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing world-locations" %>
 <% add_view_stylesheet("world_index") %>
 
 <div data-module="list-filter">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <%= render "govuk_publishing_components/components/title", {
-        title: @presented_index.title
+      <%= render "govuk_publishing_components/components/heading", {
+        text: @presented_index.title,
+        heading_level: 1,
+        margin_bottom: 8,
+        font_size: "xl",
       } %>
 
       <p class="govuk-body"><%= t('world_locations.content.find_out') %></p>

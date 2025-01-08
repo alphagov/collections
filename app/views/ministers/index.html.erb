@@ -2,12 +2,15 @@
 
 <% content_for :title, t("ministers.govuk_title") %>
 
-<% page_class "ministers-index" %>
+<% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing ministers-index" %>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/title", {
-      title: t("ministers.title"),
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t("ministers.title"),
+      heading_level: 1,
+      margin_bottom: 8,
+      font_size: "xl",
     } %>
 
     <% unless @presented_ministers.is_during_reshuffle? %>

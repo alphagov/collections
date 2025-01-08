@@ -1,8 +1,13 @@
+<% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
+
 <header class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/title", {
+    <%= render "govuk_publishing_components/components/heading", {
       context: person.current_roles_title,
-      title: person.title
+      text: person.title,
+      heading_level: 1,
+      margin_bottom: 8,
+      font_size: "xl",
     } %>
   </div>
 

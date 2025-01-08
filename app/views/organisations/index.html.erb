@@ -1,5 +1,7 @@
 <% add_view_stylesheet("organisations") %>
 
+<% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
+
 <% content_for :title, t("organisations.index_title", title: @presented_organisations.title) %>
 
 <% content_for :meta_tags do %>
@@ -9,8 +11,11 @@
 <div data-module="list-filter">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <%= render "govuk_publishing_components/components/title", {
-          title: @presented_organisations.title
+      <%= render "govuk_publishing_components/components/heading", {
+        text: @presented_organisations.title,
+        heading_level: 1,
+        margin_bottom: 8,
+        font_size: "xl",
       } %>
 
       <form class="filter-list__form" data-filter="form" role="search" aria-label="Departments, agencies and public bodies">
