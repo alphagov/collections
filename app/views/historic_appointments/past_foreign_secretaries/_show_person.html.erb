@@ -1,9 +1,15 @@
+<% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/title", {
+    <%= render "govuk_publishing_components/components/heading", {
       context: "Past Foreign Secretaries",
-      title: current_person,
+      text: current_person,
+      heading_level: 1,
+      margin_bottom: 8,
+      font_size: "xl",
     } %>
+    
     <%= render "govuk_publishing_components/components/lead_paragraph", {
       text: time_active,
     } %>
