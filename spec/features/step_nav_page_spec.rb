@@ -13,8 +13,7 @@ RSpec.feature "Step by step nav pages" do
   end
 
   it "renders the title" do
-    expect(page).to have_selector(".gem-c-title")
-    expect(page).to have_selector(".gem-c-title__text", text: "Learn to drive a car: step by step")
+    expect(page).to have_selector(".gem-c-heading__text", text: "Learn to drive a car: step by step")
   end
 
   it "renders the step by step navigation component" do
