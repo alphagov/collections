@@ -3,10 +3,15 @@
   <meta name="description" content="<%= t('embassies.meta_description') %>.">
 <% end %>
 
-<%= render "govuk_publishing_components/components/title", {
+<% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
+
+<%= render "govuk_publishing_components/components/heading", {
   context: t('embassies.context'),
-  title: @presented_embassies.title,
-  } %>
+  text: @presented_embassies.title,
+  heading_level: 1,
+  margin_bottom: 8,
+  font_size: "xl",
+} %>
 
 <div class="govuk-main-wrapper">
   <div class="govuk-grid-row">

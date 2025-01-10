@@ -11,7 +11,7 @@ RSpec.feature "Ministers index page" do
     end
 
     scenario "renders page title" do
-      expect(page).to have_selector(".gem-c-title__text", text: I18n.t("ministers.title"))
+      expect(page).to have_selector(".gem-c-heading__text", text: I18n.t("ministers.title"))
     end
 
     scenario "renders the lead paragraph with anchor links" do

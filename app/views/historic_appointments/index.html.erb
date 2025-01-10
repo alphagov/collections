@@ -1,15 +1,16 @@
 <% add_view_stylesheet("history_people") %>
 
-<% page_class "govuk-width-container" %>
-
 <% content_for :title, @index_page.title %>
 
-<% page_class "historic-appointments-index govuk-width-container" %>
+<% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing historic-appointments-index" %>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <%= render "govuk_publishing_components/components/title", {
+    <%= render "govuk_publishing_components/components/heading", {
       context: "History",
-      title: @index_page.title,
+      text: @index_page.title,
+      heading_level: 1,
+      margin_bottom: 8,
+      font_size: "xl",
     } %>
   </div>
 </div>

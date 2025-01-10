@@ -39,7 +39,7 @@ module CourtPagesHelper
 
   def the_courts_title
     expect(page).to have_title("#{@title} - GOV.UK")
-    expect(page).to have_selector(".gem-c-title__text", text: @title)
+    expect(page).to have_selector(".gem-c-heading__text", text: @title)
   end
 
   def and_featured_links

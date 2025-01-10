@@ -15,7 +15,7 @@ RSpec.feature "Content store organisations" do
   end
 
   scenario "renders page title" do
-    expect(page.has_css?(".gem-c-title__text", text: organisations_content_hash[:title])).to be(true)
+    expect(page.has_css?(".gem-c-heading__text", text: organisations_content_hash[:title])).to be(true)
   end
 
   scenario "has autodiscovery links to the API" do

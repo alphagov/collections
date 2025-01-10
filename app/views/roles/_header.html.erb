@@ -1,9 +1,14 @@
+<% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
+
 <header class="govuk-grid-row <%= direction_rtl_class %>" <%= dir_attribute %> <%= lang_attribute %>>
   <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/title", {
+    <%= render "govuk_publishing_components/components/heading", {
       context: t("roles.ministerial"),
       context_locale: t_fallback("roles.ministerial"),
-      title: role.title
+      text: role.title,
+      heading_level: 1,
+      margin_bottom: 8,
+      font_size: "xl",
     } %>
   </div>
 

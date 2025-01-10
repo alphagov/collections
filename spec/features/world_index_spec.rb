@@ -17,7 +17,7 @@ RSpec.feature "World index page" do
     end
 
     scenario "renders the page title" do
-      expect(page).to have_selector(".gem-c-title__text", text: "Help and services around the world")
+      expect(page).to have_selector(".gem-c-heading__text", text: "Help and services around the world")
     end
 
     scenario "renders a link to all foreign office posts" do
