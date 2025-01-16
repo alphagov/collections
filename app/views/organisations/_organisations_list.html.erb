@@ -11,7 +11,7 @@
         <p class="govuk-visually-hidden"><%= t('organisations.count_prefix') %> <span class="js-accessible-item-count"><%= organisations.count %></span> <%= organisation_type.to_s.humanize %></p>
         <%= render "govuk_publishing_components/components/big_number", {
           number: organisations.count,
-          data_attributes: {
+          nested_data_attributes: {
             item_count: "true",
           },
           aria: {
