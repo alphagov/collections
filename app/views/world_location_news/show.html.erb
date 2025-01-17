@@ -6,7 +6,7 @@
   <%= tag("meta", name: "description", content: @world_location_news.description) if @world_location_news.description %>
 <% end %>
 
-<div class="govuk-grid-row" <%= dir_attribute %> <%= lang_attribute %>>
+<div class="govuk-grid-row gem-print-columns-none" <%= dir_attribute %> <%= lang_attribute %>>
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/heading", {
       context: I18n.t("world_location_news.types.#{@world_location_news.type}"),
@@ -30,7 +30,7 @@
   </div>
 </div>
 
-<div class="govuk-grid-row">
+<div class="govuk-grid-row gem-print-columns-none">
   <div class="govuk-grid-column-full"  <%= dir_attribute %> <%= lang_attribute %>>
     <% if @world_location_news.ordered_featured_documents&.any? %>
       <section id="featured">
@@ -57,7 +57,7 @@
 </div>
 
 <% if I18n.locale == :en %>
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row gem-print-columns-none">
     <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
       <section id="latest">
         <%= render "govuk_publishing_components/components/heading", {
@@ -89,7 +89,7 @@
 <% end %>
 
 <% if @world_location_news.mission_statement.present? %>
-  <div class="govuk-grid-row"  <%= dir_attribute %> <%= lang_attribute %>>
+  <div class="govuk-grid-row gem-print-columns-none"  <%= dir_attribute %> <%= lang_attribute %>>
     <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-6">
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("world_location_news.headings.mission"),
@@ -105,7 +105,7 @@
 <% end %>
 
 <% if I18n.locale == :en && (@world_location_news.announcements.any? || @world_location_news.publications.any? || @world_location_news.statistics.any?) %>
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row gem-print-columns-none">
     <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("world_location_news.headings.documents"),
@@ -123,7 +123,7 @@
 <% end %>
 
 <% if @world_location_news.organisations&.any? %>
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row gem-print-columns-none">
     <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
       <section id="organisations">
         <%= render "govuk_publishing_components/components/heading", {
@@ -157,7 +157,7 @@
 <% end %>
 
 <% if @world_location_news.worldwide_organisations&.any? %>
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row gem-print-columns-none">
     <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
       <% @world_location_news.worldwide_organisations.each do |organisation| %>
         <%= render "govuk_publishing_components/components/heading", {
