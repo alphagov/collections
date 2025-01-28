@@ -11,4 +11,3 @@
 //= require support
 //= require modules/list-filter
 //= require modules/toggle-attribute
-//= require modules/coronavirus-landing-page
