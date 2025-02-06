@@ -29,8 +29,8 @@ module LatestNewsHelper
 
     news_item = Services.content_store.content_item(results["results"].first["link"])
     news_item.parsed_content["details"]["image"]
-  rescue StandardError
-    GovukError.notify("News item in Latest News Section doesn't exist or doesn't have an image")
+  rescue StandardError => e
+    GovukError.notify(e)
     {
       "url" => "https://assets.publishing.service.gov.uk/media/5a37dae940f0b649cceb1841/s300_number10.jpg",
       "alt_text" => "Front door of No. 10 Downing Street",
