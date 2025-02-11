@@ -12,9 +12,9 @@ Rails.application.routes.draw do
     GovukHealthcheck::RailsCache,
   )
 
-  ["/coronavirus-taxon", "/coronavirus-taxon/*slug"].each do |path|
-    get path => redirect("/coronavirus", status: 307)
-  end
+  # ["/coronavirus-taxon", "/coronavirus-taxon/*slug"].each do |path|
+  #   get path => redirect("/coronavirus", status: 307)
+  # end
 
   get "/coronavirus", to: "coronavirus_landing_page#show", as: :coronavirus_landing_page
 
