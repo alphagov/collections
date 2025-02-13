@@ -76,14 +76,14 @@ RSpec.describe Organisations::IndexPresenter do
       expect(organisations_presenter.all_organisations[:public_corporations]).to eq(expected)
     end
 
-    it "returns devolved_administrations departments as part of all_organisations hash" do
+    it "returns devolved_governments departments as part of all_organisations hash" do
       expected = [{
         "title": "Northern Ireland Executive ",
         "href": "/government/organisations/northern-ireland-executive",
         "brand": nil,
       }.with_indifferent_access]
 
-      expect(organisations_presenter.all_organisations[:devolved_administrations]).to eq(expected)
+      expect(organisations_presenter.all_organisations[:devolved_governments]).to eq(expected)
     end
   end
 

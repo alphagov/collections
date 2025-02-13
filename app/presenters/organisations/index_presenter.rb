@@ -52,7 +52,7 @@ module Organisations
         ),
         high_profile_groups: @organisations.high_profile_groups,
         public_corporations: @organisations.public_corporations,
-        devolved_administrations: @organisations.devolved_administrations,
+        devolved_governments: @organisations.devolved_administrations,
       }
     end
 
