@@ -1,6 +1,4 @@
 module CoronavirusContentItemHelper
-  CORONAVIRUS_TAXON_PATH = "/coronavirus-taxons".freeze
-
   def coronavirus_landing_page_content_item
     load_content_item("coronavirus_landing_page.json")
   end
