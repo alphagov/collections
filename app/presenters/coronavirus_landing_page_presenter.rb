@@ -74,7 +74,7 @@ class CoronavirusLandingPagePresenter
       },
       {
         label: "Summary of COVID-19 testing, cases and vaccinations data",
-        url: "hhttps://ukhsa-dashboard.data.gov.uk/respiratory-viruses/covid-19",
+        url: "https://ukhsa-dashboard.data.gov.uk/respiratory-viruses/covid-19",
       },
       {
         label: "COVID-19 legislation on legislation.gov.uk",
