@@ -54,27 +54,27 @@ class CoronavirusLandingPagePresenter
     { links: [
       {
         label: "Guidance and regulation about COVID-19",
-        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=guidance_and_regulation&order=updated-newest",
+        url: "/search/all?order=updated-newest&level_one_taxon=8124ead8-8ebc-4faf-88ad-dd5cbcc92ba8&level_two_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=guidance_and_regulation",
       },
       {
         label: "News and communications about COVID-19",
-        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=news_and_communications&order=updated-newest",
+        url: "/search/all?order=updated-newest&level_one_taxon=8124ead8-8ebc-4faf-88ad-dd5cbcc92ba8&level_two_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=news_and_communications",
       },
       {
         label: "Research and statistics about COVID-19",
-        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=research_and_statistics&order=updated-newest",
+        url: "/search/all?order=updated-newest&level_one_taxon=8124ead8-8ebc-4faf-88ad-dd5cbcc92ba8&level_two_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=research_and_statistics",
       },
       {
         label: "Policy papers and consultations about COVID-19",
-        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=policy_and_engagement&order=updated-newest",
+        url: "/search/all?order=updated-newest&level_one_taxon=8124ead8-8ebc-4faf-88ad-dd5cbcc92ba8&level_two_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=policy_and_engagement",
       },
       {
         label: "Transparency and freedom of information releases about COVID-19",
-        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=transparency&order=updated-newest",
+        url: "/search/all?order=updated-newest&level_one_taxon=8124ead8-8ebc-4faf-88ad-dd5cbcc92ba8&level_two_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=transparency",
       },
       {
         label: "Summary of COVID-19 testing, cases and vaccinations data",
-        url: "https://coronavirus.data.gov.uk/",
+        url: "hhttps://ukhsa-dashboard.data.gov.uk/respiratory-viruses/covid-19",
       },
       {
         label: "COVID-19 legislation on legislation.gov.uk",
