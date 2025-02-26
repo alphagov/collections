@@ -7,7 +7,7 @@ module CoronavirusLandingPageSteps
   include SearchApiHelpers
 
   CORONAVIRUS_PATH = "/coronavirus".freeze
-  CORONAVIRUS_TAXON_PATH = "/coronavirus-taxon".freeze
+  CORONAVIRUS_TAXON_PATH = "/health-and-social-care/covid-19".freeze
   OTHER_SUBTAXON_PATH = "#{CORONAVIRUS_TAXON_PATH}/no-hub-page".freeze
 
   def given_there_is_a_content_item
