@@ -2,4 +2,6 @@
 ko:
   people:
     biography: 약력
+    previous_roles: 이전 역할
+    previous_roles_in_government: 정부 내 이전 역할
     read_more: 이 사람에 대해 자세히 살펴보기
