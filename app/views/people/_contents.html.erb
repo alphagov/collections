@@ -11,6 +11,11 @@
         href: "#current-roles"
       } : nil,
 
+      person.has_previous_roles? ? {
+        text: t("people.previous_roles"),
+        href: "#previous-roles"
+      } : nil,
+
       person.announcements.items.present? ? {
         text: t("shared.schema_name.announcement.other"),
         href: "#announcements"

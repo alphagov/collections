@@ -26,6 +26,24 @@ class Person
     current_roles.map { |role| role["title"] }.to_sentence(locale: content_item.locale)
   end
 
+    def previous_roles_items
+    previous_roles.map do |role|
+      {
+        link: {
+          text: role["title"],
+          path: role["base_path"],
+        },
+        metadata: {
+          appointment_duration: "#{role['start_year']} to #{role['end_year']}",
+        },
+      }
+    end
+  end
+
+  def has_previous_roles?
+    previous_roles.present?
+  end
+
   def image_url
     details.dig("image", "url")
   end
@@ -81,6 +99,19 @@ private
 
   def previous_role_appointments
     @previous_role_appointments ||= role_appointments(current: false)
+  end
+
+
+  def previous_roles
+    previous_role_appointments
+      .sort_by { |role_appointment| role_appointment["details"]["started_on"] }
+      .reverse
+      .map do |role_appointment|
+        role_appointment["links"]["role"].first.tap do |role|
+          role["start_year"] = Time.zone.parse(role_appointment["details"]["started_on"]).strftime("%Y")
+          role["end_year"] = Time.zone.parse(role_appointment["details"]["ended_on"]).strftime("%Y")
+        end
+      end
   end
 
   def links

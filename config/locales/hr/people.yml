@@ -2,4 +2,6 @@
 hr:
   people:
     biography: Biografija
+    previous_roles: Prethodne uloge
+    previous_roles_in_government: Ranije uloge u vladi
     read_more: Više o ovoj osobi
