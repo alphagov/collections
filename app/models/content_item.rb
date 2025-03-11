@@ -31,7 +31,7 @@ class ContentItem
 
   def public_cache
     public_cache = @content_item_data.dig("cache_control", "public")
-    public_cache.nil? ? true : public_cache
+    public_cache.nil? || public_cache
   end
 
   def linked_items(field)

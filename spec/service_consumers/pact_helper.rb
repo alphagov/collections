@@ -20,9 +20,7 @@ Pact.configure do |config|
   config.include GdsApi::TestHelpers::Search
 end
 
-def url_encode(str)
-  ERB::Util.url_encode(str)
-end
+delegate :url_encode, to: :'ERB::Util'
 
 def pact_broker_base_url
   "https://govuk-pact-broker-6991351eca05.herokuapp.com"
