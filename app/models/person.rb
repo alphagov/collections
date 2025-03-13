@@ -26,8 +26,8 @@ class Person
     current_roles.map { |role| role["title"] }.to_sentence(locale: content_item.locale)
   end
 
-    def previous_roles_items
-    previous_roles.map do |role|
+  def previous_non_ministerial_roles_items
+    formatted_previous_non_ministerial_roles.map do |role|
       {
         link: {
           text: role["title"],
@@ -40,8 +40,8 @@ class Person
     end
   end
 
-  def has_previous_roles?
-    previous_roles.present?
+  def has_previous_non_ministerial_roles?
+    formatted_previous_non_ministerial_roles.present?
   end
 
   def image_url
@@ -93,6 +93,19 @@ private
       .sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
   end
 
+  def fetch_previous_non_ministerial_role_appointments
+    links
+      .fetch("role_appointments", [])
+      .filter { |role_appointment|
+        role_appointment.dig("details", "ended_on").present?
+      }
+      .filter { |role_appointment|
+        role = role_appointment.dig("links", "role", 0)
+        role && role["document_type"] != "ministerial_role"
+      }
+      .sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
+  end
+
   def current_role_appointments
     @current_role_appointments ||= role_appointments(current: true)
   end
@@ -101,9 +114,13 @@ private
     @previous_role_appointments ||= role_appointments(current: false)
   end
 
+  def previous_non_ministerial_role_appointments
+    @previous_non_ministerial_role_appointments ||= fetch_previous_non_ministerial_role_appointments
+  end
 
-  def previous_roles
-    previous_role_appointments
+  def formatted_previous_non_ministerial_roles
+    @formatted_previous_non_ministerial_roles ||=
+      previous_non_ministerial_role_appointments
       .sort_by { |role_appointment| role_appointment["details"]["started_on"] }
       .reverse
       .map do |role_appointment|
