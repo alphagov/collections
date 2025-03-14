@@ -2,4 +2,6 @@
 es:
   people:
     biography: Biografía
+    previous_roles: Funciones anteriores
+    previous_roles_in_government: Funciones anteriores en el gobierno
     read_more: Más sobre esta persona
