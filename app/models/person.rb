@@ -86,24 +86,50 @@ private
     base_path.split("/").last
   end
 
-  def role_appointments(current:)
-    links
-      .fetch("role_appointments", [])
-      .filter { |role_appointment| role_appointment.dig("details", "current") == current }
-      .sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
+  # def role_appointments(current:)
+  #   links
+  #     .fetch("role_appointments", [])
+  #     .filter { |role_appointment| role_appointment.dig("details", "current") == current }
+  #     .sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
+  # end
+
+  # def fetch_previous_non_ministerial_role_appointments
+  #   links
+  #     .fetch("role_appointments", [])
+  #     .filter { |role_appointment|
+  #       role_appointment.dig("details", "ended_on").present?
+  #     }
+  #     .filter { |role_appointment|
+  #       role = role_appointment.dig("links", "role", 0)
+  #       role && role["document_type"] != "ministerial_role"
+  #     }
+  #     .sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
+  # end
+
+  # def current_role_appointments
+  #   @current_role_appointments ||= role_appointments(current: true)
+  # end
+
+  # def previous_role_appointments
+  #   @previous_role_appointments ||= role_appointments(current: false)
+  # end
+
+  # def previous_non_ministerial_role_appointments
+  #   @previous_non_ministerial_role_appointments ||= fetch_previous_non_ministerial_role_appointments
+  # end
+
+  def all_role_appointments
+    @all_role_appointments ||= links.fetch("role_appointments", [])
   end
 
-  def fetch_previous_non_ministerial_role_appointments
-    links
-      .fetch("role_appointments", [])
-      .filter { |role_appointment|
-        role_appointment.dig("details", "ended_on").present?
-      }
-      .filter { |role_appointment|
-        role = role_appointment.dig("links", "role", 0)
-        role && role["document_type"] != "ministerial_role"
-      }
-      .sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
+  def sort_by_appointment_order(appointments)
+    appointments.sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
+  end
+
+  def role_appointments(current:)
+    sort_by_appointment_order(
+      all_role_appointments.filter { |role_appointment| role_appointment.dig("details", "current") == current },
+    )
   end
 
   def current_role_appointments
@@ -115,20 +141,20 @@ private
   end
 
   def previous_non_ministerial_role_appointments
-    @previous_non_ministerial_role_appointments ||= fetch_previous_non_ministerial_role_appointments
+    @previous_non_ministerial_role_appointments ||=
+      sort_by_appointment_order(
+        all_role_appointments
+          .filter { |role_appointment| role_appointment.dig("details", "ended_on").present? }
+          .filter { |role_appointment| non_ministerial_role?(role_appointment) },
+      )
   end
 
   def formatted_previous_non_ministerial_roles
     @formatted_previous_non_ministerial_roles ||=
       previous_non_ministerial_role_appointments
-      .sort_by { |role_appointment| role_appointment["details"]["started_on"] }
-      .reverse
-      .map do |role_appointment|
-        role_appointment["links"]["role"].first.tap do |role|
-          role["start_year"] = Time.zone.parse(role_appointment["details"]["started_on"]).strftime("%Y")
-          role["end_year"] = Time.zone.parse(role_appointment["details"]["ended_on"]).strftime("%Y")
-        end
-      end
+        .sort_by { |role_appointment| role_appointment.dig("details", "started_on") }
+        .reverse
+        .map { |role_appointment| format_role_with_dates(role_appointment) }
   end
 
   def links
@@ -145,5 +171,29 @@ private
 
   def available_translations
     links["available_translations"]&.map(&:symbolize_keys) || []
+  end
+
+  def non_ministerial_role?(role_appointment)
+    role = role_from_appointment(role_appointment)
+    role && role["document_type"] != "ministerial_role"
+  end
+
+  def role_from_appointment(appointment)
+    appointment.dig("links", "role", 0)
+  end
+
+  def roles_from_appointments(appointments)
+    appointments.map { |appointment| role_from_appointment(appointment) }
+  end
+
+  def format_role_with_dates(role_appointment)
+    role_from_appointment(role_appointment).tap do |role|
+      role["start_year"] = format_year(role_appointment.dig("details", "started_on"))
+      role["end_year"] = format_year(role_appointment.dig("details", "ended_on"))
+    end
+  end
+
+  def format_year(date_string)
+    Time.zone.parse(date_string).strftime("%Y")
   end
 end
