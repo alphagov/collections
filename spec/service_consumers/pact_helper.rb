@@ -20,15 +20,13 @@ Pact.configure do |config|
   config.include GdsApi::TestHelpers::Search
 end
 
-def url_encode(str)
-  ERB::Util.url_encode(str)
-end
-
 def pact_broker_base_url
   "https://govuk-pact-broker-6991351eca05.herokuapp.com"
 end
 
 Pact.service_provider "Collections Organisation API" do
+  include ERB::Util
+
   honours_pact_with "GDS API Adapters" do
     if ENV["PACT_URI"]
       pact_uri(ENV["PACT_URI"])

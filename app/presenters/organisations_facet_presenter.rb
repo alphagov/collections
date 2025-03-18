@@ -10,9 +10,7 @@ class OrganisationsFacetPresenter
     end
   end
 
-  def any?
-    @organisations.any?
-  end
+  delegate :any?, to: :@organisations
 
   def array_of_links
     @organisations.map do |title, link|
