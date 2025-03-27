@@ -26,7 +26,7 @@ class Person
     current_roles.map { |role| role["title"] }.to_sentence(locale: content_item.locale)
   end
 
-    def previous_roles_items
+  def previous_roles_items
     previous_roles.map do |role|
       {
         link: {
@@ -86,21 +86,27 @@ private
     base_path.split("/").last
   end
 
-  def role_appointments(current:)
-    links
-      .fetch("role_appointments", [])
-      .filter { |role_appointment| role_appointment.dig("details", "current") == current }
-      .sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
+  def role_appointments
+    @role_appointments ||= links.fetch("role_appointments", [])
+  end
+
+  def sort_by_appointment_order(appointments)
+    appointments.sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
+  end
+
+  def role_appointment(current:)
+    sort_by_appointment_order(
+      role_appointments.filter { |role_appointment| role_appointment.dig("details", "current") == current },
+    )
   end
 
   def current_role_appointments
-    @current_role_appointments ||= role_appointments(current: true)
+    @current_role_appointments ||= role_appointment(current: true)
   end
 
   def previous_role_appointments
-    @previous_role_appointments ||= role_appointments(current: false)
+    @previous_role_appointments ||= role_appointment(current: false)
   end
-
 
   def previous_roles
     previous_role_appointments
@@ -128,5 +134,9 @@ private
 
   def available_translations
     links["available_translations"]&.map(&:symbolize_keys) || []
+  end
+
+  def role_from_appointment(appointment)
+    appointment.dig("links", "role", 0)
   end
 end
