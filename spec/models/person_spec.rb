@@ -76,6 +76,19 @@ RSpec.describe Person do
     end
   end
 
+  describe "previous non ministerial roles items" do
+    it "should have previous non ministerial roles items text" do
+      text = person.previous_non_ministerial_roles_items.first[:link][:text]
+
+      expect(text).to eq("Secretary of State for Foreign and Commonwealth Affairs")
+    end
+
+    it "should have previous appointment duration text" do
+      duration = person.previous_non_ministerial_roles_items.first[:metadata][:appointment_duration]
+      expect(duration).to eq("2016 to 2018")
+    end
+  end
+
   describe "announcements" do
     before do
       results = [

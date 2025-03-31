@@ -2,4 +2,6 @@
 'no':
   people:
     biography: Biografi
+    previous_roles: Tidligere roller
+    previous_roles_in_government: Tidligere roller i regjeringen
     read_more: Mer om denne personen
