@@ -123,124 +123,60 @@ RSpec.feature "Ministers index page" do
     end
   end
 
-  context "without the GraphQL feature flag" do
-    let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
+  let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
 
+  before do
+    stub_content_store_has_item("/government/ministers", document)
+  end
+
+  context "when the GraphQL parameter is not set" do
     before do
-      stub_content_store_has_item("/government/ministers", document)
+      visit "/government/ministers"
     end
 
-    context "when the GraphQL parameter is not set" do
-      before do
-        visit "/government/ministers"
-      end
+    it_behaves_like "ministers index page"
 
-      it_behaves_like "ministers index page"
-
-      it "does not get the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-      end
-
-      context "during a reshuffle" do
-        let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
-
-        it_behaves_like "ministers index page during a reshuffle"
-      end
-
-      context "during a reshuffle preview" do
-        let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on-preview") }
-
-        it_behaves_like "ministers index page during a reshuffle preview"
-      end
+    it "does not get the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
     end
 
-    context "when the GraphQL parameter is true" do
-      before do
-        stub_publishing_api_graphql_query(
-          Graphql::MinistersIndexQuery.new("/government/ministers").query,
-          document,
-        )
+    context "during a reshuffle" do
+      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
 
-        visit "/government/ministers?graphql=true"
-      end
-
-      let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
-
-      it "gets the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
-      end
+      it_behaves_like "ministers index page during a reshuffle"
     end
 
-    context "when the GraphQL parameter is false" do
-      before do
-        visit "/government/ministers?graphql=false"
-      end
+    context "during a reshuffle preview" do
+      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on-preview") }
 
-      it "does not get the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-      end
+      it_behaves_like "ministers index page during a reshuffle preview"
     end
   end
 
-  context "with the GraphQL feature flag" do
-    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
-
+  context "when the GraphQL parameter is true" do
     before do
-      enable_graphql_feature_flag
-
       stub_publishing_api_graphql_query(
         Graphql::MinistersIndexQuery.new("/government/ministers").query,
         document,
       )
+
+      visit "/government/ministers?graphql=true"
     end
 
-    context "when the GraphQL parameter is not set" do
-      before do
-        visit "/government/ministers"
-      end
+    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
 
-      it_behaves_like "ministers index page"
+    it "gets the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
+    end
+  end
 
-      it "gets the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
-      end
-
-      context "during a reshuffle" do
-        let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-on") }
-
-        it_behaves_like "ministers index page during a reshuffle"
-      end
-
-      context "during a reshuffle preview" do
-        let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-on-preview") }
-
-        it_behaves_like "ministers index page during a reshuffle preview"
-      end
+  context "when the GraphQL parameter is false" do
+    before do
+      visit "/government/ministers?graphql=false"
     end
 
-    context "when the GraphQL parameter is true" do
-      before do
-        visit "/government/ministers?graphql=true"
-      end
-
-      let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
-
-      it "gets the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
-      end
-    end
-
-    context "when the GraphQL parameter is false" do
-      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
-
-      before do
-        stub_content_store_has_item("/government/ministers", document)
-        visit "/government/ministers?graphql=false"
-      end
-
-      it "does not get the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-      end
+    it "does not get the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
     end
   end
 end

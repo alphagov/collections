@@ -71,90 +71,44 @@ RSpec.feature "World index page" do
     end
   end
 
-  context "without the GraphQL feature flag" do
+  before do
+    stub_content_store_has_item("/world", GovukSchemas::Example.find("world_index", example_name: "world_index"))
+  end
+
+  context "when the GraphQL parameter is not set" do
     before do
-      stub_content_store_has_item("/world", GovukSchemas::Example.find("world_index", example_name: "world_index"))
+      visit "/world"
     end
 
-    context "when the GraphQL parameter is not set" do
-      before do
-        visit "/world"
-      end
+    it_behaves_like "world index page"
 
-      it_behaves_like "world index page"
-
-      it "does not get the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-      end
-    end
-
-    context "when the GraphQL parameter is true" do
-      before do
-        stub_publishing_api_graphql_query(
-          Graphql::WorldIndexQuery.new("/world").query,
-          fetch_graphql_fixture("world_index"),
-        )
-
-        visit "/world?graphql=true"
-      end
-
-      it "gets the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
-      end
-    end
-
-    context "when the GraphQL parameter is false" do
-      before do
-        visit "/world?graphql=false"
-      end
-
-      it "does not get the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-      end
+    it "does not get the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
     end
   end
 
-  context "with the GraphQL feature flag" do
+  context "when the GraphQL parameter is true" do
     before do
-      enable_graphql_feature_flag
-
       stub_publishing_api_graphql_query(
         Graphql::WorldIndexQuery.new("/world").query,
         fetch_graphql_fixture("world_index"),
       )
+
+      visit "/world?graphql=true"
     end
 
-    context "when the GraphQL parameter is not set" do
-      before do
-        visit "/world"
-      end
+    it "gets the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
+    end
+  end
 
-      it_behaves_like "world index page"
-
-      it "gets the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
-      end
+  context "when the GraphQL parameter is false" do
+    before do
+      visit "/world?graphql=false"
     end
 
-    context "when the GraphQL parameter is true" do
-      before do
-        visit "/world?graphql=true"
-      end
-
-      it "gets the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
-      end
-    end
-
-    context "when the GraphQL parameter is false" do
-      before do
-        stub_content_store_has_item("/world", GovukSchemas::Example.find("world_index", example_name: "world_index"))
-        visit "/world?graphql=false"
-      end
-
-      it "does not get the data from GraphQL" do
-        expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-      end
+    it "does not get the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
     end
   end
 end
