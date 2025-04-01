@@ -43,6 +43,7 @@
   <%=
     render_component_stylesheets
   %>
+  <%= @requested_variant.analytics_meta_tag.html_safe if @requested_variant %>
 </head>
 <body>
   <div class="wrapper" id="wrapper">
