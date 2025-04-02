@@ -4,7 +4,7 @@ class MinistersController < ApplicationController
   def index
     content_item_data = if params[:graphql] == "false"
                           load_from_content_store
-                        elsif params[:graphql] == "true" || Features.graphql_feature_enabled?
+                        elsif params[:graphql] == "true"
                           load_from_graphql
                         else
                           load_from_content_store
