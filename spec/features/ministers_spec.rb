@@ -1,6 +1,8 @@
 require "integration_spec_helper"
 
 RSpec.feature "Ministers index page" do
+  include GovukAbTesting::RspecHelpers
+
   shared_examples "ministers index page" do
     scenario "returns 200 when visiting ministers page" do
       expect(page.status_code).to eq(200)
@@ -177,6 +179,53 @@ RSpec.feature "Ministers index page" do
 
     it "does not get the data from GraphQL" do
       expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+    end
+  end
+
+  context "when the GraphQL A/B A variant is selected" do
+    before do
+      with_variant GraphQLMinistersIndex: "A" do
+        visit "/government/ministers"
+      end
+    end
+
+    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
+
+    it "does not get the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+    end
+  end
+
+  context "when the GraphQL A/B test control is selected" do
+    before do
+      with_variant GraphQLMinistersIndex: "Z" do
+        visit "/government/ministers"
+      end
+    end
+
+    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
+
+    it "does not get the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+    end
+  end
+
+  context "when the GraphQL A/B B variant is selected" do
+    before do
+      stub_publishing_api_graphql_query(
+        Graphql::MinistersIndexQuery.new("/government/ministers").query,
+        document,
+      )
+
+      with_variant GraphQLMinistersIndex: "B" do
+        visit "/government/ministers"
+      end
+    end
+
+    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
+
+    it "gets the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
     end
   end
 end
