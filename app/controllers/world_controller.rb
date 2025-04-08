@@ -1,8 +1,16 @@
 class WorldController < ApplicationController
   def index
+    ab_test = GovukAbTesting::AbTest.new(
+      "GraphQLWorldIndex",
+      allowed_variants: %w[A B Z],
+      control_variant: "Z",
+    )
+    @requested_variant = ab_test.requested_variant(request.headers)
+    @requested_variant.configure_response(response)
+
     content_item_data = if params[:graphql] == "false"
                           load_from_content_store
-                        elsif params[:graphql] == "true"
+                        elsif params[:graphql] == "true" || @requested_variant.variant?("B")
                           load_from_graphql
                         else
                           load_from_content_store
