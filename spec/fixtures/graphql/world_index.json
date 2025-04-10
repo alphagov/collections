@@ -1,6 +1,7 @@
 {
   "data": {
     "edition": {
+      "locale": "en",
       "title": "Help and services around the world",
       "details": {
         "world_locations": [

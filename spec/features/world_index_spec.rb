@@ -71,6 +71,10 @@ RSpec.feature "World index page" do
       expect(ga4_focus_loss_data["action"]).to eq "filter"
       expect(ga4_focus_loss_data["section"]).to eq "Help and services around the world"
     end
+
+    scenario "renders the locale in <main> element" do
+      expect(page).to have_css("main[lang='en']")
+    end
   end
 
   before do

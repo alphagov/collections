@@ -14,6 +14,7 @@ class Graphql::WorldIndexQuery
       {
         edition(base_path: "#{@base_path}") {
           ... on Edition {
+            locale
             title
 
             details {
