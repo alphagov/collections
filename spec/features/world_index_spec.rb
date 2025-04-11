@@ -99,6 +99,8 @@ RSpec.feature "World index page" do
       visit "/world?graphql=true"
     end
 
+    it_behaves_like "world index page"
+
     it "gets the data from GraphQL" do
       expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
     end
