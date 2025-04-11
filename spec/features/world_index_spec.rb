@@ -75,6 +75,25 @@ RSpec.feature "World index page" do
     scenario "renders the locale in <main> element" do
       expect(page).to have_css("main[lang='en']")
     end
+
+    scenario "renders meta tags" do
+      meta_tag = page.first("meta[name='govuk:public-updated-at']", visible: false)
+      expect(meta_tag["content"]).to be_present
+      meta_tag = page.first("meta[name='govuk:updated-at']", visible: false)
+      expect(meta_tag["content"]).to be_present
+      meta_tag = page.first("meta[name='govuk:first-published-at']", visible: false)
+      expect(meta_tag["content"]).to be_present
+      meta_tag = page.first("meta[name='govuk:content-id']", visible: false)
+      expect(meta_tag["content"]).to be_present
+      meta_tag = page.first("meta[name='govuk:schema-name']", visible: false)
+      expect(meta_tag["content"]).to be_present
+      meta_tag = page.first("meta[name='govuk:rendering-app']", visible: false)
+      expect(meta_tag["content"]).to be_present
+      meta_tag = page.first("meta[name='govuk:publishing-app']", visible: false)
+      expect(meta_tag["content"]).to be_present
+      meta_tag = page.first("meta[name='govuk:format']", visible: false)
+      expect(meta_tag["content"]).to be_present
+    end
   end
 
   before do
