@@ -1,7 +1,16 @@
 {
   "data": {
     "edition": {
+      "content_id": "07ebb35d-1c0d-414d-9dfa-ec09a2163dfa",
+      "document_type": "world_index",
+      "first_published_at": "2023-03-29T14:18:21+01:00",
+      "locale": "en",
+      "public_updated_at": "2025-03-14T09:49:07+00:00",
+      "publishing_app": "whitehall",
+      "rendering_app": "collections",
+      "schema_name": "world_index",
       "title": "Help and services around the world",
+      "updated_at": "2025-03-14T09:49:07+00:00",
       "details": {
         "world_locations": [
           {

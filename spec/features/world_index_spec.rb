@@ -71,6 +71,26 @@ RSpec.feature "World index page" do
       expect(ga4_focus_loss_data["action"]).to eq "filter"
       expect(ga4_focus_loss_data["section"]).to eq "Help and services around the world"
     end
+
+    scenario "renders the locale in <main> element" do
+      expect(page).to have_css("main[lang='en']")
+    end
+
+    %w[
+      govuk:public-updated-at
+      govuk:updated-at
+      govuk:first-published-at
+      govuk:content-id
+      govuk:schema-name
+      govuk:rendering-app
+      govuk:publishing-app
+      govuk:format
+    ].each do |meta_tag_name|
+      scenario "renders the #{meta_tag_name} meta tag" do
+        meta_tag = page.first("meta[name='#{meta_tag_name}']", visible: false)
+        expect(meta_tag["content"]).to be_present
+      end
+    end
   end
 
   before do
@@ -98,6 +118,8 @@ RSpec.feature "World index page" do
 
       visit "/world?graphql=true"
     end
+
+    it_behaves_like "world index page"
 
     it "gets the data from GraphQL" do
       expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
