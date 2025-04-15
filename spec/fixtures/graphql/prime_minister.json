@@ -2,6 +2,9 @@
   "data": {
     "edition": {
       "base_path": "/government/ministers/prime-minister",
+      "content_id": "845e5811-c0f1-11e4-8223-005056011aef",
+      "document_type": "ministerial_role",
+      "first_published_at": "2011-10-11T17:11:44+01:00",
       "title": "Prime Minister",
       "details": {
         "body": "\u003cp\u003eThe Prime Minister is the leader of His Majesty’s Government and is ultimately responsible for the policy and decisions of the government. \u003c/p\u003e\n\n\u003cp\u003eAs leader of the UK government the Prime Minister also: \u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003eoversees the \u003ca href=\"https://www.gov.uk/government/ministers/minister-for-the-civil-service\"\u003eoperation of the Civil Service\u003c/a\u003e and government agencies \u003c/li\u003e\n  \u003cli\u003echooses members of the government \u003c/li\u003e\n  \u003cli\u003eis the principal government figure in the House of Commons \u003c/li\u003e\n\u003c/ul\u003e\n",
@@ -53,15 +56,30 @@
         ],
         "ordered_parent_organisations": [
           {
+            "analytics_identifier": "D2",
             "base_path": "/government/organisations/cabinet-office",
             "title": "Cabinet Office"
           },
           {
+            "analytics_identifier": "OT532",
             "base_path": "/government/organisations/prime-ministers-office-10-downing-street",
             "title": "Prime Minister's Office, 10 Downing Street"
           }
+        ],
+        "organisations": [
+          {
+            "analytics_identifier": "D2"
+          },
+          {
+            "analytics_identifier": "OT532"
+          }
         ]
-      }
+      },
+      "public_updated_at": "2024-07-05T12:32:36+01:00",
+      "publishing_app": "whitehall",
+      "rendering_app": "collections",
+      "schema_name": "role",
+      "updated_at": "2025-04-01T10:16:23+01:00"
     }
   }
 }

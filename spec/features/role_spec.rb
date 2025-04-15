@@ -109,6 +109,27 @@ RSpec.feature "Role page" do
     it "gets the data from GraphQL" do
       expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
     end
+
+    it "renders the locale in <main> element" do
+      expect(page).to have_css("main[lang='en']")
+    end
+
+    %w[
+      govuk:content-id
+      govuk:first-published-at
+      govuk:format
+      govuk:organisations
+      govuk:public-updated-at
+      govuk:publishing-app
+      govuk:rendering-app
+      govuk:schema-name
+      govuk:updated-at
+    ].each do |meta_tag_name|
+      it "renders the #{meta_tag_name} meta tag" do
+        meta_tag = page.first("meta[name='#{meta_tag_name}']", visible: false)
+        expect(meta_tag["content"]).to be_present
+      end
+    end
   end
 
   context "when the GraphQL parameter is false" do
