@@ -32,6 +32,10 @@ RSpec.feature "Ministers index page" do
       end
     end
 
+    it "renders the locale in <main> element" do
+      expect(page).to have_css("main[lang='en']")
+    end
+
     scenario "renders section headers" do
       expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.cabinet"))
       expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.also_attends"))

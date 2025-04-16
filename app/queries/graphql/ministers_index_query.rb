@@ -12,6 +12,7 @@ class Graphql::MinistersIndexQuery
             content_id
             document_type
             first_published_at
+            locale
             public_updated_at
             publishing_app
             rendering_app

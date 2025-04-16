@@ -1124,6 +1124,7 @@
           }
         ]
       },
+      "locale": "en",
       "public_updated_at": "2025-02-25T14:53:56+00:00",
       "publishing_app": "whitehall",
       "rendering_app": "collections",
