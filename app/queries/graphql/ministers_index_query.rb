@@ -9,6 +9,14 @@ class Graphql::MinistersIndexQuery
         edition(base_path: "#{@base_path}") {
           ... on MinistersIndex {
             base_path
+            content_id
+            document_type
+            first_published_at
+            public_updated_at
+            publishing_app
+            rendering_app
+            schema_name
+            updated_at
 
             links {
               ordered_cabinet_ministers {

@@ -2,9 +2,12 @@
   "data": {
     "edition": {
       "base_path": "/government/ministers",
+      "content_id": "324e4708-2285-40a0-b3aa-cb13af14ec5f",
       "details": {
         "body": "Read biographies and responsibilities of <a href=\"#cabinet-ministers\" class=\"govuk-link\">Cabinet ministers</a> and all <a href=\"#ministers-by-department\" class=\"govuk-link\">ministers by department</a>, as well as the <a href=\"#whips\" class=\"govuk-link\">whips</a> who help co-ordinate parliamentary business."
       },
+      "document_type": "ministers_index",
+      "first_published_at": "2016-11-14T16:28:54+00:00",
       "links": {
         "ordered_also_attends_cabinet": [
           {
@@ -1120,7 +1123,12 @@
             "web_url": "https://www.gov.uk/government/organisations/office-of-the-advocate-general-for-scotland"
           }
         ]
-      }
+      },
+      "public_updated_at": "2025-02-25T14:53:56+00:00",
+      "publishing_app": "whitehall",
+      "rendering_app": "collections",
+      "schema_name": "ministers_index",
+      "updated_at": "2025-04-13T16:56:58+01:00"
     }
   }
 }

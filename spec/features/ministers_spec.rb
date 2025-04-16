@@ -16,6 +16,22 @@ RSpec.feature "Ministers index page" do
       expect(page).to have_selector(".gem-c-heading__text", text: I18n.t("ministers.title"))
     end
 
+    %w[
+      govuk:content-id
+      govuk:first-published-at
+      govuk:format
+      govuk:public-updated-at
+      govuk:publishing-app
+      govuk:rendering-app
+      govuk:schema-name
+      govuk:updated-at
+    ].each do |meta_tag_name|
+      it "renders the #{meta_tag_name} meta tag" do
+        meta_tag = page.first("meta[name='#{meta_tag_name}']", visible: false)
+        expect(meta_tag["content"]).to be_present
+      end
+    end
+
     scenario "renders section headers" do
       expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.cabinet"))
       expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.also_attends"))
