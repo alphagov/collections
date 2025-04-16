@@ -16,13 +16,6 @@ RSpec.feature "Ministers index page" do
       expect(page).to have_selector(".gem-c-heading__text", text: I18n.t("ministers.title"))
     end
 
-    scenario "renders the lead paragraph with anchor links" do
-      expect(page).to have_selector(".gem-c-lead-paragraph")
-      within(".gem-c-lead-paragraph") do
-        expect(page).to have_link("Cabinet ministers", href: "#cabinet-ministers", class: "govuk-link")
-      end
-    end
-
     scenario "renders section headers" do
       expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.cabinet"))
       expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.also_attends"))
@@ -100,6 +93,49 @@ RSpec.feature "Ministers index page" do
     end
   end
 
+  shared_examples "ministers index page rendered from Content Store" do
+    let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
+
+    it "does not get the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+    end
+
+    it_behaves_like "ministers index page"
+
+    scenario "renders the lead paragraph with anchor links" do
+      expect(page).to have_selector(".gem-c-lead-paragraph")
+      within(".gem-c-lead-paragraph") do
+        expect(page).to have_link("Cabinet ministers", href: "#cabinet-ministers", class: "govuk-link")
+      end
+    end
+
+    context "during a reshuffle" do
+      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
+
+      it_behaves_like "ministers index page during a reshuffle"
+    end
+
+    context "during a reshuffle preview" do
+      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on-preview") }
+
+      it_behaves_like "ministers index page during a reshuffle preview"
+    end
+  end
+
+  shared_examples "ministers index page rendered from GraphQL" do
+    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
+
+    scenario "returns 200 when visiting ministers page" do
+      expect(page.status_code).to eq(200)
+    end
+
+    it "gets the data from GraphQL" do
+      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
+    end
+
+    it_behaves_like "ministers index page"
+  end
+
   shared_examples "ministers index page during a reshuffle" do
     scenario "renders the reshuffle messaging instead of the usual contents" do
       within(".gem-c-notice") do
@@ -125,8 +161,6 @@ RSpec.feature "Ministers index page" do
     end
   end
 
-  let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
-
   before do
     stub_content_store_has_item("/government/ministers", document)
   end
@@ -136,23 +170,7 @@ RSpec.feature "Ministers index page" do
       visit "/government/ministers"
     end
 
-    it_behaves_like "ministers index page"
-
-    it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-    end
-
-    context "during a reshuffle" do
-      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
-
-      it_behaves_like "ministers index page during a reshuffle"
-    end
-
-    context "during a reshuffle preview" do
-      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on-preview") }
-
-      it_behaves_like "ministers index page during a reshuffle preview"
-    end
+    it_behaves_like "ministers index page rendered from Content Store"
   end
 
   context "when the GraphQL parameter is true" do
@@ -165,11 +183,7 @@ RSpec.feature "Ministers index page" do
       visit "/government/ministers?graphql=true"
     end
 
-    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
-
-    it "gets the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
-    end
+    it_behaves_like "ministers index page rendered from GraphQL"
   end
 
   context "when the GraphQL parameter is false" do
@@ -177,9 +191,7 @@ RSpec.feature "Ministers index page" do
       visit "/government/ministers?graphql=false"
     end
 
-    it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-    end
+    it_behaves_like "ministers index page rendered from Content Store"
   end
 
   context "when the GraphQL A/B A variant is selected" do
@@ -189,11 +201,7 @@ RSpec.feature "Ministers index page" do
       end
     end
 
-    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
-
-    it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-    end
+    it_behaves_like "ministers index page rendered from Content Store"
   end
 
   context "when the GraphQL A/B test control is selected" do
@@ -203,11 +211,7 @@ RSpec.feature "Ministers index page" do
       end
     end
 
-    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
-
-    it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-    end
+    it_behaves_like "ministers index page rendered from Content Store"
   end
 
   context "when the GraphQL A/B B variant is selected" do
@@ -222,10 +226,6 @@ RSpec.feature "Ministers index page" do
       end
     end
 
-    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
-
-    it "gets the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
-    end
+    it_behaves_like "ministers index page rendered from GraphQL"
   end
 end
