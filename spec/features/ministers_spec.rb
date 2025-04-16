@@ -36,6 +36,13 @@ RSpec.feature "Ministers index page" do
       expect(page).to have_css("main[lang='en']")
     end
 
+    scenario "renders the lead paragraph with anchor links" do
+      expect(page).to have_selector(".gem-c-lead-paragraph")
+      within(".gem-c-lead-paragraph") do
+        expect(page).to have_link("Cabinet ministers", href: "#cabinet-ministers", class: "govuk-link")
+      end
+    end
+
     scenario "renders section headers" do
       expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.cabinet"))
       expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.also_attends"))
@@ -121,13 +128,6 @@ RSpec.feature "Ministers index page" do
     end
 
     it_behaves_like "ministers index page"
-
-    scenario "renders the lead paragraph with anchor links" do
-      expect(page).to have_selector(".gem-c-lead-paragraph")
-      within(".gem-c-lead-paragraph") do
-        expect(page).to have_link("Cabinet ministers", href: "#cabinet-ministers", class: "govuk-link")
-      end
-    end
 
     context "during a reshuffle" do
       let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }

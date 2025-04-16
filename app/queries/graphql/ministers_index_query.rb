@@ -19,6 +19,10 @@ class Graphql::MinistersIndexQuery
             schema_name
             updated_at
 
+            details {
+              body
+            }
+
             links {
               ordered_cabinet_ministers {
                 ...basePersonInfo
