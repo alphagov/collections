@@ -154,6 +154,18 @@ RSpec.feature "Ministers index page" do
     end
 
     it_behaves_like "ministers index page"
+
+    context "during a reshuffle" do
+      let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-on") }
+
+      it_behaves_like "ministers index page during a reshuffle"
+    end
+
+    context "during a reshuffle preview" do
+      let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-on-preview") }
+
+      it_behaves_like "ministers index page during a reshuffle preview"
+    end
   end
 
   shared_examples "ministers index page during a reshuffle" do

@@ -21,6 +21,7 @@ class Graphql::MinistersIndexQuery
 
             details {
               body
+              reshuffle
             }
 
             links {
