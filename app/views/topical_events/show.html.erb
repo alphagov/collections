@@ -1,4 +1,7 @@
-<% ga4_link_attributes = {
+<%
+  add_view_stylesheet("topical_events")
+
+  ga4_link_attributes = {
     event_name: "navigation",
     type: "subscribe",
     index_link: 1,
@@ -7,8 +10,6 @@
   }.to_json
 %>
 
-<% add_view_stylesheet("topical_events") %>
-
 <% content_for :title, @topical_event.title %>
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing topical-events-show" %>
 
@@ -16,7 +17,7 @@
   <%= tag("meta", name: "description", content: @topical_event.description) if @topical_event.description %>
 <% end %>
 
-  <% if @topical_event.slug == "her-majesty-queen-elizabeth-ii" %>
+<% if @topical_event.slug == "her-majesty-queen-elizabeth-ii" %>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <%= render "govuk_publishing_components/components/heading", {
@@ -27,10 +28,10 @@
       } %>
     </div>
   </div>
-  <% else %>
-    <% if @topical_event.slug == 'coronation' %>
-      <%= render "bunting"%>
-    <% end %>
+<% else %>
+  <% if @topical_event.slug == 'coronation' %>
+    <%= render "bunting"%>
+  <% end %>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
@@ -42,8 +43,9 @@
       } %>
     </div>
   </div>
-  <% end %>
-  <div class="govuk-grid-row">
+<% end %>
+
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/lead_paragraph", {
       text: @topical_event.description,
@@ -93,9 +95,11 @@
       </section>
     <% end %>
   </div>
+</div>
 
-  <div class="govuk-grid-column-full">
-    <% if @topical_event.ordered_featured_documents&.any? %>
+<% if @topical_event.ordered_featured_documents&.any? %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
       <section id="featured">
         <%= render "govuk_publishing_components/components/heading", {
           text: I18n.t("shared.featured"),
@@ -115,11 +119,13 @@
           </div>
         <% end %>
       </section>
-    <% end %>
+    </div>
   </div>
+<% end %>
 
-  <div class="govuk-grid-column-two-thirds topical-events__section-break">
-    <section id="latest">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <section id="latest" class="topical-events__section-break">
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("topical_events.headings.latest"),
         padding: true,
@@ -144,25 +150,23 @@
         } %>
       </div>
     </section>
-  </div>
 
-  <section id="documents" class="govuk-grid-column-two-thirds">
-    <% if @topical_event.publications.any? || @topical_event.consultations.any? || @topical_event.announcements.any? || @topical_event.guidance_and_regulation.any? %>
-      <%= render "govuk_publishing_components/components/heading", {
-        text: I18n.t("topical_events.headings.documents"),
-        padding: true,
-        font_size: "l",
-        border_top: 2,
-        margin_bottom: 3,
-      } %>
-    <% end %>
+    <section id="documents">
+      <% if @topical_event.publications.any? || @topical_event.consultations.any? || @topical_event.announcements.any? || @topical_event.guidance_and_regulation.any? %>
+        <%= render "govuk_publishing_components/components/heading", {
+          text: I18n.t("topical_events.headings.documents"),
+          padding: true,
+          font_size: "l",
+          border_top: 2,
+          margin_bottom: 3,
+        } %>
+      <% end %>
 
-    <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.consultations, heading: I18n.t("topical_events.headings.consultations"), link_to: search_url(:topical_event, :consultation, @topical_event.slug) }) if @topical_event.consultations.any? %>
-    <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.announcements, heading: I18n.t("topical_events.headings.announcements"), link_to: search_url(:topical_event, :announcement, @topical_event.slug) }) if @topical_event.announcements.any? %>
-    <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.guidance_and_regulation, heading: I18n.t("topical_events.headings.guidance_and_regulation"), link_to: search_url(:topical_event, :guidance_and_regulation, @topical_event.slug) }) if @topical_event.guidance_and_regulation.any? %>
-  </section>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.consultations, heading: I18n.t("topical_events.headings.consultations"), link_to: search_url(:topical_event, :consultation, @topical_event.slug) }) if @topical_event.consultations.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.announcements, heading: I18n.t("topical_events.headings.announcements"), link_to: search_url(:topical_event, :announcement, @topical_event.slug) }) if @topical_event.announcements.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.guidance_and_regulation, heading: I18n.t("topical_events.headings.guidance_and_regulation"), link_to: search_url(:topical_event, :guidance_and_regulation, @topical_event.slug) }) if @topical_event.guidance_and_regulation.any? %>
+    </section>
 
-  <div class="govuk-grid-column-two-thirds">
     <% if @topical_event.emphasised_organisations && @topical_event.emphasised_organisations.any? %>
       <%= render "govuk_publishing_components/components/heading", {
         text: t("topical_events.organisations"),
