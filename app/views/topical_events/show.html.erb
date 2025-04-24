@@ -164,35 +164,32 @@
 
   <div class="govuk-grid-column-two-thirds">
     <% if @topical_event.emphasised_organisations && @topical_event.emphasised_organisations.any? %>
-      <div class="organisations">
-        <%= render "govuk_publishing_components/components/heading", {
-          text: t("topical_events.organisations"),
-          font_size: "l",
-          margin_bottom: 4,
-          padding: true,
-          border_top: 2,
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t("topical_events.organisations"),
+        font_size: "l",
+        margin_bottom: 4,
+        padding: true,
+        border_top: 2,
+      } %>
+      <% @topical_event.emphasised_organisations.flatten.each do |organisation| %>
+        <%= render "govuk_publishing_components/components/organisation_logo", {
+          organisation: {
+            name: organisation["title"],
+            url: organisation["base_path"],
+            crest: organisation.dig("details", "logo", "crest"),
+            brand: organisation.dig("details", "brand"),
+          },
+          margin_bottom: 6,
         } %>
-        <% @topical_event.emphasised_organisations.flatten.each do |organisation| %>
-          <%= render "govuk_publishing_components/components/organisation_logo", {
-            organisation: {
-              name: organisation["title"],
-              url: organisation["base_path"],
-              crest: organisation.dig("details", "logo", "crest"),
-              brand: organisation.dig("details", "brand"),
-            },
-            margin_bottom: 6,
-          } %>
-        <% end %>
+      <% end %>
 
-        <% if @topical_event.slug == 'first-world-war-centenary' %>
-          <%= render "first_world_war_centenary"%>
-        <% end %>
+      <% if @topical_event.slug == 'first-world-war-centenary' %>
+        <%= render "first_world_war_centenary"%>
+      <% end %>
 
-        <% if @topical_event.slug == '2022-events-platinum-jubilee-commonwealth-games-unboxed' %>
-          <%= render "platinum_jubilee_unboxed" %>
-        <% end %>
-
-      </div>
+      <% if @topical_event.slug == '2022-events-platinum-jubilee-commonwealth-games-unboxed' %>
+        <%= render "platinum_jubilee_unboxed" %>
+      <% end %>
     <% end %>
   </div>
 </div>
