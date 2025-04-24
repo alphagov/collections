@@ -175,17 +175,21 @@
         padding: true,
         border_top: 2,
       } %>
+      <ul class="govuk-list">
       <% @topical_event.emphasised_organisations.flatten.each do |organisation| %>
-        <%= render "govuk_publishing_components/components/organisation_logo", {
-          organisation: {
-            name: organisation["title"],
-            url: organisation["base_path"],
-            crest: organisation.dig("details", "logo", "crest"),
-            brand: organisation.dig("details", "brand"),
-          },
-          margin_bottom: 6,
-        } %>
+        <li>
+          <%= render "govuk_publishing_components/components/organisation_logo", {
+            organisation: {
+              name: organisation["title"],
+              url: organisation["base_path"],
+              crest: organisation.dig("details", "logo", "crest"),
+              brand: organisation.dig("details", "brand"),
+            },
+            margin_bottom: 6,
+          } %>
+        </li>
       <% end %>
+      </ul>
 
       <% if @topical_event.slug == 'first-world-war-centenary' %>
         <%= render "first_world_war_centenary"%>
