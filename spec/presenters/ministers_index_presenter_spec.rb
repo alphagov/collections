@@ -115,5 +115,102 @@ RSpec.describe MinistersIndexPresenter do
     end
   end
 
+  describe "#whips" do
+    let(:content_item_data) do
+      {
+        "links" => {
+          "ordered_junior_lords_of_the_treasury_whips" => [
+            {
+              "name" => "Person 1",
+              "links" => {
+                "role_appointments" => [
+                  {
+                    "details" => {
+                      "current" => true,
+                    },
+                    "links" => {
+                      "role" => [
+                        {
+                          "content_id" => "01d57ccd-ef0d-4a28-b638-eab2cc06ffe9",
+                          "title" => "Whip role",
+                          "web_url" => "https://www.integration.publishing.service.gov.uk/government/ministers/whip-role",
+                          "details" => {
+                            "seniority" => 109,
+                            "whip_organisation" => {
+                              "label" => "Junior Lords of the Treasury",
+                              "sort_order" => 2,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    "details" => {
+                      "current" => true,
+                    },
+                    "links" => {
+                      "role" => [
+                        {
+                          "content_id" => "d301319d-5957-4fec-acbc-1dfef3f79267",
+                          "title" => "Another role",
+                          "web_url" => "https://www.integration.publishing.service.gov.uk/government/ministers/role",
+                          "details" => {
+                            "seniority" => 100,
+                            "whip_organisation" => non_whip_role_organisation,
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      }
+    end
+
+    let(:expected_roles) do
+      [
+        MinistersIndexPresenter::Minister::Role.new(
+          id: "01d57ccd-ef0d-4a28-b638-eab2cc06ffe9",
+          payment_info: nil,
+          seniority: 109,
+          title: "Whip role",
+          url: "https://www.integration.publishing.service.gov.uk/government/ministers/whip-role",
+          whip: true,
+        ),
+      ]
+    end
+
+    context "when the response is from Content Store" do
+      let(:non_whip_role_organisation) { {} }
+
+      it "returns people with only their whip roles" do
+        presenter = MinistersIndexPresenter.new(content_item_data)
+        expect(
+          presenter.whips.find { |whip_types| whip_types.item_key == "ordered_junior_lords_of_the_treasury_whips" }.ministers.first.roles,
+        ).to eq(expected_roles)
+      end
+    end
+
+    context "when the response is from GraphQL" do
+      let(:non_whip_role_organisation) do
+        {
+          "label" => nil,
+          "sort_order" => nil,
+        }
+      end
+
+      it "returns people with only their whip roles" do
+        presenter = MinistersIndexPresenter.new(content_item_data)
+        expect(
+          presenter.whips.find { |whip_types| whip_types.item_key == "ordered_junior_lords_of_the_treasury_whips" }.ministers.first.roles,
+        ).to eq(expected_roles)
+      end
+    end
+  end
+
   # TODO: add tests for MinistersIndexPresenter::Minister class
 end

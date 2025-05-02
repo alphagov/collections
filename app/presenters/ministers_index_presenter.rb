@@ -91,7 +91,7 @@ class MinistersIndexPresenter
           url: role_app.dig("links", "role").first["web_url"],
           seniority: role_app.dig("links", "role").first.fetch("details").fetch("seniority", 1000),
           payment_info: role_app.dig("links", "role").first.dig("details", "role_payment_type"),
-          whip: role_app.dig("links", "role").first.dig("details", "whip_organisation").present?,
+          whip: role_app.dig("links", "role").first.dig("details", "whip_organisation", "label").present?,
         )
       }.sort_by(&:seniority)
 
