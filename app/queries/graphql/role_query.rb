@@ -59,9 +59,41 @@ class Graphql::RoleQuery
               organisations {
                 analytics_identifier
               }
+
+              taxons {
+                ...Taxon
+                links {
+                  parent_taxons {
+                    ...Taxon
+                    links {
+                      parent_taxons {
+                        ...Taxon
+                        links {
+                          parent_taxons {
+                            ...Taxon
+                            links {
+                              parent_taxons {
+                                ...Taxon
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
+      }
+
+      fragment Taxon on Edition {
+        base_path
+        content_id
+        document_type
+        phase
+        title
       }
     QUERY
   end

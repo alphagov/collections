@@ -73,7 +73,46 @@
           {
             "analytics_identifier": "OT532"
           }
-        ]
+        ],
+        "taxons": [
+          {
+            "api_path": "/api/content/corporate-information",
+            "api_url": "https://www.gov.uk/api/content/corporate-information",
+            "base_path": "/corporate-information",
+            "content_id": "a544d48b-1e9e-47fb-b427-7a987c658c14",
+            "details": {
+              "internal_name": "Corporate information",
+              "notes_for_editors": "",
+              "visible_to_departmental_editors": true
+            },
+            "document_type": "taxon",
+            "links": {
+            "root_taxon": [
+              {
+                "api_path": "/api/content/",
+                "api_url": "https://www.gov.uk/api/content/",
+                "base_path": "/",
+                "content_id": "f3bbdec2-0e62-4520-a7fd-6ffd5d36e03a",
+                "document_type": "homepage",
+                "links": {},
+                "locale": "en",
+                "public_updated_at": "2023-06-28T09:32:34Z",
+                "schema_name": "homepage",
+                "title": "GOV.UK homepage",
+                "web_url": "https://www.gov.uk/",
+                "withdrawn": false
+              }
+            ]
+          },
+          "locale": "en",
+          "phase": "live",
+          "public_updated_at": "2018-08-22T12:57:58Z",
+          "schema_name": "taxon",
+          "title": "Corporate information",
+          "web_url": "https://www.gov.uk/corporate-information",
+          "withdrawn": false
+        }
+      ]
       },
       "public_updated_at": "2024-07-05T12:32:36+01:00",
       "publishing_app": "whitehall",
