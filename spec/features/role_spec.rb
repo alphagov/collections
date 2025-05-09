@@ -18,6 +18,36 @@ RSpec.feature "Role page" do
     GovukSchemas::Example.find("role", example_name: "prime_minister")
   end
 
+  context "when the ordered_parent_organisations links are nil" do
+    let(:role_content_item_data) do
+      GovukSchemas::Example.find("role", example_name: "prime_minister").tap do |content_item|
+        content_item["links"]["ordered_parent_organisations"] = nil
+      end
+    end
+
+    it "does not include the organisations list" do
+      expect(page).to_not have_selector("div.organisations-list")
+    end
+  end
+
+  context "when the ordered_parent_organisations links are an empty array" do
+    let(:role_content_item_data) do
+      GovukSchemas::Example.find("role", example_name: "prime_minister").tap do |content_item|
+        content_item["links"]["ordered_parent_organisations"] = []
+      end
+    end
+
+    it "does not include the organisations list" do
+      expect(page).to_not have_selector("div.organisations-list")
+    end
+  end
+
+  context "when the ordered_parent_organisations links are present" do
+    it "includes the organisations list" do
+      expect(page).to have_selector("div.organisations-list")
+    end
+  end
+
   context "when there is no GraphQL parameter" do
     it "renders the page successfully" do
       expect(page).to have_selector("h1", text: "Prime Minister")
