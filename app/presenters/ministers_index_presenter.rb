@@ -38,8 +38,9 @@ class MinistersIndexPresenter
         crest: department_data.dig("details", "logo", "crest"),
         formatted_title: department_data.dig("details", "logo", "formatted_title"),
         brand: department_data.dig("details", "brand"),
+        roles: department_data.dig("links", "ordered_roles") || [],
         ministers: (department_data.dig("links", "ordered_ministers") || []).map do |minister_data|
-          Minister.new(minister_data, org_role_ids: role_ids_for_organisation(department_data))
+          Minister.new(minister_data)
         end,
       )
     end
@@ -57,10 +58,9 @@ class MinistersIndexPresenter
   end
 
   class Minister
-    def initialize(data, org_role_ids: nil, whip_only: false)
+    def initialize(data, whip_only: false)
       @data = data
       @whip_only = whip_only
-      @org_role_ids = org_role_ids
     end
 
     def person_url
@@ -96,8 +96,15 @@ class MinistersIndexPresenter
       }.sort_by(&:seniority)
 
       roles = roles.select(&:whip) if @whip_only
-      roles = roles.select { |role| @org_role_ids.include?(role.id) } if @org_role_ids
       roles
+    end
+
+    def roles_for_department(department)
+      org_role_ids = department.roles.map { |role| role["content_id"] }
+
+      roles.select do |role|
+        org_role_ids.include?(role.id)
+      end
     end
 
     def role_payment_info
@@ -143,8 +150,4 @@ private
   end
 
   WhipOrganisation = Struct.new(:item_key, :name_key, :ministers, keyword_init: true)
-
-  def role_ids_for_organisation(org_data)
-    (org_data.dig("links", "ordered_roles") || []).map { |role| role["content_id"] }
-  end
 end
