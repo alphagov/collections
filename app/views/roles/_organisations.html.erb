@@ -1,4 +1,4 @@
-<% if role.organisations %>
+<% if role.organisations.present? %>
   <div class="organisations-list <%= direction_rtl_class %>" <%= dir_attribute %> <%= lang_attribute %>>
     <span lang="en"><%= t('roles.organisations') %></span>:
     <%= to_sentence(role.organisations.map { |organisation| link_to(organisation['title'], organisation['base_path'], class: "govuk-link") }) %>
