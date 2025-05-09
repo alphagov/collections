@@ -153,6 +153,10 @@ RSpec.feature "Role page" do
       govuk:publishing-app
       govuk:rendering-app
       govuk:schema-name
+      govuk:taxon-id
+      govuk:taxon-ids
+      govuk:taxon-slug
+      govuk:taxon-slugs
       govuk:updated-at
     ].each do |meta_tag_name|
       it "renders the #{meta_tag_name} meta tag" do
