@@ -155,7 +155,7 @@ GEM
     dig_rb (1.0.1)
     docile (1.4.1)
     domain_name (0.6.20240107)
-    drb (2.2.1)
+    drb (2.2.3)
     erb (5.0.1)
     erb_lint (0.9.0)
       activesupport
@@ -237,7 +237,7 @@ GEM
       capybara (>= 3.36)
       puma
       selenium-webdriver (>= 4.0)
-    govuk_web_banners (1.1.3)
+    govuk_web_banners (1.2.0)
       govuk_app_config
       govuk_publishing_components
       rails (>= 7)
