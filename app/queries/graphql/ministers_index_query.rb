@@ -56,6 +56,7 @@ class Graphql::MinistersIndexQuery
               ordered_ministerial_departments {
                 title
                 web_url
+                content_id
 
                 details {
                   brand
@@ -69,10 +70,6 @@ class Graphql::MinistersIndexQuery
                 links {
                   ordered_ministers {
                     ...basePersonInfo
-                  }
-
-                  ordered_roles {
-                    content_id
                   }
                 }
               }
@@ -113,6 +110,11 @@ class Graphql::MinistersIndexQuery
                   whip_organisation {
                     label
                     sort_order
+                  }
+                }
+                links {
+                  organisations {
+                    content_id
                   }
                 }
               }
