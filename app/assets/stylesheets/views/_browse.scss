@@ -1,11 +1,18 @@
 @import "govuk_publishing_components/individual_component_support";
 
+// Dart Sass 1.79.0 introduced support for CSS Color Level 4 color spaces.
+// Consequently, the `govuk-tint` mixin now outputs rgb values with floating-point precision,
+// leading to unsupported property value warnings in some browsers, such as Safari 11.1.1.
+// To maintain compatibility, we're defining equivalent hex color values as variables.
+
+$govuk-blue-tint-80: #d2e2f1; // govuk-tint(govuk-colour("blue"), 80%)
+
 // This isn't proper BEM - but the convention is to have the view name as the
 // block part of the class name. Because we need to keep `browse` so this can
 // be run as an A/B test, we need to use a different class name for each view.
 .browse__breadcrumb-wrapper,
 .browse__header-wrapper {
-  background-color: govuk-tint(govuk-colour("blue"), 80%);
+  background-color: $govuk-blue-tint-80;
 }
 
 .browse__breadcrumb-wrapper {
