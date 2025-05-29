@@ -5,7 +5,7 @@
 // be run as an A/B test, we need to use a different class name for each view.
 .browse__breadcrumb-wrapper,
 .browse__header-wrapper {
-  background-color: govuk-tint(govuk-colour("blue"), 80%);
+  background-color: $govuk-blue-tint-80;
 }
 
 .browse__breadcrumb-wrapper {
