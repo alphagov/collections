@@ -91,7 +91,7 @@ class MinistersIndexPresenter
           id: role_data.fetch("content_id"),
           title: role_data.fetch("title"),
           url: role_data["web_url"],
-          seniority: role_data.fetch("details").fetch("seniority", 1000),
+          seniority: role_data.dig("details", "seniority") || 1000,
           payment_info: role_data.dig("details", "role_payment_type"),
           whip: role_data.dig("details", "whip_organisation", "label").present?,
           org_ids: (role_data.dig("links", "organisations") || []).map { |org| org["content_id"] },
