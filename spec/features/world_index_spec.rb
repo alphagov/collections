@@ -1,8 +1,6 @@
 require "integration_spec_helper"
 
 RSpec.feature "World index page" do
-  include GovukAbTesting::RspecHelpers
-
   shared_examples "world index page" do
     scenario "returns 200 when visiting world index page" do
       expect(page.status_code).to eq(200)
@@ -99,6 +97,7 @@ RSpec.feature "World index page" do
 
   context "when the GraphQL parameter is not set" do
     before do
+      allow(Random).to receive(:rand).with(1.0).and_return(1)
       visit "/world"
     end
 
@@ -136,11 +135,10 @@ RSpec.feature "World index page" do
     end
   end
 
-  context "when the GraphQL A/B A variant is selected" do
+  context "when the GraphQL A/B Content Store variant is selected" do
     before do
-      with_variant GraphQLWorldIndex: "A" do
-        visit "/world"
-      end
+      allow(Random).to receive(:rand).with(1.0).and_return(1)
+      visit "/world"
     end
 
     it "does not get the data from GraphQL" do
@@ -148,32 +146,19 @@ RSpec.feature "World index page" do
     end
   end
 
-  context "when the GraphQL A/B B variant is selected" do
+  context "when the GraphQL A/B GraphQL variant is selected" do
     before do
       stub_publishing_api_graphql_query(
         Graphql::WorldIndexQuery.new("/world").query,
         fetch_graphql_fixture("world_index"),
       )
 
-      with_variant GraphQLWorldIndex: "B" do
-        visit "/world"
-      end
+      allow(Random).to receive(:rand).with(1.0).and_return(WorldController::GRAPHQL_TRAFFIC_RATE - 0.000001)
+      visit "/world"
     end
 
     it "gets the data from GraphQL" do
       expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
-    end
-  end
-
-  context "when the GraphQL A/B control variant is selected" do
-    before do
-      with_variant GraphQLWorldIndex: "Z" do
-        visit "/world"
-      end
-    end
-
-    it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
     end
   end
 end

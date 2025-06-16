@@ -1,7 +1,6 @@
 require "integration_spec_helper"
 
 RSpec.feature "Role page" do
-  include GovukAbTesting::RspecHelpers
   include SearchApiHelpers
 
   before do
@@ -11,6 +10,7 @@ RSpec.feature "Role page" do
     )
     stub_search(body: { results: [] })
 
+    allow(Random).to receive(:rand).with(1.0).and_return(1)
     visit "/government/ministers/prime-minister"
   end
 
@@ -49,6 +49,10 @@ RSpec.feature "Role page" do
   end
 
   context "when there is no GraphQL parameter" do
+    before do
+      allow(Random).to receive(:rand).with(1.0).and_return(1)
+    end
+
     it "renders the page successfully" do
       expect(page).to have_selector("h1", text: "Prime Minister")
     end
@@ -176,11 +180,10 @@ RSpec.feature "Role page" do
     end
   end
 
-  context "when the GraphQL A/B A variant is selected" do
+  context "when the GraphQL A/B Content Store variant is selected" do
     before do
-      with_variant GraphQLRoles: "A" do
-        visit "/government/ministers/prime-minister"
-      end
+      allow(Random).to receive(:rand).with(1.0).and_return(1)
+      visit "/government/ministers/prime-minister"
     end
 
     it "does not get the data from GraphQL" do
@@ -188,28 +191,15 @@ RSpec.feature "Role page" do
     end
   end
 
-  context "when the GraphQL A/B test control is selected" do
-    before do
-      with_variant GraphQLRoles: "Z" do
-        visit "/government/ministers/prime-minister"
-      end
-    end
-
-    it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
-    end
-  end
-
-  context "when the GraphQL A/B B variant is selected" do
+  context "when the GraphQL A/B GraphQL variant is selected" do
     before do
       stub_publishing_api_graphql_query(
         Graphql::RoleQuery.new("/government/ministers/prime-minister").query,
         role_edition_data,
       )
 
-      with_variant GraphQLRoles: "B" do
-        visit "/government/ministers/prime-minister"
-      end
+      allow(Random).to receive(:rand).with(1.0).and_return(RolesController::GRAPHQL_TRAFFIC_RATE - 0.000001)
+      visit "/government/ministers/prime-minister"
     end
 
     let(:role_edition_data) do

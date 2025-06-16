@@ -1,18 +1,12 @@
 class RolesController < ApplicationController
   around_action :switch_locale
 
-  def show
-    ab_test = GovukAbTesting::AbTest.new(
-      "GraphQLRoles",
-      allowed_variants: %w[A B Z],
-      control_variant: "Z",
-    )
-    @requested_variant = ab_test.requested_variant(request.headers)
-    @requested_variant.configure_response(response)
+  GRAPHQL_TRAFFIC_RATE = 0.02207862 # This is a decimal version of a percentage, so can be between 0 and 1
 
+  def show
     content_item_data = if params[:graphql] == "false"
                           load_from_content_store
-                        elsif params[:graphql] == "true" || @requested_variant.variant?("B")
+                        elsif params[:graphql] == "true" || graphql_ab_test?(GRAPHQL_TRAFFIC_RATE)
                           load_from_graphql
                         else
                           load_from_content_store

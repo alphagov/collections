@@ -108,4 +108,9 @@ private
   def render_partial(partial_name, locals = {})
     render_to_string(partial_name, formats: [:html], layout: false, locals:)
   end
+
+  def graphql_ab_test?(graphql_traffic_rate)
+    random_number = Random.rand(1.0)
+    random_number < graphql_traffic_rate
+  end
 end
