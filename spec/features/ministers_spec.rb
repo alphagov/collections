@@ -1,8 +1,6 @@
 require "integration_spec_helper"
 
 RSpec.feature "Ministers index page" do
-  include GovukAbTesting::RspecHelpers
-
   shared_examples "ministers index page" do
     scenario "returns 200 when visiting ministers page" do
       expect(page.status_code).to eq(200)
@@ -199,6 +197,8 @@ RSpec.feature "Ministers index page" do
 
   context "when the GraphQL parameter is not set" do
     before do
+      allow(Random).to receive(:rand).with(1.0).and_return(1)
+
       visit "/government/ministers"
     end
 
@@ -226,36 +226,24 @@ RSpec.feature "Ministers index page" do
     it_behaves_like "ministers index page rendered from Content Store"
   end
 
-  context "when the GraphQL A/B A variant is selected" do
+  context "when the GraphQL A/B Content Store variant is selected" do
     before do
-      with_variant GraphQLMinistersIndex: "A" do
-        visit "/government/ministers"
-      end
+      allow(Random).to receive(:rand).with(1.0).and_return(1)
+      visit "/government/ministers"
     end
 
     it_behaves_like "ministers index page rendered from Content Store"
   end
 
-  context "when the GraphQL A/B test control is selected" do
-    before do
-      with_variant GraphQLMinistersIndex: "Z" do
-        visit "/government/ministers"
-      end
-    end
-
-    it_behaves_like "ministers index page rendered from Content Store"
-  end
-
-  context "when the GraphQL A/B B variant is selected" do
+  context "when the GraphQL A/B GraphQL variant is selected" do
     before do
       stub_publishing_api_graphql_query(
         Graphql::MinistersIndexQuery.new("/government/ministers").query,
         document,
       )
 
-      with_variant GraphQLMinistersIndex: "B" do
-        visit "/government/ministers"
-      end
+      allow(Random).to receive(:rand).with(1.0).and_return(MinistersController::GRAPHQL_TRAFFIC_RATE - 0.000001)
+      visit "/government/ministers"
     end
 
     it_behaves_like "ministers index page rendered from GraphQL"
