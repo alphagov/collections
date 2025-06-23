@@ -54,6 +54,12 @@ RSpec.describe MinistersController do
 
           expect(response).to have_http_status(:success)
         end
+
+        it "pushes the errors to prometheus when the response contains some" do
+          get :index, params: { graphql: true }
+
+          expect(request.env["govuk.prometheus_labels"]["graphql_contains_errors"]).to be(true)
+        end
       end
 
       context "and publishing-api returns an error status code" do
@@ -66,6 +72,12 @@ RSpec.describe MinistersController do
           get :index, params: { graphql: true }
 
           expect(response).to have_http_status(:success)
+        end
+
+        it "pushes the status codes to prometheus" do
+          get :index, params: { graphql: true }
+
+          expect(request.env["govuk.prometheus_labels"]["graphql_status_code"]).to eq(404)
         end
       end
 
@@ -81,6 +93,12 @@ RSpec.describe MinistersController do
           get :index, params: { graphql: true }
 
           expect(response).to have_http_status(:success)
+        end
+
+        it "pushes the errors to prometheus" do
+          get :index, params: { graphql: true }
+
+          expect(request.env["govuk.prometheus_labels"]["graphql_api_timeout"]).to be(true)
         end
       end
     end
