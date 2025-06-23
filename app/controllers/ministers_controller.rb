@@ -18,7 +18,15 @@ class MinistersController < ApplicationController
 
   def load_from_graphql
     @ministers_index = Graphql::MinistersIndex.find!(request.path)
-    @ministers_index.content_item
+    if @ministers_index.content_item.nil?
+      load_from_content_store
+    else
+      @ministers_index.content_item
+    end
+  rescue GdsApi::HTTPErrorResponse
+    load_from_content_store
+  rescue GdsApi::TimedOutException
+    load_from_content_store
   end
 
   def load_from_content_store

@@ -15,7 +15,15 @@ class WorldController < ApplicationController
 
   def load_from_graphql
     @world_index = Graphql::WorldIndex.find!(request.path)
-    @world_index.content_item
+    if @world_index.content_item.nil?
+      load_from_content_store
+    else
+      @world_index.content_item
+    end
+  rescue GdsApi::HTTPErrorResponse
+    load_from_content_store
+  rescue GdsApi::TimedOutException
+    load_from_content_store
   end
 
   def load_from_content_store

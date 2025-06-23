@@ -18,7 +18,15 @@ class RolesController < ApplicationController
 
   def load_from_graphql
     @role = Graphql::Role.find!(request.path)
-    @role.content_item
+    if @role.content_item.nil?
+      load_from_content_store
+    else
+      @role.content_item
+    end
+  rescue GdsApi::HTTPErrorResponse => e
+    load_from_content_store
+  rescue GdsApi::TimedOutException
+    load_from_content_store
   end
 
   def load_from_content_store

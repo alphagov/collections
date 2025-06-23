@@ -39,6 +39,50 @@ RSpec.describe MinistersController do
           expect(response).to render_template(:index)
         end
       end
+
+      context "and the graphql query is not successful" do
+        before do
+          stub_publishing_api_graphql_query(
+            Graphql::MinistersIndexQuery.new("/government/ministers").query,
+            { "errors": [{ "message": "some_error" }] },
+          )
+          stub_content_store_has_item(base_path, ministers)
+        end
+
+        it "falls back to loading from Content Store" do
+          get :index, params: { graphql: true }
+
+          expect(response).to have_http_status(:success)
+        end
+      end
+
+      context "and publishing-api returns an error status code" do
+        before do
+          stub_any_publishing_api_call_to_return_not_found
+          stub_content_store_has_item(base_path, ministers)
+        end
+
+        it "falls back to loading from Content Store" do
+          get :index, params: { graphql: true }
+
+          expect(response).to have_http_status(:success)
+        end
+      end
+
+      context "and GDS API Adapters times-out the request" do
+        before do
+          allow(Services.publishing_api).to receive(:graphql_query)
+            .and_raise(GdsApi::TimedOutException)
+
+          stub_content_store_has_item(base_path, ministers)
+        end
+
+        it "falls back to loading from Content Store" do
+          get :index, params: { graphql: true }
+
+          expect(response).to have_http_status(:success)
+        end
+      end
     end
   end
 end
