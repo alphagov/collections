@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/alphagov/govuk_publishing_components.git
-  revision: bdff187f6698b29ccd9aaaeb961481706065b62b
+  revision: df78e6ae3471b9878e52fc570592786562b9c79d
   branch: test-bump-govuk-frontend-to-5.10.1
   specs:
     govuk_publishing_components (57.3.1)
