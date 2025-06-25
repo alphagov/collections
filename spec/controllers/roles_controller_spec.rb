@@ -17,13 +17,13 @@ RSpec.describe RolesController do
       end
 
       it "when the content item exists" do
-        get :show, params: { name: role }
+        get :show, params: { name: role, graphql: false }
         expect(response).to have_http_status(:success)
         expect(response).to render_template(:show)
       end
 
       it "when there is no content item" do
-        get :show, params: { name: "she-ra" }
+        get :show, params: { name: "she-ra", graphql: false }
         expect(response).to have_http_status(:not_found)
       end
     end
