@@ -1,4 +1,6 @@
 class WorldController < ApplicationController
+  include PrometheusSupport
+
   GRAPHQL_TRAFFIC_RATE = 0.07404692 # This is a decimal version of a percentage, so can be between 0 and 1
   def index
     content_item_data = if params[:graphql] == "false"
@@ -15,7 +17,18 @@ class WorldController < ApplicationController
 
   def load_from_graphql
     @world_index = Graphql::WorldIndex.find!(request.path)
-    @world_index.content_item
+    if @world_index.content_item.nil?
+      set_prometheus_labels("graphql_contains_errors" => true)
+      load_from_content_store
+    else
+      @world_index.content_item
+    end
+  rescue GdsApi::HTTPErrorResponse => e
+    set_prometheus_labels("graphql_status_code" => e.code)
+    load_from_content_store
+  rescue GdsApi::TimedOutException
+    set_prometheus_labels("graphql_api_timeout" => true)
+    load_from_content_store
   end
 
   def load_from_content_store
