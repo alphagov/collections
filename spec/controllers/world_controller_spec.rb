@@ -36,6 +36,11 @@ RSpec.describe WorldController do
       it "the request is successful" do
         get :index, params: { graphql: true }
 
+        expect(request.env["govuk.prometheus_labels"]).to include({
+          "graphql_status_code" => 200,
+          "graphql_contains_errors" => false,
+          "graphql_api_timeout" => false,
+        })
         expect(response).to have_http_status(:success)
         expect(response).to render_template(:index)
       end
