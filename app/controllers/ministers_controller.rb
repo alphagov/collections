@@ -19,6 +19,7 @@ class MinistersController < ApplicationController
   end
 
   def load_from_graphql
+    set_prometheus_labels("graphql_status_code" => 200, "graphql_contains_errors" => false, "graphql_api_timeout" => false)
     @ministers_index = Graphql::MinistersIndex.find!(request.path)
     if @ministers_index.content_item.nil?
       set_prometheus_labels("graphql_contains_errors" => true)
