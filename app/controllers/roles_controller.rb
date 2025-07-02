@@ -3,7 +3,7 @@ class RolesController < ApplicationController
 
   around_action :switch_locale
 
-  GRAPHQL_TRAFFIC_RATE = 0.15 # This is a decimal version of a percentage, so can be between 0 and 1
+  GRAPHQL_TRAFFIC_RATE = 0.5 # This is a decimal version of a percentage, so can be between 0 and 1
 
   def show
     content_item_data = if params[:graphql] == "false"
