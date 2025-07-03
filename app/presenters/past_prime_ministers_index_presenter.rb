@@ -5,9 +5,9 @@ class PastPrimeMinistersIndexPresenter
 
   def featured_profile_groups
     {
-      "21st_century" => prime_minsters_between(2001, 2099),
-      "20th_century" => prime_minsters_between(1901, 2000),
-      "18th_and_19th_centuries" => prime_minsters_between(1701, 1900),
+      "21st_century" => prime_ministers_between(2001, 2099),
+      "20th_century" => prime_ministers_between(1901, 2000),
+      "18th_and_19th_centuries" => prime_ministers_between(1701, 1900),
     }
   end
 
@@ -15,7 +15,7 @@ class PastPrimeMinistersIndexPresenter
     {}
   end
 
-  def prime_minsters_between(start_date, end_date)
+  def prime_ministers_between(start_date, end_date)
     @sorted_prime_ministers_with_start_dates.filter_map do |data, earliest_start_date|
       formatted_data(data) if earliest_start_date.between?(start_date, end_date)
     end
