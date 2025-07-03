@@ -68,6 +68,30 @@ RSpec.describe PastPrimeMinistersIndexPresenter do
         expect(actual_pm_names).to eq expected_pm_names
       end
     end
+
+    context "it can order prime ministers with the same start years" do
+      it "can do a fallback sort to end year" do
+        pm_one = {
+          "title" => "The Rt Honourable Mr E",
+          "image" => {
+            "url" => "The Rt Honourable Mr E",
+            "alt_text" => "The Rt Honourable Mr E",
+          },
+          "dates_in_office" => [{ "start_year" => 2002, "end_year" => 2002 }],
+        }
+        pm_two = {
+          "title" => "The Rt Honourable Mrs F",
+          "image" => {
+            "url" => "The Rt Honourable Mrs F",
+            "alt_text" => "The Rt Honourable Mrs F",
+          },
+          "dates_in_office" => [{ "start_year" => 2002, "end_year" => 2004 }],
+        }
+        presenter = PastPrimeMinistersIndexPresenter.new([pm_one, pm_two])
+        actual_order = presenter.prime_minsters_between(2000, 2025).map { |pm| pm[:heading_text] }
+        expect(actual_order).to eq ["The Rt Honourable Mrs F", "The Rt Honourable Mr E"]
+      end
+    end
   end
 
   describe "formatted_data" do
