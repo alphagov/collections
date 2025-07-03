@@ -40,8 +40,13 @@ private
   end
 
   def sorted_prime_ministers_with_start_dates(past_prime_ministers)
-    past_prime_ministers.map { |pm_data| [pm_data, earliest_start_date(dates_data(pm_data))] }
-                        .sort_by { |_data, earliest_start_date| -earliest_start_date }
+    past_prime_ministers.map { |pm_data|
+      [
+        pm_data,
+        earliest_start_date(dates_data(pm_data)),
+        earliest_end_date(dates_data(pm_data)),
+      ]
+    }.sort_by { |_data, earliest_start_date, earliest_end_date| [-earliest_start_date, -earliest_end_date] }
   end
 
   def dates_data(prime_minister)
@@ -50,5 +55,9 @@ private
 
   def earliest_start_date(dates_in_office_object)
     dates_in_office_object.map { |date_in_office| date_in_office["start_year"] }.max
+  end
+
+  def earliest_end_date(dates_in_office_object)
+    dates_in_office_object.map { |date_in_office| date_in_office["end_year"] }.max
   end
 end
