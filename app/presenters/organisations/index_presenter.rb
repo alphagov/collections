@@ -40,7 +40,9 @@ module Organisations
 
     def all_organisations
       {
-        number_10: @organisations.number_10,
+        number_10: ordered_executive_offices(
+          @organisations.number_10,
+        ),
         ministerial_departments: reject_joining_organisations(
           @organisations.ministerial_departments,
         ),
@@ -70,6 +72,12 @@ module Organisations
       non_joining_works_with_categorised_links(organisation, @organisations.by_href)
         .to_a
         .sort_by { |type, _departments| LISTING_ORDER.index(type) || 999 }
+    end
+
+    def ordered_executive_offices(organisations)
+      organisations.sort_by do |org|
+        org["slug"] == "prime-ministers-office-10-downing-street" ? [0, org["slug"]] : [1, org["slug"]]
+      end
     end
 
     def works_with_statement(organisation)
