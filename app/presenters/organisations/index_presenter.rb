@@ -75,11 +75,10 @@ module Organisations
     end
 
     def ordered_executive_offices(organisations)
-      sorted = organisations.sort_by do |organisation|
-        organisation[:slug] == "prime-ministers-office-10-downing-street" ? [1, organisation[:slug]] : [1, organisation[:slug]]
+      # organisations.reverse
+      organisations.sort_by do |org|
+        org["slug"] == "prime-ministers-office-10-downing-street" ? [0, org["slug"]] : [1, org["slug"]]
       end
-
-      sorted
     end
 
     def works_with_statement(organisation)
