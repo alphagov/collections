@@ -18,52 +18,8 @@ class ContentStoreOrganisations
     new(content_item)
   end
 
-  # executive_offices
   def number_10
-    [
-      {
-      "acronym"=>"Test",
-      "analytics_identifier"=>"OT123",
-      "brand"=>"office-of-test",
-      "child_organisations"=>[],
-      "closed_at"=>nil,
-      "content_id"=>"705dbea4-8bd7-422e-ba9c-254557f77f81",
-      "format"=>"Executive office",
-      "govuk_closed_status"=>"",
-      "govuk_status"=>"live",
-      "href"=>"/government/organisations/office-of-test",
-      "logo"=>{"crest"=>"eo",
-      "formatted_title"=>"Office of Test Example"},
-      "parent_organisations"=>[{"href"=>"/government/organisations/cabinet-office", "title"=>"Cabinet Office"}],
-      "separate_website"=>false,
-      "slug"=>"office-of-test",
-      "superseded_organisations"=>[],
-      "superseding_organisations"=>[],
-      "title"=>"Prime Minister's Office, 10 Downing Street",
-      "updated_at"=>"2025-07-01T15:02:39.000+01:00",
-      "works_with"=>{}
-    },
-    {
-      "acronym"=>"Number 10",
-      "analytics_identifier"=>"OT532",
-      "brand"=>"prime-ministers-office-10-downing-street",
-      "child_organisations"=>[],
-      "closed_at"=>nil,
-      "content_id"=>"705dbea4-8bd7-422e-ba9c-254557f77f81",
-      "format"=>"Executive office",
-      "govuk_closed_status"=>"",
-      "govuk_status"=>"live",
-      "href"=>"/government/organisations/prime-ministers-office-10-downing-street",
-      "logo"=>{"crest"=>"eo", "formatted_title"=>"Prime Minister's Office \r\n10 Downing Street"},
-      "parent_organisations"=>[{"href"=>"/government/organisations/cabinet-office", "title"=>"Cabinet Office"}],
-      "separate_website"=>false,
-      "slug"=>"prime-ministers-office-10-downing-street",
-      "superseded_organisations"=>[],
-      "superseding_organisations"=>[],
-      "title"=>"Prime Minister's Office, 10 Downing Street",
-      "updated_at"=>"2024-07-16T15:02:39.000+01:00", "works_with"=>{}
-      }
-    ]
+    details["ordered_executive_offices"]
   end
 
   def number_10?(organisation_type)
