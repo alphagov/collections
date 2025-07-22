@@ -33,7 +33,6 @@ $c19-landing-page-header-background: govuk-colour("blue");
 
 .covid__breadcrumb-wrapper {
   background-color: $c19-landing-page-header-background;
-  border-top: solid govuk-spacing(2) $covid-yellow;
   overflow: auto; // become a block formatting context to prevent bleeding the margins
 }
 
