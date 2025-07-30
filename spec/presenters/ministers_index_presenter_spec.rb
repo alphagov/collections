@@ -65,6 +65,7 @@ RSpec.describe MinistersIndexPresenter do
               {
                 "web_url" => "foo",
                 "title" => "foo",
+                "content_id" => "foo",
                 "details" => {
                   "brand" => "foo",
                   "logo" => {
@@ -180,6 +181,7 @@ RSpec.describe MinistersIndexPresenter do
           title: "Whip role",
           url: "https://www.integration.publishing.service.gov.uk/government/ministers/whip-role",
           whip: true,
+          org_ids: [],
         ),
       ]
     end
