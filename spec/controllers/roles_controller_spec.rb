@@ -1,10 +1,7 @@
 RSpec.describe RolesController do
   include SearchApiHelpers
 
-  def prime_minister
-    GovukSchemas::Example.find("role", example_name: "prime_minister")
-  end
-
+  let(:prime_minister) { GovukSchemas::Example.find("role", example_name: "prime_minister") }
   let(:base_path) { prime_minister["base_path"] }
   let(:role) { base_path.split("/").last }
 
@@ -28,17 +25,10 @@ RSpec.describe RolesController do
       end
     end
 
-    context "when the request is for graphql" do
-      context "and the graphql query is successful" do
+    context "when the request is for GraphQL" do
+      context "and the GraphQL query is successful" do
         before do
-          stub_publishing_api_graphql_query(
-            Graphql::RoleQuery.new("/government/ministers/prime-minister").query,
-            role_edition_data,
-          )
-        end
-
-        let(:role_edition_data) do
-          fetch_graphql_fixture("prime_minister")
+          stub_publishing_api_graphql_has_item(base_path, prime_minister)
         end
 
         it "the request is successful" do
@@ -46,33 +36,10 @@ RSpec.describe RolesController do
 
           expect(request.env["govuk.prometheus_labels"]).to include({
             "graphql_status_code" => 200,
-            "graphql_contains_errors" => false,
             "graphql_api_timeout" => false,
           })
           expect(response).to have_http_status(:success)
           expect(response).to render_template(:show)
-        end
-      end
-
-      context "and the graphql query is not successful" do
-        before do
-          stub_publishing_api_graphql_query(
-            Graphql::RoleQuery.new("/government/ministers/prime-minister").query,
-            { "errors": [{ "message": "some_error" }] },
-          )
-          stub_content_store_has_item(base_path, prime_minister)
-        end
-
-        it "falls back to loading from Content Store" do
-          get :show, params: { name: role, graphql: true }
-
-          expect(response).to have_http_status(:success)
-        end
-
-        it "pushes the errors to prometheus when the response contains some" do
-          get :show, params: { name: role, graphql: true }
-
-          expect(request.env["govuk.prometheus_labels"]["graphql_contains_errors"]).to be(true)
         end
       end
 
@@ -97,7 +64,7 @@ RSpec.describe RolesController do
 
       context "and GDS API Adapters times-out the request" do
         before do
-          allow(Services.publishing_api).to receive(:graphql_query)
+          allow(Services.publishing_api).to receive(:graphql_live_content_item)
             .and_raise(GdsApi::TimedOutException)
 
           stub_content_store_has_item(base_path, prime_minister)
