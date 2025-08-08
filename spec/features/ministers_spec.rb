@@ -122,7 +122,7 @@ RSpec.feature "Ministers index page" do
     let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
 
     it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/government/ministers")).not_to have_been_made
     end
 
     it_behaves_like "ministers index page"
@@ -148,7 +148,7 @@ RSpec.feature "Ministers index page" do
     end
 
     it "gets the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/government/ministers")).to have_been_made
     end
 
     it_behaves_like "ministers index page"
@@ -207,8 +207,8 @@ RSpec.feature "Ministers index page" do
 
   context "when the GraphQL parameter is true" do
     before do
-      stub_publishing_api_graphql_query(
-        Graphql::MinistersIndexQuery.new("/government/ministers").query,
+      stub_publishing_api_graphql_has_item(
+        "/government/ministers",
         document,
       )
 
@@ -237,8 +237,8 @@ RSpec.feature "Ministers index page" do
 
   context "when the GraphQL A/B GraphQL variant is selected" do
     before do
-      stub_publishing_api_graphql_query(
-        Graphql::MinistersIndexQuery.new("/government/ministers").query,
+      stub_publishing_api_graphql_has_item(
+        "/government/ministers",
         document,
       )
 
