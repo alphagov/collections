@@ -16,14 +16,9 @@ class WorldController < ApplicationController
   end
 
   def load_from_graphql
-    set_prometheus_labels("graphql_status_code" => 200, "graphql_contains_errors" => false, "graphql_api_timeout" => false)
-    @world_index = Graphql::WorldIndex.find!(request.path)
-    if @world_index.content_item.nil?
-      set_prometheus_labels("graphql_contains_errors" => true)
-      load_from_content_store
-    else
-      @world_index.content_item
-    end
+    set_prometheus_labels("graphql_status_code" => 200, "graphql_api_timeout" => false)
+    @world_index = WorldIndex.find_from_graphql!(request.path)
+    @world_index.content_item.content_item_data
   rescue GdsApi::HTTPErrorResponse => e
     set_prometheus_labels("graphql_status_code" => e.code)
     load_from_content_store

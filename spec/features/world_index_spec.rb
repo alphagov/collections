@@ -104,14 +104,14 @@ RSpec.feature "World index page" do
     it_behaves_like "world index page"
 
     it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/world")).not_to have_been_made
     end
   end
 
   context "when the GraphQL parameter is true" do
     before do
-      stub_publishing_api_graphql_query(
-        Graphql::WorldIndexQuery.new("/world").query,
+      stub_publishing_api_graphql_has_item(
+        "/world",
         fetch_graphql_fixture("world_index"),
       )
 
@@ -121,7 +121,7 @@ RSpec.feature "World index page" do
     it_behaves_like "world index page"
 
     it "gets the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/world")).to have_been_made
     end
   end
 
@@ -131,7 +131,7 @@ RSpec.feature "World index page" do
     end
 
     it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/world")).not_to have_been_made
     end
   end
 
@@ -142,14 +142,14 @@ RSpec.feature "World index page" do
     end
 
     it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/world")).not_to have_been_made
     end
   end
 
   context "when the GraphQL A/B GraphQL variant is selected" do
     before do
-      stub_publishing_api_graphql_query(
-        Graphql::WorldIndexQuery.new("/world").query,
+      stub_publishing_api_graphql_has_item(
+        "/world",
         fetch_graphql_fixture("world_index"),
       )
 
@@ -158,7 +158,7 @@ RSpec.feature "World index page" do
     end
 
     it "gets the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/world")).to have_been_made
     end
   end
 end

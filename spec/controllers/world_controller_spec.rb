@@ -23,8 +23,8 @@ RSpec.describe WorldController do
   context "the request is for graphql" do
     context "and the graphql query is successful" do
       before do
-        stub_publishing_api_graphql_query(
-          Graphql::WorldIndexQuery.new("/world").query,
+        stub_publishing_api_graphql_has_item(
+          "/world",
           edition_data,
         )
       end
@@ -38,33 +38,10 @@ RSpec.describe WorldController do
 
         expect(request.env["govuk.prometheus_labels"]).to include({
           "graphql_status_code" => 200,
-          "graphql_contains_errors" => false,
           "graphql_api_timeout" => false,
         })
         expect(response).to have_http_status(:success)
         expect(response).to render_template(:index)
-      end
-    end
-
-    context "and the graphql query is not successful" do
-      before do
-        stub_publishing_api_graphql_query(
-          Graphql::WorldIndexQuery.new("/world").query,
-          { "errors": [{ "message": "some_error" }] },
-        )
-        stub_content_store_has_item(base_path, world)
-      end
-
-      it "falls back to loading from Content Store" do
-        get :index, params: { graphql: true }
-
-        expect(response).to have_http_status(:success)
-      end
-
-      it "pushes the errors to prometheus when the response contains some" do
-        get :index, params: { graphql: true }
-
-        expect(request.env["govuk.prometheus_labels"]["graphql_contains_errors"]).to be(true)
       end
     end
 
@@ -89,7 +66,7 @@ RSpec.describe WorldController do
 
     context "and GDS API Adapters times-out the request" do
       before do
-        allow(Services.publishing_api).to receive(:graphql_query)
+        allow(Services.publishing_api).to receive(:graphql_live_content_item)
           .and_raise(GdsApi::TimedOutException)
 
         stub_content_store_has_item(base_path, world)
