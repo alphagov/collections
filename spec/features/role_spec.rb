@@ -58,7 +58,7 @@ RSpec.feature "Role page" do
     end
 
     it "does not get data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/government/ministers/prime-minister")).not_to have_been_made
     end
 
     context "when there's a current role holder" do
@@ -127,8 +127,8 @@ RSpec.feature "Role page" do
 
   context "when the GraphQL parameter is true" do
     before do
-      stub_publishing_api_graphql_query(
-        Graphql::RoleQuery.new("/government/ministers/prime-minister").query,
+      stub_publishing_api_graphql_has_item(
+        "/government/ministers/prime-minister",
         role_edition_data,
       )
       stub_search(body: { results: [] })
@@ -141,7 +141,7 @@ RSpec.feature "Role page" do
     end
 
     it "gets the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/government/ministers/prime-minister")).to have_been_made
     end
 
     it "renders the locale in <main> element" do
@@ -176,7 +176,7 @@ RSpec.feature "Role page" do
     end
 
     it "does not get data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/government/ministers/prime-minister")).not_to have_been_made
     end
   end
 
@@ -187,14 +187,14 @@ RSpec.feature "Role page" do
     end
 
     it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/government/ministers/prime-minister")).not_to have_been_made
     end
   end
 
   context "when the GraphQL A/B GraphQL variant is selected" do
     before do
-      stub_publishing_api_graphql_query(
-        Graphql::RoleQuery.new("/government/ministers/prime-minister").query,
+      stub_publishing_api_graphql_has_item(
+        "/government/ministers/prime-minister",
         role_edition_data,
       )
 
@@ -207,7 +207,7 @@ RSpec.feature "Role page" do
     end
 
     it "gets the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content/government/ministers/prime-minister")).to have_been_made
     end
   end
 end
