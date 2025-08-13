@@ -1,0 +1,29 @@
+---
+ky:
+  browse:
+    popular_links:
+      benefits:
+        control:
+          - title:
+            url:
+        variant_a:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+      business:
+        control:
+          - title:
+            url:
+        variant_a:
+          - title:
+            url:
+        variant_b:
+          - title:
+            url:
+    all_categories:
+    description:
+    popular_tasks:
+    title:
+    topics:
