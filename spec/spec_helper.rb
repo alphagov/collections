@@ -64,13 +64,6 @@ def fetch_fixture(filename)
   JSON.parse(json)
 end
 
-def fetch_graphql_fixture(filename)
-  json = File.read(
-    Rails.root.join("spec", "fixtures", "graphql", "#{filename}.json"),
-  )
-  JSON.parse(json)
-end
-
 def search_api_response(titles_and_links_hash)
   results_array = titles_and_links_hash.to_a.map do |title, link|
     {

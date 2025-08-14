@@ -1,6 +1,8 @@
 require "integration_spec_helper"
 
 RSpec.feature "Ministers index page" do
+  let(:base_path) { "/government/ministers" }
+
   shared_examples "ministers index page" do
     scenario "returns 200 when visiting ministers page" do
       expect(page.status_code).to eq(200)
@@ -122,7 +124,7 @@ RSpec.feature "Ministers index page" do
     let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
 
     it "does not get the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).not_to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).not_to have_been_made
     end
 
     it_behaves_like "ministers index page"
@@ -141,26 +143,26 @@ RSpec.feature "Ministers index page" do
   end
 
   shared_examples "ministers index page rendered from GraphQL" do
-    let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-off") }
+    let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
 
     scenario "returns 200 when visiting ministers page" do
       expect(page.status_code).to eq(200)
     end
 
     it "gets the data from GraphQL" do
-      expect(a_request(:post, "#{Plek.find('publishing-api')}/graphql")).to have_been_made
+      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).to have_been_made
     end
 
     it_behaves_like "ministers index page"
 
     context "during a reshuffle" do
-      let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-on") }
+      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
 
       it_behaves_like "ministers index page during a reshuffle"
     end
 
     context "during a reshuffle preview" do
-      let(:document) { fetch_graphql_fixture("ministers_index-reshuffle-mode-on-preview") }
+      let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on-preview") }
 
       it_behaves_like "ministers index page during a reshuffle preview"
     end
@@ -192,14 +194,14 @@ RSpec.feature "Ministers index page" do
   end
 
   before do
-    stub_content_store_has_item("/government/ministers", document)
+    stub_content_store_has_item(base_path, document)
   end
 
   context "when the GraphQL parameter is not set" do
     before do
       allow(Random).to receive(:rand).with(1.0).and_return(1)
 
-      visit "/government/ministers"
+      visit base_path
     end
 
     it_behaves_like "ministers index page rendered from Content Store"
@@ -207,12 +209,9 @@ RSpec.feature "Ministers index page" do
 
   context "when the GraphQL parameter is true" do
     before do
-      stub_publishing_api_graphql_query(
-        Graphql::MinistersIndexQuery.new("/government/ministers").query,
-        document,
-      )
+      stub_publishing_api_graphql_has_item(base_path, document)
 
-      visit "/government/ministers?graphql=true"
+      visit "#{base_path}?graphql=true"
     end
 
     it_behaves_like "ministers index page rendered from GraphQL"
@@ -220,7 +219,7 @@ RSpec.feature "Ministers index page" do
 
   context "when the GraphQL parameter is false" do
     before do
-      visit "/government/ministers?graphql=false"
+      visit "#{base_path}?graphql=false"
     end
 
     it_behaves_like "ministers index page rendered from Content Store"
@@ -229,7 +228,7 @@ RSpec.feature "Ministers index page" do
   context "when the GraphQL A/B Content Store variant is selected" do
     before do
       allow(Random).to receive(:rand).with(1.0).and_return(1)
-      visit "/government/ministers"
+      visit base_path
     end
 
     it_behaves_like "ministers index page rendered from Content Store"
@@ -237,13 +236,10 @@ RSpec.feature "Ministers index page" do
 
   context "when the GraphQL A/B GraphQL variant is selected" do
     before do
-      stub_publishing_api_graphql_query(
-        Graphql::MinistersIndexQuery.new("/government/ministers").query,
-        document,
-      )
+      stub_publishing_api_graphql_has_item(base_path, document)
 
       allow(Random).to receive(:rand).with(1.0).and_return(MinistersController::GRAPHQL_TRAFFIC_RATE - 0.000001)
-      visit "/government/ministers"
+      visit base_path
     end
 
     it_behaves_like "ministers index page rendered from GraphQL"

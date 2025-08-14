@@ -13,4 +13,9 @@ class MinistersIndex
     content_item = ContentItem.find!(base_path)
     new(content_item)
   end
+
+  def self.find_from_graphql!(base_path)
+    content_item = Graphql::ContentItem.find!(base_path)
+    new(content_item)
+  end
 end
