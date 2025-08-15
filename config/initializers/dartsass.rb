@@ -1,4 +1,6 @@
 APP_STYLESHEETS = {
+  "application.scss" => "application.css",
+  "helpers/_header.scss" => "helpers/_header.css",
   "views/_browse.scss" => "views/_browse.css",
   "views/_bunting.scss" => "views/_bunting.css",
   "views/_covid.scss" => "views/_covid.css",
