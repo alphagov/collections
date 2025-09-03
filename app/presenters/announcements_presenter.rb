@@ -1,14 +1,18 @@
 class AnnouncementsPresenter
   attr_reader :slug, :slug_prefix, :filter_key
 
-  def initialize(slug, filter_key:, slug_prefix: nil)
+  def initialize(slug, filter_key:, slug_prefix: nil, roles: [])
     @slug = slug
     @slug_prefix = slug_prefix || filter_key
     @filter_key = filter_key
+    @roles = roles
+    puts roles
   end
 
   def items
     announcements.map do |announcement|
+      role = announcement["roles"].filter {|role| @roles.include?(role["link"]) }.map{ |role| role["title"] }.first
+
       {
         link: {
           text: announcement["title"],
@@ -17,6 +21,7 @@ class AnnouncementsPresenter
         metadata: {
           public_timestamp: Date.parse(announcement["public_timestamp"]).strftime("%d %B %Y"),
           content_store_document_type: announcement["content_store_document_type"].humanize,
+          role:
         },
       }
     end
@@ -41,7 +46,7 @@ private
       count: 10,
       order: "-public_timestamp",
       reject_content_purpose_supergroup: "other",
-      fields: %w[title link content_store_document_type public_timestamp],
+      fields: %w[title link content_store_document_type public_timestamp roles],
     }.tap do |hash|
       hash[:"filter_#{filter_key}"] = slug_without_locale
     end
