@@ -1,7 +1,7 @@
 <% if announcements.items.present? %>
   <div id="announcements" <%= direction_rtl_class(prefix: true) %> <%= dir_attribute %>>
     <%= render "govuk_publishing_components/components/heading", {
-        text: t("shared.schema_name.announcement.other"),
+        text: "#{t("shared.schema_name.announcement.other")} as #{title}",
         lang: t_fallback("shared.schema_name.announcement.other"),
         margin_bottom: 5,
     } %>
