@@ -56,7 +56,7 @@ module Organisations
       news_stories = []
 
       featured.each do |news|
-        date = Date.parse(news["public_updated_at"]) if news["public_updated_at"]
+        date = Time.zone.parse(news["public_updated_at"]).to_date if news["public_updated_at"]
         text = I18n.t("shared.schema_name.#{news['document_type']&.parameterize(separator: '_')}", count: 1, default: news["document_type"]) if news["document_type"]
         image_src = first_featured ? news["image"]["high_resolution_url"] : news["image"]["medium_resolution_url"]
         image_src ||= news["image"]["url"]

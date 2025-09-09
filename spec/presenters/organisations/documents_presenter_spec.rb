@@ -127,7 +127,7 @@ RSpec.describe Organisations::DocumentsPresenter do
               },
               metadata: {
                 document_type: "Press release",
-                public_updated_at: Date.parse("2020-07-26T23:15:09.000+00:00"),
+                public_updated_at: Time.zone.parse("2020-07-26T23:15:09.000+00:00").to_date,
                 locale: {
                   document_type: false,
                   public_updated_at: false,

@@ -192,7 +192,7 @@ RSpec.describe "Organisation pages" do
     expect(page).to have_css(".gem-c-heading", text: "Latest from the Attorney General's Office")
     expect(page).to have_css(".gem-c-document-list__item-title [href='/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector']", text: "Attorney General launches recruitment campaign for new Chief Inspector")
     expect(page).to have_css(".gem-c-document-list__attribute", text: "Press release")
-    expect(page).to have_css(".gem-c-document-list__attribute time[datetime='2020-07-26']", text: "26 July 2020")
+    expect(page).to have_css(".gem-c-document-list__attribute time[datetime='2020-07-27']", text: "27 July 2020")
   end
 
   it "shows a see all link in the latest documents section" do
