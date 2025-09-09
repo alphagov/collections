@@ -1,4 +1,5 @@
 <% add_view_stylesheet("ministers") %>
+<% add_gem_component_stylesheet("govspeak") if @presented_ministers.is_during_reshuffle? %>
 
 <% content_for :title, t("ministers.govuk_title") %>
 
