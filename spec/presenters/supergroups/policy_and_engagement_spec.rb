@@ -74,7 +74,7 @@ RSpec.describe Supergroups::PolicyAndEngagement do
                 public_updated_at: "2018-02-28T08:01:00.000+00:00",
                 organisations: "Tagged Content Organisation",
                 document_type: "Open consultation",
-                closing_date: "Closing date 10 July 2018",
+                closing_date: "Closing date 11 July 2018",
               },
             },
           ]

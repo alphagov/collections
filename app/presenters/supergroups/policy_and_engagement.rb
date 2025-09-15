@@ -25,7 +25,7 @@ module Supergroups
     end
 
     def consultation_closing_date(consultation)
-      date = Date.parse(consultation.end_date)
+      date = Time.zone.parse(consultation.end_date).to_date
 
       if date < Time.zone.today
         return date.strftime("Date closed %d %B %Y")

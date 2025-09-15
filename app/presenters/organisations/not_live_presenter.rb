@@ -75,7 +75,7 @@ module Organisations
     end
 
     def notice_successor_updated
-      Date.parse(status_updated_at).strftime("%B %Y")
+      Time.zone.parse(status_updated_at).strftime("%B %Y")
     end
 
     def status_updated_at

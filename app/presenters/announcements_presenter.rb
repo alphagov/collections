@@ -15,7 +15,7 @@ class AnnouncementsPresenter
           path: announcement["link"],
         },
         metadata: {
-          public_timestamp: Date.parse(announcement["public_timestamp"]).strftime("%d %B %Y"),
+          public_timestamp: Time.zone.parse(announcement["public_timestamp"]).strftime("%d %B %Y"),
           content_store_document_type: announcement["content_store_document_type"].humanize,
         },
       }
