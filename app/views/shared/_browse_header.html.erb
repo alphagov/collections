@@ -3,8 +3,7 @@
   margin_bottom ||= 0
   padding_top ||= false
 
-  header_wrapper_classes = %w(browse__header-wrapper)
-  header_wrapper_classes << "govuk-!-margin-bottom-#{margin_bottom}" if !margin_bottom.zero?
+  header_wrapper_classes = %w"(govuk-!-margin-bottom-#{margin_bottom})" if !margin_bottom.zero?
 
   header_wrapper_classes << "govuk-!-padding-top-#{padding_top}" if padding_top.is_a? Numeric
 
@@ -13,6 +12,9 @@
 %>
 
 <div class="<%= header_wrapper_classes.join(' ') %>">
+<%= render "govuk_publishing_components/components/inverse_header", {
+  full_width: true
+} do %>
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="<%= column_classes.join(' ') %>">
@@ -20,4 +22,5 @@
       </div>
     </div>
   </div>
+<% end %>
 </div>
