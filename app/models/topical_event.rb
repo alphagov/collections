@@ -51,7 +51,7 @@ class TopicalEvent
   end
 
   def end_date
-    Date.parse(@content_item.content_item_data.dig("details", "end_date")) if @content_item.content_item_data.dig("details", "end_date")
+    Time.zone.parse(@content_item.content_item_data.dig("details", "end_date")).to_date if @content_item.content_item_data.dig("details", "end_date")
   end
 
   def archived?
