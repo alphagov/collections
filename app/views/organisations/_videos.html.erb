@@ -20,7 +20,9 @@
           lang: "en"
       } %>
       <%= render "govuk_publishing_components/components/govspeak" do %>
-        <a href="<%= @documents.promotional_video_feature_youtube_url %>" class="govuk-link brand__color"><%= @documents.promotional_video_feature_youtube_url %></a>
+        <p>
+          <a href="<%= @documents.promotional_video_feature_youtube_url %>" class="govuk-link brand__color"><%= @documents.promotional_video_feature_youtube_url %></a>
+        </p>
       <% end %>
     </div>
     <div class="govuk-grid-column-one-third govuk-!-margin-top-7">
