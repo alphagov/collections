@@ -20,7 +20,11 @@
   } %>
 <% end %>
 
-<%= render "shared/browse_header", { margin_bottom: page.slug == "benefits" ? 7 : 9 } do %>
+<%= render "shared/browse_header", { 
+  padding_top: 1,
+  padding_bottom: 8,
+  margin_bottom: page.slug == "benefits" ? 7 : 9
+} do %>
   <%= render "govuk_publishing_components/components/heading", {
     text: page.title,
     font_size: "xl",
