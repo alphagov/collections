@@ -54,6 +54,7 @@ module OrganisationHelpers
     url = build_search_api_query_url(
       filter_organisations: organisation_slug,
       count: 4,
+      reject_document_type: "manual_section",
     )
 
     stub_request(:get, url).to_return(body: build_result_body("other", true).to_json)
@@ -74,7 +75,7 @@ module OrganisationHelpers
   end
 
   def stub_search_api_latest_documents_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search-api") + "/search.json?count=4&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp")
+    stub_request(:get, Plek.new.find("search-api") + "/search.json?count=4&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_document_type=manual_section")
       .to_return(body: { results: [search_response] }.to_json)
   end
 

@@ -44,6 +44,7 @@ module Organisations
           count: 4,
           order: "-public_timestamp",
           filter_organisations: @org.slug,
+          reject_document_type: "manual_section",
           fields: %w[title link content_store_document_type public_timestamp],
         },
         metric_key: "organisations.search.request_time",
