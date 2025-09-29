@@ -1,8 +1,10 @@
 <%
+  # The browse templates mostly share the same padding and margin overrides, but a few differ, so we make them configurable
+  padding_bottom ||= 8
+  margin_bottom ||= 8
+  padding_top ||= 1
+
   two_thirds ||= false
-  padding_bottom ||= false
-  margin_bottom ||= false
-  padding_top ||= false
 
   column_classes = %w()
   column_classes << (two_thirds ? "govuk-grid-column-two-thirds" : "govuk-grid-column-full")
