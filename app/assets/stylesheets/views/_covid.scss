@@ -1,7 +1,7 @@
 @import "govuk_publishing_components/individual_component_support";
 
 $covid-grey: #272828;
-$c19-landing-page-header-background: govuk-colour("blue");
+$c19-landing-page-header-background: $govuk-blue-tint-80;
 
 .covid__page {
   .govuk-grid-column-one-third,
@@ -33,6 +33,10 @@ $c19-landing-page-header-background: govuk-colour("blue");
 .covid__breadcrumb-wrapper {
   background-color: $c19-landing-page-header-background;
   overflow: auto; // become a block formatting context to prevent bleeding the margins
+
+  @include govuk-media-query($from: desktop) {
+    padding-bottom: govuk-spacing(3);
+  }
 }
 
 .covid__page-header {
