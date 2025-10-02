@@ -30,7 +30,10 @@ module Organisations
     end
 
     def parent_organisations
-      parent_org_links = @org.ordered_parent_organisations.map do |parent_organisation|
+      parent_orgs = @org.ordered_parent_organisations
+      return if parent_orgs.blank?
+
+      parent_org_links = parent_orgs.map do |parent_organisation|
         link_to(
           parent_organisation["title"],
           parent_organisation["base_path"],
