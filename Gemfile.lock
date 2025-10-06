@@ -190,8 +190,8 @@ GEM
       rake (>= 13)
     googleapis-common-protos-types (1.21.0)
       google-protobuf (~> 4.26)
-    govspeak (10.6.4)
-      actionview (>= 6, < 8.0.3)
+    govspeak (10.6.5)
+      actionview (>= 6, < 8.0.4)
       addressable (>= 2.3.8, < 2.8.8)
       govuk_publishing_components (>= 43)
       htmlentities (~> 4)
@@ -311,7 +311,7 @@ GEM
       bigdecimal (~> 3.1)
     net-http (0.6.0)
       uri
-    net-imap (0.5.10)
+    net-imap (0.5.11)
       date
       net-protocol
     net-pop (0.1.2)
@@ -661,9 +661,10 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.0)
-    rdoc (6.14.2)
+    rdoc (6.15.0)
       erb
       psych (>= 4.0.0)
+      tsort
     redis (5.4.1)
       redis-client (>= 0.22.0)
     redis-client (0.26.0)
@@ -805,6 +806,7 @@ GEM
     tins (1.38.0)
       bigdecimal
       sync
+    tsort (0.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.1.5)
