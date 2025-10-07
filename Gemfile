@@ -4,6 +4,7 @@ ruby "~> 3.4.5"
 
 gem "rails", "8.0.3"
 
+gem "async"
 gem "bootsnap", require: false
 gem "dalli"
 gem "dartsass-rails"
