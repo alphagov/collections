@@ -14,8 +14,7 @@
     <div class="govuk-width-container">
       <%= render 'govuk_publishing_components/components/breadcrumbs', {
         breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
-        collapse_on_mobile: true,
-        inverse: true
+        collapse_on_mobile: true
       } %>
     </div>
   </div>
