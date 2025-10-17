@@ -1,5 +1,12 @@
-<% heading ||= nil %>
-
+<%
+  heading ||= nil
+  ga4_section ||= nil
+  ga4_see_all_link_json = {
+    event_name: "navigation",
+    type: "see all",
+    section: ga4_section,
+  }.to_json
+%>
 <% if heading %>
   <section id="<%= heading.downcase.parameterize %>" class="govuk-!-margin-bottom-7">
   <%= render "govuk_publishing_components/components/heading", {
@@ -22,7 +29,11 @@
       link_to(
         see_all_link_text,
         link_to,
-        class: "govuk-link"
+        class: "govuk-link",
+        data: {
+          module: "ga4-link-tracker",
+          ga4_link: ga4_see_all_link_json,
+        }
       )
     %>
   </p>

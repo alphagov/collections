@@ -8,6 +8,12 @@
     index_total: 1,
     section: "Content"
   }.to_json
+
+  ga4_image_card_json = {
+    "event_name": "navigation",
+    "type": "image card",
+    "section": I18n.t("shared.featured", locale: :en)
+  }.to_json
 %>
 
 <% content_for :title, @topical_event.title %>
@@ -112,7 +118,7 @@
         <% @topical_event.ordered_featured_documents.in_groups_of(3, false) do |row| %>
           <div class="govuk-grid-row">
             <% row.each do |document| %>
-              <div class="govuk-grid-column-one-third">
+              <div class="govuk-grid-column-one-third" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
                 <%= render "govuk_publishing_components/components/image_card", document %>
               </div>
             <% end %>
@@ -135,7 +141,7 @@
       } %>
 
       <% if @topical_event.latest.any? %>
-        <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.latest, link_to: search_url(:topical_event, :latest, @topical_event.slug) })  %>
+        <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.latest, link_to: search_url(:topical_event, :latest, @topical_event.slug), ga4_section: I18n.t("topical_events.headings.latest", locale: :en) })  %>
       <% else %>
         <p class="govuk-body"><%= I18n.t("topical_events.no_updates") %></p>
       <% end %>
@@ -162,9 +168,9 @@
         } %>
       <% end %>
 
-      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.consultations, heading: I18n.t("topical_events.headings.consultations"), link_to: search_url(:topical_event, :consultation, @topical_event.slug) }) if @topical_event.consultations.any? %>
-      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.announcements, heading: I18n.t("topical_events.headings.announcements"), link_to: search_url(:topical_event, :announcement, @topical_event.slug) }) if @topical_event.announcements.any? %>
-      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.guidance_and_regulation, heading: I18n.t("topical_events.headings.guidance_and_regulation"), link_to: search_url(:topical_event, :guidance_and_regulation, @topical_event.slug) }) if @topical_event.guidance_and_regulation.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.consultations, heading: I18n.t("topical_events.headings.consultations"), link_to: search_url(:topical_event, :consultation, @topical_event.slug), ga4_section: I18n.t("topical_events.headings.consultations", locale: :en) }) if @topical_event.consultations.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.announcements, heading: I18n.t("topical_events.headings.announcements"), link_to: search_url(:topical_event, :announcement, @topical_event.slug), ga4_section: I18n.t("topical_events.headings.announcements", locale: :en)}) if @topical_event.announcements.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.guidance_and_regulation, heading: I18n.t("topical_events.headings.guidance_and_regulation"), link_to: search_url(:topical_event, :guidance_and_regulation, @topical_event.slug), ga4_section: I18n.t("topical_events.headings.guidance_and_regulation", locale: :en)}) if @topical_event.guidance_and_regulation.any? %>
     </section>
 
     <% if @topical_event.emphasised_organisations && @topical_event.emphasised_organisations.any? %>
@@ -175,8 +181,13 @@
         padding: true,
         border_top: 2,
       } %>
-      <ul class="govuk-list">
-      <% @topical_event.emphasised_organisations.flatten.each do |organisation| %>
+      <ul class="govuk-list" data-module="ga4-link-tracker">
+      <%
+        organisations = @topical_event.emphasised_organisations.flatten
+        ga4_organisations_length = organisations.length
+        ga4_organisations_section = t("topical_events.organisations", locale: :en)
+      %>
+      <% organisations.each_with_index do |organisation, index| %>
         <li>
           <%= render "govuk_publishing_components/components/organisation_logo", {
             organisation: {
@@ -187,6 +198,15 @@
             },
             margin_bottom: 6,
             inline: true,
+            data_attributes: {
+              ga4_link: {
+                event_name: "navigation",
+                type: "organisation_logo",
+                index_link: index + 1,
+                index_total: ga4_organisations_length,
+                section: ga4_organisations_section,
+              }
+            }
           } %>
         </li>
       <% end %>
