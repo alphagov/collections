@@ -36,7 +36,7 @@
   }
 %>
 <% if items.any? %>
-  <%= tag.div(class: wrapper_classes, lang: "en", data: wrapper_data_attributes) do %>
+  <%= tag.div(class: wrapper_classes, lang: "en", data: wrapper_data_attributes.merge({featured_links: ""})) do %>
     <%= render "govuk_publishing_components/components/list", {
       extra_spacing: !small,
       items: featured_links
