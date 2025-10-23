@@ -79,4 +79,14 @@ module ApplicationHelper
                 end
     elements.join(separator)
   end
+
+  def show_ios_banner?
+    return unless request.path
+
+    [
+      "/learn-to-drive-a-car",
+      "/drive-abroad",
+      "/buy-a-vehicle",
+    ].include?(request.path)
+  end
 end

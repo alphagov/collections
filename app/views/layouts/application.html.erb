@@ -39,6 +39,9 @@
   <%= javascript_include_tag "application", type: "module" %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
+  <% if show_ios_banner? %>
+    <meta name="apple-itunes-app" content="app-id=6572293285">
+  <% end %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>
   <%= stylesheet_link_tag "application.css", :media => "all", integrity: false %>
   <%=
