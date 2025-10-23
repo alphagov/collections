@@ -140,4 +140,21 @@ RSpec.describe ApplicationHelper do
       end
     end
   end
+
+  describe "iOS banner" do
+    it "shows the banner when the page is in the list" do
+      controller.request = ActionDispatch::TestRequest.create("PATH_INFO" => "/learn-to-drive-a-car")
+      expect(helper.show_ios_banner?).to be(true)
+    end
+
+    it "does not show the banner when the page is not in the list" do
+      controller.request = ActionDispatch::TestRequest.create("PATH_INFO" => "/parking-permits-in-london")
+      expect(helper.show_ios_banner?).to be(false)
+    end
+
+    it "does not show the banner when the page does not have a base path" do
+      controller.request = ActionDispatch::TestRequest.create("PATH_INFO" => nil)
+      expect(helper.show_ios_banner?).to be(false)
+    end
+  end
 end
