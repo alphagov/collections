@@ -4,7 +4,12 @@
   } %>
 <% end %>
 
-<header class="covid__page-header covid__page-header--landing-page">
+<%= render "govuk_publishing_components/components/inverse_header", { 
+  full_width: true,
+  padding_top: 1,
+  margin_bottom: 8,
+  padding_bottom: 0
+} do %>
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -12,7 +17,6 @@
             text: raw(title),
             heading_level: 1,
             font_size: "xl",
-            inverse: true,
             margin_bottom: 8
           } %>
       </div>
@@ -36,4 +40,4 @@
       </div>
     </div>
   </div>
-</header>
+<% end %>
