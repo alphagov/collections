@@ -134,6 +134,29 @@ RSpec.feature "Topical Event pages" do
       expect(page).not_to have_text("Documents")
       expect(page).not_to have_text("Detailed Guides")
     end
+
+    it "displays links to all related documents with GA4 tracking" do
+      stub_search(body: search_api_response(related_announcements), params: { "filter_content_purpose_supergroup" => "news_and_communications" })
+      stub_search(body: search_api_response(related_consultations), params: { "filter_format" => "consultation" })
+      stub_search(body: search_api_response(related_guidance_and_regulation), params: { "filter_content_purpose_supergroup" => "guidance_and_regulation" })
+
+      visit base_path
+
+      within("#consultations") do
+        ga4_link_data = JSON.parse(page.first("a[data-module='ga4-link-tracker']")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Consultations", "type" => "see all" })
+      end
+
+      within("#announcements") do
+        ga4_link_data = JSON.parse(page.first("a[data-module='ga4-link-tracker']")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Announcements", "type" => "see all" })
+      end
+
+      within("#guidance-and-regulation") do
+        ga4_link_data = JSON.parse(page.first("a[data-module='ga4-link-tracker']")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Guidance and regulation", "type" => "see all" })
+      end
+    end
   end
 
   context "latest documents" do
@@ -149,6 +172,17 @@ RSpec.feature "Topical Event pages" do
       within("#latest") do
         latest_documents.each { |title, link| expect(page).to have_link(title, href: link) }
         expect(page).to have_link("See all", href: "/search/all?order=updated-newest&topical_events%5B%5D=something-very-topical")
+      end
+    end
+
+    it "has GA4 tracking on the 'see all' link" do
+      stub_search(body: search_api_response(latest_documents))
+
+      visit base_path
+
+      within("#latest") do
+        ga4_link_data = JSON.parse(page.first("a[data-module='ga4-link-tracker']")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Latest", "type" => "see all" })
       end
     end
 
@@ -174,6 +208,14 @@ RSpec.feature "Topical Event pages" do
     it "includes a link to the organisation" do
       visit base_path
       expect(page).to have_link("Department of topical affairs", href: "government/organisations/department-for-topical-affairs")
+    end
+
+    it "includes GA4 tracking on the link to the organisation" do
+      visit base_path
+      within(".govuk-list[data-module='ga4-link-tracker']") do
+        ga4_link_data = JSON.parse(page.first("div[data-ga4-link]")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "type" => "organisation_logo", "index_link" => 1, "index_total" => 1, "section" => "Who’s involved" })
+      end
     end
   end
 
@@ -226,6 +268,14 @@ RSpec.feature "Topical Event pages" do
     it "includes links to the featured documents" do
       visit base_path
       expect(page).to have_link("A document related to this event", href: "https://www.gov.uk/somewhere")
+    end
+
+    it "includes GA4 tracking on links to the featured documents" do
+      visit base_path
+      within("#featured") do
+        ga4_link_data = JSON.parse(page.first("div[data-module='ga4-link-tracker'][data-ga4-track-links-only]")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Featured", "type" => "image card" })
+      end
     end
   end
 

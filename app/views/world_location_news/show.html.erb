@@ -1,6 +1,13 @@
-<% content_for :title, @world_location_news.title %>
+<%
+  content_for :title, @world_location_news.title
+  page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing"
 
-<% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
+  ga4_image_card_json = {
+    "event_name": "navigation",
+    "type": "image card",
+    "section": I18n.t("shared.featured", locale: :en)
+  }.to_json
+%>
 
 <% content_for :meta_tags do %>
   <%= tag("meta", name: "description", content: @world_location_news.description) if @world_location_news.description %>
@@ -26,6 +33,7 @@
     <% end %>
     <%= render "shared/featured_links", {
       items: @world_location_news.ordered_featured_links,
+      ga4_data: { section: @world_location_news.title }
     } %>
   </div>
 </div>
@@ -45,7 +53,7 @@
         <% @world_location_news.ordered_featured_documents.in_groups_of(3, false) do |row| %>
           <div class="govuk-grid-row">
             <% row.each do |document| %>
-              <div class="govuk-grid-column-one-third">
+              <div class="govuk-grid-column-one-third" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
                 <%= render "govuk_publishing_components/components/image_card", document %>
               </div>
             <% end %>
@@ -69,7 +77,7 @@
         } %>
 
         <% if @world_location_news.latest.any? %>
-          <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.latest, link_to: search_url(:world_location_news, :latest, @world_location_news.slug) })  %>
+          <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.latest, link_to: search_url(:world_location_news, :latest, @world_location_news.slug), ga4_section: I18n.t("world_location_news.headings.latest", locale: :en) })  %>
         <% else %>
           <p class="govuk-body"><%= I18n.t("world_location_news.no_updates") %></p>
         <% end %>
@@ -115,9 +123,9 @@
         margin_bottom: 3,
       } %>
 
-      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.announcements, heading: I18n.t("world_location_news.headings.announcements"), link_to: search_url(:world_location_news, :announcement, @world_location_news.slug) }) if @world_location_news.announcements.any? %>
-      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.publications, heading: I18n.t("world_location_news.headings.publications"), link_to: search_url(:world_location_news, :publication, @world_location_news.slug) }) if @world_location_news.publications.any? %>
-      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.statistics, heading: I18n.t("world_location_news.headings.statistics"), link_to: search_url(:world_location_news, :statistic, @world_location_news.slug) }) if @world_location_news.statistics.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.announcements, heading: I18n.t("world_location_news.headings.announcements"), ga4_section: I18n.t("world_location_news.headings.announcements", locale: :en), link_to: search_url(:world_location_news, :announcement, @world_location_news.slug) }) if @world_location_news.announcements.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.publications, heading: I18n.t("world_location_news.headings.publications"), ga4_section: I18n.t("world_location_news.headings.publications", locale: :en), link_to: search_url(:world_location_news, :publication, @world_location_news.slug) }) if @world_location_news.publications.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.statistics, heading: I18n.t("world_location_news.headings.statistics"), ga4_section: I18n.t("world_location_news.headings.statistics", locale: :en), link_to: search_url(:world_location_news, :statistic, @world_location_news.slug) }) if @world_location_news.statistics.any? %>
     </div>
   </div>
 <% end %>
@@ -125,7 +133,7 @@
 <% if @world_location_news.organisations&.any? %>
   <div class="govuk-grid-row gem-print-columns-none">
     <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
-      <section id="organisations">
+      <section id="organisations" data-module="ga4-link-tracker">
         <%= render "govuk_publishing_components/components/heading", {
           text: I18n.t("world_location_news.headings.organisations"),
           padding: true,
@@ -134,10 +142,14 @@
           heading_level: 2,
           border_top: 2,
         } %>
-
-        <% @world_location_news.organisations.flatten.in_groups_of(3, false) do |row| %>
+        <%
+          organisations = @world_location_news.organisations.flatten
+          ga4_organisations_length = organisations.length
+          ga4_organisations_section = t("topical_events.organisations", locale: :en)
+        %>
+        <% organisations.in_groups_of(3, false) do |row| %>
           <div class="govuk-grid-row">
-            <% row.each do |organisation|%>
+            <% row.each_with_index do |organisation, index|%>
               <div class="govuk-grid-column-one-third govuk-!-padding-bottom-7">
                 <%= render "govuk_publishing_components/components/organisation_logo", {
                   organisation: {
@@ -145,6 +157,15 @@
                     url: organisation["base_path"],
                     crest: organisation.dig("details", "logo", "crest"),
                     brand: organisation.dig("details", "brand"),
+                  },
+                  data_attributes: {
+                    ga4_link: {
+                      event_name: "navigation",
+                      type: "organisation_logo",
+                      index_link: index + 1,
+                      index_total: ga4_organisations_length,
+                      section: ga4_organisations_section,
+                    }
                   }
                 } %>
               </div>

@@ -40,6 +40,14 @@ RSpec.feature "World Location News pages" do
       visit base_path
       expect(page).to have_link("A document related to this location", href: "https://www.gov.uk/somewhere")
     end
+
+    it "includes GA4 tracking on links to the featured documents" do
+      visit base_path
+      within("#featured") do
+        ga4_link_data = JSON.parse(page.first("div[data-module='ga4-link-tracker'][data-ga4-track-links-only]")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Featured", "type" => "image card" })
+      end
+    end
   end
 
   context "when there are no featured documents" do
@@ -82,6 +90,17 @@ RSpec.feature "World Location News pages" do
       visit base_path
       expect(page).to have_link("A link to somewhere", href: "https://www.gov.uk/somewhere")
       expect(page).to have_link("A second link to somewhere", href: "https://www.gov.uk/somewhere2")
+    end
+
+    it "includes GA4 tracking on the featured links" do
+      visit base_path
+      within "[data-featured-links][data-module='ga4-link-tracker'][data-ga4-track-links-only]" do
+        first_ga4_link_data = JSON.parse(page.first("a[data-ga4-link]")["data-ga4-link"])
+        expect(first_ga4_link_data).to eq({ "event_name" => "navigation", "index_link" => 1, "index_total" => 2, "section" => "UK and Mock Country", "type" => "document list" })
+
+        second_ga4_link_data = JSON.parse(page.all("a[data-ga4-link]").last["data-ga4-link"])
+        expect(second_ga4_link_data).to eq({ "event_name" => "navigation", "index_link" => 2, "index_total" => 2, "section" => "UK and Mock Country", "type" => "document list" })
+      end
     end
   end
 
@@ -147,6 +166,17 @@ RSpec.feature "World Location News pages" do
         expect(page).not_to have_text("Y diweddaraf")
       end
     end
+
+    it "has GA4 tracking on the 'see all' link" do
+      stub_search(body: search_api_response(latest_documents))
+
+      visit base_path
+
+      within("#latest") do
+        ga4_link_data = JSON.parse(page.first("a[data-module='ga4-link-tracker']")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Latest", "type" => "see all" })
+      end
+    end
   end
 
   context "documents list" do
@@ -182,6 +212,29 @@ RSpec.feature "World Location News pages" do
       end
     end
 
+    it "has GA4 tracking on all related documents" do
+      stub_search(body: search_api_response(related_announcements), params: { "filter_content_purpose_supergroup" => "news_and_communications" })
+      stub_search(body: search_api_response(related_publications), params: { "filter_content_purpose_supergroup" => %w[guidance_and_regulation policy_and_engagement transparency] })
+      stub_search(body: search_api_response(related_statistics), params: { "filter_content_purpose_subgroup" => "statistics" })
+
+      visit base_path
+
+      within("#our-announcements") do
+        ga4_link_data = JSON.parse(page.first("a[data-module='ga4-link-tracker']")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Our announcements", "type" => "see all" })
+      end
+
+      within("#our-publications") do
+        ga4_link_data = JSON.parse(page.first("a[data-module='ga4-link-tracker']")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Our publications", "type" => "see all" })
+      end
+
+      within("#our-statistics") do
+        ga4_link_data = JSON.parse(page.first("a[data-module='ga4-link-tracker']")["data-ga4-link"])
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Our statistics", "type" => "see all" })
+      end
+    end
+
     it "doesn't display any document headers when there are no related documents" do
       visit base_path
 
@@ -209,6 +262,17 @@ RSpec.feature "World Location News pages" do
       visit base_path
 
       expect(page).to have_css(".gem-c-organisation-logo", count: 2)
+    end
+
+    it "includes GA4 tracking on the links to the organisations" do
+      visit base_path
+      within("#organisations[data-module='ga4-link-tracker']") do
+        first_ga4_link_data = JSON.parse(page.all("div[data-ga4-link]").first["data-ga4-link"])
+        expect(first_ga4_link_data).to eq({ "event_name" => "navigation", "type" => "organisation_logo", "index_link" => 1, "index_total" => 2, "section" => "Who’s involved" })
+
+        second_ga4_link_data = JSON.parse(page.all("div[data-ga4-link]").last["data-ga4-link"])
+        expect(second_ga4_link_data).to eq({ "event_name" => "navigation", "type" => "organisation_logo", "index_link" => 2, "index_total" => 2, "section" => "Who’s involved" })
+      end
     end
   end
 
