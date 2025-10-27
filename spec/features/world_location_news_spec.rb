@@ -268,10 +268,10 @@ RSpec.feature "World Location News pages" do
       visit base_path
       within("#organisations[data-module='ga4-link-tracker']") do
         first_ga4_link_data = JSON.parse(page.all("div[data-ga4-link]").first["data-ga4-link"])
-        expect(first_ga4_link_data).to eq({ "event_name" => "navigation", "type" => "organisation_logo", "index_link" => 1, "index_total" => 2, "section" => "Who’s involved" })
+        expect(first_ga4_link_data).to eq({ "event_name" => "navigation", "type" => "organisation logo", "index_link" => 1, "index_total" => 2, "section" => "Who’s involved" })
 
         second_ga4_link_data = JSON.parse(page.all("div[data-ga4-link]").last["data-ga4-link"])
-        expect(second_ga4_link_data).to eq({ "event_name" => "navigation", "type" => "organisation_logo", "index_link" => 2, "index_total" => 2, "section" => "Who’s involved" })
+        expect(second_ga4_link_data).to eq({ "event_name" => "navigation", "type" => "organisation logo", "index_link" => 2, "index_total" => 2, "section" => "Who’s involved" })
       end
     end
   end
