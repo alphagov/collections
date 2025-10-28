@@ -214,7 +214,7 @@ RSpec.feature "Topical Event pages" do
       visit base_path
       within(".govuk-list[data-module='ga4-link-tracker']") do
         ga4_link_data = JSON.parse(page.first("div[data-ga4-link]")["data-ga4-link"])
-        expect(ga4_link_data).to eq({ "event_name" => "navigation", "type" => "organisation_logo", "index_link" => 1, "index_total" => 1, "section" => "Who’s involved" })
+        expect(ga4_link_data).to eq({ "event_name" => "navigation", "type" => "organisation logo", "index_link" => 1, "index_total" => 1, "section" => "Who’s involved" })
       end
     end
   end
