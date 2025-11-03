@@ -541,7 +541,7 @@ GEM
       term-ansicolor (~> 1.7)
       thor (>= 0.20, < 2.0)
     parallel (1.27.0)
-    parser (3.3.9.0)
+    parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
@@ -549,7 +549,7 @@ GEM
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.4.0)
+    prism (1.6.0)
     prometheus_exporter (2.3.0)
       webrick
     pry (0.15.2)
@@ -772,10 +772,10 @@ GEM
     unicode-display_width (3.1.5)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
-    unparser (0.8.0)
+    unparser (0.8.1)
       diff-lcs (~> 1.6)
       parser (>= 3.3.0)
-      prism (>= 1.4)
+      prism (>= 1.5.1)
     uri (1.1.0)
     useragent (0.16.11)
     webmock (3.26.1)
