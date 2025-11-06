@@ -16,8 +16,9 @@
 <% content_for :breadcrumbs do %>
   <%= render "shared/browse_breadcrumbs" %>
 <% end %>
-
-<%= render "shared/browse_header", { two_thirds: true, margin_bottom: 8 } do %>
+<%= render "shared/browse_header", { 
+  two_thirds: true 
+} do %>
   <%= render "govuk_publishing_components/components/heading", {
     font_size: "xl",
     heading_level: 1,

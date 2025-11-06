@@ -9,7 +9,7 @@
 }
 
 .taxon-page__breadcrumbs-wrapper {
-  background-color: govuk-colour("blue");
+  background-color: $govuk-blue-tint-80;
   padding: govuk-spacing(3) 0 govuk-spacing(4);
 
   @include govuk-media-query($from: tablet) {

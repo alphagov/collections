@@ -3,24 +3,14 @@
 // This isn't proper BEM - but the convention is to have the view name as the
 // block part of the class name. Because we need to keep `browse` so this can
 // be run as an A/B test, we need to use a different class name for each view.
-.browse__breadcrumb-wrapper,
-.browse__header-wrapper {
-  background-color: $govuk-blue-tint-80;
-}
-
 .browse__breadcrumb-wrapper {
+  background-color: $govuk-blue-tint-80;
   // Setting the overflow to auto is required to prevent the breadcrumb
   // component's margin from collapsing.
   overflow: auto;
-}
-
-// The header spacings are a work in progress.
-.browse__header-wrapper {
-  padding-bottom: govuk-spacing(7);
 
   @include govuk-media-query($from: "tablet") {
-    padding-bottom: govuk-spacing(8);
-    padding-top: govuk-spacing(6);
+    padding-bottom: govuk-spacing(3);
   }
 }
 
