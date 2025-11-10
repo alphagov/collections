@@ -7,7 +7,7 @@
       organisation: @header.organisation_logo
     } %>
 
-    <% if @organisation.is_sub_organisation? %>
+    <% if @organisation.is_sub_organisation? && @show.parent_organisations %>
       <div class="organisation__parent-organisations brand--<%= @organisation.brand %>">
         <%= t('organisations.part_of') %>
         <%= @show.parent_organisations %>
