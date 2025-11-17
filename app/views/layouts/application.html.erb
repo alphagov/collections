@@ -26,15 +26,17 @@
     emergency_banner: render("govuk_web_banners/emergency_banner"),
     global_banner: render("govuk_web_banners/global_banner"),
   } do %>
-    <%= yield :back_link %>
-    <% unless content_for(:back_link) %>
-      <% if content_for?(:breadcrumbs) %>
-        <%= yield :breadcrumbs %>
-      <% else %>
-        <%= render 'breadcrumbs' %>
+    <%= content_tag(:div, class: class_names("govuk-width-container" => !@full_width)) do %>
+      <%= yield :back_link %>
+      <% unless content_for(:back_link) %>
+        <% if content_for?(:breadcrumbs) %>
+          <%= yield :breadcrumbs %>
+        <% else %>
+          <%= render 'breadcrumbs' %>
+        <% end %>
       <% end %>
-    <% end %>
-    <%= content_tag(:main, id: "content", role: "main", class: main_classes, lang: lang) do %>
-      <%= yield %>
+      <%= content_tag(:main, id: "content", role: "main", class: main_classes, lang: lang) do %>
+        <%= yield %>
+      <% end %>
     <% end %>
 <% end %>
