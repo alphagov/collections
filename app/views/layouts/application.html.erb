@@ -23,6 +23,8 @@
 
 <%= render "govuk_publishing_components/components/layout_for_public", {
     title: "#{yield :title} - #{ t('application.title.suffix') }",
+    emergency_banner: render("govuk_web_banners/emergency_banner"),
+    global_banner: render("govuk_web_banners/global_banner"),
   } do %>
     <%= yield :back_link %>
     <% unless content_for(:back_link) %>

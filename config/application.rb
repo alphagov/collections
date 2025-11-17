@@ -15,6 +15,8 @@ require "action_mailer/railtie" # Needed for cucumber-rails 2.1.0
 require "rails/test_unit/railtie"
 require_relative "../lib/sanitiser/strategy"
 
+require "govuk_publishing_components/middleware/ga4_optimise"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -134,5 +136,8 @@ module Collections
       only: %w[QUERY_STRING],
       strategy: Sanitiser::Strategy,
     )
+
+    # Use the middleware to compact data-ga4-event/link attributes
+    config.middleware.use GovukPublishingComponents::Middleware::Ga4Optimise
   end
 end
