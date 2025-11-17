@@ -14,10 +14,6 @@ class CoronavirusLandingPageController < ApplicationController
 
 private
 
-  def set_slimmer_template
-    set_gem_layout_full_width
-  end
-
   def content_item
     @content_item ||= ContentItem.find!(request.path)
   end
