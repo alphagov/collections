@@ -20,7 +20,6 @@ gem "rack-utf8_sanitizer"
 gem "rails-i18n"
 gem "rails_translation_manager"
 gem "rinku", require: "rails_rinku"
-gem "slimmer"
 gem "sprockets-rails"
 gem "terser"
 
