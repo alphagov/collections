@@ -1,7 +1,6 @@
 class CoronavirusLandingPageController < ApplicationController
-  slimmer_template "gem_layout_full_width"
-
   def show
+    @full_width = true
     breadcrumbs = [{ title: t("shared.breadcrumbs_home"), url: "/", is_page_parent: true }]
 
     render "show",

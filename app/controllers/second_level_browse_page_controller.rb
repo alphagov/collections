@@ -1,5 +1,6 @@
 class SecondLevelBrowsePageController < ApplicationController
   def show
+    @full_width = true
     setup_content_item_and_navigation_helpers(page)
     show_html
   end
@@ -7,8 +8,6 @@ class SecondLevelBrowsePageController < ApplicationController
 private
 
   def show_html
-    slimmer_template "gem_layout_full_width"
-
     template = if page.lists.curated?
                  :show_curated
                else

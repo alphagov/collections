@@ -1,13 +1,13 @@
 class BrowseController < ApplicationController
-  slimmer_template "gem_layout_full_width"
-
   def index
+    @full_width = true
     page = MainstreamBrowsePage.find("/browse")
     setup_content_item_and_navigation_helpers(page)
     render :index, locals: { page: }
   end
 
   def show
+    @full_width = true
     page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
     setup_content_item_and_navigation_helpers(page)
 

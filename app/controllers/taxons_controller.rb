@@ -1,9 +1,9 @@
 class TaxonsController < ApplicationController
   rescue_from Taxon::InAlphaPhase, with: :error_404
   rescue_from Taxon::NotATaxon, with: :error_404
-  slimmer_template "gem_layout_full_width"
 
   def show
+    @full_width = true
     setup_content_item_and_navigation_helpers(taxon)
 
     redirect_to(url_override, status: :temporary_redirect) and return if url_override.present?
