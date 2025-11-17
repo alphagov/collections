@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/healthcheck/live", to: proc { [200, {}, %w[OK]] }
   get "/healthcheck/ready", to: GovukHealthcheck.rack_response(
     GovukHealthcheck::RailsCache,
+    GovukHealthcheck::EmergencyBannerRedis,
   )
 
   get "/coronavirus", to: "coronavirus_landing_page#show", as: :coronavirus_landing_page
