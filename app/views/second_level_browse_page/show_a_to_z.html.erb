@@ -1,4 +1,6 @@
-<% add_view_stylesheet("browse") %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_browse", media: "all" %>
+<% end %>
 
 <% content_for :title, page.title %>
 <% top_level_page = page.active_top_level_browse_page %>

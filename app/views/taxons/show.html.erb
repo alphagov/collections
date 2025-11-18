@@ -1,4 +1,6 @@
-<% add_view_stylesheet("taxons") %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_taxons", media: "all" %>
+<% end %>
 
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
 <%=
