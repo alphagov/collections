@@ -1,7 +1,6 @@
 require_relative "spec_helper"
 
 require "capybara/rails"
-require "slimmer/test"
 
 GovukTest.configure
 

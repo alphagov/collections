@@ -1,5 +1,3 @@
-require "slimmer/test"
-
 RSpec.describe "Sanitiser" do
   context "with query being correct percent-encoded UTF-8 string" do
     it "does not raise exception" do
