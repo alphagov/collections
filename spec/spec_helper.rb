@@ -39,6 +39,9 @@ GovukAbTesting.configure do |config|
   config.acceptance_test_framework = :capybara
 end
 
+require "rspec/mocks/standalone"
+Rails.application.config.emergency_banner_redis_client = instance_double(Redis, hgetall: {})
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include GdsApi::TestHelpers::Search

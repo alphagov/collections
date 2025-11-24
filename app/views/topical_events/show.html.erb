@@ -1,6 +1,4 @@
 <%
-  add_view_stylesheet("topical_events")
-
   ga4_link_attributes = {
     event_name: "navigation",
     type: "subscribe",
@@ -15,6 +13,9 @@
     "section": I18n.t("shared.featured", locale: :en)
   }.to_json
 %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_topical_events", media: "all" %>
+<% end %>
 
 <% content_for :title, @topical_event.title %>
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing topical-events-show" %>

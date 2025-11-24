@@ -10,47 +10,33 @@
   end
 %>
 
-<% content_for :body do %>
-  <%= yield :back_link %>
-  <% unless content_for(:back_link) %>
-    <% if content_for?(:breadcrumbs) %>
-      <%= yield :breadcrumbs %>
-    <% else %>
-      <%= render 'breadcrumbs' %>
-    <% end %>
-  <% end %>
-  <%=
-    content_tag(:main,
-      id: "content",
-      role: "main",
-      class: main_classes,
-      lang: lang,
-      ) do
-  %>
-    <%= yield %>
-  <% end %>
-<% end %>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title><%= yield :title %> - <%= t('application.title.suffix')%></title>
-  <%= javascript_include_tag "test-dependencies", type: "module" if Rails.env.test? %>
-  <%= javascript_include_tag "application", type: "module" %>
+<%= content_for :head do %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
   <% if show_ios_banner? %>
     <meta name="apple-itunes-app" content="app-id=6572293285">
   <% end %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>
-  <%= stylesheet_link_tag "application.css", :media => "all", integrity: false %>
-  <%=
-    render_component_stylesheets
-  %>
-</head>
-<body>
-  <div class="wrapper" id="wrapper">
-    <%= yield :body %>
-  </div>
-</body>
-</html>
+
+  <%= javascript_include_tag "test-dependencies", type: "module" if Rails.env.test? %>
+<% end %>
+
+<%= render "govuk_publishing_components/components/layout_for_public", {
+    title: "#{yield :title} - #{ t('application.title.suffix') }",
+    emergency_banner: render("govuk_web_banners/emergency_banner"),
+    global_banner: render("govuk_web_banners/global_banner"),
+  } do %>
+    <%= content_tag(:div, class: class_names("govuk-width-container" => !@full_width)) do %>
+      <%= yield :back_link %>
+      <% unless content_for(:back_link) %>
+        <% if content_for?(:breadcrumbs) %>
+          <%= yield :breadcrumbs %>
+        <% else %>
+          <%= render 'breadcrumbs' %>
+        <% end %>
+      <% end %>
+      <%= content_tag(:main, id: "content", role: "main", class: main_classes, lang: lang) do %>
+        <%= yield %>
+      <% end %>
+    <% end %>
+<% end %>

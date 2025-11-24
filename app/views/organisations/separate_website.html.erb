@@ -1,4 +1,6 @@
-<% add_view_stylesheet("organisation") %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_organisation", media: "all" %>
+<% end %>
 
 <%= render partial: 'meta', locals: { organisation: @organisation } %>
 <%= render partial: 'breadcrumb' %>

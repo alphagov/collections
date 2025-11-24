@@ -1,14 +1,10 @@
 class ApplicationController < ActionController::Base
-  include Slimmer::Template
-
   helper_method :content_item_h
 
   protect_from_forgery with: :exception
 
   before_action :set_expiry
   before_action :restrict_request_formats
-
-  slimmer_template "gem_layout"
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
   rescue_from GdsApi::HTTPForbidden, with: :error_403

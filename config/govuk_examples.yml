@@ -1,7 +1,6 @@
 ---
 coronavirus_landing_page: /coronavirus
 embassies: /world/embassies
-embassy: /world/organisations/british-embassy-kabul
 finder: /government/organisations
 government_feed: /government/feed
 historic_appointments: /government/history/past-chancellors
@@ -11,7 +10,6 @@ organisation: /government/organisations/companies-house
 organisation_feed: /government/organisations/companies-house.atom
 past_prime_ministers: /government/history/past-prime-ministers
 person: /government/people/matthew-hancock
-services_and_information: /government/organisations/hm-revenue-customs/services-information
 step_by_step_nav: /get-tax-free-childcare
 taxon: /transport/driving-and-motorcycle-tests
 topical_event: /government/topical-events/autumn-statement-2022

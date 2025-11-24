@@ -1,4 +1,6 @@
-<% add_view_stylesheet("organisations") %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_organisations", media: "all" %>
+<% end %>
 
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
 
