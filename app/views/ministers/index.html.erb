@@ -1,7 +1,6 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "views/_ministers", media: "all" %>
 <% end %>
-<% add_gem_component_stylesheet("govspeak") if @presented_ministers.is_during_reshuffle? %>
 
 <% content_for :title, t("ministers.govuk_title") %>
 
