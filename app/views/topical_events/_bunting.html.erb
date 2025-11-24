@@ -1,4 +1,6 @@
-<% add_view_stylesheet("bunting") %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_bunting", media: "all" %>
+<% end %>
 
 <div class="app-bunting" aria-hidden="true">
     <div class="app-bunting__triangles"></div>

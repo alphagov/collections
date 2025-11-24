@@ -1,6 +1,8 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_world_index", media: "all" %>
+<% end %>
 <% content_for :title, @presented_index.title %>
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing world-locations" %>
-<% add_view_stylesheet("world_index") %>
 
 <div data-module="list-filter">
   <div class="govuk-grid-row">

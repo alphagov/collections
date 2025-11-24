@@ -1,4 +1,6 @@
-<% add_view_stylesheet("history_people") %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_history_people", media: "all" %>
+<% end %>
 
 <% content_for :title, @index_page.title %>
 

@@ -1,4 +1,6 @@
-<% add_view_stylesheet("covid") %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_covid", media: "all" %>
+<% end %>
 
 <%= render partial: "coronavirus_landing_page/components/shared/meta_tags", locals: {
   metadata: details.metadata,
