@@ -1,5 +1,5 @@
 <div class="govuk-grid-column-one-third organisation__float-section">
-    <% unless @organisation.is_promotional_org? %>
+    <% unless @organisation.is_no_10? || @organisation.is_civil_service? %>
       <%= render "govuk_publishing_components/components/heading", {
         text: t('organisations.corporate_information'),
         padding: true,
@@ -9,7 +9,7 @@
       } %>
     <% end %>
   <% if @show.corporate_information[:corporate_information_links][:items].any? && !@organisation.is_no_10? %>
-    <div class="<%= "organisation__section-border-top" if @organisation.is_promotional_org? %>">
+    <div class="<%= "organisation__section-border-top" if @organisation.is_civil_service? %>">
       <%= render "shared/featured_links", @show.corporate_information[:corporate_information_links].merge({ ga4_data: { section: t('organisations.corporate_information', locale: :en) } }) %>
     </div>
   <% end %>
