@@ -24,7 +24,8 @@
   <%= render partial: 'featured_news' %>
   <%= render partial: 'latest_documents' %>
   <%= render partial: 'what_we_do' %>
-  <% if @organisation.is_promotional_org? %>
+  <% if @organisation.is_civil_service? %>
+    <%= render partial: 'videos' if @documents.has_promotional_video_feature? %>
     <%= render partial: 'promotional_features' %>
   <% else %>
     <%= render partial: 'standard_org_docs_people' %>
@@ -34,7 +35,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render partial: 'org_contacts', locals: { contacts: @contacts } %>
-    <% unless @organisation.is_promotional_org? %>
+    <% unless @organisation.is_no_10? || @organisation.is_civil_service? %>
       <%= render partial: 'standard_org_foi_profiles' %>
     <% end %>
   </div>
