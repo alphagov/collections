@@ -53,7 +53,7 @@
             </div>
           <% end %>
 
-          <% if contact[:phone_numbers] %>
+          <% if contact[:phone_numbers].any? %>
             <div class="organisation__margin-bottom">
               <% contact[:phone_numbers].each do |phone| %>
                 <p class="organisation__paragraph"><%= phone[:title] %></p>
