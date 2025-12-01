@@ -48,8 +48,8 @@ class Organisation
     slug == "prime-ministers-office-10-downing-street"
   end
 
-  def is_promotional_org?
-    is_no_10? || organisation_type == "civil_service"
+  def is_civil_service?
+    organisation_type == "civil_service"
   end
 
   def has_more_videos_link?

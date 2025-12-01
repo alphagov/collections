@@ -1,6 +1,6 @@
 <% if @documents.has_promotional_features? %>
 <section class="organisation__margin-bottom organisation__section-wrap">
-  <% @documents.promotional_features.each do |feature| %>
+  <% @documents.promotional_image_features.each do |feature| %>
     <%
       ga4_image_card_json = {
         "event_name": "navigation",
