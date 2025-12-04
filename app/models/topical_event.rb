@@ -11,6 +11,11 @@ class TopicalEvent
     new(content_item)
   end
 
+  def self.find_from_graphql!(base_path)
+    content_item = Graphql::ContentItem.find!(base_path)
+    new(content_item)
+  end
+
   def title
     @content_item.content_item_data["title"]
   end

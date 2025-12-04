@@ -1,9 +1,18 @@
 class TopicalEventsController < ApplicationController
+  include PrometheusSupport
+
   enable_request_formats show: :atom
 
+  GRAPHQL_TRAFFIC_RATE = 0.01 # This is a decimal version of a percentage, so can be between 0 and 1
+
   def show
-    path = topical_event_path(params[:name])
-    @topical_event = TopicalEvent.find!(path)
+    if params[:graphql] == "false"
+      load_from_content_store
+    elsif params[:graphql] == "true" || graphql_ab_test?(GRAPHQL_TRAFFIC_RATE)
+      load_from_graphql
+    else
+      load_from_content_store
+    end
 
     respond_to do |format|
       format.html do
@@ -26,4 +35,25 @@ class TopicalEventsController < ApplicationController
   end
 
   helper_method :array_of_links_to_organisations
+
+private
+
+  def path
+    @path ||= topical_event_path(params[:name])
+  end
+
+  def load_from_graphql
+    set_prometheus_labels("graphql_status_code" => 200, "graphql_api_timeout" => false)
+    @topical_event = TopicalEvent.find_from_graphql!(path)
+  rescue GdsApi::HTTPErrorResponse => e
+    set_prometheus_labels("graphql_status_code" => e.code)
+    load_from_content_store
+  rescue GdsApi::TimedOutException
+    set_prometheus_labels("graphql_api_timeout" => true)
+    load_from_content_store
+  end
+
+  def load_from_content_store
+    @topical_event = TopicalEvent.find!(path)
+  end
 end
