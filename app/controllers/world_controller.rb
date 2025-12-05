@@ -1,7 +1,7 @@
 class WorldController < ApplicationController
   include PrometheusSupport
 
-  GRAPHQL_TRAFFIC_RATE = 0.5 # This is a decimal version of a percentage, so can be between 0 and 1
+  GRAPHQL_TRAFFIC_RATE = Rails.application.config.graphql_traffic_rates.fetch("world_index", 0)
   def index
     content_item_data = if params[:graphql] == "false"
                           load_from_content_store
