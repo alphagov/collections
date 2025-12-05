@@ -53,7 +53,7 @@ ru:
       foi_exemption_html: "Данная организация не регулируется Актом о Свободе Информации. \nДля просмотра включенных организаций <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">закон</a>.\n"
       freedom_of_information_act: Закон о Свободе Информации (ЗСИ)
       freedom_of_information_requests: Запрос в рамках Закона о Свободе информации
-      make_an_foi_request: Сделать запрос в рамках Закона о Свободе информации
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Прочитайте о Законе о Свободе информации (ЗСИ) и <a href="%{how_to_path}" class="govuk-link brand__color">как сделать запрос</a>.
         step2_html: Проверьте <a href="%{our_releases_path}" class="govuk-link brand__color">наши предыдущие выпуски</a> чтобы узнать ответили ли мы на ваш вопрос ранее.

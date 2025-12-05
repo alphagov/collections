@@ -58,7 +58,7 @@ dr:
         برای اینکه بدانید کدام سازمان ها شامل اند،مشاهده نمایید <a href="%{foi_url}" class="govuk-link brand__color">قانون</a>.
       freedom_of_information_act: قانون آزادی اطلاعات
       freedom_of_information_requests: درخواست هایی آزادی اطلاعات
-      make_an_foi_request: یک درخواست آزادی اطلاعات ارسال نمایید
+      make_an_foi_request:
       making_foi_requests:
         step1_html: در مورد قانون آزادی اطلاعات بخوانید <a href="%{how_to_path}" class="govuk-link brand__color">چگونه یک درخواست آماده نمایید</a>.
         step2_html: بررسی نمایید<a href="%{our_releases_path}" class="govuk-link brand__color">نسخه هایی قبلی را</a> تا دریابید که آیا قبلاً به سوال شما پاسخ داده ایم

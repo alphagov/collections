@@ -55,7 +55,7 @@ az:
         Hansı təşkilatların əhatə olunduğunu burada görmək olar: <a href="%{foi_url}" class="govuk-link brand__color">qanunvericilik</a>.
       freedom_of_information_act: Məlumat əldə etmə azadlığı (FOI) qanunu
       freedom_of_information_requests: Məlumat əldə etmə azadlığı üzrə müraciətlər
-      make_an_foi_request: Məlumat əldə etmə azadlığı (FOI) üzrə müraciət edin
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Məlumat əldə etmə azadlığı (FOI) qanunu və <a href="%{how_to_path}" class="govuk-link brand__color">müraciət etmə qaydası barədə oxuyun</a>.
         step2_html: Suallarınıza artıq cavab vermiş <a href="%{our_releases_path}" class="govuk-link brand__color">əvvəlki buraxılışlarımız</a> olub-olmadığımızı yoxlayın.

@@ -55,7 +55,7 @@ cy:
         '
       freedom_of_information_act: Deddf Rhyddid Gwybodaeth
       freedom_of_information_requests: Ceisiadau Rhyddid Gwybodaeth
-      make_an_foi_request: Gwneud cais Rhyddid Gwybodaeth
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Darllenwch am y Ddeddf Rhyddid Gwybodaeth a <a href="%{how_to_path}" class="govuk-link brand__color">sut i wneud cais</a>.
         step2_html: Gwiriwch <a href="%{our_releases_path}" class="govuk-link brand__color">y wybodaeth a ryddhawyd gennym eisoes</a> i weld ydyn ni eisoes wedi ateb eich cwestiwn.

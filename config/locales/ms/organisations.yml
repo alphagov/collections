@@ -55,7 +55,7 @@ ms:
         Untuk mengetahui organisasi mana yang termasuk, lihat <a href="%{foi_url}" class="govuk-link brand__color">perundangan</a>.
       freedom_of_information_act: Akta Kebebasan Maklumat (FOI)
       freedom_of_information_requests: Permohonan Kebebasan Maklumat
-      make_an_foi_request: Membuat permohonan Kebebasan Maklumat (FOI)
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Baca tentang Akta Kebebasan Maklumat (FOI) dan <a href="%{how_to_path}" class="govuk-link brand__color">cara membuat permohonan</a>.
         step2_html: Semak <a href="%{our_releases_path}" class="govuk-link brand__color">hebahan terdahulu kami</a> untuk melihat sama ada kami telah menjawab soalan anda.

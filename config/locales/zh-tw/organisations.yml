@@ -55,7 +55,7 @@ zh-tw:
         查看組織，請參閱 <a href="%{foi_url}" class="govuk-link brand__color">立法</a>。
       freedom_of_information_act: 資訊自由（FOI）法
       freedom_of_information_requests: 資訊自由請求
-      make_an_foi_request: 提出資訊自由請求
+      make_an_foi_request:
       making_foi_requests:
         step1_html: 查閱關於資訊自由（FOI）法以及 <a href="%{how_to_path}" class="govuk-link brand__color">如何提出請求</a>。
         step2_html: 查看 <a href="%{our_releases_path}" class="govuk-link brand__color">我們過去發布</a> 是否已回答過你的問題。

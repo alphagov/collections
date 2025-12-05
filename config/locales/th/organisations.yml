@@ -55,7 +55,7 @@ th:
         เพื่อดูว่ามีองค์กรใดรวมอยู่บ้าง ให้ดูที่ <a href="%{foi_url}" class="govuk-link brand__color">กฎหมาย</a>.
       freedom_of_information_act: พระราชบัญญัติเสรีภาพด้านข้อมูลข่าวสาร (FOI)
       freedom_of_information_requests: เสรีภาพในการขอข้อมูล
-      make_an_foi_request: การยื่นคำร้อง FOI
+      make_an_foi_request:
       making_foi_requests:
         step1_html: อ่านเกี่ยวกับกฎหมาย Freedom of Information (FOI) และ <a href="%{how_to_path}" class="govuk-link brand__color">วิธียื่นคำร้อง</a>
         step2_html: ดู<a href="%{our_releases_path}" class="govuk-link brand__color">ฉบับก่อนหน้าของเรา</a> เพื่อดูว่าเราได้ตอบคำถามของคุณแล้วหรือยัง

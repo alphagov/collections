@@ -55,7 +55,7 @@ pa:
         ਇਹ ਦੇਖਣ ਲਈ ਕਿ ਕਿਹੜੀਆਂ ਸੰਸਥਾਵਾਂ ਸ਼ਾਮਲ ਹਨ, <a href="%{foi_url}" class="govuk-link brand__color"> ਵਿਧਾਨ </a> ਵੇਖੋ।
       freedom_of_information_act: ਸੂਚਨਾ ਦੀ ਸੁਤੰਤਰਤਾ (FOI) ਐਕਟ
       freedom_of_information_requests: ਸੂਚਨਾ ਦੀ ਸੁਤੰਤਰਤਾ ਬੇਨਤੀਆਂ
-      make_an_foi_request: ਇੱਕ FOI ਬੇਨਤੀ ਕਰੋ
+      make_an_foi_request:
       making_foi_requests:
         step1_html: ਸੂਚਨਾ ਦੀ ਸੁਤੰਤਰਤਾ (FOI) ਐਕਟ ਅਤੇ <a href="%{how_to_path}" class="govuk-link brand__color"> ਬੇਨਤੀ ਕਿਵੇਂ ਕਰੀਏ </a> ਬਾਰੇ ਪੜ੍ਹੋ।
         step2_html: ਇਹ ਦੇਖਣ ਲਈ <a href="%{our_releases_path}" class="govuk-link brand__color"> ਸਾਡੀਆਂ ਪਿਛਲੀਆਂ ਰੀਲੀਜ਼ਾਂ </a> ਦੀ ਜਾਂਚ ਕਰੋ ਕਿ ਕੀ ਅਸੀਂ ਪਹਿਲਾਂ ਹੀ ਤੁਹਾਡੇ ਪ੍ਰਸ਼ਨ ਦਾ ਉੱਤਰ ਦੇ ਚੁੱਕੇ ਹਾਂ।

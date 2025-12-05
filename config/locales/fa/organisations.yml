@@ -55,7 +55,7 @@ fa:
         برای مشاهده اینکه کدام سازمان‌ها تحت پوشش هستند، <a href="%{foi_url}" class="govuk-link brand__color">مقررات</a> را مشاهده کنید.
       freedom_of_information_act: قانون آزادی اطلاعات (FOI)
       freedom_of_information_requests: درخواست‌های آزادی اطلاعات
-      make_an_foi_request: ثبت یک درخواست آزادی اطلاعات
+      make_an_foi_request:
       making_foi_requests:
         step1_html: درباره قانون آزادی اطلاعات (FOI) و <a href="%{how_to_path}" class="govuk-link brand__color">نحوه ثبت درخواست، اطلاعات بیشتری کسب کنید</a>.
         step2_html: برای اینکه ببینید آیا قبلاً به سؤال شما پاسخ داده‌ایم یا خیر، <a href="%{our_releases_path}" class="govuk-link brand__color">موارد منتشر شده قبلی</a> ما را بررسی کنید.

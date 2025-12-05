@@ -55,7 +55,7 @@ si:
         ඇතුළත් කර සංවිධාන මොනවාද යන්න බැලීටම, <a href="%{foi_url}" class="govuk-link brand__color">නීති සම්පාදනය</a> බලන්න.
       freedom_of_information_act: තොරතුරු දැනගැනීමේ නිදහස (FOI) පිළිබඳ පනත
       freedom_of_information_requests: තොරතුරු ඉල්ලීම් කිරීමේ නිදහස
-      make_an_foi_request: FOI ඉල්ලීමක් කරන්න
+      make_an_foi_request:
       making_foi_requests:
         step1_html: තොරතුරු දැනගැනීමේ නිදහස (FOI) පිළිබඳ පනත <a href="%{how_to_path}" class="govuk-link brand__color">ඉල්ලීමක් කරන්නේ කෙසේ ද</a> යන්න පිළිබඳව කියවන්න.
         step2_html: අපි ඔබේ ප්‍රශ්න වලට දැනටමත් පිළිතුරු දී ඇති ද යන්න බැලීමට <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> පරීක්ෂා කරන්න.

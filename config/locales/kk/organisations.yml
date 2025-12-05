@@ -55,7 +55,7 @@ kk:
         Қандай ұйымдардың қамтылғанын қарау үшін, <a href="%{foi_url}" class="govuk-link brand__color">заңнама</a> бөлімін қараңыз.
       freedom_of_information_act: Ақпарат еркіндігі (FOI) қаулысы
       freedom_of_information_requests: Ақпарат еркіндігі сұраулары
-      make_an_foi_request: FOI сұрауын жасау
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Ақпарат еркіндігі (FOI) қаулысы және <a href="%{how_to_path}" class="govuk-link brand__color">сұрау жасау жолы</a> туралы оқыңыз.
         step2_html: Сіздің сұрақ жауап бар-жоғын білу үшін <a href="%{our_releases_path}" class="govuk-link brand__color">біздің алдыңғы шығарылымдарды</a> қарап шығыңыз.

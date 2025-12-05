@@ -55,7 +55,7 @@ ps:
         د دې لپاره چې وګورئ کوم سازمانونه پکې شامل دي ، وګورئ <a href="%{foi_url}" class="govuk-link brand__color">قانون</a>.
       freedom_of_information_act: د معلوماتو د آزادۍ قانون (FOI)
       freedom_of_information_requests: د معلوماتو د آزادۍ غوښتنه
-      make_an_foi_request: د د معلوماتو د آزادۍ قانون غوښتنه وکړئ
+      make_an_foi_request:
       making_foi_requests:
         step1_html: د معلوماتو د آزادۍ قانون (FOI) قانون او <a href="%{how_to_path}" class="govuk-link brand__color">د غوښتنې څرنګوالي</a> په اړه ولولئ.
         step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">زموږ پخواني ریلیزونه</a> چیک کړئ ترڅو وګورئ چې ایا موږ دمخه ستاسو پوښتنې ته ځواب ورکړی دی.

@@ -55,7 +55,7 @@ bg:
         За да видите включените организации са включени, разгледайте <a href="%{foi_url}" class="govuk-link brand__color">законодателството</a>.
       freedom_of_information_act: Закон за свобода на информацията (ЗСИ)
       freedom_of_information_requests: Запитвания за свобода на информацията
-      make_an_foi_request: Направете запитване за свобода на информацията
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Прочетете за Закона за свобода на информацията (ЗСИ) и <a href="%{how_to_path}" class="govuk-link brand__color">как да подадете запитване</a>.
         step2_html: Проверете <a href="%{our_releases_path}" class="govuk-link brand__color">предишните ни издания,</a> за да видите дали вече сме отговорили на въпроса ви.

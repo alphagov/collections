@@ -55,7 +55,7 @@ el:
         Για να δείτε ποιες οργανώσεις περιλαμβάνονται, ανατρέξτε <a href="%{foi_url}" class="govuk-link brand__color">στη νομοθεσία</a>.
       freedom_of_information_act: Νόμος για την ελευθερία της πληροφόρησης (FOI)
       freedom_of_information_requests: Αιτήματα ελευθερίας πληροφόρησης
-      make_an_foi_request: Κάντε ένα αίτημα ελευθερία της πληροφόρησης
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Διαβάστε σχετικά με τον νόμο για την ελευθερία της πληροφόρησης (FOI) και τον <a href="%{how_to_path}" class="govuk-link brand__color">τρόπο υποβολής αιτήματος</a> .
         step2_html: Δείτε <a href="%{our_releases_path}" class="govuk-link brand__color">τις προηγούμενες εκδόσεις μας</a> για να δείτε αν έχουμε ήδη απαντήσει στην ερώτησή σας.

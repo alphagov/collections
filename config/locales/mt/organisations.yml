@@ -53,7 +53,7 @@ mt:
       foi_exemption_html: "Din l-organizazzjoni mhijiex koperta mill-Att dwar il-Libertà tal-Informazzjoni. \nBiex tara liema organizazzjonijiet huma inklużi ara <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">teisės aktų</a>.\n"
       freedom_of_information_act: Att dwar il-Libertà għall-informazzjoni (FOI)
       freedom_of_information_requests: Talbiet għall-libertà għall-informazzjoni
-      make_an_foi_request: Agħmel talba għall-libertà għall-informazzjoni
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Aqra dwar l-Att għall-libertà għall-informazzjoni (ACT) u <a href="%{how_to_path}" class="govuk-link brand__color">agħmel talba</a>.
         step2_html: Iċċekkja <a href="%{our_releases_path}" class="govuk-link brand__color">l-istqarrijiet għall-istampa tagħna</a> biex tara jekk diġa weġibniex il-mistoqsijiet tiegħek.

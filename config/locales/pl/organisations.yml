@@ -55,7 +55,7 @@ pl:
         Aby sprawdzić, które organizacje są objęte ustawą, przeczytaj <a href=""%{foi_url}"" class=""govuk-link brand__color"">ustawę</a>.
       freedom_of_information_act: Ustawa o wolności informacji
       freedom_of_information_requests: Wnioski dot. wolności informacji
-      make_an_foi_request: Wyślij wniosek dot. wolności informacji
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Przeczytaj o ustawie o wolności informacji i o tym, <a href="%{how_to_path}" class="govuk-link brand__color">jak złożyć wniosek</a>.
         step2_html: Sprawdź <a href="%{our_releases_path}" class="govuk-link brand__color">nasze poprzednie publikacje</a>, aby zobaczyć, czy odpowiedzieliśmy już na Twoje pytanie.

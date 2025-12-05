@@ -55,7 +55,7 @@ bn:
         কোন কোন প্রতিষ্ঠান অন্তর্ভুক্ত, তা দেখতে <a href="%{foi_url}" class="govuk-link brand__color">আইন দেখুন</a>।
       freedom_of_information_act: তথ্যের স্বাধীনতা (FOI) বিষয়ক আইন
       freedom_of_information_requests: তথ্যের স্বাধীনতার অনুরোধসমূহ
-      make_an_foi_request: একটি FOI-এর অনুরোধ করুন
+      make_an_foi_request:
       making_foi_requests:
         step1_html: তথ্যের স্বাধীনতা (FOI) বিষয়ক আইন এবং <a href="%{how_to_path}" class="govuk-link brand__color">কিভাবে একটি অনুরোধ করতে হয়</a> তা পড়ুন।
         step2_html: আমরা ইতোমধ্যে আপনার প্রশ্নের উত্তর দিয়েছি কি না তা দেখতে <a href="%{our_releases_path}" class="govuk-link brand__color">আমাদের পূর্ববর্তী প্রকাশনাগুলো</a> দেখুন।

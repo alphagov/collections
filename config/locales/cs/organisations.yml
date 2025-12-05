@@ -55,7 +55,7 @@ cs:
         Chcete-li zjistit, které organizace jsou zahrnuty, podívejte se <a href="%{foi_url}" class="govuk-link brand__color">na právní předpisy</a>.
       freedom_of_information_act: Zákon o svobodném přístupu k informacím (FOI)
       freedom_of_information_requests: Žádosti o svobodný přístup k informacím
-      make_an_foi_request: Podejte žádost o informace FOI
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Přečtěte si o zákoně o svobodném přístupu k informacím (FOI) a <a href="%{how_to_path}" class="govuk-link brand__color">jak podat žádost</a>.
         step2_html: Podívejte se na <a href="%{our_releases_path}" class="govuk-link brand__color">naše předchozí vydání</a> a zjistěte, zda jsme na vaši otázku již odpověděli.

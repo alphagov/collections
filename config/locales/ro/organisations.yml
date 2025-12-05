@@ -55,7 +55,7 @@ ro:
         Pentru a vedea ce organizații sunt incluse, consultați <a href="%{foi_url}" class="govuk-link brand__color">legislația</a>.
       freedom_of_information_act: Legea Freedom of Information (Libertatea informației)
       freedom_of_information_requests: Solicitări privind libertatea informației
-      make_an_foi_request: Faceți o solicitare privind libertatea informației
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Citiți despre legea Freedom of Information (Libertatea informației) și <a href="%{how_to_path}" class="govuk-link brand__color">despre cum puteți face o solicitare</a>.
         step2_html: Verificați <a href="%{our_releases_path}" class="govuk-link brand__color">comunicările noastre anterioare</a> pentru a vedea dacă am răspuns deja la întrebarea dvs.

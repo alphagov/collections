@@ -55,7 +55,7 @@ ja:
         '
       freedom_of_information_act: 情報自由（FOI）法
       freedom_of_information_requests: 情報の自由の要求
-      make_an_foi_request: FOIの要求を行う
+      make_an_foi_request:
       making_foi_requests:
         step1_html: 情報自由（FOI）法と<ahref = "％{how_to_path}" class = "govuk-linkbrand__color">要求方法</a>についてお読みください。
         step2_html: <a href="%{our_releases_path}" class="govuk-linkbrand__color">以前のリリース</a>をチェックして、すでに質問に回答しているかどうかをご確認ください。

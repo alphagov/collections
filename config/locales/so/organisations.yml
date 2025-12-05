@@ -55,7 +55,7 @@ so:
         Si aad u fiirisid ururda lagu daray, fiiri <a href="%{foi_url}" class="govuk-link brand__color">sharciga</a>.
       freedom_of_information_act: Xeerka Xoriyada Macluumaadka (FOI)
       freedom_of_information_requests: Codsiyada Xoriyada Macluumaadka
-      make_an_foi_request: Samee codsi FOI
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Akhri waxbadan oo khuseeya Xeerka Xoriyada Macluumaadka (FOI) <a href="%{how_to_path}" class="govuk-link brand__color">sida loo sameeyo codsi</a>.
         step2_html: Hubi <a href="%{our_releases_path}" class="govuk-link brand__color">warbixinahayagii hore</a> si aad u aragtid inaan mar hore ka jawaabnay su'aashaada.

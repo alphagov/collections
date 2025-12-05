@@ -55,7 +55,7 @@ sw:
         Ili uone mashirika yanayojumuishwa, angalia <a href="%{foi_url}" class="govuk-link brand__color">sheria</a>.
       freedom_of_information_act: Sheria ya Uhuru wa Kupata Habari (FOI)
       freedom_of_information_requests: Uhuru wa kutuma maombi ya kupata habari
-      make_an_foi_request: Tuma ombi la FOI
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Soma maelezo kuhusu Sheria ya Uhuru wa Kupata Habar (FOI) na <a href="%{how_to_path}" class="govuk-link brand__color">jinsi ya kutuma maombi</a>.
         step2_html: Angalia <a href="%{our_releases_path}" class="govuk-link brand__color">taarifa zetu za awali</a> ili uone iwapo tayari tumejibu swali lako.

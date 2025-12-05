@@ -53,7 +53,7 @@ es:
       foi_exemption_html: "Esta organización no está cubierta por la Ley de Libertad de Información. \nPara ver qué organizaciones están incluidas, consulte <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">la legislación</a>.\n"
       freedom_of_information_act: Ley de Libertad de Información (FOI)
       freedom_of_information_requests: Solicitudes según la Ley de Libertad de Información
-      make_an_foi_request: Haga una solicitud según la Ley de Libertad de Información
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Lea acerca de la Ley de libertad de información (FOI) y <a href="%{how_to_path}" class="govuk-link brand__color">cómo realizar una solicitud</a>.
         step2_html: Consulte <a href="%{our_releases_path}" class="govuk-link brand__color">nuestras versiones anteriores</a> para ver si ya hemos respondido a su pregunta.

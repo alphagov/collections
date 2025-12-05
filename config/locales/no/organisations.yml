@@ -55,7 +55,7 @@
         For å se hvilke organisasjoner som er inkludert, se <a href="%{foi_url}" class="govuk-link brand__color">lovverket</a>.
       freedom_of_information_act: Lov om informasjonsfrihet (FOI)
       freedom_of_information_requests: Forespørsler om informasjonsfrihet
-      make_an_foi_request: Send en forespørsel om informasjonsfrihet
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Les om loven om informasjonsfrihet (FOI) og <a href="%{how_to_path}" class="govuk-link brand__color">hvordan du sender en forespørsel</a>.
         step2_html: Sjekk <a href="%{our_releases_path}" class="govuk-link brand__color">våre tidligere utgivelser</a> for å se om vi allerede har svart på spørsmålet ditt.

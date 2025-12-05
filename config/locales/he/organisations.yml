@@ -55,7 +55,7 @@ he:
         כדי לראות אילו ארגונים כלולים, עיין <a href="%{foi_url}" class="govuk-link brand__color">בחקיקה</a>.
       freedom_of_information_act: 'חוק חופש המידע (FOI) '
       freedom_of_information_requests: בקשות לחופש המידע
-      make_an_foi_request: תגיש בקשה לחופש מידע
+      make_an_foi_request:
       making_foi_requests:
         step1_html: קרא על חוק חופש המידע (FOI) <a href="%{how_to_path}" class="govuk-link brand__color">וכיצד להגיש בקשה</a>.
         step2_html: בדוק <a href="%{our_releases_path}" class="govuk-link brand__color">את המהדורות הקודמות שלנו</a> כדי לראות אם כבר ענינו על שאלתך.

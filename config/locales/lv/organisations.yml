@@ -55,7 +55,7 @@ lv:
         Lai redzētu organizācijas, uz kurām tas attiecas, skatiet <a href="%{foi_url}" class="govuk-link brand__color">tiesību aktus</a>.
       freedom_of_information_act: Informācijas atklātības likums
       freedom_of_information_requests: Informācijas atklātības pieprasījumi
-      make_an_foi_request: Izveidot informācijas atklātības pieprasījumu
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Izlasiet par Informācijas atklātības likumu un <a href="%{how_to_path}" class="govuk-link brand__color">pieprasījumu veidošanu</a>.
         step2_html: Pārskatiet <a href="%{our_releases_path}" class="govuk-link brand__color">mūsu iepriekšējās publikācijas</a>, lai pārbaudītu, vai jūsu jautājums jau nav atbildēts.

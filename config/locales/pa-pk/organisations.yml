@@ -55,7 +55,7 @@ pa-pk:
         '
       freedom_of_information_act: معلومات دی آزادی  (FOI)  دا قانون
       freedom_of_information_requests: معلومات دی آزادی دیاں درخواستاں
-      make_an_foi_request: اک FOI دی درخواست دیوؤ
+      make_an_foi_request:
       making_foi_requests:
         step1_html: معلومات دی آزادی  (FOI)  دے قانون بارے ہور جانن لئی ایہ ویکھو <a href="%{how_to_path}" class="govuk-link brand__color">اک درخواست کیس طراں کیتی جا سکتی ہے</a>.
         step2_html: |-
