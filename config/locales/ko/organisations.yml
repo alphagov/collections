@@ -55,7 +55,7 @@ ko:
         어떤 조직이 포함되어 있는지 확인하려면 <a href="%{foi_url}" class="govuk-link brand__color">해당 법안</a>을 참조하십시오.
       freedom_of_information_act: 정보의 자유(FOI) 법
       freedom_of_information_requests: 정보의 자유 요청
-      make_an_foi_request: FOI 요청하기
+      make_an_foi_request:
       making_foi_requests:
         step1_html: 정보의 자유(FOI) 법과 <a href="%{how_to_path}" class="govuk-link brand__color">요청하는 법</a>에 대해 참조하십시오.
         step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">저희의 지난 공개물</a> 을 보고 저희가 이미 귀하의 질문에 답하였는지 확인하십시오.

@@ -295,7 +295,7 @@ RSpec.describe "Organisation pages" do
 
     it "promotional organisations do not have FOI info" do
       visit "/government/organisations/prime-ministers-office-10-downing-street"
-      expect(page).not_to have_content(/Make an FOI request/i)
+      expect(page).not_to have_content(/Make a Freedom of Information (FOI) request/i)
       expect(page).not_to have_content(/Freedom of Information (FOI) Act/i)
     end
 
@@ -484,7 +484,7 @@ RSpec.describe "Organisation pages" do
     test_ga4_email_links("#org-contacts")
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
-    test_ga4_email_links("#freedom-of-information", "Make an FOI request")
+    test_ga4_email_links("#freedom-of-information", "Make a Freedom of Information (FOI) request")
   end
 
   it "has GA4 tracking on organisation__supergroup 'see all' links" do

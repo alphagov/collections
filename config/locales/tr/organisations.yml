@@ -55,7 +55,7 @@ tr:
         Hangi kuruluşların dahil olduğunu görmek için, <a href="%{foi_url}" class="govuk-link brand__color">yasal mevzuata</a> bakın.
       freedom_of_information_act: Bilgi Edinme Özgürlüğü (FOI) Kanunu
       freedom_of_information_requests: Bilgi Edinme Özgürlüğü talepleri
-      make_an_foi_request: Bir Bilgi Edinme Özgürlüğü talebinde bulunun
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Bilgi Edinme Özgürlüğü (FOI) Kanunu ve <a href="%{how_to_path}" class="govuk-link brand__color">nasıl talep yapılacağı</a> hakkında okuyun.
         step2_html: Sorunuza zaten cevap verip vermediğimizi görmek için <a href="%{our_releases_path}" class="govuk-link brand__color">önceki açıklamalarımıza</a> bakın.

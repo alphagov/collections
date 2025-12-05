@@ -55,7 +55,7 @@ uz:
         Қандай ташкилотлар киритилганлигини кўриш учун <a href="%{foi_url}" class="govuk-link brand__color">қонунчиликни кўринг</a>.
       freedom_of_information_act: Маълумотларга эркин кириш тўғрисидаги Қонун (FOI).
       freedom_of_information_requests: Маълумотларга эркин киришга сўровлар
-      make_an_foi_request: Маълумотларга эркин киришга сўровларни киритиш
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Маълумотларга эркин кириш тўғрисидаги Қонун (FOI) ва <a href="%{how_to_path}" class="govuk-link brand__color">сўровларни узатиш усуллари билан танишиб олинг</a>.
         step2_html: Биз сизнинг сўровингизга жавоб берганлигимизни текшириш учун <a href="%{our_releases_path}" class="govuk-link brand__color"> бизнинг олдинги нашрларимизни</a> кўринг.

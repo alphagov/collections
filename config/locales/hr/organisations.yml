@@ -53,7 +53,7 @@ hr:
       foi_exemption_html: Ova organizacija nije obuhvaćena Zakonom o slobodi pristupa informacijama. Da biste vidjeli koje su organizacije uključene, pogledajte <a href="%{foi_url}" class="govuk-link brand__color">zakonodavstvo</a>.
       freedom_of_information_act: Zakon o slobodi pristupa informacijama (FOI)
       freedom_of_information_requests: Zahtjevi za slobodu pristupa informacijama
-      make_an_foi_request: Učinite zahtjev za Slobodu pristupa informacijama
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Pročitajte Zakon o slobodi informacija (FOI) i <a href="%{how_to_path}" class="govuk-link brand__color">kako podnijeti zahtjev</a>.
         step2_html: Provjerite <a href="%{our_releases_path}" class="govuk-link brand__color">naša prethodna izdanja</a> da vidite jesmo li već odgovorili na vaše pitanje.

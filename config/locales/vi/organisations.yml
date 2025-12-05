@@ -55,7 +55,7 @@ vi:
         Để biết những tổ chức được bao gồm, hãy xem <a href="%{foi_url}" class="govuk-link brand__color">đạo luật</a>.
       freedom_of_information_act: Đạo luật Tự do Thông tin (FOI)
       freedom_of_information_requests: Yêu cầu quyền Tự do Thông tin
-      make_an_foi_request: Yêu cầu FOI
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Đọc về Đạo luật Tự do Thông tin (FOI) và <a href="%{how_to_path}" class="govuk-link brand__color">cách đưa ra yêu cầu</a>.
         step2_html: Kiểm tra <a href="%{our_releases_path}" class="govuk-link brand__color">các công bố trước đây của chúng tôi</a> để xem liệu chúng tôi đã trả lời câu hỏi của bạn chưa.

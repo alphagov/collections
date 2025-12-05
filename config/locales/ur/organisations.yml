@@ -55,7 +55,7 @@ ur:
         یہ دیکھنے کے لیے کہ کون سی تنظیمیں شامل ہیں، <a href="%{foi_url}" class="govuk-link brand__color">قانون سازی دیکھیں</a>۔
       freedom_of_information_act: فریڈم آف انفارمیشن (FOI) ایکٹ
       freedom_of_information_requests: فریڈم آف انفارمیشن کی درخواستیں
-      make_an_foi_request: FOI درخواست کریں
+      make_an_foi_request:
       making_foi_requests:
         step1_html: فریڈم آف انفارمیشن (FOI) ایکٹ اور <a href="%{how_to_path}" class="govuk-link brand__color">درخواست کرنے کے طریقے کے بارے میں پڑھیں۔
         step2_html: یہ دیکھنے کے لیے <a href="%{our_releases_path}" class="govuk-link brand__color">ہماری پچھلی ریلیز</a> کی پڑتال کریں آیا ہم پہلے ہی آپ کے سوال کا جواب دے چکے ہیں۔

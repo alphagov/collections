@@ -55,7 +55,7 @@ hu:
         Ha szeretné megtudni, hogy mely szervezetek tartoznak a törvény hatálya alá, tekintse meg a <a href="%{foi_url}" class="govuk-link brand__color">jogszabályt</a>.
       freedom_of_information_act: Információszabadság (FOI) Törvénye
       freedom_of_information_requests: Információszabadsággal kapcsolatos kérelmek
-      make_an_foi_request: Információszabadsággal kapcsolatos kérelem küldése
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Tudjon meg többet az Információszabadság (FOI) Törvényéről és arról, hogy <a href="%{how_to_path}" class="govuk-link brand__color">miként tud kérelmet beadni</a>.
         step2_html: Nézze meg <a href="%{our_releases_path}" class="govuk-link brand__color">korábbi kiadásainkat</a>, hátha megválaszoltuk már a kérdését.

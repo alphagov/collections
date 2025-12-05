@@ -53,7 +53,7 @@ zh-hk:
       foi_exemption_html: 此組織不受資訊自由法案規限。如要查閱其中包含哪些組織，請參閱 <a href="%{foi_url}" class="govuk-link brand__color">立法</a>。
       freedom_of_information_act: 資訊自由 (FOI) 法案
       freedom_of_information_requests: 資訊自由申請
-      make_an_foi_request: 提出 FOI 申請
+      make_an_foi_request:
       making_foi_requests:
         step1_html: 了解資訊自由 (FOI) 法案之詳情及 <a href="%{how_to_path}" class="govuk-link brand__color">提出申請的方式</a>。
         step2_html: 查閱 <a href="%{our_releases_path}" class="govuk-link brand__color">我們的最近發佈</a> 以查看我們是否已對您的問題予以回應。

@@ -55,7 +55,7 @@ tk:
         Haýsy guramalaryň goşulýandygyny görmek üçin <a href="%atialfoi_urlsection" class="govuk-link brand__color">kanunçylyk</a> serediň.
       freedom_of_information_act: Maglumat azatlygy (FOI) kanuny.
       freedom_of_information_requests: Maglumat azatlygy talaplary
-      make_an_foi_request: FOI talap etmek
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Maglumat azatlygy kanuny (FOI) we <a href="%atialhow_to_pathsection" class="govuk-link brand__color">haýyş nädip etmeli</a> hakda okaň.
         step2_html: Soragyňyza eýýäm jogap berdikmi ýa-da ýok anyklamak üçin <a href="% {our_releases_pathsection" class="govuk-link brand__color">öňki neşirlerimizi</a> barlaň.

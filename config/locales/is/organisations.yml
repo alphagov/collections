@@ -55,7 +55,7 @@ is:
         Til að sjá hvað samtök eru meðtalin, sjá <a href="%{foi_url}" class="govuk-link brand__color">löggjöfina</a>.
       freedom_of_information_act: Freedom of Information (FOI) Act
       freedom_of_information_requests: Freedom of Information fyrirspurnir
-      make_an_foi_request: Leggja fram FOI fyrirspurn
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Lestu um Freedom of Information (FOI) Act og <a href="%{how_to_path}" class="govuk-link brand__color">hvernig á að leggja fram fyrirspurn</a>.
         step2_html: Kíktu á <a href="%{our_releases_path}" class="govuk-link brand__color">fyrri útgáfur okkar</a> til að sjá hvort við höfum nú þegar svarað spurningunni þinni.

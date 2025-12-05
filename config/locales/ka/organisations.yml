@@ -53,7 +53,7 @@ ka:
       foi_exemption_html: "ინფორმაციის თავისუფლების აქტი არ მოიცავს ამ ორგანიზაციას. \nიმის სანახავად, თუ რომელ ორგანიზაციებს მოიცავს ეს კანონი, იხილეთ,<a href=\"%{foi_url}\" class=\"govuk-link brand__color\">კანონმდებლობა</a>.\n"
       freedom_of_information_act: ინფორმაციის თავისუფლების (FOI) აქტი
       freedom_of_information_requests: ინფორმაციის თავისუფლების მოთხოვნები
-      make_an_foi_request: გააკეთეთ ინფორმაციის თავისუფლების მოთხოვნა
+      make_an_foi_request:
       making_foi_requests:
         step1_html: წაიკითხეთ ინფორმაციის თავისუფლების (FOI) აქტის შესახებ და <a href="%{how_to_path}" class="govuk-link brand__color">როგორ გავაკეთოთ მოთხოვნა</a>.
         step2_html: შეამოწმეთ <a href="%{our_releases_path}" class="govuk-link brand__color">ჩვენი წინა გამოცემები</a> იმის სანახავად, გიპასუხეთ თუ არა უკვე თქვენს კითხვაზე.

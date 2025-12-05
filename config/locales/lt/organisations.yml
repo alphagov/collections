@@ -55,7 +55,7 @@ lt:
         Organizacijų, kurioms taikomas įstatymas, sąrašas pateiktas <a href="%{foi_url}" class="govuk-link brand__color">the legislation</a
       freedom_of_information_act: Informacijos laisvės įstatymas
       freedom_of_information_requests: Informacijos laisvės prašymai
-      make_an_foi_request: Pateikti informacijos laisvės prašymą
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Perskaitykite informaciją apie Informacijos laisvės įstatymą ir <a href="%{how_to_path}" class="govuk-link brand__color">sužinokite, kaip pateikti prašymą</a>.
         step2_html: Peržiūrėkite <a href="%{our_releases_path}" class="govuk-link brand__color">mūsų ankstesnius pranešimus,</a> nes juose jau galime būti atsakę į jūsų klausimą.

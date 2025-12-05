@@ -55,7 +55,7 @@ ar:
         لمعرفة المنظمات المشمولة بالتغطية، اطلع على <a href="%{foi_url}" class="govuk-link brand__color">التشريع</a>.
       freedom_of_information_act: قانون حرية تداول المعلومات
       freedom_of_information_requests: طلبات حرية تداول المعلومات
-      make_an_foi_request: تقديم طلب بموجب حرية تداول المعلومات
+      make_an_foi_request:
       making_foi_requests:
         step1_html: اقرأ عن قانون حرية تداول المعلومات <a href="%{how_to_path}" class="govuk-link brand__color">وكيفية تقديم طلب بموجبه</a>.
         step2_html: تفقَّد <a href="%{our_releases_path}" class="govuk-link brand__color">إصداراتنا السابقة</a> لمعرفة ما إذا كنا قد أجبنا على سؤالك بالفعل.

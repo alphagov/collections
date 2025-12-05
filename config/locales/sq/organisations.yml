@@ -53,7 +53,7 @@ sq:
       foi_exemption_html: "Kjo organizatë nuk mbulohet nga Ligji për Lirinë e Informimit.\r\nPër të parë se cilat organizata janë të përfshira, shihni <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">legjislacionin</a>.\r\n"
       freedom_of_information_act: Akti për Lirinë e Informimit (LII)
       freedom_of_information_requests: Kërkesat për lirinë e informacionit
-      make_an_foi_request: Bëni një kërkesë për FOI
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Lexoni për Aktin e Lirisë së Informacionit (FOI) dhe <a href="%{how_to_path}" class="govuk-link brand__color">si të bëni një kërkesë</a>.
         step2_html: Kontrolloni <a href="%{our_releases_path}" class="govuk-link brand__color">publikimet tona të mëparshme</a> për të parë nëse i jemi përgjigjur pyetjes tuaj.

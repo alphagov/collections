@@ -55,7 +55,7 @@ be:
         Каб даведацца, якія арганізацыі ўлучаны, глядзi <a href="%{foi_url}" class="govuk-link brand__color">the legislation</a>.
       freedom_of_information_act: Закон пра волю інфармацыі (FOI)
       freedom_of_information_requests: Запыты пра волю інфармацыі
-      make_an_foi_request: Падайце запыт у FOI
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Чытайце пра Закон пра волю інфармацыі (FOI) i <a href="%{how_to_path}" class="govuk-link brand__color">як зрабiць запыт</a>.
         step2_html: Прагледзьце <a href="%{our_releases_path}" class="govuk-link brand__color">нашы папярэднія выпускі,</a> каб даведацца, ціадказвалі мы ўжо на ваша пытанне.

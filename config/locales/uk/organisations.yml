@@ -55,7 +55,7 @@ uk:
         Щоб дізнатися, які організації включені, перегляньте<a href="%{foi_url}" class="govuk-link brand__color">законодавство</a>.
       freedom_of_information_act: Закон про свободу інформації (FOI).
       freedom_of_information_requests: Запит по Закону про свободу інформації (FOI).
-      make_an_foi_request: Надіслати запит по Закону про свободу інформації
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Читайте про Закон про свободу інформації (FOI) та<a href="%{how_to_path}" class="govuk-link brand__color">як надіслати запит</a>.
         step2_html: Перевірте, щоб <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> дізнатися, чи ми вже відповіли на ваше запитання.

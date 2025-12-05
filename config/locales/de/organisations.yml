@@ -55,7 +55,7 @@ de:
         Um zu sehen, welche Organisationen einbezogen sind, lesen Sie <a href="%{foi_url}" class="govuk-link brand__color">die Rechtsvorschriften</a>.
       freedom_of_information_act: Informationsfreiheitsgesetz
       freedom_of_information_requests: Anfragen zur Informationsfreiheit
-      make_an_foi_request: Anfrage zur Informationsfreiheit stellen
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Lesen Sie mehr über das Informationsfreiheitgesetz und <a href="%{how_to_path}" class="govuk-link brand__color">wie Sie einen Antrag stellen</a>.
         step2_html: Sehen Sie in unseren <a href="%{our_releases_path}" class="govuk-link brand__color">früheren Veröffentlichungen</a> nach, ob wir Ihre Frage bereits beantwortet haben.

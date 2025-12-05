@@ -55,7 +55,7 @@ sl:
         Če želite videti, katere organizacije so vključene, glejte ​<a href="%{foi_url}" class="govuk-link brand__color">​zakonodajo​</a>​.
       freedom_of_information_act: Zakon o prostem dostopu do informacij (FOI)
       freedom_of_information_requests: Zahteva za prost dostop do informacij
-      make_an_foi_request: Vložite zahtevo za prost dostop do informacij
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Preberite o prostem dostopu do informacij (FOI) in ​<a href="%{how_to_path}" class="govuk-link brand__color">​o tem, kako vložiti zahtevo</a>​.
         step2_html: Preglejte ​<a href="%{our_releases_path}" class="govuk-link brand__color">​naše prejšnje izdaje​</a>​, da vidite, če smo že odgovorili na vaše vprašanje.

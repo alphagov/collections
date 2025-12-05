@@ -53,7 +53,7 @@ fr:
       foi_exemption_html: " Cette organisation n'est pas soumise à la loi sur l'accès à l'information. \nPour déterminer les organisations concernées, voir <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">la législation</a>.\r\n"
       freedom_of_information_act: Loi sur l'accès à l'information (FOI)
       freedom_of_information_requests: Demandes d'accès à l'information
-      make_an_foi_request: Faire une demande d'accès à l'information
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Découvrez la loi sur l'accès à l'information (FOIA) et <a href="%{how_to_path}" class="govuk-link brand__color">comment faire une demande</a>.
         step2_html: Consultez <a href="%{our_releases_path}" class="govuk-link brand__color">nos versions précédentes</a> pour voir si nous avons déjà répondu à votre question.

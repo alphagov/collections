@@ -53,7 +53,7 @@ gu:
       foi_exemption_html: "આ સંસ્થાને માહિતીની સ્વતંત્રતા અધિનિયમ દ્વારા આવરી લેવામાં આવેલ નથી. \nકઈ સંસ્થાઓને સામેલ કરવામાં આવેલ છે, તે જોવા માટે<a href=\"%{foi_url}\" class=\"govuk-link brand__color\">કાયદો</a>જુઓ.\n"
       freedom_of_information_act: માહિતીની સ્વતંત્રતા (FOI) અધિનિયમ
       freedom_of_information_requests: માહિતીની સ્વતંત્રતા અરજીઓ
-      make_an_foi_request: માહિતીની સ્વતંત્રતાની વિનંતી કરો
+      make_an_foi_request:
       making_foi_requests:
         step1_html: માહિતીની સ્વતંત્રતા (FOI) અધિનિયમ અંગે અને <a href="%{how_to_path}" class="govuk-link brand__color">અરજી કેવી રીતે કરવી</a> તે અંગે વાંચો.
         step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">અમારા અગાઉના પ્રકાશનો</a> તપાસો અને જુઓ કે અમે તમારા પ્રશ્નનો જવાબ પહેલાથી જ આપી દીધો છે કે કેમ.

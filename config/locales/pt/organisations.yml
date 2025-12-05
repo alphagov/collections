@@ -55,7 +55,7 @@ pt:
         Para ver que organizações estão incluídas, veja <a href="%{foi_url}" class="govuk-link brand__color">a legislação</a>.
       freedom_of_information_act: Lei da Liberdade de Informação
       freedom_of_information_requests: Pedidos de Liberdade de Informação
-      make_an_foi_request: Faça um pedido de Liberdade de Informação
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Leia mais sobre a Leia da Liberdade de Informação e <a href="%{how_to_path}" class="govuk-link brand__color">como fazer um pedido</a>.
         step2_html: Consulte <a href="%{our_releases_path}" class="govuk-link brand__color">os nossos comunicados anteriores</a> para ver se já respondemos à sua pergunta

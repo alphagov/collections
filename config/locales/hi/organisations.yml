@@ -53,7 +53,7 @@ hi:
       foi_exemption_html: यह संगठन सूचना की आज़ादी अधिनियम द्वारा कवर नहीं किया गया है। शामिल संगठनों की जानकारी देखने के लिए, <a href="%{foi_url}" class="govuk-link brand__color">कानून</a>देखें।
       freedom_of_information_act: सूचना की आज़ादी (Freedom of Information, FOI)अधिनियम
       freedom_of_information_requests: सूचना की आज़ादी के अनुरोध
-      make_an_foi_request: एफओआई अनुरोध करें
+      make_an_foi_request:
       making_foi_requests:
         step1_html: सूचना की आज़ादी (एफओआई) अधिनियम और <a href="%{how_to_path}" class="govuk-link brand__color">अनुरोध कैसे करें</a>के बारे में पढ़ें।
         step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">हमारी पिछली विज्ञप्तियां</a> जांचकर देखें कि क्या हमने पहले ही आपके सवाल का जवाब दे दिया है।

@@ -55,7 +55,7 @@ gd:
         Chun a fháil amach cé na heagraíochtaí a bhfuil tionchar orthu, féach ar an <a href="%{foi_url}" class="govuk-link brand__color">reachtaíocht</a>.
       freedom_of_information_act: An tAcht um Shaoráil Faisnéise (FOI)
       freedom_of_information_requests: Faisnéis faoi shaoirse faisnéise
-      make_an_foi_request: Déan gearán maidir le saoirse faisnéise
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Faigh amach faoin dlí um Shaoráil Faisnéise (FOI) agus <a href="%{how_to_path}" class="govuk-link brand__color">conas iarratas a dhéanamh</a>.
         step2_html: Amharc ar <a href="%{our_releases_path}" class="govuk-link brand__color">ár n-eisiúintí roimhe seo</a> agus féach an bhfuil do cheist freagartha againn cheana féin.

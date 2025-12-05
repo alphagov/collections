@@ -55,7 +55,7 @@ hy:
         Ընդգրկված կազմակերպությունների ցանկը դիտելու համար, այցելեք՝ <a href="%{foi_url}" class="govuk-link brand__color">օրենսդրությունը</a>։
       freedom_of_information_act: Տեղեկատվության ազատության (FOI) օրենք
       freedom_of_information_requests: Տեղեկատվության ազատության վերաբերյալ հարցումներ
-      make_an_foi_request: Տեղեկատվության ազատության (FOI) հարցում իրականացնել
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Կարդալ Տեղեկատվության ազատության (FOI) օրենքի մասին և <a href="%{how_to_path}" class="govuk-link brand__color">հարցում պատրաստելու մասին այստեղ</a>։
         step2_html: Ստուդշգել <a href="%{our_releases_path}" class="govuk-link brand__color">մեր նախորդ հրապարակումները՝</a> պարզելու, թե արդյոք ձեր հարցի պատասխանը այնտեղ նշված չէ, թե ոչ։

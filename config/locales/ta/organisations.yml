@@ -55,7 +55,7 @@ ta:
         எந்த நிறுவனங்கள் உள்ளடங்கியுள்ளன என்று காண்பதற்கு <a href="%{foi_url}" class="govuk-link brand__color">சட்டமுறைமையைக் காண்க</a>.
       freedom_of_information_act: தகவல் சுதந்திரச் (FOI) சட்டம்
       freedom_of_information_requests: தகவல் சுதந்திரக் கோரிக்கைகள்
-      make_an_foi_request: ஒரு FOI கோரிக்கையை வை
+      make_an_foi_request:
       making_foi_requests:
         step1_html: தகவல் சுதந்திரச் (FOI) சட்டம் பற்றியும் <a href="%{how_to_path}" class="govuk-link brand__color">எவ்வாறு ஒரு கோரிக்கையை வைப்பது என்பது பற்றியும் வாசிக்கவும்</a>.
         step2_html: ஏற்கெனவே உங்கள் கேள்விக்கு பதிலளித்துவிட்டோமா என்று <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> பார்க்கவும்.

@@ -55,7 +55,7 @@ da:
         Du kan se, hvilke organisationer der er omfattet, ved at se <a href="%{foi_url}" class="govuk-link brand__color">lovgivningen</a>.
       freedom_of_information_act: Lov om informationsfrihed (FOI)
       freedom_of_information_requests: Anmodninger om informationsfrihed
-      make_an_foi_request: Lav en anmodning om informationsfrihed
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Læs om loven om informationsfrihed (FOI) og <a href="%{how_to_path}" class="govuk-link brand__color">how at fremsætte en anmodning</a>.
         step2_html: Tjek <a href="%{our_releases_path}" class="govuk-link brand__color">our tidligere udgivelser</a> for at se, om vi allerede har besvaret dit spørgsmål.

@@ -55,7 +55,7 @@ fi:
         Jos haluat nähdä, mitkä organisaatiot ovat mukana, katso <a href="%{foi_url}" class="govuk-link brand__color">lainsäädäntö</a>.
       freedom_of_information_act: Tiedonvälityksen vapaus (FOI) koskeva laki
       freedom_of_information_requests: Tiedonvapauspyynnöt
-      make_an_foi_request: Tee Tiedonvälityksen vapaus pyyntö
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Lue lisää tiedonvälityksen vapautta koskevasta laista (FOI) ja <a href="%{how_to_path}" class="govuk-link brand__color">miten tehdä pyyntö</a>.
         step2_html: Tarkista <a href="%{our_releases_path}" class="govuk-link brand__color">aiemmat julkaisumme</a> nähdäksesi, olemmeko jo vastanneet kysymykseesi.

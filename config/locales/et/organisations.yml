@@ -55,7 +55,7 @@ et:
         Hõlmatud organisatsioonide vaatamiseks vt <a href="%{foi_url}" class="govuk-link brand__color">õigusakte</a>.
       freedom_of_information_act: Teabevabaduse (FOI) seadus
       freedom_of_information_requests: Teabevabaduse taotlused
-      make_an_foi_request: Esita FOI taotluse
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Lugege teabevabaduse seaduse (FOI) ja <a href="%{how_to_path}" class="govuk-link brand__color">taotluse esitamise kohta</a>.
         step2_html: Vt <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a>, et näha, kas oleme teie küsimusele vastanud.

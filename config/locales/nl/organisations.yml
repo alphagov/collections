@@ -55,7 +55,7 @@ nl:
         Om te zien welke organisaties zijn opgenomen, zie <a href="%{ Vrijheid van informatie_url} class=""govuk-link brand__color"">de wetgeving</a>.
       freedom_of_information_act: Wet op de vrijheid van informatie ( Vrijheid van informatie)
       freedom_of_information_requests: Vrijheid van informatie aanvragen
-      make_an_foi_request: Doe een  Vrijheid van informatie-verzoek
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Lees meer over de Wet Openbaarheid van Bestuur en <a href="%{how_to_path}" class="govuk-link brand__color">hoe u een verzoek kunt doen</a>.
         step2_html: Bekijk <a href="%{onze_releases_path}" class="govuk-link brand__color">onze eerdere berichten</a> om te zien of wij uw vraag al hebben beantwoord.

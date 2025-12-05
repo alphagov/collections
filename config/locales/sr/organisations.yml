@@ -55,7 +55,7 @@ sr:
         Da biste videli koje su organizacije uključene, pogledajte <a href="%{foi_url}" class="govuk-link brand__color">zakonske akte</a>.
       freedom_of_information_act: Zakon o informacijama od javnog značaja (FOI)
       freedom_of_information_requests: Zahtevi za pristup informacijama od javnog značaja
-      make_an_foi_request: Sastavite zahtev za pristup informacijama od javnog značaja
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Pročitajte o Zakonu o informacijama od javnog značaja (FOI) i o tome <a href="%{how_to_path}" class="govuk-link brand__color">kako da sastavite zahtev</a>.
         step2_html: Pogledajte <a href="%{our_releases_path}" class="govuk-link brand__color">naše odgovore na prethodne zahteve</a> da biste videli da li smo već dali odgovor na to pitanje.

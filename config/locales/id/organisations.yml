@@ -55,7 +55,7 @@ id:
         Untuk melihat organisasi mana yang disertakan, lihat <a href="%{foi_url}" class="govuk-link brand__color">legislasi</a>.
       freedom_of_information_act: UU Kebebasan Informasi (FOI)
       freedom_of_information_requests: Permintaan Kebebasan Informasi
-      make_an_foi_request: Buat permintaan FOI
+      make_an_foi_request:
       making_foi_requests:
         step1_html: Baca tentang UU Kebebasan Informasi (FOI) dan <a href="%{how_to_path}" class="govuk-link brand__color">cara membuat permintaan</a>.
         step2_html: Periksa <a href="%{our_releases_path}" class="govuk-link brand__color">rilis kami sebelumnya</a> untuk melihat apakah kami sudah menjawab pertanyaan Anda.
