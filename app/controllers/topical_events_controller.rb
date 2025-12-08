@@ -3,7 +3,7 @@ class TopicalEventsController < ApplicationController
 
   enable_request_formats show: :atom
 
-  GRAPHQL_TRAFFIC_RATE = 0.01 # This is a decimal version of a percentage, so can be between 0 and 1
+  GRAPHQL_TRAFFIC_RATE = Rails.application.config.graphql_traffic_rates.fetch("topical_event", 0)
 
   def show
     if params[:graphql] == "false"
