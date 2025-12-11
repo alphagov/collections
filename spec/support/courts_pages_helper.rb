@@ -72,7 +72,7 @@ module CourtPagesHelper
   end
 
   def or_foi_section
-    expect(page).not_to have_content(/Make an FOI request/i)
+    expect(page).not_to have_content(/Make a Freedom of Information (FOI) request/i)
     expect(page).not_to have_content(/Freedom of Information (FOI) Act/i)
   end
 
