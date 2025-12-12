@@ -55,7 +55,7 @@ en:
         To see which organisations are included, see <a href="%{foi_url}" class="govuk-link brand__color">the legislation</a>.
       freedom_of_information_act: Freedom of Information (FOI) Act
       freedom_of_information_requests: Freedom of Information requests
-      make_an_foi_request: Make an FOI request
+      make_an_foi_request: Make a Freedom of Information (FOI) request
       making_foi_requests:
         step1_html: Read about the Freedom of Information (FOI) Act and <a href="%{how_to_path}" class="govuk-link brand__color">how to make a request</a>.
         step2_html: Check <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> to see if we’ve already answered your question.

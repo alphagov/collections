@@ -484,7 +484,7 @@ RSpec.describe "Organisation pages" do
     test_ga4_email_links("#org-contacts")
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
-    test_ga4_email_links("#freedom-of-information", "Make an FOI request")
+    test_ga4_email_links("#freedom-of-information", "Make a Freedom of Information (FOI) request")
   end
 
   it "has GA4 tracking on organisation__supergroup 'see all' links" do
