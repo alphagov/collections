@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
   rescue_from GdsApi::HTTPForbidden, with: :error_403
+  rescue_from GdsApi::InvalidUrl, with: :error_404
 
   if ENV["BASIC_AUTH_USERNAME"]
     http_basic_authenticate_with(
