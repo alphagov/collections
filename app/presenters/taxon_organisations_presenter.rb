@@ -43,7 +43,7 @@ private
   def organisation_list_with_logos
     organisations_with_logos.map.with_index do |org, index|
       {
-        name: org.logo_formatted_title,
+        name: org.logo_formatted_title.html_safe,
         url: org.link,
         brand: org.brand,
         crest: org.crest,
