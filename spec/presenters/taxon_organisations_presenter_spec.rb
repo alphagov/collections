@@ -179,6 +179,27 @@ RSpec.describe TaxonOrganisationsPresenter do
       expect(taxon_organisations_presenter.promoted_organisation_list).to eq(expected)
     end
 
+    it "returns an organisation with HTML safe parsing" do
+      organisation = [
+        SearchApiOrganisation.new(
+          title: "Driver &amp; Vehicle<br/>Standards<br/>Agency",
+          content_id: "ebd15ade-73b2-4eaf-b1c3-43034a42eb37",
+          link: "/government/organisations/driver-and-vehicle-standards-agency",
+          slug: "driver-and-vehicle-standards-agency",
+          organisation_state: "live",
+          logo_formatted_title: "Driver &amp; Vehicle<br/>Standards<br/>Agency",
+          brand: "driver-and-vehicle-standards-agency",
+          crest: "single-identity",
+          logo_url: nil,
+          document_count: 89,
+        ),
+      ]
+
+      allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(organisation)
+
+      expect(taxon_organisations_presenter.promoted_organisation_list[:promoted_with_logos][0][:name].html_safe?).to eq(true)
+    end
+
     it "returns the organisations with and without logos as promoted content if less than 5 organisations have logos" do
       tagged_organisations = multiple_organisations_with_logo("single-identity", 3) + tagged_organisation
 
