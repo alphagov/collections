@@ -1,4 +1,4 @@
-<% content_for :title, organisation.title %>
+<% content_for :title, organisation.title.html_safe %>
 
 <% content_for :meta_tags do %>
   <%= tag("meta", name: "description", content: organisation.description) if organisation.description %>
