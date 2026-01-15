@@ -5,6 +5,10 @@
 
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
 
+<% content_for :recruitment_banner do %>
+  <%= render "govuk_web_banners/recruitment_banner" %>
+<% end %>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/heading", {

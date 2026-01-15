@@ -35,6 +35,9 @@
           <%= render 'breadcrumbs' %>
         <% end %>
       <% end %>
+      <% if content_for?(:recruitment_banner) %>
+        <%= yield :recruitment_banner %>
+      <% end %>
       <%= content_tag(:main, id: "content", role: "main", class: main_classes, lang: lang) do %>
         <%= yield %>
       <% end %>
