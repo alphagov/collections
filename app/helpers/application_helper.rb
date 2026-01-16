@@ -80,7 +80,7 @@ module ApplicationHelper
     elements.join(separator)
   end
 
-  def show_ios_banner?
+  def show_app_promo_banner?
     return unless request.path
 
     [
