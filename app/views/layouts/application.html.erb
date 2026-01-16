@@ -13,7 +13,7 @@
 <%= content_for :head do %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
-  <% if show_ios_banner? %>
+  <% if show_app_promo_banner? %>
     <meta name="apple-itunes-app" content="app-id=6572293285">
   <% end %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>
@@ -25,6 +25,7 @@
     title: "#{yield :title} - #{ t('application.title.suffix') }",
     emergency_banner: render("govuk_web_banners/emergency_banner"),
     global_banner: render("govuk_web_banners/global_banner"),
+    show_app_promo_banner: show_app_promo_banner?,
   } do %>
     <%= content_tag(:div, class: class_names("govuk-width-container" => !@full_width)) do %>
       <%= yield :back_link %>
