@@ -529,7 +529,7 @@ __metadata:
   resolution: "collections@workspace:."
   dependencies:
     jasmine-browser-runner: ^4.0.0
-    jasmine-core: ^6.0.0
+    jasmine-core: ^6.0.1
     standardx: ^7.0.0
     stylelint: ^17.0.0
     stylelint-config-gds: ^2.0.0
@@ -1990,10 +1990,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jasmine-core@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "jasmine-core@npm:6.0.0"
-  checksum: 5626febc84dc207dd6ab53e9bd7b052f59004fe80e92f11efb0643910829e7ab31dbdb8f901e753ee9500925192dfb5734c2e29e12542dbe3502daea36e9b5f8
+"jasmine-core@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "jasmine-core@npm:6.0.1"
+  checksum: f8c2ecb7c503d8ceb5268ef3f6a88f0767ca1d9ad6474becb33431886129793fac58ba6ce06885a80527f5011a29e2c43da11b647337ece028c4831d6e012c86
   languageName: node
   linkType: hard
 
