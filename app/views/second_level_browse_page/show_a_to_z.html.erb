@@ -1,5 +1,8 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "views/_browse", media: "all" %>
+  <% if ["/browse/business/manufacturing", "/browse/business/food"].include?(page.base_path) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="ga4-scroll-tracker">
+  <% end %>
 <% end %>
 
 <% content_for :title, page.title %>
