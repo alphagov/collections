@@ -1,4 +1,4 @@
-<% content_for :title, role.title %>
+<% content_for :title, role.title.html_safe %>
 
 <%= render partial: "header", locals: { role: role } %>
 

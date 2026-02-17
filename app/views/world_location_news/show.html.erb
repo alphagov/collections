@@ -1,5 +1,5 @@
 <%
-  content_for :title, @world_location_news.title
+  content_for :title, @world_location_news.title.html_safe
   page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing"
 
   ga4_image_card_json = {
