@@ -1,4 +1,4 @@
-<% content_for :title, step_by_step.title %>
+<% content_for :title, step_by_step.title.html_safe %>
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= step_by_step.description %>">
 <% end %>

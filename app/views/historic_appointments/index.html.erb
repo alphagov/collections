@@ -2,7 +2,7 @@
   <%= stylesheet_link_tag "views/_history_people", media: "all" %>
 <% end %>
 
-<% content_for :title, @index_page.title %>
+<% content_for :title, @index_page.title.html_safe %>
 
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing historic-appointments-index" %>
 <div class="govuk-grid-row">

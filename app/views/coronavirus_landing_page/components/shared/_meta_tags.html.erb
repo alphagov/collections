@@ -2,7 +2,7 @@
   corona_opengraph_images ||= false
 %>
 
-<% content_for :title, metadata[:title] %>
+<% content_for :title, metadata[:title].html_safe %>
 <% content_for :meta_tags do %>
   <% page_url = File.join(request.base_url, request.path) %>
   <meta property="og:type" content="website" />

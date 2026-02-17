@@ -1,7 +1,7 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "views/_world_index", media: "all" %>
 <% end %>
-<% content_for :title, @presented_index.title %>
+<% content_for :title, @presented_index.title.html_safe %>
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing world-locations" %>
 
 <div data-module="list-filter">

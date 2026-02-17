@@ -1,4 +1,4 @@
-<% content_for :title, @presented_embassies.title %>
+<% content_for :title, @presented_embassies.title.html_safe %>
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= t('embassies.meta_description') %>.">
 <% end %>

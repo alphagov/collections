@@ -17,7 +17,7 @@
   <%= stylesheet_link_tag "views/_topical_events", media: "all" %>
 <% end %>
 
-<% content_for :title, @topical_event.title %>
+<% content_for :title, @topical_event.title.html_safe %>
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing topical-events-show" %>
 
 <% content_for :meta_tags do %>
