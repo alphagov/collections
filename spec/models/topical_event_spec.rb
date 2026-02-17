@@ -75,6 +75,13 @@ RSpec.describe TopicalEvent do
         heading_text: "A document related to this event",
         description: "Very interesting document content. However this goes over the 160 character limit so when displayed this should be truncated in order to display the content...",
       },
+      {
+        href: "https://www.gov.uk/another-link",
+        image_src: "https://www.gov.uk/anotherimage.png",
+        image_alt: "Alt text for the image",
+        heading_text: "Another document related to this event",
+        description: "This has bold text and a link that should be sanitized.",
+      },
     ])
   end
 
