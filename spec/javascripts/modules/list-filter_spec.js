@@ -1,218 +1,219 @@
-/* global $ GOVUK */
 /* eslint-env jasmine */
 /* eslint-disable no-var */
 
 describe('list-filter.js', function () {
   'use strict'
 
+  function searchAndFilter (searchTerm) {
+    wrapper.querySelector('[data-filter="form"] input').value = searchTerm
+    window.GOVUK.triggerEvent(wrapper.querySelector('[data-filter="form"] input'), 'keyup')
+  }
+
+  var wrapper
   var timeout = 210
 
-  var stubStyling =
-    '<style>' +
-      '.js-hidden {' +
-        'display: none;' +
-        'visibility: none' +
-      '}' +
-    '</style>'
+  var stubStyling = `
+    <style>
+      .js-hidden {
+        display: none;
+        visibility: none
+      }
+    </style>
+  `
 
-  var form =
-    '<form data-filter="form"></div>' +
-      '<input type="search" id="filter-organisations-list" />' +
-    '</form>'
+  var form = `
+    <form data-filter="form"></div>
+      <input type="search" id="filter-organisations-list" />
+    </form>
+  `
 
-  var items =
-    '<div id="search_results">' +
-      '<div data-filter="block">' +
-        '<div data-filter="count" class="count-for-logos">' +
-          '<h2>Ministerial Departments</h2>' +
-          '<p>There are <span class="js-accessible-item-count">2</span> Ministerial Departments</p>' +
-          '<div class="gem-c-big-number">' +
-            '<span class="gem-c-big-number__value" data-item-count="true">2</span>' +
-          '</div>' +
-        '</div>' +
-        '<ol>' +
-          '<li data-filter="item" class="org-logo-1" data-filter-terms="Cabinet Office">' +
-            '<div class="gem-c-organisation-logo__name">Cabinet Office</div>' +
-          '</li>' +
-          '<li data-filter="item" class="org-logo-2" data-filter-terms="Cabinet Office CO">' +
-            '<div class="gem-c-organisation-logo__name">Cabinet Office</div>' +
-          '</li>' +
-          '<li data-filter="item" class="org-logo-3" data-filter-terms="Ministry of  Funny\nWalks MFW">' +
-            // Double space and line break added on purpose:
-            '<div class="gem-c-organisation-logo__name">Ministry of  Funny\nWalks</div>' +
-          '</li>' +
-          '<div data-filter="inner-block">' +
-            '<ol>' +
-              '<li data-filter="item" class="org-logo-4" data-filter-terms="Ministry of Inner Blocks MIB">' +
-                '<div class="gem-c-organisation-logo__name">Ministry of Inner Blocks</div>' +
-              '</li>' +
-            '</ol>' +
-          '</div>' +
-        '</ol>' +
-      '</div>' +
-      '<div data-filter="block">' +
-        '<div data-filter="count" class="count-for-no-logos">' +
-          '<h2>Non Ministerial Departments</h2>' +
-          '<p>There are <span class="js-accessible-item-count">2</span> Non Ministerial Departments</p>' +
-          '<div class="gem-c-big-number">' +
-            '<span class="gem-c-big-number__value" data-item-count="true">2</span>' +
-          '</div>' +
-        '</div>' +
-        '<ol>' +
-          '<li data-filter="item" class="org-no-logo-1" data-filter-terms="Advisory Committee on Releases to the Environment">' +
-            '<a class="list__item-title">Advisory Committee on Releases to the Environment</a>' +
-          '</li>' +
-          '<li data-filter="item" class="org-no-logo-2" data-filter-terms="Advisory Council on the Misuse of Drugs">' +
-            '<a class="list__item-title">Advisory Council on the Misuse of Drugs</a>' +
-          '</li>' +
-        '</ol>' +
-      '</div>' +
-    '</div>'
+  // Double space and line break added on purpose:
+  // https://github.com/alphagov/collections/pull/2251
+  var items = `
+    <div id="search_results">
+      <div data-filter="block">
+        <div data-filter="count" class="count-for-logos">
+          <h2>Ministerial Departments</h2>
+          <p>There are <span class="js-accessible-item-count">2</span> Ministerial Departments</p>
+          <div class="gem-c-big-number">
+            <span class="gem-c-big-number__value" data-item-count="true">2</span>
+          </div>
+        </div>
+        <ol>
+          <li data-filter="item" class="org-logo-1" data-filter-terms="Cabinet Office">
+            <div class="gem-c-organisation-logo__name">Cabinet Office</div>
+          </li>
+          <li data-filter="item" class="org-logo-2" data-filter-terms="Cabinet Office CO">
+            <div class="gem-c-organisation-logo__name">Cabinet Office</div>
+          </li>
+          <li data-filter="item" class="org-logo-3" data-filter-terms="Ministry of  Funny\nWalks MFW">
+            <div class="gem-c-organisation-logo__name">Ministry of  Funny\nWalks</div>
+          </li>
+          <div data-filter="inner-block">
+            <ol>
+              <li data-filter="item" class="org-logo-4" data-filter-terms="Ministry of Inner Blocks MIB">
+                <div class="gem-c-organisation-logo__name">Ministry of Inner Blocks</div>
+              </li>
+            </ol>
+          </div>
+        </ol>
+      </div>
+      <div data-filter="block">
+        <div data-filter="count" class="count-for-no-logos">
+          <h2>Non Ministerial Departments</h2>
+          <p>There are <span class="js-accessible-item-count">2</span> Non Ministerial Departments</p>
+          <div class="gem-c-big-number">
+            <span class="gem-c-big-number__value" data-item-count="true">2</span>
+          </div>
+        </div>
+        <ol>
+          <li data-filter="item" class="org-no-logo-1" data-filter-terms="Advisory Committee on Releases to the Environment">
+            <a class="list__item-title">Advisory Committee on Releases to the Environment</a>
+          </li>
+          <li data-filter="item" class="org-no-logo-2" data-filter-terms="Advisory Council on the Misuse of Drugs">
+            <a class="list__item-title">Advisory Council on the Misuse of Drugs</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  `
 
   beforeAll(function () {
-    var wrapper = $('<div>').addClass('wrapper')
-    wrapper.append(stubStyling)
-    wrapper.append(form)
-    wrapper.append(items)
-    $(document.body).append(wrapper)
+    wrapper = document.createElement('div')
+    wrapper.classList.add('wrapper')
+    wrapper.innerHTML = `
+      ${stubStyling}
+      ${form}
+      ${items}
+    `
 
-    new GOVUK.Modules.ListFilter(wrapper[0]).init()
+    document.body.appendChild(wrapper)
+
+    new GOVUK.Modules.ListFilter(wrapper).init()
   })
 
   afterAll(function () {
-    $('.wrapper').remove()
+    document.body.removeChild(wrapper)
   })
 
   afterEach(function (done) {
     setTimeout(function () {
-      $('[data-filter="form"] input').val('')
-      window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+      searchAndFilter('')
       done()
     }, 1)
   })
 
   it('hide items that do not match the search term', function (done) {
-    $('[data-filter="form"] input').val('Advisory cou')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('Advisory cou')
 
     setTimeout(function () {
-      expect($('.org-logo-1')).toHaveClass('js-hidden')
-      expect($('.org-logo-2')).toHaveClass('js-hidden')
-      expect($('.org-no-logo-1')).toHaveClass('js-hidden')
-      expect($('.js-search-results')).toHaveText('1 result found')
+      expect(wrapper.querySelector('.org-logo-1')).toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.org-logo-2')).toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.org-no-logo-1')).toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('1 result found')
       done()
     }, timeout)
   })
 
   it('show items that do match the search term', function (done) {
-    $('[data-filter="form"] input').val('Advisory cou')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('Advisory cou')
 
     setTimeout(function () {
-      expect($('.org-no-logo-2')).not.toHaveClass('js-hidden')
-      expect($('.js-search-results')).toHaveText('1 result found')
+      expect(wrapper.querySelector('.org-no-logo-2')).not.toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('1 result found')
       done()
     }, timeout)
   })
 
   it('show items that do have additional terms that match the search term', function (done) {
-    $('[data-filter="form"] input').val('mfw')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('mfw')
 
     setTimeout(function () {
-      expect($('.org-logo-3')).not.toHaveClass('js-hidden')
-      expect($('.js-search-results')).toHaveText('1 result found')
+      expect(wrapper.querySelector('.org-logo-3')).not.toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('1 result found')
       done()
     }, timeout)
   })
 
   it('show items that do have names or additional terms that match the search term', function (done) {
-    $('[data-filter="form"] input').val('co')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('co')
 
     setTimeout(function () {
-      expect($('.org-logo-2')).not.toHaveClass('js-hidden')
-      expect($('.org-no-logo-1')).not.toHaveClass('js-hidden')
-      expect($('.org-no-logo-2')).not.toHaveClass('js-hidden')
-      expect($('.js-search-results')).toHaveText('3 results found')
+      expect(wrapper.querySelector('.org-logo-2')).not.toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.org-no-logo-1')).not.toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.org-no-logo-2')).not.toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('3 results found')
       done()
     }, timeout)
   })
 
   it('hides items that do not have names or additional terms that match the search term', function (done) {
-    $('[data-filter="form"] input').val('co')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('co')
 
     setTimeout(function () {
-      expect($('.org-logo-1')).toHaveClass('js-hidden')
-      expect($('.org-logo-3')).toHaveClass('js-hidden')
-      expect($('.js-search-results')).toHaveText('3 results found')
+      expect(wrapper.querySelector('.org-logo-1')).toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.org-logo-3')).toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('3 results found')
       done()
     }, timeout)
   })
 
   it('hide department counts and names if they have no matching items', function (done) {
-    $('[data-filter="form"] input').val('Advisory cou')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('Advisory cou')
 
     setTimeout(function () {
-      expect($('.count-for-logos').parent()).toHaveClass('js-hidden')
-      expect($('.js-search-results')).toHaveText('1 result found')
+      expect(wrapper.querySelector('.count-for-logos').parentElement).toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('1 result found')
       done()
     }, timeout)
   })
 
   it('update the item count', function (done) {
-    $('[data-filter="form"] input').val('Advisory cou')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('Advisory cou')
 
     setTimeout(function () {
-      expect($('.count-for-no-logos')).not.toHaveClass('js-hidden')
-      expect($('.count-for-no-logos .js-accessible-item-count')).toHaveText(1)
-      expect($('.count-for-no-logos [data-item-count="true"]')).toHaveText(1)
-      expect($('.js-search-results')).toHaveText('1 result found')
+      expect(wrapper.querySelector('.count-for-no-logos')).not.toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.count-for-no-logos .js-accessible-item-count').textContent).toBe('1')
+      expect(wrapper.querySelector('.count-for-no-logos [data-item-count="true"]').textContent).toBe('1')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('1 result found')
       done()
     }, timeout)
   })
 
   it('shows a message if there are no matching items', function (done) {
-    $('[data-filter="form"] input').val('Nothing will match this')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('Nothing will match this')
 
     setTimeout(function () {
-      expect($('.js-search-results')).toHaveText('0 results found')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('0 results found')
       done()
     }, timeout)
   })
 
   it('copes when item name contains line breaks and multiple spaces', function (done) {
-    $('[data-filter="form"] input').val('ministry of funny walks')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('ministry of funny walks')
 
     setTimeout(function () {
-      expect($('.js-search-results')).toHaveText('1 result found')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('1 result found')
       done()
     }, timeout)
   })
 
   it('hide inner blocks if they have no matching items', function (done) {
-    $('[data-filter="form"] input').val('Advisory cou')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('Advisory cou')
 
     setTimeout(function () {
-      expect($('[data-filter="inner-block"]').first()).toHaveClass('js-hidden')
-      expect($('.js-search-results')).toHaveText('1 result found')
+      expect(wrapper.querySelector('[data-filter="inner-block"]')).toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('1 result found')
       done()
     }, timeout)
   })
 
   it('reveals inner blocks if they have matching items', function (done) {
-    $('[data-filter="form"] input').val('Ministry of Inner Blocks')
-    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+    searchAndFilter('Ministry of Inner Blocks')
 
     setTimeout(function () {
-      expect($('[data-filter="inner-block"]').first()).not.toHaveClass('js-hidden')
-      expect($('.js-search-results')).toHaveText('1 result found')
+      expect(wrapper.querySelector('[data-filter="inner-block"]')).not.toHaveClass('js-hidden')
+      expect(wrapper.querySelector('.js-search-results').textContent).toBe('1 result found')
       done()
     }, timeout)
   })
