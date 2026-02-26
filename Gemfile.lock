@@ -226,6 +226,9 @@ GEM
       sentry-rails (>= 5.3, < 7.0)
       sentry-ruby (>= 5.3, < 7.0)
       statsd-ruby (~> 1.5)
+    govuk_content_item_loader (1.0.0)
+      gds-api-adapters (>= 99.3)
+      railties (>= 7.2)
     govuk_document_types (3.1.0)
     govuk_personalisation (1.1.0)
       plek (>= 1.9.0)
@@ -825,6 +828,7 @@ DEPENDENCIES
   govspeak
   govuk_ab_testing
   govuk_app_config
+  govuk_content_item_loader
   govuk_document_types
   govuk_publishing_components (= 64.1.2)
   govuk_schemas
