@@ -44,6 +44,7 @@ Rails.application.config.emergency_banner_redis_client = instance_double(Redis, 
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.include GovukConditionalContentItemLoaderTestHelpers
   config.include GdsApi::TestHelpers::Search
   config.include GdsApi::TestHelpers::ContentStore
   config.include GdsApi::TestHelpers::PublishingApi
