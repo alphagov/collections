@@ -55,9 +55,7 @@ RSpec.describe MinistersController do
 
       context "and GDS API Adapters times-out the request" do
         before do
-          allow(Services.publishing_api).to receive(:graphql_live_content_item)
-            .and_raise(GdsApi::TimedOutException)
-
+          stub_any_publishing_api_call_to_return_timeout
           stub_content_store_has_item(base_path, ministers)
         end
 
