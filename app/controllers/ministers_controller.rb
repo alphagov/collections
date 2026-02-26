@@ -6,14 +6,21 @@ class MinistersController < ApplicationController
   GRAPHQL_TRAFFIC_RATE = Rails.application.config.graphql_traffic_rates.fetch("ministers_index", 0)
 
   def index
-    content_item_data = if params[:graphql] == "false"
-                          load_from_content_store
-                        elsif params[:graphql] == "true" || graphql_ab_test?(GRAPHQL_TRAFFIC_RATE)
-                          load_from_graphql
-                        else
-                          load_from_content_store
-                        end
+    
+    #content_item_data = if params[:graphql] == "false"
+    #                      load_from_content_store
+    #                    elsif params[:graphql] == "true" || graphql_ab_test?(GRAPHQL_TRAFFIC_RATE)
+    #                      load_from_graphql
+    #                    else
+    #                      load_from_content_store
+    #                    end
 
+    debugger
+    @ministers_index = MinistersIndex.find_content_item!(request)
+    
+    content_item_data = @ministers_index.content_item
+    
+    
     @presented_ministers = MinistersIndexPresenter.new(content_item_data)
     setup_content_item_and_navigation_helpers(@ministers_index)
   end
