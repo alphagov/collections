@@ -7,7 +7,7 @@
 
 <% end %>
 
-<% content_for :title, page.title %>
+<% content_for :title, page.title.html_safe %>
 
 <%= render 'shared/tag_meta', tag: page %>
 
