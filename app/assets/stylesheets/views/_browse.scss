@@ -1,4 +1,4 @@
-@import "govuk_publishing_components/individual_component_support";
+@import "govuk_publishing_components/vars_and_mixins";
 
 // This isn't proper BEM - but the convention is to have the view name as the
 // block part of the class name. Because we need to keep `browse` so this can
