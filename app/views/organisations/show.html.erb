@@ -1,5 +1,8 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "views/_organisation", media: "all" %>
+  <%= render 'govuk_publishing_components/components/machine_readable_metadata',
+           schema: :organisation,
+           content_item: @organisation.content_item.content_item_data %>
 <% end %>
 
 <%= render partial: 'meta', locals: { organisation: @organisation } %>
@@ -11,9 +14,6 @@
     title: sanitize(@organisation.custom_banner)
   } %>
 <% end %>
-<%= render 'govuk_publishing_components/components/machine_readable_metadata',
-           schema: :organisation,
-           content_item: @organisation.content_item.content_item_data %>
 
 <% if @organisation.is_no_10? %>
   <%= render partial: 'featured_news_no10' %>
