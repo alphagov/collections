@@ -180,6 +180,7 @@ GEM
       net-http (~> 0.5)
     ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
     find_a_port (1.0.1)
     gds-api-adapters (103.0.0)
@@ -195,6 +196,9 @@ GEM
       bigdecimal
       rake (~> 13.3)
     google-protobuf (4.34.0-arm64-darwin)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.34.0-x86_64-darwin)
       bigdecimal
       rake (~> 13.3)
     google-protobuf (4.34.0-x86_64-linux-gnu)
@@ -230,7 +234,7 @@ GEM
     govuk_personalisation (1.1.0)
       plek (>= 1.9.0)
       rails (>= 6, < 9)
-    govuk_publishing_components (64.2.0)
+    govuk_publishing_components (65.0.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -341,6 +345,8 @@ GEM
     nokogiri (1.19.1-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.1-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.1-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.19.1-x86_64-linux-gnu)
       racc (~> 1.4)
@@ -726,6 +732,8 @@ GEM
       google-protobuf (~> 4.29)
     sass-embedded (1.85.0-arm64-darwin)
       google-protobuf (~> 4.29)
+    sass-embedded (1.85.0-x86_64-darwin)
+      google-protobuf (~> 4.29)
     sass-embedded (1.85.0-x86_64-linux-gnu)
       google-protobuf (~> 4.29)
     securerandom (0.4.1)
@@ -809,6 +817,7 @@ GEM
 PLATFORMS
   aarch64-linux
   arm64-darwin-24
+  x86_64-darwin-24
   x86_64-linux
 
 DEPENDENCIES
@@ -826,7 +835,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_document_types
-  govuk_publishing_components (= 64.2.0)
+  govuk_publishing_components
   govuk_schemas
   govuk_test
   govuk_web_banners
