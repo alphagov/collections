@@ -183,7 +183,7 @@ GEM
     ffi (1.17.2-x86_64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
     find_a_port (1.0.1)
-    gds-api-adapters (103.0.0)
+    gds-api-adapters (103.1.0)
       addressable
       link_header
       null_logger
@@ -317,7 +317,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2026.0224)
+    mime-types-data (3.2026.0303)
     mini_mime (1.1.5)
     minitest (6.0.2)
       drb (~> 2.0)
