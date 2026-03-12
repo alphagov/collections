@@ -1,6 +1,14 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "views/_browse", media: "all" %>
-  <% if ["/browse/business/exports", "/browse/business/imports", "/browse/business/setting-up"].include?(page.base_path) %>
+  <% if [
+          "/browse/business/exports",
+          "/browse/business/imports",
+          "/browse/business/setting-up",
+          "/browse/business/limited-company",
+          "/browse/business/childcare-providers",
+          "/browse/business/food-hospitality-retail",
+          "/browse/business/manufacturing-industry",
+        ].include?(page.base_path) %>
     <meta name="govuk:scroll-tracker" content="" data-module="ga4-scroll-tracker">
   <% end %>
 <% end %>
