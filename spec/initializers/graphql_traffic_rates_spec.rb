@@ -1,5 +1,5 @@
 RSpec.describe "graphql_traffic_rates initializer" do
-  let(:initializer_path) { Rails.root.join("config/initializers/graphql_traffic_rates.rb") }
+  let(:initializer_path) { Rails.root.join("config/initializers/govuk_graphql_traffic_rates.rb") }
 
   around do |example|
     ClimateControl.modify(
