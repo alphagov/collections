@@ -3,35 +3,12 @@ class RolesController < ApplicationController
 
   around_action :switch_locale
 
-  GRAPHQL_TRAFFIC_RATE = Rails.application.config.graphql_traffic_rates.fetch("role", 0)
-
   def show
-    content_item_data = if params[:graphql] == "false"
-                          load_from_content_store
-                        elsif params[:graphql] == "true" || graphql_ab_test?(GRAPHQL_TRAFFIC_RATE)
-                          load_from_graphql
-                        else
-                          load_from_content_store
-                        end
+    @role = Role.find_content_item!(request)
+
+    content_item_data = @role.content_item
 
     setup_content_item_and_navigation_helpers(@role)
     render :show, locals: { role: RolePresenter.new(content_item_data) }
-  end
-
-  def load_from_graphql
-    set_prometheus_labels("graphql_status_code" => 200, "graphql_api_timeout" => false)
-    @role = Role.find_from_graphql!(request.path)
-    @role.content_item.content_item_data
-  rescue GdsApi::HTTPErrorResponse => e
-    set_prometheus_labels("graphql_status_code" => e.code)
-    load_from_content_store
-  rescue GdsApi::TimedOutException
-    set_prometheus_labels("graphql_api_timeout" => true)
-    load_from_content_store
-  end
-
-  def load_from_content_store
-    @role = Role.find!(request.path)
-    @role.content_item.content_item_data
   end
 end

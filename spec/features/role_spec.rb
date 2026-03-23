@@ -10,7 +10,6 @@ RSpec.feature "Role page" do
     )
     stub_search(body: { results: [] })
 
-    allow(Random).to receive(:rand).with(1.0).and_return(1)
     visit base_path
   end
 
@@ -50,17 +49,9 @@ RSpec.feature "Role page" do
     end
   end
 
-  context "when there is no GraphQL parameter" do
-    before do
-      allow(Random).to receive(:rand).with(1.0).and_return(1)
-    end
-
+  context "when the role page is requested" do
     it "renders the page successfully" do
       expect(page).to have_selector("h1", text: "Prime Minister")
-    end
-
-    it "does not get data from GraphQL" do
-      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).not_to have_been_made
     end
 
     context "when there's a current role holder" do
@@ -124,53 +115,6 @@ RSpec.feature "Role page" do
       it "renders the page successfully" do
         expect(page.status_code).to eq(200)
       end
-    end
-  end
-
-  context "when the GraphQL parameter is true" do
-    before do
-      stub_publishing_api_graphql_has_item(base_path, role_content_item_data)
-      stub_search(body: { results: [] })
-
-      visit "#{base_path}?graphql=true"
-    end
-
-    it "gets the data from GraphQL" do
-      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).to have_been_made
-    end
-  end
-
-  context "when the GraphQL parameter is false" do
-    before do
-      visit "#{base_path}?graphql=false"
-    end
-
-    it "does not get data from GraphQL" do
-      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).not_to have_been_made
-    end
-  end
-
-  context "when the GraphQL A/B Content Store variant is selected" do
-    before do
-      allow(Random).to receive(:rand).with(1.0).and_return(1)
-      visit base_path
-    end
-
-    it "does not get the data from GraphQL" do
-      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).not_to have_been_made
-    end
-  end
-
-  context "when the GraphQL A/B GraphQL variant is selected" do
-    before do
-      stub_publishing_api_graphql_has_item(base_path, role_content_item_data)
-
-      allow(Random).to receive(:rand).with(1.0).and_return(RolesController::GRAPHQL_TRAFFIC_RATE - 0.000001)
-      visit base_path
-    end
-
-    it "gets the data from GraphQL" do
-      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).to have_been_made
     end
   end
 end
