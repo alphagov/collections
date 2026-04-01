@@ -842,7 +842,7 @@ DEPENDENCIES
   govuk_web_banners
   i18n-coverage
   mocha
-  pact
+  pact (~> 1.67)
   pact_broker-client
   plek
   pry-byebug
