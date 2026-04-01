@@ -6,7 +6,7 @@ RSpec.feature "Topical Event pages" do
   let(:base_path) { content_item["base_path"] }
 
   before do
-    stub_content_store_has_item(base_path, content_item)
+    stub_conditional_loader_returns_content_item_for_path(base_path, content_item)
     stub_search(body: { results: [] })
 
     allow(Random).to receive(:rand).with(1.0).and_return(1)
@@ -41,7 +41,7 @@ RSpec.feature "Topical Event pages" do
     before do
       content_item["details"]["image"].delete("medium_resolution_url")
       content_item["details"]["image"].delete("high_resolution_url")
-      stub_content_store_has_item(base_path, content_item)
+      stub_conditional_loader_returns_content_item_for_path(base_path, content_item)
     end
     it "omits srcset if there are no higher res image sizes" do
       visit base_path
@@ -223,7 +223,7 @@ RSpec.feature "Topical Event pages" do
 
   context "when there are no organisations" do
     before do
-      stub_content_store_has_item(base_path, content_item_without_link(content_item, "organisations"))
+      stub_conditional_loader_returns_content_item_for_path(base_path, content_item_without_link(content_item, "organisations"))
     end
 
     it "does not include a link to the organisations" do
@@ -251,7 +251,7 @@ RSpec.feature "Topical Event pages" do
 
   context "when there are no social media links" do
     before do
-      stub_content_store_has_item(base_path, content_item_without_detail(content_item, "social_media_links"))
+      stub_conditional_loader_returns_content_item_for_path(base_path, content_item_without_detail(content_item, "social_media_links"))
     end
 
     it "does not include links to any social media platforms" do
@@ -283,7 +283,7 @@ RSpec.feature "Topical Event pages" do
 
   context "when there are no featured documents" do
     before do
-      stub_content_store_has_item(base_path, content_item_without_detail(content_item, "ordered_featured_documents"))
+      stub_conditional_loader_returns_content_item_for_path(base_path, content_item_without_detail(content_item, "ordered_featured_documents"))
     end
 
     it "does not include the featured documents header" do
@@ -296,6 +296,7 @@ RSpec.feature "Topical Event pages" do
     let(:related_documents) { { "An announcement on Topicals" => "/foo/announcement_one", "Another announcement" => "/foo/announcement_two" } }
 
     before do
+      stub_conditional_loader_returns_content_item_for_path("#{base_path}.atom", content_item)
       stub_search(body: search_api_response(related_documents))
     end
 
@@ -314,53 +315,6 @@ RSpec.feature "Topical Event pages" do
 
       expect(entries.second).to include("title" => "some_display_type: Another announcement")
       expect(entries.second["link"]).to include("href" => "http://www.test.gov.uk/foo/announcement_two")
-    end
-  end
-
-  context "when the GraphQL parameter is true" do
-    before do
-      stub_publishing_api_graphql_has_item(base_path, content_item)
-      stub_search(body: { results: [] })
-
-      visit "#{base_path}?graphql=true"
-    end
-
-    it "gets the data from GraphQL" do
-      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).to have_been_made
-    end
-  end
-
-  context "when the GraphQL parameter is false" do
-    before do
-      visit "#{base_path}?graphql=false"
-    end
-
-    it "does not get data from GraphQL" do
-      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).not_to have_been_made
-    end
-  end
-
-  context "when the GraphQL A/B Content Store variant is selected" do
-    before do
-      allow(Random).to receive(:rand).with(1.0).and_return(1)
-      visit base_path
-    end
-
-    it "does not get the data from GraphQL" do
-      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).not_to have_been_made
-    end
-  end
-
-  context "when the GraphQL A/B GraphQL variant is selected" do
-    before do
-      stub_publishing_api_graphql_has_item(base_path, content_item)
-
-      allow(Random).to receive(:rand).with(1.0).and_return(TopicalEventsController::GRAPHQL_TRAFFIC_RATE - 0.000001)
-      visit base_path
-    end
-
-    it "gets the data from GraphQL" do
-      expect(a_request(:get, "#{Plek.find('publishing-api')}/graphql/content#{base_path}")).to have_been_made
     end
   end
 
