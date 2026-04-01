@@ -2,7 +2,7 @@ RSpec.describe TopicalEvent do
   include SearchApiHelpers
 
   let(:api_data) { fetch_fixture("topical_event") }
-  let(:content_item) { ContentItem.new(api_data) }
+  let(:content_item) { ConditionalLoader::ContentItem.new(api_data) }
   let(:base_path) { content_item.base_path }
   let(:topical_event) { described_class.new(content_item) }
 
