@@ -6,30 +6,34 @@ class TopicalEvent
     @documents_service = TopicalEventSearchDocuments
   end
 
-  def self.find_content_item!(request)
-    loader = GovukConditionalContentItemLoader.new(request: request)
-    content_item = loader.load.to_hash
+  def self.find!(base_path)
+    content_item = ContentItem.find!(base_path)
+    new(content_item)
+  end
+
+  def self.find_from_graphql!(base_path)
+    content_item = Graphql::ContentItem.find!(base_path)
     new(content_item)
   end
 
   def title
-    @content_item["title"]
+    @content_item.content_item_data["title"]
   end
 
   def description
-    @content_item["description"]
+    @content_item.content_item_data["description"]
   end
 
   def image_url
-    @content_item.dig("details", "image", "url")
+    @content_item.content_item_data.dig("details", "image", "url")
   end
 
   def image_medium_resolution_url
-    @content_item.dig("details", "image", "medium_resolution_url")
+    @content_item.content_item_data.dig("details", "image", "medium_resolution_url")
   end
 
   def image_high_resolution_url
-    @content_item.dig("details", "image", "high_resolution_url")
+    @content_item.content_item_data.dig("details", "image", "high_resolution_url")
   end
 
   def image_srcset
@@ -40,19 +44,19 @@ class TopicalEvent
   end
 
   def image_alt_text
-    @content_item.dig("details", "image", "alt_text")
+    @content_item.content_item_data.dig("details", "image", "alt_text")
   end
 
   def body
-    @content_item.dig("details", "body")
+    @content_item.content_item_data.dig("details", "body")
   end
 
   def slug
-    @content_item["base_path"].sub(%r{/government/topical-events/}, "")
+    @content_item.content_item_data["base_path"].sub(%r{/government/topical-events/}, "")
   end
 
   def end_date
-    Time.zone.parse(@content_item.dig("details", "end_date")).to_date if @content_item.dig("details", "end_date")
+    Time.zone.parse(@content_item.content_item_data.dig("details", "end_date")).to_date if @content_item.content_item_data.dig("details", "end_date")
   end
 
   def archived?
@@ -64,15 +68,15 @@ class TopicalEvent
   end
 
   def about_page_url
-    "#{@content_item['base_path']}/about"
+    "#{@content_item.content_item_data['base_path']}/about"
   end
 
   def about_page_link_text
-    @content_item.dig("details", "about_page_link_text")
+    @content_item.content_item_data.dig("details", "about_page_link_text")
   end
 
   def social_media_links
-    @content_item.dig("details", "social_media_links")&.map do |social_media_link|
+    @content_item.content_item_data.dig("details", "social_media_links")&.map do |social_media_link|
       {
         href: social_media_link["href"],
         text: social_media_link["title"],
@@ -82,7 +86,7 @@ class TopicalEvent
   end
 
   def ordered_featured_documents
-    @content_item.dig("details", "ordered_featured_documents")&.map do |document|
+    @content_item.content_item_data.dig("details", "ordered_featured_documents")&.map do |document|
       {
         href: document["href"],
         image_src: document.dig("image", "url"),
@@ -118,7 +122,7 @@ class TopicalEvent
   end
 
   def organisations
-    @content_item.dig("links", "organisations")&.map do |organisation|
+    @content_item.content_item_data.dig("links", "organisations")&.map do |organisation|
       {
         content_id: organisation["content_id"],
         base_path: organisation["base_path"],
@@ -130,8 +134,8 @@ class TopicalEvent
   end
 
   def emphasised_organisations
-    @content_item.dig("details", "emphasised_organisations")&.map do |organisation_content_id|
-      @content_item.dig("links", "organisations")&.select { |organisation| organisation["content_id"] == organisation_content_id }
+    @content_item.content_item_data.dig("details", "emphasised_organisations")&.map do |organisation_content_id|
+      @content_item.content_item_data.dig("links", "organisations")&.select { |organisation| organisation["content_id"] == organisation_content_id }
     end
   end
 end
