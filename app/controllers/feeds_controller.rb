@@ -9,8 +9,8 @@ class FeedsController < ApplicationController
   end
 
   def organisation
-    path = "/government/organisations/#{organisation_name}#{locale}"
-    @organisation = Organisation.find!(path)
+    request.path_info = request.path.delete_suffix(".atom")
+    @organisation = Organisation.find!(request)
 
     results = FeedContent.new(filter_organisations: organisation_name).results
     items = results.map { |result| FeedEntryPresenter.new(result) }

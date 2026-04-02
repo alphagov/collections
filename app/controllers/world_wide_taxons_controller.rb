@@ -3,7 +3,7 @@ class WorldWideTaxonsController < ApplicationController
     setup_content_item_and_navigation_helpers(taxon)
 
     if taxon.content_item.document_type == "world_location_news"
-      @world_location_news = WorldLocationNews.find!(request.path)
+      @world_location_news = WorldLocationNews.find!(request)
       render "world_location_news/show" and return
     end
 
@@ -18,7 +18,7 @@ class WorldWideTaxonsController < ApplicationController
 private
 
   def taxon
-    @taxon ||= WorldWideTaxon.find(request.path)
+    @taxon ||= WorldWideTaxon.find(request)
   end
 
   def presented_taxon

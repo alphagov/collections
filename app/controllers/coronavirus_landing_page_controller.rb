@@ -14,7 +14,7 @@ class CoronavirusLandingPageController < ApplicationController
 private
 
   def content_item
-    @content_item ||= ContentItem.find!(request.path)
+    @content_item ||= ContentItem.find!(request)
   end
 
   def presenter

@@ -4,10 +4,19 @@ RSpec.feature "World location taxon page" do
   include SearchApiHelpers
   include TaxonHelpers
 
+  def request_with_path(path)
+    ActionDispatch::Request.new({
+      "ORIGINAL_FULLPATH" => path,
+      "PATH_INFO" => path,
+      "REQUEST_METHOD" => "GET",
+      "REQUEST_PATH" => path,
+    })
+  end
+
   let(:base_path) { "/world/usa" }
-  let(:taxon) { WorldWideTaxon.find(base_path) }
+  let(:taxon) { WorldWideTaxon.find(request_with_path(base_path)) }
   let(:child_taxon_base_path) { "/world/news-and-events-usa" }
-  let(:child_taxon) { WorldWideTaxon.find(child_taxon_base_path) }
+  let(:child_taxon) { WorldWideTaxon.find(request_with_path(child_taxon_base_path)) }
   let(:email_url) { Plek.new.website_root + "/email-signup?link=#{base_path}" }
 
   scenario "contains email signup url if we are browsing a world location" do

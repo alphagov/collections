@@ -17,7 +17,7 @@ class TaxonsController < ApplicationController
 private
 
   def taxon
-    @taxon ||= Taxon.find(request.path)
+    @taxon ||= Taxon.find(request)
   end
 
   def presented_taxon

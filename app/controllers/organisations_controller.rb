@@ -6,13 +6,13 @@ class OrganisationsController < ApplicationController
   around_action :switch_locale, only: %i[show court]
 
   def index
-    @organisations = ContentStoreOrganisations.find!("/government/organisations")
+    @organisations = ContentStoreOrganisations.find!(request)
     @presented_organisations = presented_organisations
     setup_content_item_and_navigation_helpers(@organisations)
   end
 
   def show
-    @organisation = Organisation.find!(request.path)
+    @organisation = Organisation.find!(request)
     setup_content_item_and_navigation_helpers(@organisation)
 
     @show = Organisations::ShowPresenter.new(@organisation)
@@ -28,7 +28,7 @@ class OrganisationsController < ApplicationController
   end
 
   def court
-    @organisation = Organisation.find!(request.path)
+    @organisation = Organisation.find!(request)
     setup_content_item_and_navigation_helpers(@organisation)
 
     @show = Organisations::ShowPresenter.new(@organisation)

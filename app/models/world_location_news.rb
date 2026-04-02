@@ -6,8 +6,8 @@ class WorldLocationNews
     @documents_service = WorldLocationNewsSearchDocuments
   end
 
-  def self.find!(base_path)
-    content_item = ContentItem.find!(base_path)
+  def self.find!(request)
+    content_item = ContentItem.find!(request)
     new(content_item)
   end
 

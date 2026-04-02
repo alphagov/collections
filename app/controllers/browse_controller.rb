@@ -1,14 +1,16 @@
 class BrowseController < ApplicationController
   def index
     @full_width = true
-    page = MainstreamBrowsePage.find("/browse")
+    page = MainstreamBrowsePage.find(request)
     setup_content_item_and_navigation_helpers(page)
     render :index, locals: { page: }
   end
 
   def show
     @full_width = true
-    page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
+    base_path = "/browse/#{params[:top_level_slug]}"
+    request.path_info = base_path
+    page = MainstreamBrowsePage.find(request)
     setup_content_item_and_navigation_helpers(page)
 
     show_html(page)

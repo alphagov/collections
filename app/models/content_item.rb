@@ -1,8 +1,8 @@
 class ContentItem
   attr_reader :content_item_data
 
-  def self.find!(base_path)
-    content_item = Services.content_store.content_item(base_path)
+  def self.find!(request)
+    content_item = GovukConditionalContentItemLoader.new(request: request).load
     content_item_hash = content_item.to_h
     content_item_hash["cache_control"] = {
       "max_age" => content_item.cache_control["max-age"],

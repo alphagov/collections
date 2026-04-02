@@ -23,8 +23,8 @@ class StepNav
     details["step_by_step_nav"].deep_symbolize_keys.merge(remember_last_step: true, tracking_id: content_id)
   end
 
-  def self.find!(base_path)
-    content_item = ContentItem.find!(base_path)
+  def self.find!(request)
+    content_item = ContentItem.find!(request)
     new(content_item)
   end
 end

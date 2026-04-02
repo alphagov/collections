@@ -1,12 +1,12 @@
 class HistoricAppointmentsController < ApplicationController
   def index
-    @index_page = HistoricAppointmentsIndex.find!(request.path)
+    @index_page = HistoricAppointmentsIndex.find!(request)
     @presenter = HistoricAppointmentsIndexPresenter.new(@index_page)
     setup_content_item_and_navigation_helpers(@index_page)
   end
 
   def show
-    setup_content_item_and_navigation_helpers(HistoricAppointmentsIndex.find!(request.path))
+    setup_content_item_and_navigation_helpers(HistoricAppointmentsIndex.find!(request))
 
     if foreign_secretaries_with_individual_pages.include?(params[:id])
       render template: "historic_appointments/past_foreign_secretaries/#{params[:id].underscore}"

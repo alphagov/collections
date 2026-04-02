@@ -21,9 +21,9 @@ private
   end
 
   def page
-    @page ||= MainstreamBrowsePage.find(
-      "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}",
-    )
+    base_path = "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}"
+    request.path_info = base_path
+    @page ||= MainstreamBrowsePage.find(request)
   end
 
   def count_link_sections(page)

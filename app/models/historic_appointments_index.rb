@@ -21,7 +21,8 @@ class HistoricAppointmentsIndex
     @content_item.content_item_data.dig("body", "selection_of_profiles")
   end
 
-  def self.find!(base_path)
+  def self.find!(request)
+    base_path = request.path
     directory =
       base_path.include?("past-foreign-secretaries") ? "past_foreign_secretaries" : "past_chancellors"
     yaml_content = YAML.load_file(Rails.root.join("config/#{directory}/content_item.yml"))
