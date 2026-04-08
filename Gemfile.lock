@@ -91,7 +91,7 @@ GEM
       erubi (~> 1.4)
       parser (>= 2.4)
       smart_properties
-    bigdecimal (4.1.0)
+    bigdecimal (4.1.1)
     binding_of_caller (2.0.0)
       debug_inspector (>= 1.2.0)
     bootsnap (1.23.0)
@@ -234,7 +234,7 @@ GEM
     govuk_personalisation (1.1.0)
       plek (>= 1.9.0)
       rails (>= 6, < 9)
-    govuk_publishing_components (65.2.0)
+    govuk_publishing_components (65.2.1)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -351,9 +351,9 @@ GEM
     nokogiri (1.19.2-x86_64-linux-gnu)
       racc (~> 1.4)
     null_logger (0.0.1)
-    opentelemetry-api (1.8.0)
+    opentelemetry-api (1.9.0)
       logger
-    opentelemetry-common (0.23.0)
+    opentelemetry-common (0.24.0)
       opentelemetry-api (~> 1.0)
     opentelemetry-exporter-otlp (0.31.1)
       google-protobuf (>= 3.18)
@@ -516,14 +516,15 @@ GEM
       opentelemetry-helpers-sql-processor
       opentelemetry-instrumentation-base (~> 0.25)
       opentelemetry-semantic_conventions (>= 1.8.0)
-    opentelemetry-registry (0.4.0)
+    opentelemetry-registry (0.5.0)
       opentelemetry-api (~> 1.1)
-    opentelemetry-sdk (1.10.0)
+    opentelemetry-sdk (1.11.0)
+      logger
       opentelemetry-api (~> 1.1)
       opentelemetry-common (~> 0.20)
       opentelemetry-registry (~> 0.2)
       opentelemetry-semantic_conventions
-    opentelemetry-semantic_conventions (1.36.0)
+    opentelemetry-semantic_conventions (1.37.0)
       opentelemetry-api (~> 1.0)
     ostruct (0.6.3)
     pact (1.67.5)
@@ -592,7 +593,7 @@ GEM
     rack (3.2.6)
     rack-proxy (0.7.7)
       rack
-    rack-session (2.1.1)
+    rack-session (2.1.2)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
     rack-test (2.2.0)
