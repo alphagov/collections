@@ -148,7 +148,7 @@ GEM
       cucumber (>= 7, < 11)
       railties (>= 6.1, < 9)
     cucumber-tag-expressions (8.1.0)
-    dalli (4.3.3)
+    dalli (5.0.2)
       logger
     dartsass-rails (0.5.1)
       railties (>= 6.0.0)
@@ -828,7 +828,7 @@ DEPENDENCIES
   bootsnap
   climate_control
   cucumber-rails
-  dalli (~> 4)
+  dalli (~> 5)
   dartsass-rails
   erb_lint
   faraday

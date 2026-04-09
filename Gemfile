@@ -5,7 +5,7 @@ ruby "~> 3.4.5"
 gem "rails", "8.1.2.1"
 
 gem "bootsnap", require: false
-gem "dalli", "~> 4"
+gem "dalli", "~> 5"
 gem "dartsass-rails"
 gem "faraday"
 gem "gds-api-adapters"
