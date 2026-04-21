@@ -24,10 +24,12 @@ RSpec.feature "Past Prime Minister pages" do
         },
         links: {
           person: [
-            details: {
-              image: {
-                url: "/test/pm",
-                alt_text: "A picture of test PM",
+            {
+              details: {
+                image: {
+                  url: "/test/pm",
+                  alt_text: "A picture of test PM",
+                },
               },
             },
           ],
