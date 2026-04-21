@@ -6,6 +6,8 @@ updates:
       interval: daily
     cooldown:
       default-days: 3
+      exclude:
+        - govuk_*
 
   - package-ecosystem: npm
     directory: /
