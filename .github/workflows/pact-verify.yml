@@ -44,7 +44,7 @@ jobs:
         with:
           repository: alphagov/collections
           ref: ${{ inputs.ref }}
-      - uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1.302.0
         with:
           bundler-cache: true
       - if: inputs.pact_artifact == ''
