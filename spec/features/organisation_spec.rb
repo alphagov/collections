@@ -52,6 +52,9 @@ RSpec.describe "Organisation pages" do
     stub_content_and_search(content_item_separate_student_loans)
     stub_latest_news_for_organisation("prime-ministers-office-10-downing-street")
     stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", content_item_wales_office_cy)
+    stub_content_store_has_item("/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector", content_item_for_base_path("/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector"))
+    stub_content_store_has_item("/content-item-1", content_item_for_base_path("/content-item-1"))
+    stub_content_store_has_item("/content-item-2", content_item_for_base_path("/content-item-2"))
   end
 
   it "doesn't fail if the content item is missing any data" do
@@ -224,6 +227,40 @@ RSpec.describe "Organisation pages" do
     expect(page).to have_css(".gem-c-heading", text: "Guidance and regulation")
     expect(page).not_to have_css(".gem-c-heading", text: "Services")
     expect(page).not_to have_css(".gem-c-heading", text: "Statistics")
+  end
+
+  it "shows latest documents with translated version on Welsh" do
+    content_item_with_translated_latest_documents = {
+      "title" => "The Wales Office",
+      "base_path" => "/content-item-1",
+      "details" => {
+        "body" => "",
+        "brand" => "",
+        "logo" => {},
+        "organisation_govuk_status" => { "status" => "" },
+      },
+      "links" => {
+        "available_translations" => [
+          {
+            "base_path" => "/content-item-1.cy",
+            "locale" => "cy",
+            "public_updated_at" => "2024-07-29T23:00:00Z",
+            "title" => "Swyddfa Cymru",
+          },
+          {
+            "base_path" => "/content-item-1",
+            "locale" => "en",
+            "public_updated_at" => "2024-07-29T23:00:00Z",
+            "title" => "Wales Office",
+          },
+        ],
+      },
+    }
+    stub_content_store_has_item("/content-item-1", content_item_with_translated_latest_documents)
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    expect(page).to have_css(".gem-c-heading", text: "Newyddion a chyfathrebu")
+    expect(page).to have_css(".gem-c-document-list__item-title [href='/content-item-1.cy']", text: "Swyddfa Cymru")
   end
 
   it "does not show the latest documents by type section if there are none" do
