@@ -53,7 +53,11 @@ class Person
   end
 
   def announcements
-    @announcements ||= AnnouncementsPresenter.new(slug, filter_key: "people")
+    @announcements ||=
+      current_roles.reduce({}) { |hash, role|
+        hash[role["title"]] = AnnouncementsPresenter.new(role["base_path"].split("/").last, slug_prefix: "ministers", filter_key: "roles")
+        hash
+      }
   end
 
   def translations
