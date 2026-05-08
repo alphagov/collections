@@ -884,7 +884,7 @@ module OrganisationHelpers
   end
 
   def test_ga4_image_cards(selector, section_heading = nil)
-    ga4_selector = "#{selector}[data-module='ga4-link-tracker'][data-ga4-track-links-only]"
+    ga4_selector = "#{selector}[data-module='ga4-link-tracker']"
     expect(page).to have_css(ga4_selector)
 
     ga4_link_data = JSON.parse(page.first(ga4_selector)["data-ga4-link"])
