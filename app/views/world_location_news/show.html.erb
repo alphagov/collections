@@ -2,11 +2,13 @@
   content_for :title, @world_location_news.title.html_safe
   page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing"
 
+
   ga4_image_card_json = {
     "event_name": "navigation",
     "type": "image card",
-    "section": I18n.t("shared.featured", locale: :en)
-  }.to_json
+    "section": I18n.t("shared.featured", locale: :en),
+    "index_total": @world_location_news.ordered_featured_documents&.count
+  }
 %>
 
 <% content_for :meta_tags do %>
@@ -49,13 +51,14 @@
           border_top: 2,
           margin_bottom: 4,
         } %>
-
+        <% ga4_index = 1 %>
         <% @world_location_news.ordered_featured_documents.in_groups_of(3, false) do |row| %>
           <div class="govuk-grid-row">
             <% row.each do |document| %>
-              <div class="govuk-grid-column-one-third" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
-                <%= render "govuk_publishing_components/components/image_card", document %>
+              <div class="govuk-grid-column-one-third" data-module="ga4-link-tracker">
+                <%= render "govuk_publishing_components/components/image_card", document.merge({ data_attributes: { ga4_link: ga4_image_card_json.merge({ index: { index_link: ga4_index } })  }}) %>
               </div>
+              <% ga4_index += 1 %>
             <% end %>
           </div>
         <% end %>
