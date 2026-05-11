@@ -3,14 +3,11 @@
   render_first_featured_news = @organisation.is_news_organisation? && !@organisation.is_no_10?
 
   # GA4 attributes
-  ga4_index_offset = 1
+  ga4_index = 1
   ga4_index_total = @documents.remaining_featured_news.count
 
-  # Increment GA4 indexes by 1 if 'First featured news' is rendered
-  if render_first_featured_news
-    ga4_index_offset += 1
-    ga4_index_total += 1
-  end
+  # Increment GA4 index total by 1 if 'First featured news' is rendered
+  ga4_index_total += 1 if render_first_featured_news
 
   ga4_image_card_json = {
     "event_name": "navigation",
@@ -32,10 +29,11 @@
   </div>
 
   <% if render_first_featured_news %>
-      <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news.merge({ data_attributes: { module: "ga4-link-tracker", ga4_link: ga4_image_card_json.merge({ index: { index_link: 1 } }) }}) %>
+      <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news.merge({ data_attributes: { module: "ga4-link-tracker", ga4_link: ga4_image_card_json.merge({ index: { index_link: ga4_index } }) }}) %>
+      <% ga4_index += 1 %>
   <% end %>
 
-  <% @documents.remaining_featured_news.in_groups_of(3, false).each_with_index do |news, index| %>
+  <% @documents.remaining_featured_news.in_groups_of(3, false).each do |news| %>
     <div class="govuk-grid-row" data-module="ga4-link-tracker">
       <% news.each do |news_item| %>
         <% classes = %w[] %>
@@ -43,7 +41,8 @@
         <% classes << "govuk-grid-column-full" if news_item[:large] %>
 
         <%= content_tag(:div, class: classes) do %>
-          <%= render "govuk_publishing_components/components/image_card", news_item.merge({ data_attributes: { ga4_link: ga4_image_card_json.merge({ index: { index_link: index + ga4_index_offset }}) }}) %>
+          <%= render "govuk_publishing_components/components/image_card", news_item.merge({ data_attributes: { ga4_link: ga4_image_card_json.merge({ index: { index_link: ga4_index }}) }}) %>
+          <% ga4_index +=1 %>
         <% end %>
       <% end %>
     </div>
