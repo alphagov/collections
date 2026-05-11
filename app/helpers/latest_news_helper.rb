@@ -28,7 +28,13 @@ module LatestNewsHelper
     return nil unless results["results"].any?
 
     news_item = Services.content_store.content_item(results["results"].first["link"])
-    news_item.parsed_content["details"]["image"]
+    image_details = news_item.parsed_content["details"]["image"] || news_item.parsed_content["details"]["images"].find { |img| img["type"] == "lead" }
+    if image_details
+      {
+        "url" => image_details["url"] || image_details.dig("sources", "s465"),
+        "alt_text" => image_details["alt_text"] || "",
+      }
+    end
   rescue StandardError
     GovukError.notify("News item in Latest News Section doesn't exist or doesn't have an image")
     {
