@@ -27,6 +27,22 @@ RSpec.describe LatestNewsHelper do
 
     context "with the first news item missing" do
       before do
+        stub_latest_news_for_organisation_with_image_sources("prime-ministers-office-10-downing-street")
+      end
+
+      it "retreives the lead image for the first news item if requested" do
+        results = latest_news_items(no10, get_first_image: true)
+
+        expect(results[0][:image_src]).to eq("https://www.example.com/s465_latest-news-item-with-image.png")
+        expect(results[0][:image_alt]).to eq("")
+
+        expect(results[1][:image_src]).to be_nil
+        expect(results[1][:image_alt]).to be_nil
+      end
+    end
+
+    context "with the first news item missing" do
+      before do
         stub_latest_news_for_organisation_missing_item("prime-ministers-office-10-downing-street")
       end
 
