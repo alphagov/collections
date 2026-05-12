@@ -43,9 +43,12 @@ RSpec.feature "World Location News pages" do
 
     it "includes GA4 tracking on links to the featured documents" do
       visit base_path
-      within("#featured") do
-        ga4_link_data = JSON.parse(page.first("div[data-module='ga4-link-tracker'][data-ga4-track-links-only]")["data-ga4-link"])
-        expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Featured", "type" => "image card" })
+
+      all('#featured div[data-module="ga4-link-tracker"]').each_with_index do |image_card, index|
+        within(image_card) do
+          ga4_link_data = JSON.parse(image_card.first("div[data-ga4-link]")["data-ga4-link"])
+          expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Featured", "index_total" => 2, "type" => "image card", "index" => { "index_link" => index + 1 } })
+        end
       end
     end
   end

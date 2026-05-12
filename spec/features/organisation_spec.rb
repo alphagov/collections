@@ -487,7 +487,7 @@ RSpec.describe "Organisation pages" do
     test_ga4_image_cards("#latest-news div")
 
     visit "/government/organisations/attorney-generals-office"
-    test_ga4_image_cards("#featured-documents div")
+    test_ga4_image_cards_with_index("#featured-documents div")
     test_ga4_image_cards("[data-people-id=our-ministers] div")
     test_ga4_image_cards("[data-people-id=our-management] div")
 

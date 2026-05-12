@@ -904,8 +904,24 @@ module OrganisationHelpers
     stub_search_api_latest_content_requests(slug)
   end
 
+  def test_ga4_image_cards_with_index(selector, section_heading = nil)
+    links = page.all("#{selector}[data-ga4-link]")
+    section_heading ||= page.first("#{selector} h2").text
+
+    expect(links.first["data-module"]).to eq("ga4-link-tracker")
+
+    links.each.with_index(1) do |link, index|
+      ga4_link_data = JSON.parse(link["data-ga4-link"])
+      expect(ga4_link_data["event_name"]).to eq "navigation"
+      expect(ga4_link_data["type"]).to eq "image card"
+      expect(ga4_link_data["section"]).to eq section_heading
+      expect(ga4_link_data["index"]["index_link"]).to eq index
+      expect(ga4_link_data["index_total"]).to eq links.count
+    end
+  end
+
   def test_ga4_image_cards(selector, section_heading = nil)
-    ga4_selector = "#{selector}[data-module='ga4-link-tracker'][data-ga4-track-links-only]"
+    ga4_selector = "#{selector}[data-module='ga4-link-tracker']"
     expect(page).to have_css(ga4_selector)
 
     ga4_link_data = JSON.parse(page.first(ga4_selector)["data-ga4-link"])

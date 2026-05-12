@@ -2,7 +2,9 @@
   ga4_image_card_json = {
     "event_name": "navigation",
     "type": "image card",
-    "section": t("organisations.latest_news", lang: :en)
+    "section": t("organisations.latest_news", lang: :en),
+    "index_link": 1,
+    "index_total": 1,
   }.to_json
 %>
 <section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="latest-news">
