@@ -67,6 +67,13 @@ module OrganisationHelpers
     stub_content_store_has_item(latest_news_search_response.first[:link], latest_news_content_item_with_image.to_json)
   end
 
+  def stub_latest_news_for_organisation_with_image_sources(organisation_slug)
+    stub_request(:get, Plek.new.find("search-api") + "/search.json?count=5&filter_content_purpose_supergroup%5B%5D=news_and_communications&filter_organisations%5B%5D=#{organisation_slug}&order=-public_timestamp")
+      .to_return(body: { results: latest_news_search_response }.to_json)
+
+    stub_content_store_has_item(latest_news_search_response.first[:link], latest_news_content_item_with_image_sources.to_json)
+  end
+
   def stub_latest_news_for_organisation_missing_item(organisation_slug)
     stub_request(:get, Plek.new.find("search-api") + "/search.json?count=5&filter_content_purpose_supergroup%5B%5D=news_and_communications&filter_organisations%5B%5D=#{organisation_slug}&order=-public_timestamp")
       .to_return(body: { results: latest_news_search_response }.to_json)
@@ -101,6 +108,20 @@ module OrganisationHelpers
   def latest_news_content_item_with_image
     {
       details: { image: { url: "https://www.example.com/latest-news-item-with-image.png", alt_text: "Example Image" } },
+    }
+  end
+
+  def latest_news_content_item_with_image_sources
+    {
+      details: { images: [{ "sources": {
+                              "s216": "https://www.example.com/s216_latest-news-item-with-image.png",
+                              "s300": "https://www.example.com/s300_latest-news-item-with-image.png",
+                              "s465": "https://www.example.com/s465_latest-news-item-with-image.png",
+                              "s630": "https://www.example.com/s630_latest-news-item-with-image.png",
+                              "s712": "https://www.example.com/s712_latest-news-item-with-image.png",
+                              "s960": "https://www.example.com/s960_latest-news-item-with-image.png",
+                            },
+                            "type": "lead" }] },
     }
   end
 
