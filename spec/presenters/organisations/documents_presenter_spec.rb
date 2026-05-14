@@ -13,6 +13,7 @@ RSpec.describe Organisations::DocumentsPresenter do
     before do
       stub_empty_search_api_requests("org-with-no-docs")
       stub_search_api_latest_content_requests("attorney-generals-office")
+      stub_content_store_has_item("/government/organisations/attorney-generals-office", content_item_for_base_path("/government/organisations/attorney-generals-office"))
     end
 
     context "page is No. 10 organisation page" do
