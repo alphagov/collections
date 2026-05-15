@@ -50,7 +50,7 @@ module Organisations
         metric_key: "organisations.search.request_time",
       )["results"]
 
-      documents.reject { |doc| doc["link"] == get_untranslated_organisation_base_path(@org.base_path) }.take(3)
+      documents.reject { |doc| doc["link"] == @org.base_path }.take(3)
     end
 
     def featured_news(featured, first_featured: false)
@@ -78,21 +78,6 @@ module Organisations
       end
 
       news_stories
-    end
-
-    def get_untranslated_organisation_base_path(base_path)
-      organisation_base_path = base_path
-
-      content_item = Services.content_store.content_item(base_path)
-      if content_item.parsed_content.dig("links", "available_translations")
-        content_item.parsed_content["links"]["available_translations"].each do |t|
-          if t["locale"] == "en"
-            organisation_base_path = t["base_path"]
-          end
-        end
-      end
-
-      organisation_base_path
     end
   end
 end
