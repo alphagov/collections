@@ -90,7 +90,23 @@ module ApplicationHelper
     ].include?(request.path)
   end
 
-  PERCENTAGE_SCROLL_TRACKING_URLS = [].freeze
+  PERCENTAGE_SCROLL_TRACKING_URLS = [
+    "/browse/business/start-your-business",
+    "/browse/business/buying-selling-outside-great-britain",
+    "/browse/business/food-hospitality-retail",
+    "/browse/business/manufacturing-industry",
+    "/browse/business/keep-your-business-running",
+    "/browse/business/grow-your-business",
+    "/browse/business/business-debt-continuity-options",
+    "/browse/business/business-waste",
+    "/browse/business/sell-transfer-your-business",
+    "/browse/business/childcare-education-providers",
+    "/browse/business/construction-property-management",
+    "/browse/business/running-charity",
+    "/browse/business/commercial-transport-logistics",
+    "/browse/business/farming-forestry-fishing",
+    "/browse/business/media-creative-entertainment",
+  ].freeze
 
   def include_percentage_scroll_tracking?(base_path = nil)
     return false unless base_path
