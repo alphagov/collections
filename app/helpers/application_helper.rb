@@ -89,4 +89,12 @@ module ApplicationHelper
       "/buy-a-vehicle",
     ].include?(request.path)
   end
+
+  PERCENTAGE_SCROLL_TRACKING_URLS = [].freeze
+
+  def include_percentage_scroll_tracking?(base_path = nil)
+    return false unless base_path
+
+    PERCENTAGE_SCROLL_TRACKING_URLS.include?(base_path)
+  end
 end
