@@ -19,6 +19,10 @@
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>
 
   <%= javascript_include_tag "test-dependencies", type: "module" if Rails.env.test? %>
+
+  <% if include_percentage_scroll_tracking?(content_item_h["base_path"]) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="ga4-scroll-tracker">
+  <% end %>
 <% end %>
 
 <%= render "govuk_publishing_components/components/layout_for_public", {
