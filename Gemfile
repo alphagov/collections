@@ -7,7 +7,6 @@ gem "rails", "8.1.3"
 gem "bootsnap", require: false
 gem "dalli", "~> 4"
 gem "dartsass-rails"
-gem "faraday"
 gem "gds-api-adapters"
 gem "govspeak"
 gem "govuk_ab_testing"
