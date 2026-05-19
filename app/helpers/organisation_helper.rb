@@ -11,11 +11,13 @@ module OrganisationHelper
   def translated_search_result(result)
     return result if I18n.locale == :en
 
-    content_item = Services.content_store.content_item(result["link"])
+    content_item ||= handle_api_errors do
+      Services.content_store.content_item(result["link"]).parsed_content
+    end
 
-    return result if content_item.parsed_content.dig("links", "available_translations").nil?
+    return result if content_item.dig("links", "available_translations").nil?
 
-    content_item.parsed_content["links"]["available_translations"].each do |t|
+    content_item["links"]["available_translations"].each do |t|
       if t["locale"] == I18n.locale.to_s
         return {
           "title" => t["title"],
@@ -37,4 +39,13 @@ module OrganisationHelper
       end,
     }
   end
+
+private
+
+  def handle_api_errors
+    yield
+  rescue GdsApi::HTTPErrorResponse, GdsApi::InvalidUrl
+    {}
+  end
+
 end
