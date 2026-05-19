@@ -11,9 +11,7 @@ module OrganisationHelper
   def translated_search_result(result)
     return result if I18n.locale == :en
 
-    content_item ||= handle_api_errors do
-      Services.content_store.content_item(result["link"]).parsed_content
-    end
+    content_item = get_content_item(result["link"])
 
     return result if content_item.dig("links", "available_translations").nil?
 
@@ -34,9 +32,9 @@ module OrganisationHelper
   def get_untranslated_organisation_base_path(base_path)
     organisation_base_path = base_path
 
-    content_item = Services.content_store.content_item(base_path)
-    if content_item.parsed_content.dig("links", "available_translations")
-      content_item.parsed_content["links"]["available_translations"].each do |t|
+    content_item = get_content_item(base_path)
+    if content_item.dig("links", "available_translations")
+      content_item["links"]["available_translations"].each do |t|
         if t["locale"] == "en"
           organisation_base_path = t["base_path"]
         end
@@ -63,4 +61,9 @@ private
     {}
   end
 
+  def get_content_item(base_path)
+    handle_api_errors do
+      Services.content_store.content_item(base_path).parsed_content
+    end
+  end
 end
