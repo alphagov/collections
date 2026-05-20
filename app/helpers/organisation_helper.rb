@@ -11,11 +11,11 @@ module OrganisationHelper
   def translated_search_result(result)
     return result if I18n.locale == :en
 
-    content_item = Services.content_store.content_item(result["link"])
+    content_item = get_content_item(result["link"])
 
-    return result if content_item.parsed_content.dig("links", "available_translations").nil?
+    return result if content_item.dig("links", "available_translations").nil?
 
-    content_item.parsed_content["links"]["available_translations"].each do |t|
+    content_item["links"]["available_translations"].each do |t|
       if t["locale"] == I18n.locale.to_s
         return {
           "title" => t["title"],
@@ -29,6 +29,21 @@ module OrganisationHelper
     result
   end
 
+  def get_untranslated_organisation_base_path(base_path)
+    organisation_base_path = base_path
+
+    content_item = get_content_item(base_path)
+    if content_item.dig("links", "available_translations")
+      content_item["links"]["available_translations"].each do |t|
+        if t["locale"] == "en"
+          organisation_base_path = t["base_path"]
+        end
+      end
+    end
+
+    organisation_base_path
+  end
+
   def search_results_to_documents(search_results, organisation, include_metadata: true)
     {
       brand: (organisation.brand if organisation.is_live?),
@@ -36,5 +51,19 @@ module OrganisationHelper
         Organisations::DocumentPresenter.new(translated_search_result(result), include_metadata:).present
       end,
     }
+  end
+
+private
+
+  def handle_api_errors
+    yield
+  rescue GdsApi::HTTPErrorResponse, GdsApi::InvalidUrl
+    {}
+  end
+
+  def get_content_item(base_path)
+    handle_api_errors do
+      Services.content_store.content_item(base_path).parsed_content
+    end
   end
 end

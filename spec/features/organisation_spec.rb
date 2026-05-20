@@ -263,6 +263,13 @@ RSpec.describe "Organisation pages" do
     expect(page).to have_css(".gem-c-document-list__item-title [href='/content-item-1.cy']", text: "Swyddfa Cymru")
   end
 
+  it "shows organisation page when a latest document url returns 404" do
+    stub_content_store_does_not_have_item("/content-item-1")
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    expect(page).to have_css(".gem-c-heading", text: "Newyddion a chyfathrebu")
+    expect(page).to have_css(".gem-c-document-list__item-title [href='/content-item-1']", text: "Content item 1")
+  end
+
   it "does not show the latest documents by type section if there are none" do
     stub_empty_search_api_requests("attorney-generals-office")
     visit "/government/organisations/attorney-generals-office"
