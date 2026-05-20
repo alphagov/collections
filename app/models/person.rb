@@ -53,7 +53,7 @@ class Person
   end
 
   def announcements
-    @announcements ||= AnnouncementsPresenter.new(slug, filter_key: "people")
+    @announcements ||= AnnouncementsPresenter.new(slug, filter_key: "people", roles: current_roles.map { |role| role["base_path"] })
   end
 
   def translations
