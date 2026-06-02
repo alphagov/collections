@@ -6,7 +6,7 @@
 }
 
 .organisation__section-wrap {
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 // This is only used to apply to promotional orgs where the border colour is always black
@@ -34,7 +34,7 @@
 }
 
 .organisation__contact-section {
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   .organisation__address {
     font-style: normal;
