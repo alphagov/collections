@@ -18,7 +18,7 @@
 }
 
 .taxon-page__email-link-wrapper {
-  background-color: govuk-colour("light-grey");
+  background-color: govuk-colour("black", $variant: "tint-95");
   margin-top: -(govuk-spacing(6));
   margin-bottom: govuk-spacing(6);
   border-bottom: 1px solid $govuk-border-colour;
