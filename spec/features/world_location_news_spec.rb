@@ -97,7 +97,7 @@ RSpec.feature "World Location News pages" do
 
     it "includes GA4 tracking on the featured links" do
       visit base_path
-      within "[data-featured-links][data-module='ga4-link-tracker'][data-ga4-track-links-only]" do
+      within "[data-featured-links][data-module='ga4-link-tracker']" do
         first_ga4_link_data = JSON.parse(page.first("a[data-ga4-link]")["data-ga4-link"])
         expect(first_ga4_link_data).to eq({ "event_name" => "navigation", "index_link" => 1, "index_total" => 2, "section" => "UK and Mock Country", "type" => "document list" })
 

@@ -20,7 +20,7 @@
   </div>
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half" data-module="ga4-link-tracker" data-ga4-link="<%= ga4_image_card_json %>" data-ga4-track-links-only>
+    <div class="govuk-grid-column-one-half" data-module="ga4-link-tracker" data-ga4-link="<%= ga4_image_card_json %>">
       <% latest_news_items = latest_news_items(@organisation, get_first_image: true) %>
       <%= render "govuk_publishing_components/components/image_card", latest_news_items.shift %>
     </div>

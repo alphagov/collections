@@ -22,7 +22,6 @@ RSpec.describe BrowseHelper do
           href: "/foo/policy_paper",
           data_attributes: {
             module: "ga4-link-tracker",
-            ga4_track_links_only: "",
             ga4_link: {
               event_name: "navigation",
               type: "action",
@@ -38,7 +37,6 @@ RSpec.describe BrowseHelper do
           href: "/foo/news_story",
           data_attributes: {
             module: "ga4-link-tracker",
-            ga4_track_links_only: "",
             ga4_link: {
               event_name: "navigation",
               type: "action",
@@ -54,7 +52,6 @@ RSpec.describe BrowseHelper do
           href: "/foo/anything",
           data_attributes: {
             module: "ga4-link-tracker",
-            ga4_track_links_only: "",
             ga4_link: {
               event_name: "navigation",
               type: "action",

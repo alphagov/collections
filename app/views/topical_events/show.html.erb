@@ -119,7 +119,7 @@
         <% @topical_event.ordered_featured_documents.in_groups_of(3, false) do |row| %>
           <div class="govuk-grid-row">
             <% row.each do |document| %>
-              <div class="govuk-grid-column-one-third" data-module="ga4-link-tracker" data-ga4-track-links-only data-ga4-link="<%= ga4_image_card_json %>">
+              <div class="govuk-grid-column-one-third" data-module="ga4-link-tracker" data-ga4-link="<%= ga4_image_card_json %>">
                 <%= render "govuk_publishing_components/components/image_card", document %>
               </div>
             <% end %>
@@ -150,7 +150,6 @@
       <div
         data-module="ga4-link-tracker"
         data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index_link": 1, "index_total": 1, "section": "Content" }'
-        data-ga4-track-links-only
       >
         <%= render "govuk_publishing_components/components/subscription_links", {
           email_signup_link: "/email-signup?link=#{topical_event_path(@topical_event.slug)}"

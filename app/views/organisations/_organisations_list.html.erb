@@ -24,7 +24,6 @@
     <div class="govuk-grid-column-two-thirds <%= "organisations-list__without-number" if @presented_organisations.executive_office?(organisation_type) %>">
       <ol
         data-module="ga4-link-tracker"
-        data-ga4-track-links-only
         data-ga4-link="<%= { event_name: "navigation", type: "filter" }.to_json %>">
         <% organisations.each do |organisation| %>
           <%= content_tag :li, {
