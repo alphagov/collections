@@ -74,7 +74,6 @@ RSpec.feature "Content store organisations" do
   scenario "renders links with GA4 tracking" do
     ga4_module = "ol[data-module=ga4-link-tracker]"
     expect(page).to have_css(ga4_module)
-    expect(page).to have_css("ol[data-ga4-track-links-only]")
 
     ga4_link_data = JSON.parse(page.first(ga4_module)["data-ga4-link"])
     expect(ga4_link_data["event_name"]).to eq "navigation"

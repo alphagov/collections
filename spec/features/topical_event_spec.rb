@@ -275,7 +275,7 @@ RSpec.feature "Topical Event pages" do
     it "includes GA4 tracking on links to the featured documents" do
       visit base_path
       within("#featured") do
-        ga4_link_data = JSON.parse(page.first("div[data-module='ga4-link-tracker'][data-ga4-track-links-only]")["data-ga4-link"])
+        ga4_link_data = JSON.parse(page.first("div[data-module='ga4-link-tracker']")["data-ga4-link"])
         expect(ga4_link_data).to eq({ "event_name" => "navigation", "section" => "Featured", "type" => "image card" })
       end
     end

@@ -1,5 +1,5 @@
 <% if contacts.present? %>
-<% 
+<%
   ga4_section ||= nil
   ga4_email_link_data = { event_name: "navigation", type: "email" }
   ga4_email_link_data[:section] = ga4_section if ga4_section
@@ -36,7 +36,6 @@
                 <p
                   class="organisation__paragraph"
                   data-module="ga4-link-tracker"
-                  data-ga4-track-links-only
                   data-ga4-do-not-redact
                   data-ga4-link="<%= ga4_email_link_data.to_json %>">
                     <%= email.html_safe %>

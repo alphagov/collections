@@ -944,7 +944,6 @@ module OrganisationHelpers
   def test_ga4_get_emails_link(section_heading = nil)
     email_div = page.find("#latest-documents ul.gem-c-document-list ~ div")
     expect(email_div["data-module"]).to eq "ga4-link-tracker"
-    expect(email_div["data-ga4-track-links-only"]).to eq ""
     ga4_link_data = JSON.parse(email_div["data-ga4-link"])
     expect(ga4_link_data["event_name"]).to eq "navigation"
     expect(ga4_link_data["type"]).to eq "subscribe"
@@ -960,7 +959,6 @@ module OrganisationHelpers
     links.each do |link|
       expect(link["data-module"]).to eq "ga4-link-tracker"
       expect(link["data-ga4-do-not-redact"]).to eq ""
-      expect(link["data-ga4-track-links-only"]).to eq ""
       ga4_link_data = JSON.parse(link["data-ga4-link"])
       expect(ga4_link_data["event_name"]).to eq "navigation"
       expect(ga4_link_data["type"]).to eq "email"

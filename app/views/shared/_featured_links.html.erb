@@ -4,7 +4,7 @@
   margin_bottom ||= false
   ga4_data ||= {}
 
-  wrapper_data_attributes = { "module": "ga4-link-tracker", "ga4-track-links-only": "" } if !ga4_data.empty?
+  wrapper_data_attributes = { "module": "ga4-link-tracker" } if !ga4_data.empty?
 
   brand ||= false
   brand_helper = GovukPublishingComponents::AppHelpers::BrandHelper.new(brand)
