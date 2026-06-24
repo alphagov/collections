@@ -21,7 +21,7 @@
   background-color: govuk-colour("black", $variant: "tint-95");
   margin-top: -(govuk-spacing(6));
   margin-bottom: govuk-spacing(6);
-  border-bottom: 1px solid $govuk-border-colour;
+  border-bottom: 1px solid govuk-functional-colour(border);
   padding: govuk-spacing(6) 0;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .taxon-page__section-group {
-  border-top: 2px solid $govuk-brand-colour;
+  border-top: 2px solid govuk-functional-colour(brand);
   margin-top: 45px;
   padding-top: govuk-spacing(3);
 }
@@ -73,7 +73,7 @@
 
   .taxon-page__organisation {
     margin-bottom: govuk-spacing(4);
-    border-bottom: 1px solid $govuk-border-colour;
+    border-bottom: 1px solid govuk-functional-colour(border);
     padding-bottom: govuk-spacing(3);
   }
 }

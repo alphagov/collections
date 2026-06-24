@@ -25,7 +25,7 @@
 }
 
 .browse__section--top-border {
-  border-top: 1px solid $govuk-border-colour;
+  border-top: 1px solid govuk-functional-colour(border);
   padding-top: govuk-spacing(3);
 }
 
