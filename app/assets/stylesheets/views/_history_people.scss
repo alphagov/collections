@@ -9,7 +9,7 @@
 
 .historic-people-index__section-row {
   .govuk-body {
-    color: $govuk-secondary-text-colour;
+    color: govuk-functional-colour(secondary-text);
 
     // Targets all of the years / periods of service but the last one.
     &:nth-last-child(n+2) {
