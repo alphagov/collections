@@ -41,10 +41,10 @@ module OrganisationHelper
 
     return { "title" => content_item["title"], "link" => content_item["base_path"] } if introductory_paragraph.nil?
 
-    welsh_translation_link_regex = /This (.*) also available <a href="(.*)">in Welsh/
+    welsh_translation_link_regex = /This (.*) also available (in )?<a href="(.*)">(in )?Welsh/
 
     if welsh_translation_link_regex.match?(introductory_paragraph)
-      base_path = welsh_translation_link_regex.match(introductory_paragraph)[2]
+      base_path = welsh_translation_link_regex.match(introductory_paragraph)[3]
       translated_item = get_content_item(base_path)
 
       { "title" => translated_item["title"], "link" => translated_item["base_path"] }
