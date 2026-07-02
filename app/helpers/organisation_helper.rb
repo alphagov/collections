@@ -13,6 +13,8 @@ module OrganisationHelper
 
     content_item = get_content_item(result["link"])
 
+    return get_translation_for_mainstream_pages(content_item) if content_item["publishing_app"] == "publisher"
+
     return result if content_item.dig("links", "available_translations").nil?
 
     content_item["links"]["available_translations"].each do |t|
@@ -27,6 +29,28 @@ module OrganisationHelper
     end
 
     result
+  end
+
+  def get_translation_for_mainstream_pages(content_item)
+    content_details = content_item["details"] || {}
+
+    introductory_paragraph =
+      content_details["introductory_paragraph"] ||
+      content_details.dig("parts", 0, "body") ||
+      content_details["body"]
+
+    return { "title" => content_item["title"], "link" => content_item["base_path"] } if introductory_paragraph.nil?
+
+    welsh_translation_link_regex = /This (.*) also available (in )?<a href="(.*)">(in )?Welsh/
+
+    if welsh_translation_link_regex.match?(introductory_paragraph)
+      base_path = welsh_translation_link_regex.match(introductory_paragraph)[3]
+      translated_item = get_content_item(base_path)
+
+      { "title" => translated_item["title"], "link" => translated_item["base_path"] }
+    else
+      { "title" => content_item["title"], "link" => content_item["base_path"] }
+    end
   end
 
   def get_untranslated_organisation_base_path(base_path)
