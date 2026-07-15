@@ -8,7 +8,7 @@
   .organisations-list__item {
     list-style-type: none;
     margin-bottom: govuk-spacing(3);
-    border-bottom: 1px solid govuk-colour("black", $variant: "tint-80");
+    border-bottom: 1px solid govuk-functional-colour("border");
 
     h3 {
       margin: 0;
