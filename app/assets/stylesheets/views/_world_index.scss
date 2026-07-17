@@ -26,7 +26,7 @@
 
   .world_locations-group__item {
     list-style-type: none;
-    border-bottom: 1px solid govuk-colour("black", $variant: "tint-80");
+    border-bottom: 1px solid govuk-functional-colour("border");
     padding: govuk-spacing(1) 0;
     @include govuk-font(19);
   }
