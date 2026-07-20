@@ -7,7 +7,9 @@ class Organisation
 
   HMCTS_CONTENT_ID = "6f757605-ab8f-4b62-84e4-99f79cf085c2".freeze
 
-  CUSTOM_BANNERS_DATA = {}.freeze
+  CUSTOM_BANNERS_DATA = {
+    "department-for-business-and-trade" => "This organisation is changing. It will be called the Department for Business, Innovation, Science and Trade.",
+  }.freeze
 
   def initialize(content_item)
     @content_item = content_item
