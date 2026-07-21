@@ -10,7 +10,7 @@ class Organisation
   CUSTOM_BANNERS_DATA = {
     "department-for-business-and-trade" => "This organisation is changing. It will be called the Department for Business, Innovation, Science and Trade.",
     "department-for-culture-media-and-sport" => "This organisation is changing. It will be called the Department for Digital, Culture, Media and Sport.",
-    "department-for-science-innovation-and-technology" => "This organisation is changing.",
+    "department-for-science-innovation-and-technology" => "This organisation is changing. It’s being replaced by the Department for Business, Innovation, Science and Trade, the Department for Digital, Culture, Media and Sport and the Cabinet Office.",
   }.freeze
 
   def initialize(content_item)
