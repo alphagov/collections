@@ -9,7 +9,7 @@
       } %>
     <% end %>
   <% if @show.corporate_information[:corporate_information_links][:items].any? && !@organisation.is_no_10? %>
-    <div class="<%= "organisation__section-border-top" if @organisation.is_civil_service? %>">
+    <div class="<%= "brand--civil-service brand__border-color organisation__brand-border-top govuk-!-static-padding-top-3" if @organisation.is_civil_service? %>">
       <%= render "shared/featured_links", @show.corporate_information[:corporate_information_links].merge({ ga4_data: { section: t('organisations.corporate_information', locale: :en) } }) %>
     </div>
   <% end %>
