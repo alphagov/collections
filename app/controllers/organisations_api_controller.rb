@@ -72,7 +72,7 @@ private
       start: 0,
     }
 
-    @organisation_from_search ||= Services.cached_search(params, metric_key: "organisation_api.search.request_time")
+    @organisation_from_search ||= Services.cached_search(params, metric_key: "organisation_api.search.request_time", expires_in: 6.hours)
   end
 
   def set_link_header(links:)
