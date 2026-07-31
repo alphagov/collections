@@ -250,7 +250,7 @@ GEM
       capybara (>= 3.36)
       puma
       selenium-webdriver (>= 4.0)
-    govuk_web_banners (1.38.0)
+    govuk_web_banners (1.38.1)
       govuk_app_config (>= 9)
       govuk_publishing_components
       rails (>= 7)
@@ -641,7 +641,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.4.2)
-    rbs (4.1.0)
+    rbs (4.1.1)
       logger
       prism (>= 1.6.0)
       tsort
