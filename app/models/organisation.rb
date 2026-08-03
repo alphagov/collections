@@ -8,9 +8,9 @@ class Organisation
   HMCTS_CONTENT_ID = "6f757605-ab8f-4b62-84e4-99f79cf085c2".freeze
 
   CUSTOM_BANNERS_DATA = {
-    "department-for-business-and-trade" => "This organisation is changing. It will be called the Department for Business, Innovation, Science and Trade.",
+    "department-for-business-and-trade" => "This organisation is changing. It’s now called the <a href=\"https://www.gov.uk/government/organisations/department-for-business-innovation-science-and-trade\">Department for Business, Innovation, Science and Trade</a>.",
     "department-for-culture-media-and-sport" => "This organisation is changing. It will be called the Department for Digital, Culture, Media and Sport.",
-    "department-for-science-innovation-and-technology" => "This organisation is changing. It’s being replaced by the Department for Business, Innovation, Science and Trade, the Department for Digital, Culture, Media and Sport and the Cabinet Office.",
+    "department-for-science-innovation-and-technology" => "This organisation is changing. It’s being replaced by the <a href=\"https://www.gov.uk/government/organisations/department-for-business-innovation-science-and-trade\">Department for Business, Innovation, Science and Trade</a>, the Department for Digital, Culture, Media and Sport and the Cabinet Office.",
   }.freeze
 
   def initialize(content_item)
