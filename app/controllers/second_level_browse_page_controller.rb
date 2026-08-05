@@ -25,17 +25,4 @@ private
       "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}",
     )
   end
-
-  def count_link_sections(page)
-    page.lists.count
-  end
-
-  def count_total_links(page)
-    link_count = 0
-    page.lists.each do |list|
-      link_count += list.contents.count
-    end
-
-    link_count
-  end
 end
