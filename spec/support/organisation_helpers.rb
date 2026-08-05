@@ -15,7 +15,7 @@ module OrganisationHelpers
           filter_organisations: organisation_slug,
           filter_content_purpose_supergroup: group,
           order: Search::Supergroup::DEFAULT_SORT_ORDER,
-        }.merge(Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {})),
+        }.merge(Search::Supergroup::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {})),
       )
 
       stub_request(:get, url).to_return(body: build_result_body(group, empty).to_json)

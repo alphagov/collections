@@ -35,6 +35,7 @@ describe Search::Supergroup do
       additional_params: {
         filter_organisations: "attorney-generals-office",
         filter_content_purpose_supergroup: "services",
+        order: "-popularity",
       },
     )
   end

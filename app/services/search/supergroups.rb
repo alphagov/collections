@@ -9,18 +9,6 @@ module Search
       transparency
     ].freeze
 
-    SUPERGROUP_ADDITIONAL_SEARCH_PARAMS = {
-      "guidance_and_regulation" => {
-        order: "-popularity",
-      },
-      "news_and_communications" => {
-        reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
-      },
-      "services" => {
-        order: "-popularity",
-      },
-    }.freeze
-
     def initialize(organisation_slug:)
       @organisation_slug = organisation_slug
     end
@@ -34,7 +22,6 @@ module Search
         Supergroup.new(
           organisation_slug: @organisation_slug,
           content_purpose_supergroup: group,
-          additional_search_params: SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}),
         )
       end
     end

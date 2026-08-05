@@ -35,7 +35,7 @@ describe Search::Supergroups do
 
     it "applies the given additional search parameters" do
       supergroups.groups.each do |group|
-        params = Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(
+        params = Search::Supergroup::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(
           group.content_purpose_supergroup,
           {},
         )
@@ -61,7 +61,7 @@ describe Search::Supergroups do
         filter_content_purpose_supergroup: group,
         filter_organisations: organisation_slug,
         order: Search::Supergroup::DEFAULT_SORT_ORDER,
-      }.merge(Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {})),
+      }.merge(Search::Supergroup::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {})),
     )
   end
 end

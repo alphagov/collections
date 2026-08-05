@@ -1,13 +1,24 @@
 module Search
   class Supergroup
-    attr_reader :content_purpose_supergroup, :additional_search_params
+    attr_reader :content_purpose_supergroup
 
     DEFAULT_SORT_ORDER = "-public_timestamp".freeze
 
-    def initialize(organisation_slug:, content_purpose_supergroup:, additional_search_params: {})
+    SUPERGROUP_ADDITIONAL_SEARCH_PARAMS = {
+      "guidance_and_regulation" => {
+        order: "-popularity",
+      },
+      "news_and_communications" => {
+        reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
+      },
+      "services" => {
+        order: "-popularity",
+      },
+    }.freeze
+
+    def initialize(organisation_slug:, content_purpose_supergroup:)
       @organisation_slug = organisation_slug
       @content_purpose_supergroup = content_purpose_supergroup
-      @additional_search_params = additional_search_params
     end
 
     def has_documents?
@@ -23,6 +34,10 @@ module Search
         filter_organisations: @organisation_slug,
         filter_content_purpose_supergroup: @content_purpose_supergroup,
       }.merge(additional_search_params)
+    end
+
+    def additional_search_params
+      SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(@content_purpose_supergroup, {})
     end
 
   private
