@@ -9,7 +9,7 @@ module OrganisationHelpers
   end
 
   def stub_latest_content_from_supergroups_request(organisation_slug, empty: false)
-    Search::Supergroups::SUPERGROUP_TYPES.each do |group|
+    Search::Supergroups::CONTENT_PURPOSE_SUPERGROUPS.each do |group|
       url = build_search_api_query_url(
         {
           filter_organisations: organisation_slug,

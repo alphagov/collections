@@ -8,7 +8,7 @@ describe Search::Supergroups do
   let(:no_docs_supergroups) { described_class.new(organisation_slug: slug_for_org_with_no_docs) }
 
   before do
-    Search::Supergroups::SUPERGROUP_TYPES.each do |supergroup|
+    Search::Supergroups::CONTENT_PURPOSE_SUPERGROUPS.each do |supergroup|
       stub_search_api_supergroup_request(supergroup, slug_for_org_with_docs, [raw_search_api_result])
       stub_search_api_supergroup_request(supergroup, slug_for_org_with_no_docs, [])
     end
