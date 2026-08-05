@@ -4,18 +4,6 @@ module Search
 
     DEFAULT_SORT_ORDER = "-public_timestamp".freeze
 
-    SUPERGROUP_ADDITIONAL_SEARCH_PARAMS = {
-      "guidance_and_regulation" => {
-        order: "-popularity",
-      },
-      "news_and_communications" => {
-        reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
-      },
-      "services" => {
-        order: "-popularity",
-      },
-    }.freeze
-
     def initialize(organisation_slug:, content_purpose_supergroup:)
       @organisation_slug = organisation_slug
       @content_purpose_supergroup = content_purpose_supergroup
@@ -36,11 +24,21 @@ module Search
       }.merge(additional_search_params)
     end
 
-    def additional_search_params
-      SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(@content_purpose_supergroup, {})
-    end
-
   private
+
+    def additional_search_params
+      {
+        "guidance_and_regulation" => {
+          order: "-popularity",
+        },
+        "news_and_communications" => {
+          reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
+        },
+        "services" => {
+          order: "-popularity",
+        },
+      }.fetch(content_purpose_supergroup, {})
+    end
 
     def search_search_api(additional_params)
       params = default_search_api_params.merge(additional_params).compact

@@ -32,17 +32,6 @@ describe Search::Supergroups do
     it "returns an array of supergroups regardless of doc responses" do
       expect(no_docs_supergroups.groups.map(&:content_purpose_supergroup)).to eq(supergroups.groups.map(&:content_purpose_supergroup))
     end
-
-    it "applies the given additional search parameters" do
-      supergroups.groups.each do |group|
-        params = Search::Supergroup::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(
-          group.content_purpose_supergroup,
-          {},
-        )
-        query = group.documents_query
-        expect(query).to eq(query.merge(params))
-      end
-    end
   end
 
   def raw_search_api_result
@@ -55,13 +44,24 @@ describe Search::Supergroups do
   end
 
   def stub_search_api_supergroup_request(group, organisation_slug, results)
+    additional_search_params = {
+      "guidance_and_regulation" => {
+        order: "-popularity",
+      },
+      "news_and_communications" => {
+        reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
+      },
+      "services" => {
+        order: "-popularity",
+      },
+    }.fetch(group, {})
     stub_supergroup_request(
       results:,
       additional_params: {
         filter_content_purpose_supergroup: group,
         filter_organisations: organisation_slug,
         order: Search::Supergroup::DEFAULT_SORT_ORDER,
-      }.merge(Search::Supergroup::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {})),
+      }.merge(additional_search_params),
     )
   end
 end
