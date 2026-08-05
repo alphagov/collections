@@ -14,14 +14,7 @@ module Search
     end
 
     def documents
-      @documents ||= search_search_api(documents_query)
-    end
-
-    def documents_query
-      {
-        filter_organisations: @organisation_slug,
-        filter_content_purpose_supergroup: @content_purpose_supergroup,
-      }.merge(additional_search_params)
+      @documents ||= search_search_api
     end
 
   private
@@ -40,8 +33,8 @@ module Search
       }.fetch(content_purpose_supergroup, {})
     end
 
-    def search_search_api(additional_params)
-      params = default_search_api_params.merge(additional_params).compact
+    def search_search_api
+      params = default_search_api_params.merge(additional_search_params).compact
 
       Services.search_api.search(params)["results"]
     end
@@ -51,6 +44,8 @@ module Search
         count: 2,
         order: DEFAULT_SORT_ORDER,
         fields: %w[title link content_store_document_type public_timestamp],
+        filter_organisations: @organisation_slug,
+        filter_content_purpose_supergroup: @content_purpose_supergroup,
       }
     end
   end
