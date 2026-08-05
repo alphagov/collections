@@ -75,14 +75,6 @@ private
     error 404
   end
 
-  def error_410
-    error 410
-  end
-
-  def error_503(exception)
-    error(503, exception)
-  end
-
   def error(status_code, exception = nil)
     GovukError.notify(exception) if exception
     render status: status_code, plain: "#{status_code} error"
@@ -96,13 +88,5 @@ private
 
   def setup_content_item_and_navigation_helpers(model)
     @content_item = model.content_item.to_hash
-  end
-
-  def breadcrumb_content
-    render_partial("_breadcrumbs")
-  end
-
-  def render_partial(partial_name, locals = {})
-    render_to_string(partial_name, formats: [:html], layout: false, locals:)
   end
 end
