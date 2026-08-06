@@ -14,7 +14,7 @@ module Search
     end
 
     def documents
-      @documents ||= search_search_api
+      @documents ||= fetch_search_results["results"]
     end
 
   private
@@ -33,10 +33,10 @@ module Search
       }.fetch(content_purpose_supergroup, {})
     end
 
-    def search_search_api
+    def fetch_search_results
       params = default_search_api_params.merge(additional_search_params).compact
 
-      Services.search_api.search(params)["results"]
+      Services.search_api.search(params)
     end
 
     def default_search_api_params
