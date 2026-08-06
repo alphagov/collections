@@ -9,9 +9,9 @@
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
   </div>
 </div>
-<div id=<%= "historical-people-#{heading.downcase.gsub(' ', '-')}" %>>
+<div id="<%= "historical-people-#{heading.downcase.gsub(' ', '-')}" %>" role="list">
   <% people.each_slice(4) do |row| %>
-    <div class="govuk-grid-row historic-people-index__section-row">
+    <div class="govuk-grid-row historic-people-index__section-row" role="presentation">
       <% row.map(&:deep_symbolize_keys).each do |info| %>
         <% if include_images %>
           <div role="listitem" class="govuk-grid-column-one-quarter">
