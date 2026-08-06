@@ -28,10 +28,10 @@
       margin_bottom: 6,
       } %>
   </aside>
-  <section class="govuk-grid-column-three-quarters">
+  <section class="govuk-grid-column-three-quarters" data-module="filter-list" data-filter-label="Search">
     <ol class="embassies-list">
       <% @presented_embassies.embassies_by_location.each do |embassy| -%>
-        <li class="embassies-list__item">
+        <li class="embassies-list__item" data-filter-item>
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-third">
               <%= render "govuk_publishing_components/components/heading", {
