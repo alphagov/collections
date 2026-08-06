@@ -3,7 +3,7 @@ module OrganisationsApiTestHelper
     {
       filter_format: "organisation",
       order: "title",
-      count: "20",
+      count: "100",
       start:,
     }
   end
