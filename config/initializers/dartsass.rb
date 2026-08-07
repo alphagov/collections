@@ -4,6 +4,7 @@ APP_STYLESHEETS = {
   "views/_browse.scss" => "views/_browse.css",
   "views/_bunting.scss" => "views/_bunting.css",
   "views/_covid.scss" => "views/_covid.css",
+  "views/_embassies.scss" => "views/_embassies.css",
   "views/_history_people.scss" => "views/_history_people.css",
   "views/_ministers.scss" => "views/_ministers.css",
   "views/_organisation.scss" => "views/_organisation.css",
