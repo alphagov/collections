@@ -64,7 +64,13 @@
         </div>
       <% end %>
     </div>
-    <%= auto_link(contact[:description], html: { class: "brand__color govuk-link" }) if contact[:description] %>
+    <% if contact[:description] %>
+      <div class="govuk-grid-row">  
+        <div class="govuk-grid-column-two-thirds">
+            <%= auto_link(contact[:description], html: { class: "brand__color govuk-link" }) %>
+        </div>
+      </div>
+    <% end %>
   </div>
 <% end %>
 <% end %>
