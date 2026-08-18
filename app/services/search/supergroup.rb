@@ -35,8 +35,13 @@ module Search
 
     def fetch_search_results
       params = default_search_api_params.merge(additional_search_params).compact
+      search_service(params)
+    end
 
-      Services.search_api.search(params)
+    def search_service(params)
+      expires_in = params[:order] == "-popularity" ? 12.hours : 60.minutes
+
+      Services.cached_search(params, expires_in:)
     end
 
     def default_search_api_params
