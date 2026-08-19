@@ -1,6 +1,6 @@
 module Search
   class Supergroups
-    SUPERGROUP_TYPES = %w[
+    CONTENT_PURPOSE_SUPERGROUPS = %w[
       services
       guidance_and_regulation
       news_and_communications
@@ -8,18 +8,6 @@ module Search
       policy_and_engagement
       transparency
     ].freeze
-
-    SUPERGROUP_ADDITIONAL_SEARCH_PARAMS = {
-      "guidance_and_regulation" => {
-        order: "-popularity",
-      },
-      "news_and_communications" => {
-        reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
-      },
-      "services" => {
-        order: "-popularity",
-      },
-    }.freeze
 
     def initialize(organisation_slug:)
       @organisation_slug = organisation_slug
@@ -30,11 +18,10 @@ module Search
     end
 
     def groups
-      @groups ||= SUPERGROUP_TYPES.map do |group|
+      @groups ||= CONTENT_PURPOSE_SUPERGROUPS.map do |group|
         Supergroup.new(
           organisation_slug: @organisation_slug,
           content_purpose_supergroup: group,
-          additional_search_params: SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}),
         )
       end
     end

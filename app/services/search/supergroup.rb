@@ -1,13 +1,12 @@
 module Search
   class Supergroup
-    attr_reader :content_purpose_supergroup, :additional_search_params
+    attr_reader :content_purpose_supergroup
 
     DEFAULT_SORT_ORDER = "-public_timestamp".freeze
 
-    def initialize(organisation_slug:, content_purpose_supergroup:, additional_search_params: {})
+    def initialize(organisation_slug:, content_purpose_supergroup:)
       @organisation_slug = organisation_slug
       @content_purpose_supergroup = content_purpose_supergroup
-      @additional_search_params = additional_search_params
     end
 
     def has_documents?
@@ -15,22 +14,34 @@ module Search
     end
 
     def documents
-      @documents ||= search_search_api(documents_query)
-    end
-
-    def documents_query
-      {
-        filter_organisations: @organisation_slug,
-        filter_content_purpose_supergroup: @content_purpose_supergroup,
-      }.merge(additional_search_params)
+      @documents ||= fetch_search_results["results"]
     end
 
   private
 
-    def search_search_api(additional_params)
-      params = default_search_api_params.merge(additional_params).compact
+    def additional_search_params
+      {
+        "guidance_and_regulation" => {
+          order: "-popularity",
+        },
+        "news_and_communications" => {
+          reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
+        },
+        "services" => {
+          order: "-popularity",
+        },
+      }.fetch(content_purpose_supergroup, {})
+    end
 
-      Services.search_api.search(params)["results"]
+    def fetch_search_results
+      params = default_search_api_params.merge(additional_search_params).compact
+      search_service(params)
+    end
+
+    def search_service(params)
+      expires_in = params[:order] == "-popularity" ? 12.hours : 60.minutes
+
+      Services.cached_search(params, expires_in:)
     end
 
     def default_search_api_params
@@ -38,6 +49,8 @@ module Search
         count: 2,
         order: DEFAULT_SORT_ORDER,
         fields: %w[title link content_store_document_type public_timestamp],
+        filter_organisations: @organisation_slug,
+        filter_content_purpose_supergroup: @content_purpose_supergroup,
       }
     end
   end

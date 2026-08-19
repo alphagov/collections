@@ -9,13 +9,24 @@ module OrganisationHelpers
   end
 
   def stub_latest_content_from_supergroups_request(organisation_slug, empty: false)
-    Search::Supergroups::SUPERGROUP_TYPES.each do |group|
+    Search::Supergroups::CONTENT_PURPOSE_SUPERGROUPS.each do |group|
+      additional_search_params = {
+        "guidance_and_regulation" => {
+          order: "-popularity",
+        },
+        "news_and_communications" => {
+          reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
+        },
+        "services" => {
+          order: "-popularity",
+        },
+      }.fetch(group, {})
       url = build_search_api_query_url(
         {
           filter_organisations: organisation_slug,
           filter_content_purpose_supergroup: group,
           order: Search::Supergroup::DEFAULT_SORT_ORDER,
-        }.merge(Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {})),
+        }.merge(additional_search_params),
       )
 
       stub_request(:get, url).to_return(body: build_result_body(group, empty).to_json)
