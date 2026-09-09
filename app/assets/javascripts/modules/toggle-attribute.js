@@ -8,8 +8,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
   ToggleAttribute.prototype.init = function () {
     this.$module.addEventListener('click', function (event) {
-      var target = event.target
-      var toggleAttribute
+      let target = event.target
+      let toggleAttribute
 
       // traverse up node tree to check parent elements for data-toggle-attribute
       do {
@@ -20,9 +20,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       if (!toggleAttribute) return
 
-      var current = target.getAttribute(toggleAttribute)
-      var closedText = target.getAttribute('data-when-closed-text')
-      var openText = target.getAttribute('data-when-open-text')
+      const current = target.getAttribute(toggleAttribute)
+      const closedText = target.getAttribute('data-when-closed-text')
+      const openText = target.getAttribute('data-when-open-text')
       target.setAttribute(toggleAttribute, current === closedText ? openText : closedText)
     }.bind(this))
   }

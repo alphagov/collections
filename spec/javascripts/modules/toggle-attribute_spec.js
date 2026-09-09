@@ -1,7 +1,7 @@
 describe('A toggle attribute module', function () {
   'use strict'
 
-  var element
+  let element
 
   beforeEach(function () {
     element = document.createElement('div')
@@ -11,12 +11,12 @@ describe('A toggle attribute module', function () {
         <button type="button"><span>Toggler</span></button>
       </div>
     `
-    var toggle = new GOVUK.Modules.ToggleAttribute(element)
+    const toggle = new GOVUK.Modules.ToggleAttribute(element)
     toggle.init()
   })
 
   it('sets the state to open when clicked and back again', function () {
-    var unnested = element.querySelector('#unnested-click')
+    const unnested = element.querySelector('#unnested-click')
 
     expect(unnested.getAttribute('data-state')).toBe('closed')
     unnested.click()
@@ -26,8 +26,8 @@ describe('A toggle attribute module', function () {
   })
 
   it('can handle a click on a nested element', function () {
-    var nested = element.querySelector('#nested-click')
-    var span = nested.querySelector('span')
+    const nested = element.querySelector('#nested-click')
+    const span = nested.querySelector('span')
 
     expect(nested.getAttribute('data-state')).toBe('closed')
     span.click()
