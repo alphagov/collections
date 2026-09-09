@@ -66,6 +66,7 @@ module Collections
       ka
       kk
       ko
+      ku
       ky
       lt
       lv
@@ -91,6 +92,7 @@ module Collections
       sw
       ta
       th
+      ti
       tk
       tr
       uk
