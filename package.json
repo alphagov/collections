@@ -6,17 +6,17 @@
   "license": "MIT",
   "scripts": {
     "lint": "yarn run lint:js && yarn run lint:scss",
-    "lint:js": "standardx 'app/assets/javascripts/**/*.js' 'spec/javascripts/**/*.js'",
+    "lint:js": "standard 'app/assets/javascripts/**/*.js' 'spec/javascripts/**/*.js'",
     "lint:scss": "stylelint app/assets/stylesheets/",
     "jasmine:prepare": "RAILS_ENV=test bundle exec rails assets:clobber assets:precompile",
     "jasmine:ci": "yarn run jasmine:prepare && yarn run jasmine-browser-runner runSpecs",
     "jasmine:browser": "yarn run jasmine:prepare && yarn run jasmine-browser-runner"
   },
-  "standardx": {
-    "env": {
-      "browser": true,
-      "jasmine": true
-    },
+  "standard": {
+    "env": [
+      "browser",
+      "jasmine"
+    ],
     "globals": [
       "GOVUK"
     ],
@@ -24,24 +24,15 @@
       "spec/javascripts/vendor"
     ]
   },
-  "eslintConfig": {
-    "rules": {
-      "no-var": 0
-    }
-  },
   "stylelint": {
     "extends": "stylelint-config-gds/scss"
   },
   "devDependencies": {
     "jasmine-browser-runner": "^5.0.0",
     "jasmine-core": "^7.0.2",
-    "standardx": "^7.0.0",
+    "standard": "^17.0.0",
     "stylelint": "^17.15.0",
     "stylelint-config-gds": "3.0.0"
-  },
-  "resolutions": {
-    "js-yaml@^3.13.1": "^3.15.0",
-    "js-yaml@^4.3.0": "^4.3.2"
   },
   "packageManager": "yarn@3.4.1"
 }
