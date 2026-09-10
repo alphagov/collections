@@ -1,0 +1,18 @@
+@import "govuk_publishing_components/base";
+
+.embassies-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.embassies-list__item {
+  padding-bottom: 0;
+  margin-bottom: govuk-spacing(3);
+  border-bottom: solid 1px $govuk-border-colour;
+
+  @include govuk-media-query($from: "tablet") {
+    padding-bottom: govuk-spacing(4);
+    margin-bottom: govuk-spacing(4);
+  }
+}
