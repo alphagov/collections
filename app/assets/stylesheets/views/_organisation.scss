@@ -38,10 +38,6 @@
   }
 }
 
-.organisation__paragraph {
-  @include govuk-font(19);
-}
-
 .organisation__parent-organisations {
   margin-top: govuk-spacing(3);
   @include govuk-font(19);
