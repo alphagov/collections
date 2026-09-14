@@ -58,7 +58,6 @@ Rails.application.routes.draw do
   get "/government/history/past-prime-ministers", to: "past_prime_ministers#index"
   get "/government/history/past-prime-ministers/:id", to: "past_prime_ministers#show"
 
-  get "/government/people/:name(.:locale)", to: "people#show"
   get "/government/ministers(.:locale)", to: "ministers#index"
   get "/government/ministers/:name(.:locale)", to: "roles#show"
 

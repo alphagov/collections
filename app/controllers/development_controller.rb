@@ -14,7 +14,6 @@ class DevelopmentController < ApplicationController
       organisation
       organisation_feed
       past_prime_ministers
-      person
       step_by_step_nav
       taxon
       topical_event
