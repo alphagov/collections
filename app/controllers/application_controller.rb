@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_action :restrict_request_formats
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
+  rescue_from GdsApi::HTTPBadRequest, with: :error_400
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::InvalidUrl, with: :error_404
 
@@ -65,6 +66,10 @@ private
     return true if format == Mime[:html] || format == Mime::ALL
 
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
+  end
+
+  def error_400
+    error 400
   end
 
   def error_403
