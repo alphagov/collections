@@ -44,7 +44,7 @@ RSpec.describe Organisations::ShowPresenter do
         I18n.with_locale(:cy) do
           expect(presenter.subscription_links).to eq({
             email_signup_link: "/email-signup?link=#{base_path}",
-            email_signup_link_text: "I gael e-byst (Saesneg yn unig)",
+            email_signup_link_text: "I gael negeseuon ebost (Saesneg yn unig)",
             email_signup_link_text_locale: false,
             brand: "brand",
           })
