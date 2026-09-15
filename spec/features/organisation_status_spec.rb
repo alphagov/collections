@@ -6,7 +6,7 @@ RSpec.feature "Organisation status" do
   before do
     @content_item_changed_name = {
       title: "Changed name organisation",
-      base_path: "/government/organisations/changed_name",
+      base_path: "/government/organisations/changed-name",
       details: {
         body: "This organisation has a status of changed_name.",
         logo: {},
@@ -87,7 +87,7 @@ RSpec.feature "Organisation status" do
 
     @content_item_left_gov = {
       title: "Left_gov organisation",
-      base_path: "/government/organisations/left_gov",
+      base_path: "/government/organisations/left-gov",
       links: {},
       details: {
         body: "This organisation has a status of left_gov.",
@@ -149,7 +149,7 @@ RSpec.feature "Organisation status" do
 
     @content_item_no_longer_exists = {
       title: "No_longer_exists organisation",
-      base_path: "/government/organisations/no_longer_exists",
+      base_path: "/government/organisations/no-longer-exists",
       links: {},
       details: {
         body: "This organisation has a status of no_longer_exists.",
@@ -212,7 +212,7 @@ RSpec.feature "Organisation status" do
   end
 
   scenario "displays a changed_name organisation page correctly" do
-    visit "/government/organisations/changed_name"
+    visit "/government/organisations/changed-name"
     expect(page).to have_selector(".gem-c-organisation-logo")
     expect(page).to have_selector(".gem-c-notice", text: "Changed name organisation is now called Successor")
     expect(page).to have_selector(".gem-c-notice a[href='/changed/name/successor']", text: "Successor")
@@ -261,7 +261,7 @@ RSpec.feature "Organisation status" do
   end
 
   scenario "displays a left_gov organisation page correctly" do
-    visit "/government/organisations/left_gov"
+    visit "/government/organisations/left-gov"
     expect(page).to have_selector(".gem-c-organisation-logo")
     expect(page).to have_selector(".gem-c-notice", text: "Left_gov organisation is now independent of the UK government")
     expect(page).not_to have_selector(".gem-c-notice a")
@@ -290,7 +290,7 @@ RSpec.feature "Organisation status" do
   end
 
   scenario "displays a no_longer_exists organisation page correctly" do
-    visit "/government/organisations/no_longer_exists"
+    visit "/government/organisations/no-longer-exists"
     expect(page).to have_selector(".gem-c-organisation-logo")
     expect(page).to have_selector(".gem-c-notice", text: "No_longer_exists organisation has closed")
     expect(page).not_to have_selector(".gem-c-notice a")
