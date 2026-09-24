@@ -6,6 +6,25 @@ module CourtPagesHelper
     setup_and_visit_page(content)
   end
 
+  def when_i_visit_a_courts_page_that_is_not_live
+    content = GovukSchemas::Example.find("organisation", example_name: "court")
+    content["details"]["body"] = "We review decisions."
+    content["details"]["organisation_govuk_status"]["status"] = "changed_name"
+
+    content.deep_merge!(
+      "links" => {
+        "ordered_successor_organisations" => [
+          {
+            "title" => "Super Administrative Court",
+            "base_path" => "/courts-tribunals/super-administrative-court",
+          },
+        ],
+      },
+    )
+
+    setup_and_visit_page(content)
+  end
+
   def when_i_visit_an_hmcts_tribunal_page
     content = GovukSchemas::Example.find("organisation", example_name: "tribunal")
     content["details"]["body"] = "We handle appeals."
@@ -62,6 +81,12 @@ module CourtPagesHelper
     assert_equal org_schema["name"], @title
   end
 
+  def and_notice_banner
+    expect(page).to have_selector("section.govuk-notification-banner")
+    expect(page).to have_selector(".gem-c-notice__title", text: "Administrative Court is now called Super Administrative Court")
+    expect(page).to have_link("Super Administrative Court", href: "/courts-tribunals/super-administrative-court")
+  end
+
   def but_no_documents
     expect(page).not_to have_selector("section#latest-documents")
     expect(page).not_to have_selector(".gem-c-heading", text: "Documents")
@@ -69,6 +94,11 @@ module CourtPagesHelper
     expect(page).not_to have_selector(".gem-c-heading", text: "Our consultations")
     expect(page).not_to have_selector(".gem-c-heading", text: "Our publications")
     expect(page).not_to have_selector(".gem-c-heading", text: "Our statistics")
+  end
+
+  def or_notice_banner
+    expect(page).not_to have_selector("section.govuk-notification-banner")
+    expect(page).not_to have_selector(".gem-c-notice__title")
   end
 
   def or_foi_section
