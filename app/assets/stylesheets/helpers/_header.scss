@@ -1,4 +1,4 @@
-@import "govuk_publishing_components/base";
+@use "govuk_publishing_components/base" as *;
 
 .translation-nav-header {
   @include govuk-media-query($from: tablet) {

@@ -1,4 +1,6 @@
-@import "govuk_publishing_components/base";
+// @use "govuk_publishing_components/base" as *;
+@use 'govuk_publishing_components/specific-components' as *;
+@use 'govuk_publishing_components/base' as *;
 
 // This isn't proper BEM - but the convention is to have the view name as the
 // block part of the class name. Because we need to keep `browse` so this can
