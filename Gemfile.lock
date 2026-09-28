@@ -149,7 +149,7 @@ GEM
       cucumber (>= 7, < 12)
       railties (>= 6.1, < 9)
     cucumber-tag-expressions (8.1.0)
-    dalli (4.3.3)
+    dalli (4.3.4)
       logger
     dartsass-rails (0.5.1)
       railties (>= 6.0.0)
