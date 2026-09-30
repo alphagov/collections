@@ -1,0 +1,23 @@
+:root {
+  --govuk-frontend-version: "6.2.0";
+}
+
+@media (min-width: 40.0625em) {
+  .historic-people-index__section-row-header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.historic-people-index__section-row .govuk-body {
+  color: var(--govuk-secondary-text-colour, #484949);
+  margin-bottom: 25px;
+}
+.historic-people-index__section-row .govuk-body:nth-last-child(n+2) {
+  margin-bottom: 0;
+}
+@media (min-width: 40.0625em) {
+  .historic-people-index__section-row .govuk-body {
+    margin-bottom: 40px;
+  }
+}
