@@ -1,0 +1,155 @@
+:root {
+  --govuk-frontend-version: "6.2.0";
+}
+
+@media (min-width: 40.0625em) {
+  .content-list__sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+.taxon-page__breadcrumbs-wrapper {
+  background-color: #d2e2f1;
+  overflow: auto;
+  padding-bottom: 20px;
+}
+@media (min-width: 40.0625em) {
+  .taxon-page__breadcrumbs-wrapper {
+    padding-bottom: 50px;
+  }
+}
+
+.taxon-page__email-link-wrapper {
+  background-color: #f3f3f3;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--govuk-border-colour, #cecece);
+  padding: 30px 0;
+}
+
+.taxon-page__section-description {
+  margin-top: 10px;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+}
+/*! Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */ /* stylelint-disable-line scss/comment-no-loud  */
+@font-face {
+  font-family: "GDS Transport";
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+  src: url("light-94a07e06a1-v2.woff2") format("woff2"), url("light-f591b13f7d-v2.woff") format("woff");
+}
+@font-face {
+  font-family: "GDS Transport";
+  font-style: normal;
+  font-weight: bold;
+  font-display: fallback;
+  src: url("bold-b542beb274-v2.woff2") format("woff2"), url("bold-affa96571d-v2.woff") format("woff");
+}
+@media print {
+  .taxon-page__section-description {
+    font-family: sans-serif;
+  }
+}
+@media print {
+  .taxon-page__section-description {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.taxon-page__section-group {
+  border-top: 2px solid var(--govuk-brand-colour, #1d70b8);
+  margin-top: 45px;
+  padding-top: 15px;
+}
+
+.taxon-page__section-group:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.taxon-page__featured-item {
+  margin-top: 20px;
+}
+.taxon-page__featured-item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.taxon-page__featured-item--single {
+  min-width: 330px;
+}
+
+.taxon-page__featured-see-more {
+  display: block;
+  padding-top: 20px;
+  padding-left: 15px;
+  clear: both;
+}
+
+.taxon-page__show-more-toggle {
+  display: none;
+}
+.govuk-frontend-supported .taxon-page__show-more-toggle {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.taxon-page__organisations {
+  margin-bottom: 35px;
+  list-style-type: none;
+}
+.taxon-page__organisations .taxon-page__organisation {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--govuk-border-colour, #cecece);
+  padding-bottom: 15px;
+}
+
+.taxon-page__more-organisations.js-hidden {
+  display: none;
+}
+
+.taxon-page__sub-topic-sidebar a {
+  display: block;
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+.taxon-page__link-list {
+  list-style-type: none;
+}
+
+.taxon-page__link-list-item {
+  margin-bottom: 10px;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+}
+@media print {
+  .taxon-page__link-list-item {
+    font-family: sans-serif;
+  }
+}
+@media print {
+  .taxon-page__link-list-item {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 40.0625em) {
+  .taxon-page__link-list-item {
+    margin-bottom: 5px;
+  }
+}
