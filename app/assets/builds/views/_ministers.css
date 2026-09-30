@@ -1,0 +1,8 @@
+.clear-column {
+  clear: both;
+}
+
+.footnotes {
+  color: govuk-functional-colour("secondary-text");
+  display: block;
+}

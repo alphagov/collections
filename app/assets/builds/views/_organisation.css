@@ -1,0 +1,175 @@
+.organisation__brand-border-top {
+  border-top-width: 5px;
+  border-top-style: solid;
+}
+
+.organisation__section-wrap {
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 40.0625em) {
+  .organisation__corporate-information .organisation__float-section {
+    float: right;
+  }
+}
+.organisation__corporate-information .organisation__secondary-corporate-information {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+}
+/*! Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */ /* stylelint-disable-line scss/comment-no-loud  */
+@font-face {
+  font-family: "GDS Transport";
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+  src: url("/assets/fonts/light-94a07e06a1-v2.woff2") format("woff2"), url("/assets/fonts/light-f591b13f7d-v2.woff") format("woff");
+}
+@font-face {
+  font-family: "GDS Transport";
+  font-style: normal;
+  font-weight: bold;
+  font-display: fallback;
+  src: url("/assets/fonts/bold-b542beb274-v2.woff2") format("woff2"), url("/assets/fonts/bold-affa96571d-v2.woff") format("woff");
+}
+@media print {
+  .organisation__corporate-information .organisation__secondary-corporate-information {
+    font-family: sans-serif;
+  }
+}
+@media print {
+  .organisation__corporate-information .organisation__secondary-corporate-information {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+.organisation__corporate-information .organisation__secondary-corporate-information a:focus {
+  outline: 3px solid transparent;
+  color: var(--govuk-focus-text-colour, #0b0c0c);
+  background-color: var(--govuk-focus-colour, #ffdd00);
+  box-shadow: 0 -2px var(--govuk-focus-colour, #ffdd00), 0 4px var(--govuk-focus-text-colour, #0b0c0c);
+  text-decoration: none;
+}
+@supports not (text-wrap: balance) {
+  .organisation__corporate-information .organisation__secondary-corporate-information a:focus {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+}
+
+.organisation__contact-section {
+  overflow-wrap: break-word;
+}
+.organisation__contact-section .organisation__address {
+  font-style: normal;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+}
+@media print {
+  .organisation__contact-section .organisation__address {
+    font-family: sans-serif;
+  }
+}
+@media print {
+  .organisation__contact-section .organisation__address {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+.organisation__contact-section .organisation__contact-number {
+  margin-bottom: 10px;
+}
+
+.organisation__paragraph {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+}
+@media print {
+  .organisation__paragraph {
+    font-family: sans-serif;
+  }
+}
+@media print {
+  .organisation__paragraph {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.organisation__parent-organisations {
+  margin-top: 15px;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+}
+@media print {
+  .organisation__parent-organisations {
+    font-family: sans-serif;
+  }
+}
+@media print {
+  .organisation__parent-organisations {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.organisation__contact-section--border-top {
+  border-top: 1px solid var(--govuk-border-colour, #cecece);
+  margin-bottom: 15px;
+}
+
+.organisation__margin-bottom {
+  margin-bottom: 30px;
+}
+
+.organisation__supergroup--margin-bottom {
+  margin-bottom: 15px;
+}
+
+.organisation__no10-banner {
+  padding-top: 140px;
+  background-image: url("prime-ministers-office-header.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  text-align: center;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+}
+@media print {
+  .organisation__no10-banner {
+    font-family: sans-serif;
+  }
+}
+@media print {
+  .organisation__no10-banner {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.organisation__no10-yt-link {
+  display: none;
+}
+
+.govuk-frontend-supported .organisation__no10-yt-link {
+  display: block;
+}

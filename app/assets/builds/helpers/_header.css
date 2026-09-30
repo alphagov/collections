@@ -1,0 +1,11 @@
+@media (min-width: 40.0625em) {
+  .translation-nav-header {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 40.0525em) {
+  .translation-nav-header__child {
+    margin-bottom: 30px;
+  }
+}

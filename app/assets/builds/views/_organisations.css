@@ -1,0 +1,28 @@
+.organisations .organisations-list__section {
+  margin-bottom: 60px;
+}
+.organisations .organisations-list__item {
+  list-style-type: none;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--govuk-border-colour, #cecece);
+}
+.organisations .organisations-list__item h3 {
+  margin: 0;
+}
+.organisations .organisations-list__section.js-hidden,
+.organisations .organisations-list__item.js-hidden {
+  display: none;
+}
+@media (min-width: 40.0625em) {
+  .organisations .organisations-list__without-number {
+    float: right;
+  }
+}
+
+.filter-list__form {
+  display: none;
+}
+
+.filter-list__form--active {
+  display: block;
+}

@@ -1,0 +1,87 @@
+.topical-events-show .topical-event-logo img {
+  max-width: 100%;
+  height: auto;
+}
+.topical-events-show .organisations-list {
+  list-style: none;
+  padding: 0;
+  /* stylelint-disable */
+  /* stylelint-enable */
+}
+.topical-events-show .organisations-list .organisations-list__item {
+  float: left;
+  padding: 0 15px 15px;
+  min-height: 90px;
+  border: none;
+  margin: 0;
+}
+.topical-events-show .organisations-list .organisations-list__item .organisation-logo:focus {
+  padding-bottom: 5px;
+}
+.topical-events-show .organisations-list .non-govuk a {
+  display: block;
+  height: 80px;
+  text-indent: -999em;
+  background: transparent none no-repeat 50% 50%;
+}
+.topical-events-show .organisations-list .non-govuk.arts-council-england a {
+  background-image: url("topical-events/arts-council-england.png");
+  width: 217px;
+}
+.topical-events-show .organisations-list .non-govuk.bbc a {
+  background-image: url("topical-events/bbc.png");
+  width: 143px;
+}
+.topical-events-show .organisations-list .non-govuk.british-library a {
+  background-image: url("topical-events/british-library.png");
+  width: 30px;
+}
+.topical-events-show .organisations-list .non-govuk.commonwealth-war-graves-commission a {
+  background-image: url("topical-events/cwgc.png");
+  width: 209px;
+}
+.topical-events-show .organisations-list .non-govuk.heritage-lottery-fund a {
+  background-image: url("topical-events/hlf.png");
+  width: 74px;
+}
+.topical-events-show .organisations-list .non-govuk.historic-england a {
+  background-image: url("topical-events/historic-england.png");
+  width: 242px;
+}
+.topical-events-show .organisations-list .non-govuk.imperial-war-museums a {
+  background-image: url("topical-events/iwm.png");
+  width: 80px;
+}
+.topical-events-show .organisations-list .non-govuk.war-memorials-trust a {
+  background-image: url("topical-events/wmt.png");
+  width: 103px;
+}
+.topical-events-show .organisations-list .non-govuk.birmingham_2022_commonwealth_games a {
+  background-image: url("topical-events/birmingham_2022.png");
+  width: 120px;
+  height: 120px;
+}
+.topical-events-show .organisations-list .non-govuk.queens_platinum_jubilee a {
+  background-image: url("topical-events/platinum_jubilee.png");
+  width: 120px;
+  height: 120px;
+}
+.topical-events-show .organisations-list .non-govuk.unboxed a {
+  background-image: url("topical-events/unboxed.png");
+  width: 250px;
+  height: 120px;
+}
+.topical-events-show .topical-events__section-break,
+.topical-events-show .topical-events__social-media-links,
+.topical-events-show .topical-events__image,
+.topical-events-show .topical-event__body-wrapper {
+  margin-bottom: 30px;
+}
+@media (min-width: 40.0625em) {
+  .topical-events-show .topical-events__section-break,
+  .topical-events-show .topical-events__social-media-links,
+  .topical-events-show .topical-events__image,
+  .topical-events-show .topical-event__body-wrapper {
+    margin-bottom: 50px;
+  }
+}

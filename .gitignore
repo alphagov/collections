@@ -17,7 +17,6 @@
 /yarn-error.log
 
 /public/assets
-/app/assets/builds/*
 !/app/assets/builds/.keep
 
 # pact reports
