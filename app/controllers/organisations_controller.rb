@@ -35,6 +35,7 @@ class OrganisationsController < ApplicationController
     @header = Organisations::HeaderPresenter.new(@organisation)
     @what_we_do = Organisations::WhatWeDoPresenter.new(@organisation)
     @contacts = Organisations::ContactsPresenter.new(@organisation)
+    @not_live = Organisations::NotLivePresenter.new(@organisation)
 
     render organisation: @organisation
   end

@@ -9,6 +9,12 @@
 <%= render partial: 'breadcrumb' %>
 <%= render partial: 'courts_header' %>
 
+<% if !@organisation.is_live? %>
+  <%= render "govuk_publishing_components/components/notice", {
+    title: sanitize(@not_live.non_live_organisation_notice)
+  } %>
+<% end %>
+
 <% if @organisation.body || what_we_do.has_share_links? %>
   <%= render partial: 'what_we_do' %>
 <% end %>
