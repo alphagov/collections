@@ -1,35 +1,42 @@
 <% content_for :title, @presented_embassies.title.html_safe %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_embassies", media: "all" %>
+<% end %>
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= t('embassies.meta_description') %>.">
 <% end %>
 
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
 
-<%= render "govuk_publishing_components/components/heading", {
-  context: t('embassies.context'),
-  text: @presented_embassies.title,
-  heading_level: 1,
-  margin_bottom: 8,
-  font_size: "xl",
-} %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <%= render "govuk_publishing_components/components/heading", {
+      context: t('embassies.context'),
+      text: @presented_embassies.title,
+      heading_level: 1,
+      margin_bottom: 8,
+      font_size: "xl",
+    } %>
+  </div>
+</div>
 
-<div class="govuk-main-wrapper">
-  <div class="govuk-grid-row">
-    <aside class="govuk-grid-column-one-quarter">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: raw("<span class=\" govuk-visually-hidden\">#{t('embassies.visually_hidden_ordering_hint')} </span> #{t('embassies.ordering_title')}"),
-        font_size: "l",
-        margin_bottom: 6,
-        } %>
-    </aside>
-    <section class="govuk-grid-column-three-quarters">
-      <ol class="govuk-list govuk-list--spaced">
-        <% @presented_embassies.embassies_by_location.each do |embassy| -%>
-          <li class="govuk-grid-row">
+<div class="govuk-grid-row">
+  <section class="govuk-grid-column-three-quarters-from-desktop" data-module="filter-list" data-filter-label="Search for an embassy by country">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: raw("<span class=\" govuk-visually-hidden\">#{t('embassies.visually_hidden_ordering_hint')} </span> #{t('embassies.ordering_title')}"),
+      font_size: "l",
+      margin_bottom: 6,
+    } %>
+    <ol class="embassies-list">
+      <% @presented_embassies.embassies_by_location.each do |embassy| -%>
+        <li class="embassies-list__item" data-filter-item>
+          <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-third">
               <%= render "govuk_publishing_components/components/heading", {
-                text: embassy.name, margin_bottom: 1
-                } %>
+                text: embassy.name,
+                margin_bottom: 1,
+                heading_level: 3,
+              } %>
             </div>
             <div class="govuk-grid-column-two-thirds">
               <% if embassy.can_assist_british_nationals? %>
@@ -49,10 +56,9 @@
                 <p class="govuk-body"><%= t('embassies.contact_local_authorities') %>.</p>
               <% end %>
             </div>
-          </li>
-          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        <% end %>
-      </ol>
-    </section>
-  </div>
+          </div>
+        </li>
+      <% end %>
+    </ol>
+  </section>
 </div>
