@@ -595,7 +595,7 @@ __metadata:
     jasmine-browser-runner: ^5.0.0
     jasmine-core: ^7.0.2
     standard: ^17.0.0
-    stylelint: ^17.15.0
+    stylelint: ^17.16.0
     stylelint-config-gds: 3.0.0
   languageName: unknown
   linkType: soft
@@ -3652,9 +3652,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^17.15.0":
-  version: 17.15.0
-  resolution: "stylelint@npm:17.15.0"
+"stylelint@npm:^17.16.0":
+  version: 17.16.0
+  resolution: "stylelint@npm:17.16.0"
   dependencies:
     "@csstools/css-calc": ^3.3.0
     "@csstools/css-parser-algorithms": ^4.0.0
@@ -3693,7 +3693,7 @@ __metadata:
     write-file-atomic: ^7.0.1
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: 27c83015f990b8e8bea22e4aeac537835e3609ad1b5409c8c2ddf242f8dafe80a542994ecf52f017e73e837613d536e504f3c6696094b918b2c2fe80f88414e5
+  checksum: 39ee1390eefb238e80fed0702e5f7c08da2f2fac6dd03ed59608496a2b485b8604e5742b228ba7bb51a4b14c6c9c4249e6501b1eecf28af07ff16c3dd05c6c1c
   languageName: node
   linkType: hard
 
