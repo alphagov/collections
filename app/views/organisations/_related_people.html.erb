@@ -22,7 +22,7 @@
       <div class="govuk-grid-row" data-module="ga4-link-tracker" data-ga4-link="<%= ga4_image_card_json %>">
         <% people.each do |person| %>
           <div class="govuk-grid-column-one-quarter">
-            <%= render "govuk_publishing_components/components/image_card", person %>
+            <%= render "govuk_publishing_components/components/image_card", person.merge(image_loading: "lazy") %>
           </div>
         <% end %>
       </div>
