@@ -1,3 +1,6 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_history_people", media: "all" %>
+<% end %>
 <% content_for :title, @past_prime_minister.page_title.html_safe %>
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
 
@@ -27,9 +30,11 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
         <%= image_tag(
-              @past_prime_minister.image_data["url"],
-              alt: @past_prime_minister.image_data["alt_text"],
-              class: "govuk-!-margin-bottom-4 govuk-!-width-full"
+          @past_prime_minister.image_data["url"],
+          width: 465,
+          height: 310,
+          alt: @past_prime_minister.image_data["alt_text"],
+          class: "historic-people__portrait-img govuk-!-margin-bottom-4 govuk-!-width-full"
         ) %>
       </div>
     </div>
