@@ -25,9 +25,9 @@
       <% if contact[:email_addresses].any? %>
         <div class="organisation__margin-bottom">
           <% if I18n.exists?('organisations.contact.email', contact[:locale]) %>
-            <p class="govuk-body"><%= t('organisations.contact.email') %></p>
+            <p class="govuk-body govuk-!-margin-bottom-1"><%= t('organisations.contact.email') %></p>
           <% else %>
-            <p class="govuk-body" lang="en"><%= t('organisations.contact.email') %></p>
+            <p class="govuk-body govuk-!-margin-bottom-1" lang="en"><%= t('organisations.contact.email') %></p>
           <% end %>
 
           <% contact[:email_addresses].each do |email| %>
@@ -53,7 +53,7 @@
       <% if contact[:phone_numbers].any? %>
         <div class="organisation__margin-bottom">
           <% contact[:phone_numbers].each do |phone| %>
-            <p class="govuk-body"><%= phone[:title] %></p>
+            <p class="govuk-body govuk-!-margin-bottom-1"><%= phone[:title] %></p>
             <p class="govuk-body"><%= phone[:number] %></p>
           <% end %>
         </div>
