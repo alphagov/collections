@@ -1,3 +1,6 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "views/_history_people", media: "all" %>
+<% end %>
 <% page_class "govuk-main-wrapper govuk-main-wrapper--auto-spacing" %>
 
 <div class="govuk-grid-row">
@@ -24,8 +27,15 @@
     <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible govuk-!-margin-bottom-4">
 
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <%= image_tag image, class: "govuk-!-margin-bottom-4 govuk-!-width-full", alt: "", loading: "lazy" %>
+      <div class="govuk-grid-column-full">
+        <%= image_tag(
+          image,
+          class: "historic-people__portrait-img",
+          alt: "",
+          width: 218,
+          height: 144,
+          loading: "lazy"
+        ) %>
       </div>
     </div>
 

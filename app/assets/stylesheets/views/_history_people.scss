@@ -20,3 +20,17 @@
     @include govuk-responsive-margin(7, "bottom");
   }
 }
+
+.historic-people__portrait-img {
+  display: block;
+  height: auto;
+  margin-bottom: govuk-spacing(3);
+
+  @include govuk-media-query($until: tablet) {
+    width: 100%;
+  }
+
+  @include govuk-media-query($from: "tablet") {
+    margin-bottom: govuk-spacing(4);
+  }
+}
