@@ -23,6 +23,9 @@
   <% if include_percentage_scroll_tracking?(content_item_h["base_path"]) %>
     <meta name="govuk:scroll-tracker" content="" data-module="ga4-scroll-tracker">
   <% end %>
+  <% if include_header_scroll_tracking?(content_item_h["base_path"]) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="ga4-scroll-tracker" data-ga4-track-type="headings">
+  <% end %>
 <% end %>
 
 <%= render "govuk_publishing_components/components/layout_for_public", {

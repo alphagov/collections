@@ -185,4 +185,28 @@ RSpec.describe ApplicationHelper do
       end
     end
   end
+
+  describe "include_header_scroll_tracking?" do
+    before do
+      stub_const("ApplicationHelper::HEADER_SCROLL_TRACKING_URLS", ["/browse"])
+    end
+
+    describe "when nothing is passed to it" do
+      it "does not include tracking by default" do
+        expect(include_header_scroll_tracking?).to be(false)
+      end
+    end
+
+    describe "when the page is not in the list" do
+      it "does not include scroll tracking" do
+        expect(include_header_scroll_tracking?("/browse/speeches/test")).to be(false)
+      end
+    end
+
+    describe "when the page is in the list" do
+      it "does include scroll tracking" do
+        expect(include_header_scroll_tracking?("/browse")).to be(true)
+      end
+    end
+  end
 end

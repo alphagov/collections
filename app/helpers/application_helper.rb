@@ -91,10 +91,21 @@ module ApplicationHelper
   end
 
   PERCENTAGE_SCROLL_TRACKING_URLS = [].freeze
+  HEADER_SCROLL_TRACKING_URLS = [
+    "/browse/housing-local-services/landlords",
+    "/browse/housing-local-services/renting-property",
+    "/browse/housing-local-services/repossessions-evictions",
+  ].freeze
 
   def include_percentage_scroll_tracking?(base_path = nil)
     return false unless base_path
 
     PERCENTAGE_SCROLL_TRACKING_URLS.include?(base_path)
+  end
+
+  def include_header_scroll_tracking?(base_path = nil)
+    return false unless base_path
+
+    HEADER_SCROLL_TRACKING_URLS.include?(base_path)
   end
 end
