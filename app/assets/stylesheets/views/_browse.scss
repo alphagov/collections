@@ -4,7 +4,7 @@
 // block part of the class name. Because we need to keep `browse` so this can
 // be run as an A/B test, we need to use a different class name for each view.
 .browse__breadcrumb-wrapper {
-  background-color: $govuk-blue-tint-80;
+  background-color: govuk-colour("blue", $variant: "tint-80");
   // Setting the overflow to auto is required to prevent the breadcrumb
   // component's margin from collapsing.
   overflow: auto;

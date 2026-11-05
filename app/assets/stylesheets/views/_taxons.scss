@@ -9,7 +9,7 @@
 }
 
 .taxon-page__breadcrumbs-wrapper {
-  background-color: $govuk-blue-tint-80;
+  background-color: govuk-colour("blue", $variant: "tint-80");
   // Setting the overflow to auto is required to prevent the breadcrumb
   // component's margin from collapsing.
   overflow: auto;
