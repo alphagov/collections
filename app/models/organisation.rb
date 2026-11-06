@@ -7,9 +7,7 @@ class Organisation
 
   HMCTS_CONTENT_ID = "6f757605-ab8f-4b62-84e4-99f79cf085c2".freeze
 
-  CUSTOM_BANNERS_DATA = {
-    "department-for-business-and-trade" => "This organisation is changing. It’s now called the <a href=\"https://www.gov.uk/government/organisations/department-for-business-innovation-science-and-trade\">Department for Business, Innovation, Science and Trade</a>.",
-  }.freeze
+  CUSTOM_BANNERS_DATA = {}.freeze
 
   def initialize(content_item)
     @content_item = content_item
