@@ -4,7 +4,7 @@ class TopicalEventsController < ApplicationController
   enable_request_formats show: :atom
 
   def show
-    @topical_event = TopicalEvent.find!(request)
+    @topical_event = TopicalEvent.find!(path)
 
     respond_to do |format|
       format.html do

@@ -6,8 +6,8 @@ class TopicalEvent
     @documents_service = TopicalEventSearchDocuments
   end
 
-  def self.find!(request)
-    content_item = ConditionalLoader::ContentItem.find!(request)
+  def self.find!(base_path)
+    content_item = ContentItem.find!(base_path)
     new(content_item)
   end
 

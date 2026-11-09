@@ -6,7 +6,7 @@ RSpec.feature "Topical Event pages" do
   let(:base_path) { content_item["base_path"] }
 
   before do
-    stub_conditional_loader_returns_content_item_for_path(base_path, content_item)
+    stub_content_store_has_item(base_path, content_item)
     stub_search(body: { results: [] })
 
     allow(Random).to receive(:rand).with(1.0).and_return(1)
@@ -41,7 +41,7 @@ RSpec.feature "Topical Event pages" do
     before do
       content_item["details"]["image"].delete("medium_resolution_url")
       content_item["details"]["image"].delete("high_resolution_url")
-      stub_conditional_loader_returns_content_item_for_path(base_path, content_item)
+      stub_content_store_has_item(base_path, content_item)
     end
     it "omits srcset if there are no higher res image sizes" do
       visit base_path
@@ -223,7 +223,7 @@ RSpec.feature "Topical Event pages" do
 
   context "when there are no organisations" do
     before do
-      stub_conditional_loader_returns_content_item_for_path(base_path, content_item_without_link(content_item, "organisations"))
+      stub_content_store_has_item(base_path, content_item_without_link(content_item, "organisations"))
     end
 
     it "does not include a link to the organisations" do
@@ -251,7 +251,7 @@ RSpec.feature "Topical Event pages" do
 
   context "when there are no social media links" do
     before do
-      stub_conditional_loader_returns_content_item_for_path(base_path, content_item_without_detail(content_item, "social_media_links"))
+      stub_content_store_has_item(base_path, content_item_without_detail(content_item, "social_media_links"))
     end
 
     it "does not include links to any social media platforms" do
@@ -283,7 +283,7 @@ RSpec.feature "Topical Event pages" do
 
   context "when there are no featured documents" do
     before do
-      stub_conditional_loader_returns_content_item_for_path(base_path, content_item_without_detail(content_item, "ordered_featured_documents"))
+      stub_content_store_has_item(base_path, content_item_without_detail(content_item, "ordered_featured_documents"))
     end
 
     it "does not include the featured documents header" do
@@ -296,7 +296,7 @@ RSpec.feature "Topical Event pages" do
     let(:related_documents) { { "An announcement on Topicals" => "/foo/announcement_one", "Another announcement" => "/foo/announcement_two" } }
 
     before do
-      stub_conditional_loader_returns_content_item_for_path("#{base_path}.atom", content_item)
+      stub_content_store_has_item(base_path, content_item)
       stub_search(body: search_api_response(related_documents))
     end
 
