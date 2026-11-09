@@ -5,7 +5,7 @@ RSpec.describe WorldController do
   describe "GET index" do
     context "the request is successful" do
       before do
-        stub_conditional_loader_returns_content_item_for_path(base_path, world)
+        stub_content_store_has_item(base_path, world)
       end
 
       it "successfully renders the page" do
@@ -18,7 +18,7 @@ RSpec.describe WorldController do
 
     context "the request is not successful" do
       before do
-        stub_conditional_loader_does_not_return_content_item_for_path(base_path)
+        stub_content_store_does_not_have_item(base_path)
       end
 
       it "responds with a 404" do
