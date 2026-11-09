@@ -4,7 +4,7 @@ RSpec.feature "Role page" do
   include SearchApiHelpers
 
   before do
-    stub_conditional_loader_returns_content_item_for_path(
+    stub_content_store_has_item(
       base_path,
       role_content_item_data,
     )
