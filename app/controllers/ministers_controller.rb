@@ -4,7 +4,7 @@ class MinistersController < ApplicationController
   around_action :switch_locale
 
   def index
-    @ministers_index = MinistersIndex.find!(request)
+    @ministers_index = MinistersIndex.find!(request.path)
 
     content_item_data = @ministers_index.content_item.content_item_data
 

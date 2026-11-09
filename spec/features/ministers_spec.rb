@@ -5,7 +5,7 @@ RSpec.feature "Ministers index page" do
   let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
 
   before do
-    stub_conditional_loader_returns_content_item_for_path(base_path, document)
+    stub_content_store_has_item(base_path, document)
     visit base_path
   end
 
