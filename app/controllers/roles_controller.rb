@@ -1,6 +1,4 @@
 class RolesController < ApplicationController
-  include PrometheusSupport
-
   around_action :switch_locale
 
   def show

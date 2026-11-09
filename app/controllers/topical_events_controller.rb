@@ -1,6 +1,4 @@
 class TopicalEventsController < ApplicationController
-  include PrometheusSupport
-
   enable_request_formats show: :atom
 
   def show

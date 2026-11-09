@@ -1,6 +1,4 @@
 class MinistersController < ApplicationController
-  include PrometheusSupport
-
   around_action :switch_locale
 
   def index
