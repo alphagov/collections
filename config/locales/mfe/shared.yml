@@ -8,11 +8,11 @@ mfe:
     featured: 
     get_emails: 
     language_direction: ltr
-    language_name:
+    language_name: Kreol Morisien
     schema_name:
       aaib_report:
-        one: 
-        other:
+        one: Bann rapor depi Air Accidents Investigation Branch
+        other: Bann rapor depi Air Accidents Investigation Branch
       about:
         one: 
         other: 
@@ -29,26 +29,26 @@ mfe:
         one:
         other:
       announcement:
-        one:
-        other:
+        one: Kominike
+        other: Bann kominike
       asylum_support_decision:
-        one:
-        other:
+        one: Desizion depi Asylum support tribunal
+        other: Bann desizion depi Asylum support tribunal
       authored_article:
-        one:
-        other:
+        one: Lartik signe par
+        other: Bann lartik signe par
       blog_post:
         one:
         other:
       business_finance_support_scheme:
-        one:
-        other:
+        one: Program soutien finansie pou biznes
+        other: Bann program soutien finansie pou biznes
       call_for_evidence:
-        one:
-        other:
+        one: Apel pou kontribision
+        other: Bann apel pou kontribision
       call_for_evidence_outcome:
-        one:
-        other:
+        one: Rezilta apel pou kontribision
+        other: Bann rezilta apel pou kontribision
       campaign:
         one:
         other:
@@ -56,17 +56,17 @@ mfe:
         one:
         other:
       case_study:
-        one:
-        other:
+        one: Etid-de-ka
+        other: Bann etid-de-ka
       closed_call_for_evidence:
-        one:
-        other:
+        one: Apel pou kontribision klotire
+        other: Bann apel pou kontribision klotire
       closed_consultation:
-        one:
-        other:
+        one: Konsiltasion klotire
+        other: Bann konsiltasion klotire
       cma_case:
-        one:
-        other:
+        one: Dosie Competition and Markets Authority
+        other: Bann dosie Competition and Markets Authority
       coming_soon:
         one:
         other:
@@ -74,47 +74,47 @@ mfe:
         one:
         other:
       consultation:
-        one:
-        other:
+        one: Konsiltasion
+        other: Bann konsiltasion
       consultation_outcome:
-        one:
-        other:
+        one: Rezilta konsiltasion
+        other: Bann rezilta konsiltasion
       corporate_information_page:
-        one:
-        other:
+        one: Paz informasion
+        other: Bann paz informasion
       corporate_report:
-        one:
-        other:
+        one: Rapor antrepriz/ Rapor institisionel
+        other: Bann rapor antepriz/ bann rapor institisionel
       correspondence:
-        one:
-        other:
+        one: Korespondans
+        other: Bann korespondans
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Sibvansion depi program Country Stewardship
+        other: Bann sibvasion depi program Country Stewardship
       decision:
-        one:
-        other:
+        one: Desizion
+        other: Bann desizion
       detailed_guidance:
         one:
         other:
       detailed_guide:
-        one:
-        other:
+        one: Gid / Konsey /Direktiv
+        other: Gid / Konsey /Direktiv
       dfid_research_output:
-        one:
-        other:
+        one: Rezilta resers pou devlopman
+        other: Bann rezilta resers pou devlopman
       document_collection:
-        one:
-        other:
+        one: Koleksion
+        other: Bann koleksion
       draft_text:
-        one:
-        other:
+        one: Version preliminer
+        other: Bann version preliminer
       drcf_digital_markets_research:
         one:
         other:
       drug_safety_update:
-        one:
-        other:
+        one: Miz-a-zour lor sekirite medikaman
+        other: Bann miz-a-zour lor sekirite medikaman
       edition:
         one:
         other:
@@ -125,62 +125,62 @@ mfe:
         one:
         other:
       employment_tribunal_decision:
-        one:
-        other:
+        one: Desizion Employment tribunal
+        other: Bann desizion Employment tribunal
       equality_and_diversity:
-        one:
-        other:
+        one: Egalite ek diversite
+        other: Egalite ek diversite
       esi_fund:
-        one:
-        other:
+        one: European Structural and Investment Fund (ESIF)
+        other: European Structural and Investment Fund (ESIF)
       fatality_notice:
-        one:
-        other:
+        one: Avi-dese
+        other: Bann avi-dese
       foi_release:
-        one:
-        other:
+        one: Piblikasion otit Drwa akse avek linformasion
+        other: Bann piblikasion otit Drwa aske avek linformasion
       form:
-        one:
-        other:
+        one: Formiler
+        other: Bann formiler
       generic_edition:
         one:
         other:
       government_response:
-        one:
-        other:
+        one: Repons gouvernman
+        other: Bann repons gouvernman
       guidance:
-        one:
-        other:
+        one: Gid / Konsey /Direktiv
+        other: Gid / Konsey /Direktiv
       impact_assessment:
-        one:
-        other:
+        one: Etid linpak
+        other: Bann etid linpak
       imported:
-        one:
-        other:
+        one: Inporte - kategori pou determine
+        other: Inporte - kategori pou determine
       independent_report:
-        one:
-        other:
+        one: Rapor indepandan
+        other: Bann rapor indepandan
       international_development_fund:
-        one:
-        other:
+        one: Finansman devlopman internasional
+        other: Finansman devlopman internasional
       international_treaty:
-        one:
-        other:
+        one: Trete internasional
+        other: Bann trete internasional
       maib_report:
-        one:
-        other:
+        one: Rapor depi Marine Accident Investigation Branch
+        other: Bann rapor depi Marine Accident Investigation Branch
       manual:
         one:
         other:
       map:
-        one:
-        other:
+        one: Map
+        other: Bann map
       media_enquiries:
         one:
         other:
       medical_safety_alert:
-        one:
-        other:
+        one: Bann alert ek rapel konsernan bann medikaman ek dispozitif medikal
+        other: Bann alert ek rapel konsernan bann medikaman ek dispozitif medikal
       membership:
         one:
         other:
@@ -188,20 +188,20 @@ mfe:
         one:
         other:
       national:
-        one:
-        other:
+        one: Anons bann statistik ofisiel akredite
+        other: Bann anons bann statistik ofisiel akredite
       national_statistics:
-        one:
-        other:
+        one: Statistik ofisiel akredite
+        other: Statistik ofisiel akredite
       national_statistics_announcement:
-        one:
-        other:
+        one: Anons bann statistik ofisiel akredite
+        other: Anons bann statistik ofisiel akredite
       news_article:
-        one: 
-        other:
+        one: Lartik aktialite
+        other: Bann lartik aktialite
       news_story:
-        one:
-        other:
+        one: Aktialite
+        other: Bann aktialite
       nhs_content:
         one:
         other:
@@ -209,23 +209,23 @@ mfe:
         one:
         other:
       official:
-        one:
-        other:
+        one: Anons bann statistik ofisiel
+        other: Anons bann statistik ofisiel
       official_statistics:
-        one:
-        other:
+        one: Bann statistik ofisiel
+        other: Bann statistik ofisiel
       official_statistics_announcement:
-        one:
-        other:
+        one: Anons bann statistik ofisiel
+        other: Anons bann statistik ofisiel
       open_call_for_evidence:
-        one:
-        other:
+        one: Apel pou kontrision ouver
+        other: Bann lapel pou kontribision ouver
       open_consultation:
-        one:
-        other:
+        one: Konsiltasion ouver
+        other: Bann konsiltasion ouver
       oral_statement:
-        one:
-        other:
+        one: Deklarasion oral dan Parlman
+        other: Bann deklarasion oral dan Parlman
       our_energy_use:
         one:
         other:
@@ -239,98 +239,98 @@ mfe:
         one:
         other:
       policy:
-        one:
-        other:
+        one: Politik
+        other: Bann politik
       policy_paper:
-        one:
-        other:
+        one: Dokiman politk
+        other: Bann dokiman politik
       press_release:
-        one:
-        other:
+        one: Kominike lapres
+        other: Bann kominike lapres
       procurement:
-        one:
-        other:
+        one: Procurement
+        other: Procurement
       promotional:
-        one:
-        other:
+        one: Materyel promosionel
+        other: Materyel promosionel
       publication:
-        one:
-        other:
+        one: Dokiman
+        other: Bann dokiman
       publication_scheme:
         one:
         other:
       raib_report:
-        one:
-        other:
+        one: Rapor depi Rail Accident Investigation Branch
+        other: Bann rapor depi Accident Investigation Branch
       recruitment:
         one:
         other:
       regulation:
-        one:
-        other:
+        one: Reglemantasion
+        other: Bann reglemantasion
       research:
-        one:
-        other:
+        one: Resers ek analiz
+        other: Resers ek analiz
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Desizion tribinal bann litiz relatif a bann dibien imobilie
+        other: Bann desizion tribinal bann litiz relatif a bann dibien imobilie
       service:
         one:
         other:
       service_sign_in:
-        one:
-        other:
+        one: Konexion a enn servis
+        other: Konexion a enn servis
       service_standard_report:
-        one:
-        other:
+        one: Rapor evaliasion norm servis
+        other: Bann rapor evaliasion norm servis
       social_media_use:
         one:
         other:
       speaking_notes:
-        one:
-        other:
+        one: Bann not alokision
+        other: Bann not alokision
       speech:
-        one:
-        other:
+        one: Diskour
+        other: Bann diskour
       staff_update:
         one:
         other:
       standard:
-        one:
-        other:
+        one: Norm
+        other: Bann norm
       statement_to_parliament:
-        one:
-        other:
+        one: Deklarasion dan Palrman
+        other: Bann deklarasion dan Parlman
       statistical_data_set:
-        one:
-        other:
+        one: Lansanb bann done statistik
+        other: Lansanb bann done statistik
       statistics:
-        one: 
-        other: 
+        one: Bann statistik
+        other: Bann statistik
       statistics_announcement:
-        one:
-        other:
+        one: Anons piblikasion bann statistik
+        other: Anons piblikasion bann statistik
       statutory_guidance:
-        one:
-        other:
+        one: Direktiv statiter
+        other: Direktiv statiter
       take_part:
         one: 
         other: 
       tax_tribunal_decision:
-        one:
-        other:
+        one: Desizion depi tribinal tax ek Chancery
+        other: Bann desizion depi tribinal tax ek Chancery
       terms_of_reference:
         one:
         other:
       transcript:
-        one: 
-        other:
+        one: Transkript
+        other: Bann transkript
       transparency:
-        one: 
-        other: 
+        one: Informasion relatif avek transparans
+        other: Informasion relatif avek transparans
       utaac_decision:
-        one: 
-        other: 
+        one: Desizion tribinel apel administratif
+        other: Bann dezision tribinal apel administratif
       welsh_language_scheme:
         one: 
         other: 
@@ -338,10 +338,10 @@ mfe:
         one: 
         other: 
       world_news_story:
-        one: 
-        other: 
+        one: Aktialite internasional
+        other: Bann aktialite internasional
       written_statement:
-        one: 
-        other: 
+        one: Deklarasion ekri pou Parlman
+        other: Bann deklrasion ekri pou Parlman
     topics:
       title: 
