@@ -1,8 +1,6 @@
 class WorldController < ApplicationController
-  include PrometheusSupport
-
   def index
-    @world_index = WorldIndex.find!(request)
+    @world_index = WorldIndex.find!(request.path)
 
     content_item_data = @world_index.content_item.content_item_data
 

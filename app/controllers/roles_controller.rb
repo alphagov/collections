@@ -1,10 +1,8 @@
 class RolesController < ApplicationController
-  include PrometheusSupport
-
   around_action :switch_locale
 
   def show
-    @role = Role.find!(request)
+    @role = Role.find!(request.path)
 
     content_item_data = @role.content_item.content_item_data
 

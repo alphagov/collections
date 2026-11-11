@@ -7,8 +7,8 @@ RSpec.describe RolesController do
 
   describe "GET show" do
     before do
-      stub_conditional_loader_returns_content_item_for_path(base_path, prime_minister)
-      stub_conditional_loader_does_not_return_content_item_for_path("/government/ministers/she-ra")
+      stub_content_store_has_item(base_path, prime_minister)
+      stub_content_store_does_not_have_item("/government/ministers/she-ra")
       stub_minister_announcements(role)
     end
 

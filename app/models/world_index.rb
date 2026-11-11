@@ -5,8 +5,8 @@ class WorldIndex
     @content_item = content_item
   end
 
-  def self.find!(request)
-    content_item = ConditionalLoader::ContentItem.find!(request)
+  def self.find!(base_path)
+    content_item = ContentItem.find!(base_path)
     new(content_item)
   end
 end

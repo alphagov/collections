@@ -6,7 +6,7 @@ RSpec.describe TopicalEventsController do
   describe "GET show" do
     context "the request is for a valid content item" do
       before do
-        stub_conditional_loader_returns_content_item_for_path(base_path, example_document)
+        stub_content_store_has_item(base_path, example_document)
       end
 
       it "the request is successful" do
@@ -18,7 +18,7 @@ RSpec.describe TopicalEventsController do
 
     context "the request is for an invalid content item" do
       before do
-        stub_conditional_loader_does_not_return_content_item_for_path("/government/topical-events/invalid")
+        stub_content_store_does_not_have_item("/government/topical-events/invalid")
       end
 
       it "when there is no content item" do

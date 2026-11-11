@@ -4,7 +4,7 @@ RSpec.describe MinistersController do
 
   describe "index" do
     before do
-      stub_conditional_loader_returns_content_item_for_path(base_path, ministers)
+      stub_content_store_has_item(base_path, ministers)
     end
 
     it "responds with a 200" do
