@@ -70,6 +70,7 @@ module Collections
       ky
       lt
       lv
+      mfe
       ms
       mt
       ne
