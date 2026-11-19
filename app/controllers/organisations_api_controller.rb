@@ -25,7 +25,7 @@ class OrganisationsApiController < ApplicationController
 
 private
 
-  RESULTS_PER_PAGE = 20
+  RESULTS_PER_PAGE = 100
 
   def presented_organisations(start:)
     organisations = organisations_from_search(count: RESULTS_PER_PAGE, start:)
