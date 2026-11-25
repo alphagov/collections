@@ -90,7 +90,9 @@ module ApplicationHelper
     ].include?(request.path)
   end
 
-  PERCENTAGE_SCROLL_TRACKING_URLS = [].freeze
+  PERCENTAGE_SCROLL_TRACKING_URLS = [
+    "/government/organisations/disclosure-and-barring-service",
+  ].freeze
   HEADER_SCROLL_TRACKING_URLS = [
     "/browse/housing-local-services/landlords",
     "/browse/housing-local-services/renting-property",
