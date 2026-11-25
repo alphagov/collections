@@ -39,13 +39,14 @@ class Organisation
   end
 
   def brand
-    return slug if is_no_10?
+    # govuk-frontend and Whitehall still use the old slug as the brand name
+    return "prime-ministers-office-10-downing-street" if is_no_10?
 
     details["brand"]
   end
 
   def is_no_10?
-    slug == "prime-ministers-office-10-downing-street"
+    %w[prime-ministers-office-10-downing-street prime-ministers-office-no-10].include?(slug)
   end
 
   def is_civil_service?
