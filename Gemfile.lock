@@ -869,7 +869,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 4.0.10p0
+  ruby 4.0.10
 
 BUNDLED WITH
-   2.6.9
+  4.0.20
