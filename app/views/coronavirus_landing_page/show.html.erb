@@ -19,6 +19,15 @@
   header: details.header_section
 } %>
 
+<%= render "govuk_publishing_components/components/map", {
+  heading_text: "An example map",
+  zoom: 12,
+  centre: [
+    -3.1883,
+    55.9533
+  ]
+} %>
+
 <div class="govuk-width-container covid__page">
   <section class="covid__section covid__section--first">
     <div class="govuk-grid-row">
