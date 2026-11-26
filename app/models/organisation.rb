@@ -46,7 +46,7 @@ class Organisation
   end
 
   def is_no_10?
-    %w[prime-ministers-office-10-downing-street prime-ministers-office-no-10].include?(slug)
+    slug == "prime-ministers-office-no-10"
   end
 
   def is_civil_service?

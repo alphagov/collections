@@ -9,8 +9,7 @@ RSpec.describe Organisation do
   end
 
   describe "#is_no_10?" do
-    it "is true for the old and new Number 10 slugs" do
-      expect(organisation_with_slug("prime-ministers-office-10-downing-street")).to be_is_no_10
+    it "is true for the Number 10 slug" do
       expect(organisation_with_slug("prime-ministers-office-no-10")).to be_is_no_10
     end
 
@@ -20,8 +19,7 @@ RSpec.describe Organisation do
   end
 
   describe "#brand" do
-    it "is the old Number 10 slug for both the old and new Number 10 slugs" do
-      expect(organisation_with_slug("prime-ministers-office-10-downing-street").brand).to eq("prime-ministers-office-10-downing-street")
+    it "is the old Number 10 slug for Number 10, as govuk-frontend and Whitehall still use it as the brand name" do
       expect(organisation_with_slug("prime-ministers-office-no-10").brand).to eq("prime-ministers-office-10-downing-street")
     end
 

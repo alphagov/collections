@@ -6,7 +6,7 @@ RSpec.describe LatestNewsHelper do
     let!(:no10) { Organisation.new(ContentItem.new(organisation_with_featured_documents_and_is_no_10)) }
 
     before do
-      stub_latest_news_for_organisation("prime-ministers-office-10-downing-street")
+      stub_latest_news_for_organisation("prime-ministers-office-no-10")
     end
 
     it "gets the latest news items" do
@@ -27,7 +27,7 @@ RSpec.describe LatestNewsHelper do
 
     context "with the first news item missing" do
       before do
-        stub_latest_news_for_organisation_with_image_sources("prime-ministers-office-10-downing-street")
+        stub_latest_news_for_organisation_with_image_sources("prime-ministers-office-no-10")
       end
 
       it "retreives the lead image for the first news item if requested" do
@@ -43,7 +43,7 @@ RSpec.describe LatestNewsHelper do
 
     context "with the first news item missing" do
       before do
-        stub_latest_news_for_organisation_missing_item("prime-ministers-office-10-downing-street")
+        stub_latest_news_for_organisation_missing_item("prime-ministers-office-no-10")
       end
 
       it "falls back to a default image" do
