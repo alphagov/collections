@@ -400,7 +400,7 @@ module OrganisationHelpers
   def organisation_with_featured_documents_and_is_no_10
     {
       title: "Number 10",
-      base_path: "/government/organisations/prime-ministers-office-10-downing-street",
+      base_path: "/government/organisations/prime-ministers-office-no-10",
       details: {
         organisation_govuk_status: {
           status: "live",

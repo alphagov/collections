@@ -4,7 +4,8 @@ RSpec.describe "Organisation pages" do
   include OrganisationHelpers
 
   let(:org_example) { organisation_content_schema_example("organisation") }
-  let(:content_item_no10) { organisation_content_schema_example("number_10") }
+  # The example in Publishing API still has the old Number 10 base path
+  let(:content_item_no10) { organisation_content_schema_example("number_10").merge("base_path" => "/government/organisations/prime-ministers-office-no-10") }
   let(:content_item_attorney_general) { organisation_content_schema_example("attorney_general") }
   let(:content_item_charity_commission) { organisation_content_schema_example("charity_commission") }
   let(:content_item_wales_office) { organisation_content_schema_example("wales_office") }
@@ -50,7 +51,7 @@ RSpec.describe "Organisation pages" do
     stub_content_and_search(content_item_wales_office)
     stub_content_and_search(content_item_blank)
     stub_content_and_search(content_item_separate_student_loans)
-    stub_latest_news_for_organisation("prime-ministers-office-10-downing-street")
+    stub_latest_news_for_organisation("prime-ministers-office-no-10")
     stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", content_item_wales_office_cy)
     stub_content_store_has_item("/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector", content_item_for_base_path("/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector"))
     stub_content_store_has_item("/content-item-1", content_item_for_base_path("/content-item-1"))
@@ -63,7 +64,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "includes description, autodiscovery, and google no image preview meta tags" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
     padded_string =
       "10 Downing Street is the official residence and the office of the British Prime Minister.\
       The office helps the Prime Minister to establish and deliver the government’s overall strategy and policy priorities,\
@@ -71,8 +72,8 @@ RSpec.describe "Organisation pages" do
     string = padded_string.gsub("      ", " ")
     expect(page).to have_selector("meta[name='description'][content='#{string}']", visible: :hidden)
     expect(page).to have_selector("meta[name='robots'][content='max-image-preview:none']", visible: :hidden)
-    expect(page).to have_css("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: :hidden)
-    expect(page).to have_css("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: :hidden)
+    expect(page).to have_css("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-no-10']", visible: :hidden)
+    expect(page).to have_css("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-no-10.atom']", visible: :hidden)
   end
 
   context "with latest news items that lack an image" do
@@ -82,12 +83,12 @@ RSpec.describe "Organisation pages" do
 
     it "records the problem" do
       expect(GovukError).to receive(:notify)
-      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      visit "/government/organisations/prime-ministers-office-no-10"
     end
   end
 
   it "displays breadcrumbs" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
 
     within ".gem-c-breadcrumbs" do
       expect(page).to have_link("Home", href: "/")
@@ -102,7 +103,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "sets the page title" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
     expect(page).to have_title("Prime Minister's Office, 10 Downing Street - GOV.UK")
 
     visit "/government/organisations/attorney-generals-office"
@@ -114,7 +115,7 @@ RSpec.describe "Organisation pages" do
 
   describe "no10 banner" do
     it "doesnt show on no10's page" do
-      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      visit "/government/organisations/prime-ministers-office-no-10"
       expect(page).not_to have_css(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
     end
 
@@ -131,7 +132,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "renders the logo and logo brand correctly" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
     expect(page).to have_css(".gem-c-organisation-logo.brand--prime-ministers-office-10-downing-street .gem-c-organisation-logo__name", text: "Prime Minister's Office, 10 Downing Street")
 
     visit "/government/organisations/attorney-generals-office"
@@ -145,11 +146,11 @@ RSpec.describe "Organisation pages" do
     before do
       content_item_no10["details"]["ordered_featured_documents"] = []
       content_item_no10["details"]["ordered_featured_links"] = []
-      stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", content_item_no10)
+      stub_content_store_has_item("/government/organisations/prime-ministers-office-no-10", content_item_no10)
     end
 
     it "does not display them if they are absent from content item" do
-      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      visit "/government/organisations/prime-ministers-office-no-10"
       expect(page).not_to have_css("section#featured-documents")
       expect(page).not_to have_css(".govuk-link.govuk-link--no-underline.govuk-\\!-font-weight-bold.govuk-body-s.brand__color")
     end
@@ -167,7 +168,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "shows the translation nav if required" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
     expect(page).not_to have_css(".gem-c-translation-nav")
 
     visit "/government/organisations/attorney-generals-office"
@@ -209,7 +210,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "shows the 'what we do' section, but not on the no. 10 page" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
     expect(page).not_to have_css("section#what-we-do")
     expect(page).not_to have_content(/10 Downing Street is the official residence and the office of the British Prime Minister/i)
 
@@ -305,7 +306,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "does not show the ministers section for no.10" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
     expect(page).not_to have_css("div#people")
     expect(page).not_to have_css(".gem-c-heading", text: "Our ministers")
     expect(page).not_to have_css(".gem-c-image-card .gem-c-image-card__title-link", text: "Theresa May MP")
@@ -358,7 +359,7 @@ RSpec.describe "Organisation pages" do
     end
 
     it "promotional organisations do not have FOI info" do
-      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      visit "/government/organisations/prime-ministers-office-no-10"
       expect(page).not_to have_content(/Make an FOI request/i)
       expect(page).not_to have_content(/Freedom of Information (FOI) Act/i)
     end
@@ -426,7 +427,7 @@ RSpec.describe "Organisation pages" do
     end
 
     it "does not show high profile groups for promotional orgs" do
-      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      visit "/government/organisations/prime-ministers-office-no-10"
       expect(page).not_to have_css(".gem-c-heading", text: "High profile groups within the Prime Minister's Office, 10 Downing Street")
     end
 
@@ -480,7 +481,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "shows promotional features on the right pages" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
     expect(page).to have_content(/became Prime Minister in/i)
 
     visit "/government/organisations/attorney-generals-office"
@@ -488,7 +489,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "full org pages have GovernmentOrganization schema.org information" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
 
     schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
     schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
@@ -508,7 +509,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "has GA4 tracking on image cards" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
     test_ga4_image_cards("#featured-documents-small div")
     test_ga4_image_cards("div.organisation__promotion")
     test_ga4_image_cards("#latest-news div")
@@ -541,7 +542,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "has GA4 tracking on email links" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-no-10"
     test_ga4_email_links("#org-contacts")
 
     visit "/government/organisations/attorney-generals-office"
